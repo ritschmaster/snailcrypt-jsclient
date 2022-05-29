@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: timecapsule-jsclient-apache
+    build:
+      context: .
+      dockerfile: ApacheDockerfile
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8082:80

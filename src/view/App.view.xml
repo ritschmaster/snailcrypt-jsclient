@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="timecapsule-jsclient.controller.App"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc">
+  <l:HorizontalLayout class="sapUiContentPadding"
+                      width="100%">
+    <l:VerticalLayout class="sapUiContentPadding"
+                      width="100%">
+      <Label text="Text to be encrypted:"
+             labelFor="toBeEncryptedTextArea" />
+      <TextArea id="toBeEncryptedTextArea"
+                required="true"
+                rows="20"
+                change="onTextToBeEncrytedChanged" />
+      <DateTimePicker id="encryptionDateTimePicker"
+                      required="true"
+                      valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                      displayFormat="short"
+                      placeholder="Expiration date time"
+                      class="sapUiSmallMarginBottom"
+                      change="onEncryptionDateTimePickerChanged" />
+      <Button text="Encypt"
+              press="onEncryptPressed" />
+
+      <Label id="encryptedLabel"
+             text="Encrypted text:"
+             labelFor="encryptedTextArea"
+             visible="false" />
+      <TextArea id="encryptedTextArea"
+                visible="false"
+                editable="false" />
+    </l:VerticalLayout>
+    <l:VerticalLayout class="sapUiContentPadding"
+                      width="100%">
+      <Label text="Text to be decrypted:"
+             labelFor="toBeDecryptedTextArea" />
+      <TextArea id="toBeDecryptedTextArea"
+                required="true"
+                rows="20"
+                change="onTextToBeDecryptedChanged" />
+      <Button text="Decrypt"
+              press="onDecryptPressed" />
+
+      <Label id="decryptedLabel"
+             text="Decrypted text:"
+             labelFor="decryptedTextArea"
+             visible="false" />
+      <TextArea id="decryptedTextArea"
+                displayOnly="true"
+                editable="false" />
+    </l:VerticalLayout>
+  </l:HorizontalLayout>
+</mvc:View>
