@@ -1,0 +1,169 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_fiori_3_dark/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_fiori_3_dark/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_fiori_3_dark/global.less";
+
+/* START "Overlay.less" */
+/******************************************************************
+	Style of the RTA Overlays - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_rta_Overlay_PlaceholderBG: lighten(saturate(@sapUiShellBackground, 15%), 2%); //#202f3e
+@_sap_ui_rta_Overlay_ShellBG: @sapUiShellBorderColor; //#354a5f
+/* END "Overlay.less" */
+
+/* START "ContextMenu.less" */
+/******************************************************************
+	Style of the RTA Contextmenu - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_rta_ContextMenu_Border_LightColor: @sapUiContentContrastShadowColor; //#fff
+@_sap_ui_rta_ContextMenu_Border_DarkColor: @sapUiShellBorderColor; //#354a5f
+/* END "ContextMenu.less" */
+
+/* START "Dialogs.less" */
+/******************************************************************
+	Style of Dialogs shown in RTA - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_rta_Dialogs_BorderLightColor: @sapUiContentContrastShadowColor; //#fff
+@_sap_ui_rta_Dialogs_BorderDarkColor: @sapUiShellBorderColor; //#354a5f
+/* END "Dialogs.less" */
+
+/* START "FieldRepository.less" */
+/******************************************************************
+	Style of the RTA Add Fields Dialog  - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_rta_FieldRepository_ListSelect: lighten(@sapUiListActiveTextColor, 10%); //#3e4a58
+@_sap_ui_rta_FieldRepository_ListHoverBG: @sapUiListSelectionHoverBackground; //#395369
+@_sap_ui_rta_FieldRepository_BtnHoverBorder: @sapUiButtonEmphasizedBackground; //#1b8dec
+@_sap_ui_rta_FieldRepository_BtnFocusBorder: @sapUiSelected; //#91c8f6
+
+.sapUiRtaMode {
+
+	.sapUIRtaFieldRepositoryDialog {
+
+		.sapMBtn {
+			&:hover:not(focus) {
+				.sapMBtnInner {
+					border: 0.0625rem solid @_sap_ui_rta_FieldRepository_BtnHoverBorder; //1px
+				}
+			}
+
+			> .sapMBtnInner {
+				border: 0.0625rem solid transparent; //1px
+			}
+
+			&:focus {
+				&:not(:hover) > .sapMFocusable {
+					border: 0.0625rem dotted @_sap_ui_rta_FieldRepository_BtnFocusBorder; //1px
+					outline: none;
+				}
+
+				&:hover > .sapMFocusable {
+					outline: 0.0625rem dotted; //1px
+				}
+			}
+		}
+
+		.sapMLIBHoverable {
+			&:hover {
+				background: @_sap_ui_rta_FieldRepository_ListSelect;
+			}
+
+			&.sapMLIBSelected:hover {
+				background: @_sap_ui_rta_FieldRepository_ListHoverBG;
+			}
+		}
+
+		.sapMLIB.sapMLIBSelected {
+			border-color: transparent;
+		}
+	}
+}
+/* END "FieldRepository.less" */
+
+/* START "Toolbar.personalization.less" */
+/******************************************************************
+	Style of the Personalization Toolbar - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_rta_Toolbar_Personalization_BaseColor: @sapUiShellColor; //#354a5f
+/* END "Toolbar.personalization.less" */
+
+/* START "Toolbar.adaptation.less" */
+/***********************************************************************
+	Style of the RTA Toolbar (type: adaptation) - sap_fiori_3_dark Theme
+************************************************************************/
+@_sap_ui_rta_Toolbar_Adaptation_BaseColor: @sapUiShellBorderColor; //#354a5f
+@_sap_ui_rta_Toolbar_Adaptation_TextColor: @sapUiContentContrastShadowColor; //#fff
+@_sap_ui_rta_Toolbar_Adaptation_BtnFocusBorder: @sapUiContentContrastShadowColor; //#fff
+@_sap_ui_rta_Toolbar_Adaptation_SegBBtnHoverTextColor: @sapUiSelected; //#91c8f6
+@_sap_ui_rta_Toolbar_Adaptation_BtnHoverText: @sapUiSelected; //#91c8f6
+
+.sapUiRtaMode {
+	.sapUiRtaToolbar.sapUiRtaToolbarAdaptation {
+		.sapMBtn {
+			&.sapMBtnDisabled .sapMBtnInner {
+				opacity: 1.0;
+			}
+		}
+
+		.sapMSegBBtn.sapMSegBBtnFocusable {
+			&.sapMSegBBtnSel {
+				&:hover .sapMSegBBtnInner::after {
+					border-bottom: 0.125rem solid @_sap_ui_rta_Toolbar_Adaptation_SegBBtnHoverTextColor;
+				}
+
+				&:hover .sapMSegBBtnInner {
+					background-color: @_sap_ui_rta_Toolbar_Adaptation_BaseColor;
+				}
+			}
+
+			&:hover .sapMSegBBtnInner {
+				background-color: @_sap_ui_rta_Toolbar_Adaptation_BaseColor;
+			}
+		}
+	}
+}
+
+.sapUiSizeCozy.sapUiRtaMode {
+	.sapUiRtaToolbar {
+		.sapMSegB {
+			.sapMSegBBtn {
+				.sapMSegBBtnInner {
+					line-height: 2rem; //32px
+				}
+			}
+		}
+	}
+}
+/* END "Toolbar.adaptation.less" */
+
+/* START "Toolbar.base.less" */
+/******************************************************************
+	Style of the RTA Toolbar (all types) - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_rta_Toolbar_Base_TextColor: @sapUiContentContrastShadowColor; //#fff
+@_sap_ui_rta_Toolbar_Base_BaseColor: @sapUiShellBorderColor; //#354a5f
+@_sap_ui_rta_Toolbar_Base_BaseBG: @sapUiShellBorderColor; //#354a5f
+/* END "Toolbar.base.less" */
+
+/* START "AddIFrame.less" */
+/******************************************************************
+	Style of the RTA Add IFrame Dialog  sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_rta_AddIFrame_DelimiterLineColor: @sapUiFieldBorderColor; //#8696a9
+/* END "AddIFrame.less" */
+
+/* START "ChangeVisualization.less" */
+/******************************************************************
+	Style of the RTA Change Visualization - sap_fiori_3_dark theme
+*******************************************************************/
+@_sap_ui_rta_ChangeVisualization_ChangeIndicatorColorLight: @sapUiChartPaletteSequentialHue1Light3; //	#b2d4f5
+@_sap_ui_rta_ChangeVisualization_ChangeIndicatorColorMedium: darken(@sapUiChartPaletteSequentialHue1Light1, 5%); //#5f9ede
+@_sap_ui_rta_ChangeVisualization_ChangeIndicatorColorDark: @sapUiChartPaletteSequentialHue1Dark1; //#367dc4
+/* END "ChangeVisualization.less" */

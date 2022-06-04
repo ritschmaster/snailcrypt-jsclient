@@ -1,0 +1,142 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "AddIFrame.less",
+			"size": 3186,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ChangeVisualization.less",
+			"size": 3139,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ContextMenu.less",
+			"size": 1326,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Dialogs.less",
+			"size": 3143,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "FieldRepository.less",
+			"size": 1245,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "MessageBox.less",
+			"size": 254,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Overlay.less",
+			"size": 6100,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "OverlayWithScrollbar.less",
+			"size": 1525,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Toolbar.adaptation.less",
+			"size": 8496,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Toolbar.base.less",
+			"size": 1653,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Toolbar.fiori.less",
+			"size": 341,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Toolbar.personalization.less",
+			"size": 792,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Toolbar.standalone.less",
+			"size": 346,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 10229,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 240,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 125287,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 29727,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 3987,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 29708,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 32897,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 678,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 27206,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 27199,
+			"theme": "base"
+		}
+	]
+}

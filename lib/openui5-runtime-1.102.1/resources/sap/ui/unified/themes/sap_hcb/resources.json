@@ -1,0 +1,128 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 128,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Calendar.less",
+			"size": 13903,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "CalendarLegend.less",
+			"size": 3368,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "CalendarRow.less",
+			"size": 5059,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "ColorPicker.less",
+			"size": 1362,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Currency.less",
+			"size": 188,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Menu.less",
+			"size": 576,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "ShellHeader.less",
+			"size": 4418,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "ShellLayout.less",
+			"size": 369,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "ShellOverlay.less",
+			"size": 1370,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 18884,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 124371,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 124071,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img-RTL/create.txt",
+			"size": 0,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/create.txt",
+			"size": 0,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 155947,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 7563,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.css",
+			"size": 155825,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.less",
+			"size": 31512,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.source.less",
+			"size": 499,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 166669,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 166547,
+			"theme": "sap_hcb"
+		}
+	]
+}

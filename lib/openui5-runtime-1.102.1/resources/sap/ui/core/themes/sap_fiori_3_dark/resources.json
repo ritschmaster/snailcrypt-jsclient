@@ -1,0 +1,149 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theme",
+			"size": 655,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": ".theming",
+			"size": 95,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "BrowserScrollbar.less",
+			"size": 376,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "DatePicker.less",
+			"size": 252,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "base.less",
+			"size": 69397,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 203836,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 230593,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 230215,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72-Bold-full.woff2",
+			"size": 56684,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72-Bold.woff2",
+			"size": 24336,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72-Light-full.woff2",
+			"size": 57936,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72-Light.woff2",
+			"size": 24936,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72-Regular-full.woff2",
+			"size": 56160,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72-Regular.woff2",
+			"size": 24396,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72Mono-Bold-full.woff2",
+			"size": 51544,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72Mono-Bold.woff2",
+			"size": 22044,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72Mono-Regular-full.woff2",
+			"size": 50276,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "fonts/72Mono-Regular.woff2",
+			"size": 21800,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "global.less",
+			"size": 64452,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 131308,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 76663,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "library.css",
+			"size": 131293,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "library.less",
+			"size": 12469,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "library.source.less",
+			"size": 319,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 30397,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 30383,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "shared.less",
+			"size": 11229,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		}
+	]
+}

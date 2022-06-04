@@ -1,0 +1,97 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_belize_hcw/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_belize_hcw/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_belize_hcw/global.less";
+
+/* START "FormLayout.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/FormLayout  */
+/* Belize High Contrast White theme          */
+/* ========================================= */
+
+.sapUiForm .sapUiFormTitle {
+	border-width: 3px;
+	box-sizing: border-box;
+}
+/* END "FormLayout.less" */
+
+/* START "BlockLayoutCell.less" */
+/* ============================================== */
+/* CSS for control sap.ui.layout/BlockLayoutCell  */
+/* Belize High Contrast White theme               */
+/* ============================================== */
+
+.sapUiBlockCellContent {
+	border: 1px solid @sapUiTileBorderColor;
+}
+/* END "BlockLayoutCell.less" */
+
+/* START "GridLayout.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/GridLayout  */
+/* Belize High Contrast White theme          */
+/* ========================================= */
+
+.sapUiGridHeader > .sapUiFormTitle > .sapUiBtn {
+	bottom: 0.4375rem;
+}
+/* END "GridLayout.less" */
+
+/* START "ResponsiveGridLayout.less" */
+/* =================================================== */
+/* CSS for control sap.ui.layout/ResponsiveGridLayout  */
+/* Belize High Contrast White theme                    */
+/* =================================================== */
+
+/* Title */
+.sapUiRGLContainer > .sapUiFormTitle > .sapUiBtn {
+	bottom: 0.4375rem;
+}
+/* END "ResponsiveGridLayout.less" */
+
+/* START "ResponsiveLayout.less" */
+/* =============================================== */
+/* CSS for control sap.ui.layout/ResponsiveLayout  */
+/* Belize High Contrast White theme                */
+/* =============================================== */
+
+/* Title */
+.sapUiRLContainer > .sapUiFormTitle > .sapUiBtn {
+	bottom: 0.4375rem;
+}
+/* END "ResponsiveLayout.less" */
+
+/* START "Splitter.less" */
+/* ======================================= */
+/* CSS for control sap.ui.layout/Splitter  */
+/* Belize High Contrast White theme        */
+/* ======================================= */
+
+@_sap_ui_layout_Splitter_BarActiveDecorationColors: @sapUiObjectHeaderBorderColor, @sapUiObjectHeaderBorderColor;
+@_sap_ui_layout_Splitter_BarDecorationColors: @sapUiObjectHeaderBorderColor, fade(@sapUiObjectHeaderBorderColor, 0);
+@_sap_ui_layout_Splitter_BarBorder: 0.0625rem solid @sapUiGroupContentBorderColor;
+@_sap_ui_layout_Splitter_BarHoverIconBorderColor: @sapUiButtonLiteHoverBorderColor;
+@_sap_ui_layout_Splitter_BarHoverIconBackground: @sapUiButtonLiteHoverBackground;
+
+.sapUiLoSplitter {
+	background-color: @sapUiHcStandardBackground;
+}
+
+/*********************************** Focus outline**********************************/
+
+.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiLoSplitter > .sapUiLoSplitterOverlay .sapUiLoSplitterOverlayBar {
+	&:focus::after {
+		border-width: 2px;
+	}
+}
+
+/* END "Splitter.less" */

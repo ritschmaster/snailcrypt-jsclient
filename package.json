@@ -4,15 +4,25 @@
   "private": true,
   "dependencies": {
     "@openui5/sap.m": "1.102.1",
-    "@openui5/sap.ui.core":  "1.102.1",
+    "@openui5/sap.ui.core": "1.102.1",
     "@openui5/sap.ui.layout": "1.102.1",
     "@openui5/sap.ui.unified": "1.102.1",
     "@openui5/themelib_sap_belize": "1.102.1",
+    "@openui5/themelib_sap_fiori_3": "^1.102.1",
+    "jsencrypt": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
     "grunt": "1.5.3",
-    "grunt-openui5": "0.18.3"
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-uglify": "^5.2.1"
   },
   "engines": {
     "node": ">= 14.19.0",
     "npm": ">= 6.14.16"
-  }
+  },
+  "keywords": [],
+  "author": "Richard Bäck <richard.baeck@mailbox.org>",
+  "license": "",
+  "description": ""
 }

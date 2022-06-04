@@ -1,0 +1,345 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_horizon_hcw/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_horizon_hcw/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_horizon_hcw/global.less";
+
+/* START "Toolbar.base.less" */
+/******************************************************************************
+	Style of the RTA Toolbar (all types) - Horizon High Contrast White theme
+*******************************************************************************/
+@_sap_ui_rta_Toolbar_Base_BaseColor: @sapUiNeutralElement; //#000
+@_sap_ui_rta_Toolbar_Base_BaseBG: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Toolbar_Base_TextColor: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Toolbar_Base_OutlineColor: @sapUiButtonEmphasizedBorderColor; //#000
+@_sap_ui_rta_Toolbar_Base_BoxShadow_DarkColor: fade(@sapUiNeutralElement, 80%); //rgba(0, 0, 0, 0.8)
+@_sap_ui_rta_Toolbar_Base_BoxShadow_LightColor: @sapUiNeutralBG; //#fff
+
+.sapUiRtaMode {
+	.sapUiRtaToolbar {
+		outline: 0.125rem dashed @_sap_ui_rta_Toolbar_Base_OutlineColor;
+		outline-offset: -0.125rem;
+		border: none;
+		border-image: none;
+	}
+}
+/* END "Toolbar.base.less" */
+
+/* START "Toolbar.adaptation.less" */
+/***********************************************************************************
+	Style of the RTA Toolbar (type: adaptation) - Horizon High Contrast White theme
+************************************************************************************/
+@_sap_ui_rta_Toolbar_Adaptation_BaseColor: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Toolbar_Adaptation_TextColor: @sapUiNeutralElement; //#000
+@_sap_ui_rta_Toolbar_Adaptation_BtnFocusBorder: @sapUiNeutralElement; //#000
+@_sap_ui_rta_Toolbar_Adaptation_FocusOutlineCol: @sapUiNeutralBorder; //#000
+@_sap_ui_rta_Toolbar_Adaptation_SegBBtnHoverTextColor: @sapUiNeutralElement; //000
+@_sap_ui_rta_Toolbar_Adaptation_SegBBtnSelBG: @sapUiSelected; //#5c93ff
+
+.sapUiRtaMode {
+	.sapUiRtaToolbar.sapUiRtaToolbarAdaptation {
+		.sapMBtn {
+			&:focus .sapMFocusable {
+				outline: 0.125rem dotted @_sap_ui_rta_Toolbar_Adaptation_FocusOutlineCol;
+				outline-offset: -0.125rem; //2px
+				border-color: transparent;
+			}
+		}
+
+		.sapMSegB {
+			.sapMSegBBtn {
+				&.sapMSegBBtnFocusable {
+					&:focus .sapMSegBBtnInner {
+						outline-width: 0.125rem; //2px
+						outline-offset: -0.125rem; //2px
+					}
+				}
+
+				&.sapMSegBBtnSel .sapMSegBBtnInner {
+					background: @_sap_ui_rta_Toolbar_Adaptation_SegBBtnSelBG;
+
+					&:after {
+						content: none !important;
+					}
+				}
+
+				.sapMSegBBtnInner {
+					border: solid thin;
+				}
+			}
+		}
+	}
+}
+/* END "Toolbar.adaptation.less" */
+
+/* START "Toolbar.personalization.less" */
+/*****************************************************************************************
+	Style of the RTA Toolbar (type: personalization) - Horizon High Contrast White theme
+******************************************************************************************/
+@_sap_ui_rta_Toolbar_Personalization_BaseColor: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Toolbar_Personalization_TextColor: @sapUiNeutralElement; //#000
+
+.sapUiRtaToolbar.type_personalization {
+	border-top: 0.0625rem solid @_sap_ui_rta_Toolbar_Personalization_TextColor; //1px
+}
+/* END "Toolbar.personalization.less" */
+
+/* START "Overlay.less" */
+/******************************************************************
+	Style of the RTA Overlays - Horizon High Contrast White theme
+*******************************************************************/
+@_sap_ui_rta_Overlay_BorderColor: @sapUiIndication5; //#004ccb
+@_sap_ui_rta_Overlay_BoxShadowColor: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Overlay_ShellBG: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Overlay_FocusBorder: @sapUiNeutralElement; //#000
+@_sap_ui_rta_Overlay_TargetZoneBG: fade(@sapUiSelected, 15%);
+@_sap_ui_rta_Overlay_PlaceholderBG: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Overlay_BorderRadius: @sapUiButtonBorderCornerRadius; //0.375rem
+
+.sapUiRta {
+	.sapUiDtOverlayTargetZone {
+		&:after {
+			box-shadow: none;
+			border-radius: @_sap_ui_rta_Overlay_BorderRadius;
+		}
+
+		&.sapUiDtOverlayDropZone > .sapUiDtOverlayChildren > .sapUiDtOverlayMovable {
+			background: @_sap_ui_rta_Overlay_TargetZoneBG;
+		}
+	}
+}
+
+.sapUiRta:not(.sapUiRtaVisualizationMode) {
+	.sapUiDtOverlay {
+		&:focus {
+			outline: none;
+			/* We create inner white shadow to make sure black border is in contrast with element */
+			box-shadow: 0 0 0 0.125rem @_sap_ui_rta_Overlay_BoxShadowColor inset; //2px
+
+			&:before {
+				border: none;
+				outline: 0.125rem dotted @_sap_ui_rta_Overlay_FocusBorder; //2px
+				outline-offset: -0.25rem; //4px
+			}
+		}
+	}
+
+	.sapUiRtaOverlayHover {
+		&:after {
+			border: none;
+			box-shadow: none;
+			outline: 0.125rem dotted @_sap_ui_rta_Overlay_BorderColor; //2px
+			outline-offset: -0.125rem; //2px
+			border-radius: @_sap_ui_rta_Overlay_BorderRadius;
+		}
+	}
+
+	.sapUiDtOverlaySelected {
+		box-shadow: none;
+
+		&:after {
+			border: 0.125rem solid @_sap_ui_rta_Overlay_BorderColor; //2px
+			outline: none;
+		}
+
+		&.sapUiDtOverlayFocusable {
+			&:focus {
+				/* Same trick as described above but doubled thickness */
+				box-shadow: 0 0 0 0.25rem @_sap_ui_rta_Overlay_BoxShadowColor inset; //4px
+			}
+		}
+
+		&.sapUiRtaOverlayHover {
+			&:after {
+				border: 0.125rem solid @_sap_ui_rta_Overlay_BorderColor !important; //2px
+				outline: 0.125rem dotted @_sap_ui_rta_Overlay_BorderColor !important; //2px
+				outline-offset: -0.25rem; //4px
+				box-shadow: none;
+			}
+		}
+	}
+}
+/* END "Overlay.less" */
+
+/* START "ContextMenu.less" */
+/**********************************************************************
+	Style of the RTA Contextmenu - Horizon High Contrast White theme
+***********************************************************************/
+@_sap_ui_rta_ContextMenu_Border_LightColor: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_ContextMenu_Border_DarkColor: @sapUiNeutralBorder; //#000
+@_sap_ui_rta_ContextMenu_Border_Radius: @sapUiButtonBorderCornerRadius; // 0.375rem
+@_sap_ui_rta_ContextMenu_BoxShadow_DarkColor: fade(@sapUiContentShadowColor, 60%); //rgba(255, 255, 255, 0.6)
+@_sap_ui_rta_ContextMenu_BoxShadow_LightColor: @sapUiNeutralBG; //#fff
+
+.sapUiRtaMode {
+	.sapUiDtContextMenu {
+		&.sapMMenu {
+			border: 0.188rem dashed @_sap_ui_rta_ContextMenu_Border_DarkColor; //2px
+			border-image: none;
+			border-radius: @_sap_ui_rta_ContextMenu_Border_Radius;
+		}
+	}
+}
+/* END "ContextMenu.less" */
+
+/* START "Dialogs.less" */
+/***********************************************************************
+	Style of Dialogs shown in RTA - Horizon High Contrast White theme
+************************************************************************/
+@_sap_ui_rta_Dialogs_BorderLightColor: @sapUiNeutralElement; //#000
+@_sap_ui_rta_Dialogs_BorderDarkColor: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_Dialogs_BorderRadius: @sapUiButtonBorderCornerRadius; //0.375rem
+
+.sapMDialog.sapUiRTABorder {
+	border: 0.25rem solid @_sap_ui_rta_Dialogs_BorderLightColor;
+	border-image: none;
+	border-radius: @_sap_ui_rta_Dialogs_BorderRadius;
+	outline: 0.25rem dashed @_sap_ui_rta_Dialogs_BorderDarkColor; //4px
+	outline-offset: -0.188rem;
+}
+
+.sapUiRtaPopover {
+
+	&.sapMPopover, .sapMPopover {
+		border: 0.188rem solid @_sap_ui_rta_Dialogs_BorderLightColor; //3px
+		border-image: none;
+		border-radius: @_sap_ui_rta_Dialogs_BorderRadius;
+		outline: 0.188rem dashed @_sap_ui_rta_Dialogs_BorderDarkColor; //4px
+		outline-offset: -0.25rem; //4px
+	}
+
+	&.sapMPopoverArr, .sapMPopoverArr {
+		&:after {
+			border: 0.188rem dashed @_sap_ui_rta_Dialogs_BorderLightColor; //3px
+			border-image: none;
+		}
+	}
+}
+/* END "Dialogs.less" */
+
+/* START "FieldRepository.less" */
+/****************************************************************************
+	Style of the RTA Add Fields Dialog  - Horizon High Contrast White theme
+*****************************************************************************/
+.sapUiRtaMode {
+	.sapUIRtaFieldRepositoryDialog {
+		.sapMBtn:focus {
+			> .sapMFocusable {
+				outline-offset: -0.125rem; //2px
+				&.sapMBtnEmphasized {
+					border: 0.125rem solid transparent;
+				}
+			}
+		}
+	}
+}
+/* END "FieldRepository.less" */
+
+/* START "ChangeVisualization.less" */
+/******************************************************************
+	Style of the RTA Change Visualization - Horizon hcw theme
+*******************************************************************/
+@_sap_ui_rta_ChangeVisualization_ChangeIndicatorColorLight: @sapUiPositiveText; //#006362
+@_sap_ui_rta_ChangeVisualization_ChangeIndicatorColorMedium: @sapUiActive; //#e97624
+@_sap_ui_rta_ChangeVisualization_ChangeIndicatorColorDark: lighten(@sapUiChart8, 20%); //#e52faa
+@_sap_ui_rta_ChangeVisualization_OverlayOutline: @sapUiIndication5; //#004ccb
+@_sap_ui_rta_ChangeVisualization_BorderRadius: @sapUiButtonBorderCornerRadius;
+
+.sapUiDtOverlay {
+	.sapUiRtaChangeIndicatorHovered {
+		&:after {
+			box-shadow: none;
+		}
+	}
+
+	&.sapUiRtaChangeIndicatorDependent {
+		border-radius: @_sap_ui_rta_ChangeVisualization_BorderRadius;
+	}
+}
+/* END "ChangeVisualization.less" */
+
+/* START "AddIFrame.less" */
+/**************************************************************************
+	Style of the RTA Add IFrame Dialog  Horizon High Contrast White theme
+***************************************************************************/
+@_sap_ui_rta_AddIFrame_DelimiterLineColor: @sapUiListBorderColor; //#585858
+@_sap_ui_rta_AddIFrame_PreviewBG: @sapUiNeutralBG; //#fff
+@_sap_ui_rta_AddIFrame_BorderRadius: 0.5rem;
+@_sap_ui_rta_AddIFrame_PreviewTlbarHoverBG: @sapUiNeutralBG; //#fff
+
+.sapUiRtaMode {
+	.sapUiRtaAddIFrameDialog {
+		.sapUiRtaAddIFrameDialogVlWrapper {
+			.sapUiRtaAddIFrameDialogEditGrid {
+
+				.sapUiRtaAddIFrameDialogParameters {
+					.sapMScrollCont {
+						border-radius: @_sap_ui_rta_AddIFrame_BorderRadius;
+					}
+				}
+
+				.sapUiRtaAddIFrameDialogEditUrl {
+					.sapMTextArea {
+						.sapMInputBaseContentWrapper {
+							border: 0.0625rem solid @_sap_ui_rta_AddIFrame_BorderColor; //1px
+							border-radius: @_sap_ui_rta_AddIFrame_BorderRadius;
+							background-image: none;
+						}
+
+						.sapMTextAreaInner {
+							border: none;
+						}
+
+						&.sapMFocus.sapMInputBase .sapMInputBaseContentWrapper:not(.sapMInputBaseDisabledWrapper)::before {
+							border-radius: @_sap_ui_rta_AddIFrame_BorderRadius;
+						}
+
+						&.sapMFocus {
+							.sapMInputBaseContentWrapper .sapMInputBaseInner {
+								outline: none;
+							}
+						}
+					}
+				}
+			}
+
+			.sapUiRtaAddIFrameDialogPreviewLinkGrid {
+				.sapUiRtaAddIFrameDialogPreviewLinkPanel {
+
+					&.sapMPanel .sapMPanelWrappingDiv:not(.sapMPanelWrappingDivExpanded),
+					&.sapMPanel .sapMPanelWrappingDivTb:not(.sapMPanelWrappingDivTbExpanded) {
+						border-radius: 0;
+					}
+
+					.sapUiRtaAddIFrameDialogPreviewLinkToolbar {
+						padding-left: 0;
+						padding-right: 0.125rem;
+
+						&.sapMTB:hover,
+						&.sapMTB-Solid-CTX.sapMTB:hover {
+							background-color: @_sap_ui_rta_AddIFrame_PreviewTlbarHoverBG;
+						}
+					}
+				}
+			}
+
+			.sapUiRtaAddIFrameDialogPreviewGrid {
+				border-radius: @_sap_ui_rta_AddIFrame_BorderRadius;
+				padding-bottom: 0.5rem;
+				background: transparent;
+			}
+		}
+	}
+}
+
+// adapt scrollbars to rounded corners
+html.sap-desktop:not(.sapUiNativeScrollbars) ::-webkit-scrollbar {
+	background-color: inherit !important;
+}
+/* END "AddIFrame.less" */

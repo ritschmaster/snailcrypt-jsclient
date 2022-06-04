@@ -1,0 +1,73 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../Base/baseLib/sap_belize_hcb/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/sap_belize_hcb/base.less" */
+
+@import "../../../../sap/ui/core/themes/sap_belize_hcb/global.less";
+
+/* START "InfoLabel.less" */
+/* ================================= */
+/* CSS for control sap.tnt/InfoLabel */
+/* Belize HCB theme                  */
+/* ================================= */
+
+
+/* ==========================================================================
+   Variables and mixins
+   ========================================================================== */
+
+@_sap_tnt_InfoLabel_LineHeightDisplayOnly: 0.875rem;
+
+
+.sapTntInfoLabel,
+.sapTntInfoLabel.sapTntInfoLabelDisplayOnly {
+	background-color: @sapUiGroupContentBackground;
+	border: 1px solid @sapUiGroupContentBorderColor;
+}
+
+/* ==========================================================================
+   InfoLabel No Text
+   ========================================================================== */
+.sapTntInfoLabel.sapTntInfoLabelNoText:not(.sapTntInfoLabelWithIcon) {
+	padding: 0 0.5rem;
+
+	&.sapTntInfoLabelDisplayOnly{
+		padding: 0 0.4375rem;
+	}
+}
+/* END "InfoLabel.less" */
+
+/* START "NavigationList.less" */
+/* ======================================= */
+/* CSS for control sap.tnt/NavigationList  */
+/* Belize High Contrast Black theme        */
+/* ======================================= */
+
+@_sap_tnt_NavigationList_ItemFocusBorder: 0.125rem dotted @sapUiContentFocusColor;
+@_sap_tnt_NavigationList_SelectedItemBorderColor: transparent;
+@_sap_tnt_NavigationList_Collapsed_SelectedGroupBorderColor: @sapUiListSelectionBorderColor;
+/* END "NavigationList.less" */
+
+/* START "ToolHeader.less" */
+/* =================================== */
+/* CSS for control sap.tnt/ToolHeader  */
+/* Belize HCB theme                   */
+/* =================================== */
+
+@_sap_tnt_ToolHeader_AvatarBackground: @sapUiAccent6;
+@_sap_tnt_ToolHeader_AvatarColor: @sapUiBaseColor;
+
+.sapTntToolHeader .sapMMenuBtn.sapMMenuBtnRegular .sapMBtnDisabled .sapMBtnInner::after {
+	color: inherit;
+}
+
+.sapTntToolHeader .sapMITH.sapMITBTextOnly .sapMITHEndOverflow {
+	margin-top: 0;
+}
+/* END "ToolHeader.less" */

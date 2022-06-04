@@ -1,0 +1,100 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 650,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ContextMenu.less",
+			"size": 2006,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Dialogs.less",
+			"size": 651,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Overlay.less",
+			"size": 436,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Toolbar.adaptation.less",
+			"size": 367,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Toolbar.base.less",
+			"size": 1383,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "Toolbar.personalization.less",
+			"size": 283,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 14399,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 128739,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 128373,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 57387,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 5996,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.css",
+			"size": 57366,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.less",
+			"size": 6031,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.source.less",
+			"size": 503,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 56406,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 56397,
+			"theme": "sap_belize"
+		}
+	]
+}

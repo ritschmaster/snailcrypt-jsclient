@@ -1,0 +1,30 @@
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	<Popover
+		showHeader="false"
+		placement="Bottom">
+		<MessageStrip
+			text="{visualizationModel>/popupInfoMessage}"
+			type="Information"
+			showIcon="true"
+			visible="{= ${visualizationModel>/hiddenChanges}.length > 0 }">
+			<link>
+				<Link text="{i18n>BUT_CHANGEVISUALIZATION_LEARNMORE}"
+					target="_blank"
+					href="https://ui5.sap.com/1.101.0/#/topic/35274280504f42cd87cc4fd3d403ca91.html#loio35274280504f42cd87cc4fd3d403ca91/visualization" />
+			</link>
+		</MessageStrip>
+		<List
+			class="sapUiRtaChangesList"
+			items="{visualizationModel>/commandCategories/}">
+			<StandardListItem
+				title="{visualizationModel>title}"
+				counter="{visualizationModel>count}"
+				type="{= ${visualizationModel>count} > 0 ? 'Active' : 'Inactive'}"
+				icon="{visualizationModel>icon}"
+				press=".onCommandCategorySelection"/>
+		</List>
+	</Popover>
+</core:FragmentDefinition>

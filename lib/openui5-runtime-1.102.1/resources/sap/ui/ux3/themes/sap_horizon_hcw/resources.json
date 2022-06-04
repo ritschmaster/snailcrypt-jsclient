@@ -1,0 +1,374 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 94,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ActionBar.less",
+			"size": 5109,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "CollectionInspector.less",
+			"size": 267,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "DataSet.less",
+			"size": 219,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "DataSetSimpleView.less",
+			"size": 415,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "Exact.less",
+			"size": 218,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ExactArea.less",
+			"size": 285,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ExactBrowser.less",
+			"size": 247,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ExactList.less",
+			"size": 2699,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "FacetFilter.less",
+			"size": 244,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "FacetFilterList.less",
+			"size": 411,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "Feed.less",
+			"size": 449,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "FeedChunk.less",
+			"size": 2820,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "Feeder.less",
+			"size": 1388,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "NavigationBar.less",
+			"size": 783,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "NotificationBar.less",
+			"size": 1128,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "Overlay.less",
+			"size": 231,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "OverlayContainer.less",
+			"size": 255,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "QuickView.less",
+			"size": 227,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "Shell.less",
+			"size": 3202,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ShellColorPicker.less",
+			"size": 269,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ShellPersonalization.less",
+			"size": 278,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ThingInspector.less",
+			"size": 307,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ThingViewer.less",
+			"size": 235,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "ToolPopup.less",
+			"size": 707,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 748,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 114023,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 113647,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img-RTL/notification_bar/arrows/ArrowBar_up_hover.png",
+			"size": 176,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img-RTL/notification_bar/arrows/DoubleArrow_up_hover.png",
+			"size": 192,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img-RTL/shell/tools/Feed_hover.png",
+			"size": 348,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img-RTL/shell/tools/Inspector_hover.png",
+			"size": 340,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img-RTL/shell/tools/Inspector_selected.png",
+			"size": 364,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img-RTL/shell/tools/Search_hover.png",
+			"size": 471,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/exact/tophead.gif",
+			"size": 835,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/feed/ico12_click.png",
+			"size": 182,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/menu_follow.png",
+			"size": 365,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/menu_hold.png",
+			"size": 380,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/menu_unlisten.png",
+			"size": 387,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/navigationbar/facetNext.png",
+			"size": 223,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/navigationbar/facetPrev.png",
+			"size": 223,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/alert_white_24.png",
+			"size": 2981,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/ArrowBar_down.png",
+			"size": 212,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/ArrowBar_down_hover.png",
+			"size": 176,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/ArrowBar_up.png",
+			"size": 210,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/ArrowBar_up_hover.png",
+			"size": 176,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/DoubleArrow_down.png",
+			"size": 111,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/DoubleArrow_down_hover.png",
+			"size": 171,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/DoubleArrow_up.png",
+			"size": 112,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/arrows/DoubleArrow_up_hover.png",
+			"size": 192,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/notification_bar/notification_24.png",
+			"size": 309,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/shell/LogOut_icon.png",
+			"size": 343,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/shell/tools/Feed_hover.png",
+			"size": 348,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/shell/tools/Inspector_hover.png",
+			"size": 340,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/shell/tools/Inspector_selected.png",
+			"size": 364,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/shell/tools/Search_hover.png",
+			"size": 471,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/toolpopup/arrow_down.png",
+			"size": 315,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/toolpopup/arrow_left.png",
+			"size": 315,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/toolpopup/arrow_right.png",
+			"size": 325,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "img/toolpopup/arrow_up.png",
+			"size": 317,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 65273,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 190,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "library.css",
+			"size": 65159,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "library.less",
+			"size": 24621,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "library.source.less",
+			"size": 1034,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 72235,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 72121,
+			"theme": "sap_horizon_hcw"
+		},
+		{
+			"name": "shared.less",
+			"size": 155,
+			"designtime": true,
+			"theme": "sap_horizon_hcw"
+		}
+	]
+}

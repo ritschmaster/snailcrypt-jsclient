@@ -1,0 +1,134 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 128,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "BrowserScrollbar.less",
+			"size": 431,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "LocalBusyIndicator.less",
+			"size": 537,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Shadow.less",
+			"size": 201,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 188528,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 217576,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 217276,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "global.less",
+			"size": 53782,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/16x16/Message_Icon_Error.png",
+			"size": 154,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/16x16/Message_Icon_Information.png",
+			"size": 208,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/16x16/Message_Icon_Success.png",
+			"size": 584,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/16x16/Message_Icon_Warning.png",
+			"size": 236,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/32x32/Message_Icon_Error.png",
+			"size": 358,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/32x32/Message_Icon_Information.png",
+			"size": 316,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/32x32/Message_Icon_Success.png",
+			"size": 1124,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "img/message/32x32/Message_Icon_Warning.png",
+			"size": 628,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 123674,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 75245,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.css",
+			"size": 123659,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.less",
+			"size": 2899,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.source.less",
+			"size": 329,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 23891,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 23877,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "shared.less",
+			"size": 1160,
+			"designtime": true,
+			"theme": "sap_hcb"
+		}
+	]
+}

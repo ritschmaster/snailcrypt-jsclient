@@ -1,0 +1,112 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 650,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "AnchorBar.less",
+			"size": 6603,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "HierarchicalSelect.less",
+			"size": 3682,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "IconTabBar.less",
+			"size": 398,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ObjectPageHeader.less",
+			"size": 2856,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ObjectPageHeaderContent.less",
+			"size": 1496,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ObjectPageLayout.less",
+			"size": 3271,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ObjectPageSection.less",
+			"size": 820,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "ObjectPageSubSection.less",
+			"size": 686,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 1210,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 117905,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 117545,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 98946,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 380,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.css",
+			"size": 98937,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.less",
+			"size": 20892,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library.source.less",
+			"size": 584,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 101398,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 101389,
+			"theme": "sap_belize"
+		}
+	]
+}

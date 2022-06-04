@@ -1,0 +1,112 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 90,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "BlockLayout.less",
+			"size": 12937,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ColumnLayout.less",
+			"size": 813,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "FormLayout.less",
+			"size": 1923,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "GridLayout.less",
+			"size": 1276,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ResponsiveGridLayout.less",
+			"size": 1164,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ResponsiveLayout.less",
+			"size": 1120,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ResponsiveSplitter.less",
+			"size": 757,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "Splitter.less",
+			"size": 374,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 15874,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 136042,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 135674,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 237831,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 7091,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.css",
+			"size": 237363,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.less",
+			"size": 21408,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.source.less",
+			"size": 568,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 232800,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 232332,
+			"theme": "sap_horizon"
+		}
+	]
+}

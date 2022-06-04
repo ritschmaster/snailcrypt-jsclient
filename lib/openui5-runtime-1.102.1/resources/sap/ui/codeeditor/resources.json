@@ -1,0 +1,4830 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library",
+			"size": 2078
+		},
+		{
+			"name": ".supportrc",
+			"size": 26
+		},
+		{
+			"name": ".theming",
+			"size": 81
+		},
+		{
+			"name": "CodeEditor-dbg.js",
+			"module": "sap/ui/codeeditor/CodeEditor.js",
+			"size": 16318,
+			"isDebug": true,
+			"required": [
+				"sap/ui/codeeditor/js/ace/ace.js",
+				"sap/ui/codeeditor/js/ace/ext-beautify.js",
+				"sap/ui/codeeditor/js/ace/ext-language_tools.js",
+				"sap/ui/codeeditor/js/ace/mode-javascript.js",
+				"sap/ui/codeeditor/js/ace/mode-json.js",
+				"sap/ui/codeeditor/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/RenderManager.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/dom/includeStylesheet.js",
+				"sap/ui/thirdparty/jquery.js"
+			]
+		},
+		{
+			"name": "CodeEditor.js",
+			"module": "sap/ui/codeeditor/CodeEditor.js",
+			"size": 6952,
+			"required": [
+				"sap/ui/codeeditor/js/ace/ace.js",
+				"sap/ui/codeeditor/js/ace/ext-beautify.js",
+				"sap/ui/codeeditor/js/ace/ext-language_tools.js",
+				"sap/ui/codeeditor/js/ace/mode-javascript.js",
+				"sap/ui/codeeditor/js/ace/mode-json.js",
+				"sap/ui/codeeditor/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/RenderManager.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/dom/includeStylesheet.js",
+				"sap/ui/thirdparty/jquery.js"
+			]
+		},
+		{
+			"name": "aceWorkerProxy-dbg.js",
+			"module": "sap/ui/codeeditor/aceWorkerProxy.js",
+			"size": 1646,
+			"format": "raw",
+			"isDebug": true
+		},
+		{
+			"name": "aceWorkerProxy.html",
+			"size": 256
+		},
+		{
+			"name": "aceWorkerProxy.js",
+			"module": "sap/ui/codeeditor/aceWorkerProxy.js",
+			"size": 865,
+			"format": "raw"
+		},
+		{
+			"name": "js/ace/ace-dbg.js",
+			"size": 714295,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ace.js",
+			"size": 384136
+		},
+		{
+			"name": "js/ace/css/ace.css",
+			"size": 21601
+		},
+		{
+			"name": "js/ace/css/ambiance-1.png",
+			"size": 17742
+		},
+		{
+			"name": "js/ace/css/ambiance-2.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/chrome-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/clouds-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/clouds_midnight-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/cobalt-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/crimson_editor-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/dawn-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/dracula-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/dreamweaver-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/eclipse-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/github-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/gob-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/gruvbox-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/idle_fingers-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/iplastic-1.png",
+			"size": 109
+		},
+		{
+			"name": "js/ace/css/iplastic-2.png",
+			"size": 2798
+		},
+		{
+			"name": "js/ace/css/kr_theme-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/main-1.png",
+			"size": 694
+		},
+		{
+			"name": "js/ace/css/main-10.png",
+			"size": 109
+		},
+		{
+			"name": "js/ace/css/main-11.png",
+			"size": 115
+		},
+		{
+			"name": "js/ace/css/main-12.png",
+			"size": 87
+		},
+		{
+			"name": "js/ace/css/main-13.png",
+			"size": 88
+		},
+		{
+			"name": "js/ace/css/main-14.png",
+			"size": 85
+		},
+		{
+			"name": "js/ace/css/main-15.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/main-16.png",
+			"size": 160
+		},
+		{
+			"name": "js/ace/css/main-2.png",
+			"size": 427
+		},
+		{
+			"name": "js/ace/css/main-3.png",
+			"size": 170
+		},
+		{
+			"name": "js/ace/css/main-4.png",
+			"size": 159
+		},
+		{
+			"name": "js/ace/css/main-5.png",
+			"size": 248
+		},
+		{
+			"name": "js/ace/css/main-6.png",
+			"size": 128
+		},
+		{
+			"name": "js/ace/css/main-7.png",
+			"size": 248
+		},
+		{
+			"name": "js/ace/css/main-8.png",
+			"size": 126
+		},
+		{
+			"name": "js/ace/css/main-9.png",
+			"size": 109
+		},
+		{
+			"name": "js/ace/css/merbivore-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/merbivore_soft-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/mono_industrial-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/monokai-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/one_dark-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/pastel_on_dark-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/solarized_dark-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/solarized_light-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/sqlserver-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/terminal-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/textmate-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/theme/ambiance.css",
+			"size": 3651
+		},
+		{
+			"name": "js/ace/css/theme/chaos.css",
+			"size": 2789
+		},
+		{
+			"name": "js/ace/css/theme/chrome.css",
+			"size": 2517
+		},
+		{
+			"name": "js/ace/css/theme/clouds.css",
+			"size": 1853
+		},
+		{
+			"name": "js/ace/css/theme/clouds_midnight.css",
+			"size": 2202
+		},
+		{
+			"name": "js/ace/css/theme/cobalt.css",
+			"size": 2149
+		},
+		{
+			"name": "js/ace/css/theme/crimson_editor.css",
+			"size": 2599
+		},
+		{
+			"name": "js/ace/css/theme/dawn.css",
+			"size": 2033
+		},
+		{
+			"name": "js/ace/css/theme/dracula.css",
+			"size": 2364
+		},
+		{
+			"name": "js/ace/css/theme/dreamweaver.css",
+			"size": 2952
+		},
+		{
+			"name": "js/ace/css/theme/eclipse.css",
+			"size": 1884
+		},
+		{
+			"name": "js/ace/css/theme/github.css",
+			"size": 1956
+		},
+		{
+			"name": "js/ace/css/theme/gob.css",
+			"size": 2179
+		},
+		{
+			"name": "js/ace/css/theme/gruvbox.css",
+			"size": 1428
+		},
+		{
+			"name": "js/ace/css/theme/idle_fingers.css",
+			"size": 2021
+		},
+		{
+			"name": "js/ace/css/theme/iplastic.css",
+			"size": 2495
+		},
+		{
+			"name": "js/ace/css/theme/katzenmilch.css",
+			"size": 3025
+		},
+		{
+			"name": "js/ace/css/theme/kr_theme.css",
+			"size": 2081
+		},
+		{
+			"name": "js/ace/css/theme/kuroir.css",
+			"size": 1903
+		},
+		{
+			"name": "js/ace/css/theme/merbivore.css",
+			"size": 2011
+		},
+		{
+			"name": "js/ace/css/theme/merbivore_soft.css",
+			"size": 2219
+		},
+		{
+			"name": "js/ace/css/theme/mono_industrial.css",
+			"size": 2572
+		},
+		{
+			"name": "js/ace/css/theme/monokai.css",
+			"size": 2162
+		},
+		{
+			"name": "js/ace/css/theme/nord_dark.css",
+			"size": 1929
+		},
+		{
+			"name": "js/ace/css/theme/one_dark.css",
+			"size": 2481
+		},
+		{
+			"name": "js/ace/css/theme/pastel_on_dark.css",
+			"size": 2416
+		},
+		{
+			"name": "js/ace/css/theme/solarized_dark.css",
+			"size": 2075
+		},
+		{
+			"name": "js/ace/css/theme/solarized_light.css",
+			"size": 2125
+		},
+		{
+			"name": "js/ace/css/theme/sqlserver.css",
+			"size": 2704
+		},
+		{
+			"name": "js/ace/css/theme/terminal.css",
+			"size": 2702
+		},
+		{
+			"name": "js/ace/css/theme/textmate.css",
+			"size": 2381
+		},
+		{
+			"name": "js/ace/css/theme/tomorrow.css",
+			"size": 2341
+		},
+		{
+			"name": "js/ace/css/theme/tomorrow_night.css",
+			"size": 2603
+		},
+		{
+			"name": "js/ace/css/theme/tomorrow_night_blue.css",
+			"size": 2807
+		},
+		{
+			"name": "js/ace/css/theme/tomorrow_night_bright.css",
+			"size": 3285
+		},
+		{
+			"name": "js/ace/css/theme/tomorrow_night_eighties.css",
+			"size": 2995
+		},
+		{
+			"name": "js/ace/css/theme/twilight.css",
+			"size": 2261
+		},
+		{
+			"name": "js/ace/css/theme/vibrant_ink.css",
+			"size": 1976
+		},
+		{
+			"name": "js/ace/css/theme/xcode.css",
+			"size": 1686
+		},
+		{
+			"name": "js/ace/css/tomorrow-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/css/tomorrow_night-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/tomorrow_night_blue-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/tomorrow_night_bright-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/tomorrow_night_eighties-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/twilight-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/vibrant_ink-1.png",
+			"size": 75
+		},
+		{
+			"name": "js/ace/css/xcode-1.png",
+			"size": 76
+		},
+		{
+			"name": "js/ace/ext-beautify-dbg.js",
+			"size": 12495,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-beautify.js",
+			"size": 4650
+		},
+		{
+			"name": "js/ace/ext-code_lens-dbg.js",
+			"size": 7728,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-code_lens.js",
+			"size": 3887
+		},
+		{
+			"name": "js/ace/ext-elastic_tabstops_lite-dbg.js",
+			"size": 8893,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-elastic_tabstops_lite.js",
+			"size": 3968
+		},
+		{
+			"name": "js/ace/ext-emmet-dbg.js",
+			"size": 48415,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-emmet.js",
+			"size": 25333
+		},
+		{
+			"name": "js/ace/ext-error_marker-dbg.js",
+			"size": 333,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-error_marker.js",
+			"size": 151
+		},
+		{
+			"name": "js/ace/ext-hardwrap-dbg.js",
+			"size": 2844,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-hardwrap.js",
+			"size": 1126
+		},
+		{
+			"name": "js/ace/ext-keybinding_menu-dbg.js",
+			"size": 6032,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-keybinding_menu.js",
+			"size": 3688
+		},
+		{
+			"name": "js/ace/ext-language_tools-dbg.js",
+			"size": 76783,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-language_tools.js",
+			"size": 40426
+		},
+		{
+			"name": "js/ace/ext-linking-dbg.js",
+			"size": 1944,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-linking.js",
+			"size": 1046
+		},
+		{
+			"name": "js/ace/ext-modelist-dbg.js",
+			"size": 7500,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-modelist.js",
+			"size": 4643
+		},
+		{
+			"name": "js/ace/ext-options-dbg.js",
+			"size": 25508,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-options.js",
+			"size": 14842
+		},
+		{
+			"name": "js/ace/ext-prompt-dbg.js",
+			"size": 97223,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-prompt.js",
+			"size": 51361
+		},
+		{
+			"name": "js/ace/ext-rtl-dbg.js",
+			"size": 4490,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-rtl.js",
+			"size": 2444
+		},
+		{
+			"name": "js/ace/ext-searchbox-dbg.js",
+			"size": 17033,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-searchbox.js",
+			"size": 11778
+		},
+		{
+			"name": "js/ace/ext-settings_menu-dbg.js",
+			"size": 26258,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-settings_menu.js",
+			"size": 15314
+		},
+		{
+			"name": "js/ace/ext-spellcheck-dbg.js",
+			"size": 2455,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-spellcheck.js",
+			"size": 1385
+		},
+		{
+			"name": "js/ace/ext-split-dbg.js",
+			"size": 6374,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-split.js",
+			"size": 3613
+		},
+		{
+			"name": "js/ace/ext-static_highlight-dbg.js",
+			"size": 165,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-static_highlight.js",
+			"size": 106
+		},
+		{
+			"name": "js/ace/ext-statusbar-dbg.js",
+			"size": 1859,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-statusbar.js",
+			"size": 1063
+		},
+		{
+			"name": "js/ace/ext-textarea-dbg.js",
+			"size": 157,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-textarea.js",
+			"size": 98
+		},
+		{
+			"name": "js/ace/ext-themelist-dbg.js",
+			"size": 2799,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-themelist.js",
+			"size": 1524
+		},
+		{
+			"name": "js/ace/ext-whitespace-dbg.js",
+			"size": 6556,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/ext-whitespace.js",
+			"size": 3205
+		},
+		{
+			"name": "js/ace/keybinding-emacs-dbg.js",
+			"size": 39906,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/keybinding-emacs.js",
+			"size": 23901
+		},
+		{
+			"name": "js/ace/keybinding-sublime-dbg.js",
+			"size": 11334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/keybinding-sublime.js",
+			"size": 7779
+		},
+		{
+			"name": "js/ace/keybinding-vim-dbg.js",
+			"size": 228010,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/keybinding-vim.js",
+			"size": 113358
+		},
+		{
+			"name": "js/ace/keybinding-vscode-dbg.js",
+			"size": 8190,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/keybinding-vscode.js",
+			"size": 5690
+		},
+		{
+			"name": "js/ace/mode-abap-dbg.js",
+			"size": 9119,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-abap.js",
+			"size": 5927
+		},
+		{
+			"name": "js/ace/mode-abc-dbg.js",
+			"size": 9223,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-abc.js",
+			"size": 4805
+		},
+		{
+			"name": "js/ace/mode-actionscript-dbg.js",
+			"size": 24753,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-actionscript.js",
+			"size": 20625
+		},
+		{
+			"name": "js/ace/mode-ada-dbg.js",
+			"size": 4131,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-ada.js",
+			"size": 2384
+		},
+		{
+			"name": "js/ace/mode-alda-dbg.js",
+			"size": 10208,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-alda.js",
+			"size": 5095
+		},
+		{
+			"name": "js/ace/mode-apache_conf-dbg.js",
+			"size": 19121,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-apache_conf.js",
+			"size": 13942
+		},
+		{
+			"name": "js/ace/mode-apex-dbg.js",
+			"size": 15247,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-apex.js",
+			"size": 8381
+		},
+		{
+			"name": "js/ace/mode-applescript-dbg.js",
+			"size": 9627,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-applescript.js",
+			"size": 5529
+		},
+		{
+			"name": "js/ace/mode-aql-dbg.js",
+			"size": 4551,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-aql.js",
+			"size": 3171
+		},
+		{
+			"name": "js/ace/mode-asciidoc-dbg.js",
+			"size": 13846,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-asciidoc.js",
+			"size": 8243
+		},
+		{
+			"name": "js/ace/mode-asl-dbg.js",
+			"size": 15804,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-asl.js",
+			"size": 8764
+		},
+		{
+			"name": "js/ace/mode-assembly_x86-dbg.js",
+			"size": 11766,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-assembly_x86.js",
+			"size": 8904
+		},
+		{
+			"name": "js/ace/mode-autohotkey-dbg.js",
+			"size": 67347,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-autohotkey.js",
+			"size": 63712
+		},
+		{
+			"name": "js/ace/mode-batchfile-dbg.js",
+			"size": 8297,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-batchfile.js",
+			"size": 4899
+		},
+		{
+			"name": "js/ace/mode-c9search-dbg.js",
+			"size": 9598,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-c9search.js",
+			"size": 4053
+		},
+		{
+			"name": "js/ace/mode-c_cpp-dbg.js",
+			"size": 18902,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-c_cpp.js",
+			"size": 11137
+		},
+		{
+			"name": "js/ace/mode-cirru-dbg.js",
+			"size": 6029,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-cirru.js",
+			"size": 3007
+		},
+		{
+			"name": "js/ace/mode-clojure-dbg.js",
+			"size": 12892,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-clojure.js",
+			"size": 8412
+		},
+		{
+			"name": "js/ace/mode-cobol-dbg.js",
+			"size": 3531,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-cobol.js",
+			"size": 2375
+		},
+		{
+			"name": "js/ace/mode-coffee-dbg.js",
+			"size": 14362,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-coffee.js",
+			"size": 7471
+		},
+		{
+			"name": "js/ace/mode-coldfusion-dbg.js",
+			"size": 103255,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-coldfusion.js",
+			"size": 63584
+		},
+		{
+			"name": "js/ace/mode-crystal-dbg.js",
+			"size": 23741,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-crystal.js",
+			"size": 10069
+		},
+		{
+			"name": "js/ace/mode-csharp-dbg.js",
+			"size": 16251,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-csharp.js",
+			"size": 8745
+		},
+		{
+			"name": "js/ace/mode-csound_document-dbg.js",
+			"size": 123999,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-csound_document.js",
+			"size": 72460
+		},
+		{
+			"name": "js/ace/mode-csound_orchestra-dbg.js",
+			"size": 76177,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-csound_orchestra.js",
+			"size": 41416
+		},
+		{
+			"name": "js/ace/mode-csound_score-dbg.js",
+			"size": 14149,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-csound_score.js",
+			"size": 7600
+		},
+		{
+			"name": "js/ace/mode-csp-dbg.js",
+			"size": 2120,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-csp.js",
+			"size": 1266
+		},
+		{
+			"name": "js/ace/mode-css-dbg.js",
+			"size": 31294,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-css.js",
+			"size": 20844
+		},
+		{
+			"name": "js/ace/mode-curly-dbg.js",
+			"size": 101292,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-curly.js",
+			"size": 62070
+		},
+		{
+			"name": "js/ace/mode-d-dbg.js",
+			"size": 17471,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-d.js",
+			"size": 9001
+		},
+		{
+			"name": "js/ace/mode-dart-dbg.js",
+			"size": 24778,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-dart.js",
+			"size": 14436
+		},
+		{
+			"name": "js/ace/mode-diff-dbg.js",
+			"size": 4540,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-diff.js",
+			"size": 2364
+		},
+		{
+			"name": "js/ace/mode-django-dbg.js",
+			"size": 102272,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-django.js",
+			"size": 62502
+		},
+		{
+			"name": "js/ace/mode-dockerfile-dbg.js",
+			"size": 16058,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-dockerfile.js",
+			"size": 8293
+		},
+		{
+			"name": "js/ace/mode-dot-dbg.js",
+			"size": 13695,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-dot.js",
+			"size": 7544
+		},
+		{
+			"name": "js/ace/mode-drools-dbg.js",
+			"size": 18658,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-drools.js",
+			"size": 11226
+		},
+		{
+			"name": "js/ace/mode-edifact-dbg.js",
+			"size": 5215,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-edifact.js",
+			"size": 2823
+		},
+		{
+			"name": "js/ace/mode-eiffel-dbg.js",
+			"size": 5111,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-eiffel.js",
+			"size": 2901
+		},
+		{
+			"name": "js/ace/mode-ejs-dbg.js",
+			"size": 139158,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-ejs.js",
+			"size": 81536
+		},
+		{
+			"name": "js/ace/mode-elixir-dbg.js",
+			"size": 23357,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-elixir.js",
+			"size": 15822
+		},
+		{
+			"name": "js/ace/mode-elm-dbg.js",
+			"size": 9437,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-elm.js",
+			"size": 5001
+		},
+		{
+			"name": "js/ace/mode-erlang-dbg.js",
+			"size": 46504,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-erlang.js",
+			"size": 29827
+		},
+		{
+			"name": "js/ace/mode-forth-dbg.js",
+			"size": 11307,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-forth.js",
+			"size": 7053
+		},
+		{
+			"name": "js/ace/mode-fortran-dbg.js",
+			"size": 15118,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-fortran.js",
+			"size": 8704
+		},
+		{
+			"name": "js/ace/mode-fsharp-dbg.js",
+			"size": 10370,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-fsharp.js",
+			"size": 5483
+		},
+		{
+			"name": "js/ace/mode-fsl-dbg.js",
+			"size": 8516,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-fsl.js",
+			"size": 4758
+		},
+		{
+			"name": "js/ace/mode-ftl-dbg.js",
+			"size": 50670,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-ftl.js",
+			"size": 32513
+		},
+		{
+			"name": "js/ace/mode-gcode-dbg.js",
+			"size": 2993,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-gcode.js",
+			"size": 1487
+		},
+		{
+			"name": "js/ace/mode-gherkin-dbg.js",
+			"size": 4826,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-gherkin.js",
+			"size": 2439
+		},
+		{
+			"name": "js/ace/mode-gitignore-dbg.js",
+			"size": 1648,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-gitignore.js",
+			"size": 908
+		},
+		{
+			"name": "js/ace/mode-glsl-dbg.js",
+			"size": 21763,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-glsl.js",
+			"size": 13150
+		},
+		{
+			"name": "js/ace/mode-gobstones-dbg.js",
+			"size": 43559,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-gobstones.js",
+			"size": 28005
+		},
+		{
+			"name": "js/ace/mode-golang-dbg.js",
+			"size": 13675,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-golang.js",
+			"size": 6873
+		},
+		{
+			"name": "js/ace/mode-graphqlschema-dbg.js",
+			"size": 6651,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-graphqlschema.js",
+			"size": 3527
+		},
+		{
+			"name": "js/ace/mode-groovy-dbg.js",
+			"size": 38282,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-groovy.js",
+			"size": 22585
+		},
+		{
+			"name": "js/ace/mode-haml-dbg.js",
+			"size": 77620,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-haml.js",
+			"size": 46010
+		},
+		{
+			"name": "js/ace/mode-handlebars-dbg.js",
+			"size": 102830,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-handlebars.js",
+			"size": 62879
+		},
+		{
+			"name": "js/ace/mode-haskell-dbg.js",
+			"size": 17242,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-haskell.js",
+			"size": 11567
+		},
+		{
+			"name": "js/ace/mode-haskell_cabal-dbg.js",
+			"size": 4296,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-haskell_cabal.js",
+			"size": 2258
+		},
+		{
+			"name": "js/ace/mode-haxe-dbg.js",
+			"size": 12090,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-haxe.js",
+			"size": 6447
+		},
+		{
+			"name": "js/ace/mode-hjson-dbg.js",
+			"size": 11087,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-hjson.js",
+			"size": 6001
+		},
+		{
+			"name": "js/ace/mode-html-dbg.js",
+			"size": 99925,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-html.js",
+			"size": 61231
+		},
+		{
+			"name": "js/ace/mode-html_elixir-dbg.js",
+			"size": 125354,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-html_elixir.js",
+			"size": 78151
+		},
+		{
+			"name": "js/ace/mode-html_ruby-dbg.js",
+			"size": 139859,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-html_ruby.js",
+			"size": 81816
+		},
+		{
+			"name": "js/ace/mode-ini-dbg.js",
+			"size": 4738,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-ini.js",
+			"size": 2663
+		},
+		{
+			"name": "js/ace/mode-io-dbg.js",
+			"size": 9051,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-io.js",
+			"size": 5380
+		},
+		{
+			"name": "js/ace/mode-jack-dbg.js",
+			"size": 10922,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-jack.js",
+			"size": 5748
+		},
+		{
+			"name": "js/ace/mode-jade-dbg.js",
+			"size": 79902,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-jade.js",
+			"size": 47084
+		},
+		{
+			"name": "js/ace/mode-java-dbg.js",
+			"size": 39965,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-java.js",
+			"size": 23438
+		},
+		{
+			"name": "js/ace/mode-javascript-dbg.js",
+			"size": 31319,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-javascript.js",
+			"size": 18271
+		},
+		{
+			"name": "js/ace/mode-json-dbg.js",
+			"size": 10188,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-json.js",
+			"size": 5200
+		},
+		{
+			"name": "js/ace/mode-json5-dbg.js",
+			"size": 11121,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-json5.js",
+			"size": 5804
+		},
+		{
+			"name": "js/ace/mode-jsoniq-dbg.js",
+			"size": 327673,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-jsoniq.js",
+			"size": 233804
+		},
+		{
+			"name": "js/ace/mode-jsp-dbg.js",
+			"size": 58905,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-jsp.js",
+			"size": 36961
+		},
+		{
+			"name": "js/ace/mode-jssm-dbg.js",
+			"size": 10536,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-jssm.js",
+			"size": 5925
+		},
+		{
+			"name": "js/ace/mode-jsx-dbg.js",
+			"size": 13191,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-jsx.js",
+			"size": 6955
+		},
+		{
+			"name": "js/ace/mode-julia-dbg.js",
+			"size": 11954,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-julia.js",
+			"size": 7575
+		},
+		{
+			"name": "js/ace/mode-kotlin-dbg.js",
+			"size": 24692,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-kotlin.js",
+			"size": 12005
+		},
+		{
+			"name": "js/ace/mode-latex-dbg.js",
+			"size": 9408,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-latex.js",
+			"size": 5059
+		},
+		{
+			"name": "js/ace/mode-latte-dbg.js",
+			"size": 106546,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-latte.js",
+			"size": 64783
+		},
+		{
+			"name": "js/ace/mode-less-dbg.js",
+			"size": 35419,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-less.js",
+			"size": 22830
+		},
+		{
+			"name": "js/ace/mode-liquid-dbg.js",
+			"size": 108227,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-liquid.js",
+			"size": 65588
+		},
+		{
+			"name": "js/ace/mode-lisp-dbg.js",
+			"size": 3393,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-lisp.js",
+			"size": 1990
+		},
+		{
+			"name": "js/ace/mode-livescript-dbg.js",
+			"size": 8388,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-livescript.js",
+			"size": 5121
+		},
+		{
+			"name": "js/ace/mode-logiql-dbg.js",
+			"size": 10511,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-logiql.js",
+			"size": 5714
+		},
+		{
+			"name": "js/ace/mode-logtalk-dbg.js",
+			"size": 15740,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-logtalk.js",
+			"size": 10664
+		},
+		{
+			"name": "js/ace/mode-lsl-dbg.js",
+			"size": 31561,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-lsl.js",
+			"size": 26642
+		},
+		{
+			"name": "js/ace/mode-lua-dbg.js",
+			"size": 15069,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-lua.js",
+			"size": 7893
+		},
+		{
+			"name": "js/ace/mode-luapage-dbg.js",
+			"size": 116426,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-luapage.js",
+			"size": 69973
+		},
+		{
+			"name": "js/ace/mode-lucene-dbg.js",
+			"size": 4738,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-lucene.js",
+			"size": 2468
+		},
+		{
+			"name": "js/ace/mode-makefile-dbg.js",
+			"size": 13117,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-makefile.js",
+			"size": 6631
+		},
+		{
+			"name": "js/ace/mode-markdown-dbg.js",
+			"size": 122022,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-markdown.js",
+			"size": 72609
+		},
+		{
+			"name": "js/ace/mode-mask-dbg.js",
+			"size": 70717,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-mask.js",
+			"size": 41970
+		},
+		{
+			"name": "js/ace/mode-matlab-dbg.js",
+			"size": 23284,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-matlab.js",
+			"size": 20920
+		},
+		{
+			"name": "js/ace/mode-maze-dbg.js",
+			"size": 9169,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-maze.js",
+			"size": 4951
+		},
+		{
+			"name": "js/ace/mode-mediawiki-dbg.js",
+			"size": 19254,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-mediawiki.js",
+			"size": 9389
+		},
+		{
+			"name": "js/ace/mode-mel-dbg.js",
+			"size": 28867,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-mel.js",
+			"size": 24962
+		},
+		{
+			"name": "js/ace/mode-mips-dbg.js",
+			"size": 9191,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-mips.js",
+			"size": 5332
+		},
+		{
+			"name": "js/ace/mode-mixal-dbg.js",
+			"size": 5112,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-mixal.js",
+			"size": 2868
+		},
+		{
+			"name": "js/ace/mode-mushcode-dbg.js",
+			"size": 12097,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-mushcode.js",
+			"size": 8188
+		},
+		{
+			"name": "js/ace/mode-mysql-dbg.js",
+			"size": 8721,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-mysql.js",
+			"size": 6457
+		},
+		{
+			"name": "js/ace/mode-nginx-dbg.js",
+			"size": 20248,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-nginx.js",
+			"size": 15920
+		},
+		{
+			"name": "js/ace/mode-nim-dbg.js",
+			"size": 12155,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-nim.js",
+			"size": 6691
+		},
+		{
+			"name": "js/ace/mode-nix-dbg.js",
+			"size": 23555,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-nix.js",
+			"size": 13283
+		},
+		{
+			"name": "js/ace/mode-nsis-dbg.js",
+			"size": 14908,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-nsis.js",
+			"size": 10429
+		},
+		{
+			"name": "js/ace/mode-nunjucks-dbg.js",
+			"size": 105793,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-nunjucks.js",
+			"size": 64517
+		},
+		{
+			"name": "js/ace/mode-objectivec-dbg.js",
+			"size": 65375,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-objectivec.js",
+			"size": 54768
+		},
+		{
+			"name": "js/ace/mode-ocaml-dbg.js",
+			"size": 21528,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-ocaml.js",
+			"size": 16196
+		},
+		{
+			"name": "js/ace/mode-pascal-dbg.js",
+			"size": 7846,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-pascal.js",
+			"size": 4206
+		},
+		{
+			"name": "js/ace/mode-perl-dbg.js",
+			"size": 13066,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-perl.js",
+			"size": 7527
+		},
+		{
+			"name": "js/ace/mode-pgsql-dbg.js",
+			"size": 86287,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-pgsql.js",
+			"size": 60266
+		},
+		{
+			"name": "js/ace/mode-php-dbg.js",
+			"size": 594858,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-php.js",
+			"size": 479403
+		},
+		{
+			"name": "js/ace/mode-php_laravel_blade-dbg.js",
+			"size": 601995,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-php_laravel_blade.js",
+			"size": 483696
+		},
+		{
+			"name": "js/ace/mode-pig-dbg.js",
+			"size": 10904,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-pig.js",
+			"size": 6355
+		},
+		{
+			"name": "js/ace/mode-plain_text-dbg.js",
+			"size": 975,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-plain_text.js",
+			"size": 569
+		},
+		{
+			"name": "js/ace/mode-powershell-dbg.js",
+			"size": 38781,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-powershell.js",
+			"size": 32937
+		},
+		{
+			"name": "js/ace/mode-praat-dbg.js",
+			"size": 17677,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-praat.js",
+			"size": 10644
+		},
+		{
+			"name": "js/ace/mode-prisma-dbg.js",
+			"size": 15361,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-prisma.js",
+			"size": 8276
+		},
+		{
+			"name": "js/ace/mode-prolog-dbg.js",
+			"size": 14144,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-prolog.js",
+			"size": 8402
+		},
+		{
+			"name": "js/ace/mode-properties-dbg.js",
+			"size": 2224,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-properties.js",
+			"size": 1110
+		},
+		{
+			"name": "js/ace/mode-protobuf-dbg.js",
+			"size": 21961,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-protobuf.js",
+			"size": 12701
+		},
+		{
+			"name": "js/ace/mode-puppet-dbg.js",
+			"size": 12678,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-puppet.js",
+			"size": 7091
+		},
+		{
+			"name": "js/ace/mode-python-dbg.js",
+			"size": 15271,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-python.js",
+			"size": 7960
+		},
+		{
+			"name": "js/ace/mode-qml-dbg.js",
+			"size": 23395,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-qml.js",
+			"size": 16491
+		},
+		{
+			"name": "js/ace/mode-r-dbg.js",
+			"size": 9780,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-r.js",
+			"size": 5072
+		},
+		{
+			"name": "js/ace/mode-raku-dbg.js",
+			"size": 24783,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-raku.js",
+			"size": 18147
+		},
+		{
+			"name": "js/ace/mode-razor-dbg.js",
+			"size": 111962,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-razor.js",
+			"size": 68061
+		},
+		{
+			"name": "js/ace/mode-rdoc-dbg.js",
+			"size": 7905,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-rdoc.js",
+			"size": 4571
+		},
+		{
+			"name": "js/ace/mode-red-dbg.js",
+			"size": 19957,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-red.js",
+			"size": 12904
+		},
+		{
+			"name": "js/ace/mode-redshift-dbg.js",
+			"size": 13922,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-redshift.js",
+			"size": 7931
+		},
+		{
+			"name": "js/ace/mode-rhtml-dbg.js",
+			"size": 109013,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-rhtml.js",
+			"size": 66006
+		},
+		{
+			"name": "js/ace/mode-rst-dbg.js",
+			"size": 5837,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-rst.js",
+			"size": 3082
+		},
+		{
+			"name": "js/ace/mode-ruby-dbg.js",
+			"size": 38923,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-ruby.js",
+			"size": 20096
+		},
+		{
+			"name": "js/ace/mode-rust-dbg.js",
+			"size": 11191,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-rust.js",
+			"size": 6664
+		},
+		{
+			"name": "js/ace/mode-sass-dbg.js",
+			"size": 23900,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-sass.js",
+			"size": 15695
+		},
+		{
+			"name": "js/ace/mode-scad-dbg.js",
+			"size": 12715,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-scad.js",
+			"size": 6419
+		},
+		{
+			"name": "js/ace/mode-scala-dbg.js",
+			"size": 38392,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-scala.js",
+			"size": 22770
+		},
+		{
+			"name": "js/ace/mode-scheme-dbg.js",
+			"size": 7076,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-scheme.js",
+			"size": 3853
+		},
+		{
+			"name": "js/ace/mode-scrypt-dbg.js",
+			"size": 13108,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-scrypt.js",
+			"size": 7092
+		},
+		{
+			"name": "js/ace/mode-scss-dbg.js",
+			"size": 37171,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-scss.js",
+			"size": 24098
+		},
+		{
+			"name": "js/ace/mode-sh-dbg.js",
+			"size": 14580,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-sh.js",
+			"size": 7403
+		},
+		{
+			"name": "js/ace/mode-sjs-dbg.js",
+			"size": 37131,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-sjs.js",
+			"size": 21286
+		},
+		{
+			"name": "js/ace/mode-slim-dbg.js",
+			"size": 197768,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-slim.js",
+			"size": 112180
+		},
+		{
+			"name": "js/ace/mode-smarty-dbg.js",
+			"size": 104841,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-smarty.js",
+			"size": 64570
+		},
+		{
+			"name": "js/ace/mode-smithy-dbg.js",
+			"size": 15763,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-smithy.js",
+			"size": 8662
+		},
+		{
+			"name": "js/ace/mode-snippets-dbg.js",
+			"size": 7062,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-snippets.js",
+			"size": 3838
+		},
+		{
+			"name": "js/ace/mode-soy_template-dbg.js",
+			"size": 113337,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-soy_template.js",
+			"size": 69615
+		},
+		{
+			"name": "js/ace/mode-space-dbg.js",
+			"size": 4848,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-space.js",
+			"size": 2234
+		},
+		{
+			"name": "js/ace/mode-sparql-dbg.js",
+			"size": 12385,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-sparql.js",
+			"size": 7886
+		},
+		{
+			"name": "js/ace/mode-sql-dbg.js",
+			"size": 8328,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-sql.js",
+			"size": 4524
+		},
+		{
+			"name": "js/ace/mode-sqlserver-dbg.js",
+			"size": 23227,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-sqlserver.js",
+			"size": 16466
+		},
+		{
+			"name": "js/ace/mode-stylus-dbg.js",
+			"size": 21045,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-stylus.js",
+			"size": 14373
+		},
+		{
+			"name": "js/ace/mode-svg-dbg.js",
+			"size": 57712,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-svg.js",
+			"size": 31827
+		},
+		{
+			"name": "js/ace/mode-swift-dbg.js",
+			"size": 13361,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-swift.js",
+			"size": 7039
+		},
+		{
+			"name": "js/ace/mode-tcl-dbg.js",
+			"size": 12226,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-tcl.js",
+			"size": 6209
+		},
+		{
+			"name": "js/ace/mode-terraform-dbg.js",
+			"size": 12937,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-terraform.js",
+			"size": 6841
+		},
+		{
+			"name": "js/ace/mode-tex-dbg.js",
+			"size": 5022,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-tex.js",
+			"size": 2749
+		},
+		{
+			"name": "js/ace/mode-text-dbg.js",
+			"size": 326,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-text.js",
+			"size": 144
+		},
+		{
+			"name": "js/ace/mode-textile-dbg.js",
+			"size": 4098,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-textile.js",
+			"size": 2131
+		},
+		{
+			"name": "js/ace/mode-toml-dbg.js",
+			"size": 4012,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-toml.js",
+			"size": 2161
+		},
+		{
+			"name": "js/ace/mode-tsx-dbg.js",
+			"size": 34133,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-tsx.js",
+			"size": 20093
+		},
+		{
+			"name": "js/ace/mode-turtle-dbg.js",
+			"size": 9270,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-turtle.js",
+			"size": 5055
+		},
+		{
+			"name": "js/ace/mode-twig-dbg.js",
+			"size": 105480,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-twig.js",
+			"size": 64704
+		},
+		{
+			"name": "js/ace/mode-typescript-dbg.js",
+			"size": 33760,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-typescript.js",
+			"size": 19837
+		},
+		{
+			"name": "js/ace/mode-vala-dbg.js",
+			"size": 27375,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-vala.js",
+			"size": 16590
+		},
+		{
+			"name": "js/ace/mode-vbscript-dbg.js",
+			"size": 24334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-vbscript.js",
+			"size": 12001
+		},
+		{
+			"name": "js/ace/mode-velocity-dbg.js",
+			"size": 108999,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-velocity.js",
+			"size": 66013
+		},
+		{
+			"name": "js/ace/mode-verilog-dbg.js",
+			"size": 4378,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-verilog.js",
+			"size": 2956
+		},
+		{
+			"name": "js/ace/mode-vhdl-dbg.js",
+			"size": 3716,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-vhdl.js",
+			"size": 2153
+		},
+		{
+			"name": "js/ace/mode-visualforce-dbg.js",
+			"size": 104045,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-visualforce.js",
+			"size": 63747
+		},
+		{
+			"name": "js/ace/mode-wollok-dbg.js",
+			"size": 35132,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-wollok.js",
+			"size": 20394
+		},
+		{
+			"name": "js/ace/mode-xml-dbg.js",
+			"size": 23522,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-xml.js",
+			"size": 11918
+		},
+		{
+			"name": "js/ace/mode-xquery-dbg.js",
+			"size": 324880,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-xquery.js",
+			"size": 231189
+		},
+		{
+			"name": "js/ace/mode-yaml-dbg.js",
+			"size": 10269,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-yaml.js",
+			"size": 4771
+		},
+		{
+			"name": "js/ace/mode-zeek-dbg.js",
+			"size": 16783,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/mode-zeek.js",
+			"size": 9118
+		},
+		{
+			"name": "js/ace/snippets/abap-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/abap.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/abc-dbg.js",
+			"size": 1401,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/abc.js",
+			"size": 1115
+		},
+		{
+			"name": "js/ace/snippets/actionscript-dbg.js",
+			"size": 3660,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/actionscript.js",
+			"size": 3122
+		},
+		{
+			"name": "js/ace/snippets/ada-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/ada.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/alda-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/alda.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/apache_conf-dbg.js",
+			"size": 337,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/apache_conf.js",
+			"size": 155
+		},
+		{
+			"name": "js/ace/snippets/apex-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/apex.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/applescript-dbg.js",
+			"size": 337,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/applescript.js",
+			"size": 155
+		},
+		{
+			"name": "js/ace/snippets/aql-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/aql.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/asciidoc-dbg.js",
+			"size": 334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/asciidoc.js",
+			"size": 152
+		},
+		{
+			"name": "js/ace/snippets/asl-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/asl.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/assembly_x86-dbg.js",
+			"size": 338,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/assembly_x86.js",
+			"size": 156
+		},
+		{
+			"name": "js/ace/snippets/autohotkey-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/autohotkey.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/batchfile-dbg.js",
+			"size": 335,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/batchfile.js",
+			"size": 153
+		},
+		{
+			"name": "js/ace/snippets/c9search-dbg.js",
+			"size": 334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/c9search.js",
+			"size": 152
+		},
+		{
+			"name": "js/ace/snippets/c_cpp-dbg.js",
+			"size": 3271,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/c_cpp.js",
+			"size": 2785
+		},
+		{
+			"name": "js/ace/snippets/cirru-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/cirru.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/clojure-dbg.js",
+			"size": 2576,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/clojure.js",
+			"size": 2172
+		},
+		{
+			"name": "js/ace/snippets/cobol-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/cobol.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/coffee-dbg.js",
+			"size": 2770,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/coffee.js",
+			"size": 2356
+		},
+		{
+			"name": "js/ace/snippets/coldfusion-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/coldfusion.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/crystal-dbg.js",
+			"size": 333,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/crystal.js",
+			"size": 151
+		},
+		{
+			"name": "js/ace/snippets/csharp-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/csharp.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/csound_document-dbg.js",
+			"size": 678,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/csound_document.js",
+			"size": 434
+		},
+		{
+			"name": "js/ace/snippets/csound_orchestra-dbg.js",
+			"size": 1524,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/csound_orchestra.js",
+			"size": 1206
+		},
+		{
+			"name": "js/ace/snippets/csound_score-dbg.js",
+			"size": 338,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/csound_score.js",
+			"size": 156
+		},
+		{
+			"name": "js/ace/snippets/csp-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/csp.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/css-dbg.js",
+			"size": 21928,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/css.js",
+			"size": 19770
+		},
+		{
+			"name": "js/ace/snippets/curly-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/curly.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/d-dbg.js",
+			"size": 327,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/d.js",
+			"size": 145
+		},
+		{
+			"name": "js/ace/snippets/dart-dbg.js",
+			"size": 1830,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/dart.js",
+			"size": 1440
+		},
+		{
+			"name": "js/ace/snippets/diff-dbg.js",
+			"size": 920,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/diff.js",
+			"size": 674
+		},
+		{
+			"name": "js/ace/snippets/django-dbg.js",
+			"size": 4563,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/django.js",
+			"size": 4123
+		},
+		{
+			"name": "js/ace/snippets/dockerfile-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/dockerfile.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/dot-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/dot.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/drools-dbg.js",
+			"size": 757,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/drools.js",
+			"size": 495
+		},
+		{
+			"name": "js/ace/snippets/edifact-dbg.js",
+			"size": 5195,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/edifact.js",
+			"size": 4471
+		},
+		{
+			"name": "js/ace/snippets/eiffel-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/eiffel.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/ejs-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/ejs.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/elixir-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/elixir.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/elm-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/elm.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/erlang-dbg.js",
+			"size": 4241,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/erlang.js",
+			"size": 3697
+		},
+		{
+			"name": "js/ace/snippets/forth-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/forth.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/fortran-dbg.js",
+			"size": 333,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/fortran.js",
+			"size": 151
+		},
+		{
+			"name": "js/ace/snippets/fsharp-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/fsharp.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/fsl-dbg.js",
+			"size": 469,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/fsl.js",
+			"size": 246
+		},
+		{
+			"name": "js/ace/snippets/ftl-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/ftl.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/gcode-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/gcode.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/gherkin-dbg.js",
+			"size": 333,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/gherkin.js",
+			"size": 151
+		},
+		{
+			"name": "js/ace/snippets/gitignore-dbg.js",
+			"size": 335,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/gitignore.js",
+			"size": 153
+		},
+		{
+			"name": "js/ace/snippets/glsl-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/glsl.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/gobstones-dbg.js",
+			"size": 42452,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/gobstones.js",
+			"size": 38820
+		},
+		{
+			"name": "js/ace/snippets/golang-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/golang.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/graphqlschema-dbg.js",
+			"size": 1080,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/graphqlschema.js",
+			"size": 792
+		},
+		{
+			"name": "js/ace/snippets/groovy-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/groovy.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/haml-dbg.js",
+			"size": 833,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/haml.js",
+			"size": 569
+		},
+		{
+			"name": "js/ace/snippets/handlebars-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/handlebars.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/haskell-dbg.js",
+			"size": 2477,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/haskell.js",
+			"size": 2089
+		},
+		{
+			"name": "js/ace/snippets/haskell_cabal-dbg.js",
+			"size": 339,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/haskell_cabal.js",
+			"size": 157
+		},
+		{
+			"name": "js/ace/snippets/haxe-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/haxe.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/hjson-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/hjson.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/html-dbg.js",
+			"size": 21903,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/html.js",
+			"size": 19973
+		},
+		{
+			"name": "js/ace/snippets/html_elixir-dbg.js",
+			"size": 337,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/html_elixir.js",
+			"size": 155
+		},
+		{
+			"name": "js/ace/snippets/html_ruby-dbg.js",
+			"size": 335,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/html_ruby.js",
+			"size": 153
+		},
+		{
+			"name": "js/ace/snippets/ini-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/ini.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/io-dbg.js",
+			"size": 2170,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/io.js",
+			"size": 1435
+		},
+		{
+			"name": "js/ace/snippets/jack-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/jack.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/jade-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/jade.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/java-dbg.js",
+			"size": 5177,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/java.js",
+			"size": 4473
+		},
+		{
+			"name": "js/ace/snippets/javascript-dbg.js",
+			"size": 4583,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/javascript.js",
+			"size": 3969
+		},
+		{
+			"name": "js/ace/snippets/json-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/json.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/json5-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/json5.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/jsoniq-dbg.js",
+			"size": 2193,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/jsoniq.js",
+			"size": 1847
+		},
+		{
+			"name": "js/ace/snippets/jsp-dbg.js",
+			"size": 3410,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/jsp.js",
+			"size": 2988
+		},
+		{
+			"name": "js/ace/snippets/jssm-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/jssm.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/jsx-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/jsx.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/julia-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/julia.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/kotlin-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/kotlin.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/latex-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/latex.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/latte-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/latte.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/less-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/less.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/liquid-dbg.js",
+			"size": 22323,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/liquid.js",
+			"size": 20337
+		},
+		{
+			"name": "js/ace/snippets/lisp-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/lisp.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/livescript-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/livescript.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/logiql-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/logiql.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/logtalk-dbg.js",
+			"size": 333,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/logtalk.js",
+			"size": 151
+		},
+		{
+			"name": "js/ace/snippets/lsl-dbg.js",
+			"size": 38231,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/lsl.js",
+			"size": 35543
+		},
+		{
+			"name": "js/ace/snippets/lua-dbg.js",
+			"size": 894,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/lua.js",
+			"size": 628
+		},
+		{
+			"name": "js/ace/snippets/luapage-dbg.js",
+			"size": 333,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/luapage.js",
+			"size": 151
+		},
+		{
+			"name": "js/ace/snippets/lucene-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/lucene.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/makefile-dbg.js",
+			"size": 555,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/makefile.js",
+			"size": 323
+		},
+		{
+			"name": "js/ace/snippets/markdown-dbg.js",
+			"size": 2516,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/markdown.js",
+			"size": 2116
+		},
+		{
+			"name": "js/ace/snippets/mask-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/mask.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/matlab-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/matlab.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/maze-dbg.js",
+			"size": 633,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/maze.js",
+			"size": 391
+		},
+		{
+			"name": "js/ace/snippets/mediawiki-dbg.js",
+			"size": 335,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/mediawiki.js",
+			"size": 153
+		},
+		{
+			"name": "js/ace/snippets/mel-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/mel.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/mips-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/mips.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/mixal-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/mixal.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/mushcode-dbg.js",
+			"size": 334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/mushcode.js",
+			"size": 152
+		},
+		{
+			"name": "js/ace/snippets/mysql-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/mysql.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/nginx-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/nginx.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/nim-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/nim.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/nix-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/nix.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/nsis-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/nsis.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/nunjucks-dbg.js",
+			"size": 334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/nunjucks.js",
+			"size": 152
+		},
+		{
+			"name": "js/ace/snippets/objectivec-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/objectivec.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/ocaml-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/ocaml.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/pascal-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/pascal.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/perl-dbg.js",
+			"size": 6552,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/perl.js",
+			"size": 5634
+		},
+		{
+			"name": "js/ace/snippets/pgsql-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/pgsql.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/php-dbg.js",
+			"size": 8063,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/php.js",
+			"size": 7073
+		},
+		{
+			"name": "js/ace/snippets/php_laravel_blade-dbg.js",
+			"size": 343,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/php_laravel_blade.js",
+			"size": 161
+		},
+		{
+			"name": "js/ace/snippets/pig-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/pig.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/plain_text-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/plain_text.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/powershell-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/powershell.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/praat-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/praat.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/prisma-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/prisma.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/prolog-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/prolog.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/properties-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/properties.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/protobuf-dbg.js",
+			"size": 334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/protobuf.js",
+			"size": 152
+		},
+		{
+			"name": "js/ace/snippets/puppet-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/puppet.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/python-dbg.js",
+			"size": 4350,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/python.js",
+			"size": 3810
+		},
+		{
+			"name": "js/ace/snippets/qml-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/qml.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/r-dbg.js",
+			"size": 3216,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/r.js",
+			"size": 2750
+		},
+		{
+			"name": "js/ace/snippets/raku-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/raku.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/razor-dbg.js",
+			"size": 516,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/razor.js",
+			"size": 286
+		},
+		{
+			"name": "js/ace/snippets/rdoc-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/rdoc.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/red-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/red.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/redshift-dbg.js",
+			"size": 334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/redshift.js",
+			"size": 152
+		},
+		{
+			"name": "js/ace/snippets/rhtml-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/rhtml.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/rst-dbg.js",
+			"size": 830,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/rst.js",
+			"size": 562
+		},
+		{
+			"name": "js/ace/snippets/ruby-dbg.js",
+			"size": 23569,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/ruby.js",
+			"size": 21489
+		},
+		{
+			"name": "js/ace/snippets/rust-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/rust.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/sass-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/sass.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/scad-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/scad.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/scala-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/scala.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/scheme-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/scheme.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/scrypt-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/scrypt.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/scss-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/scss.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/sh-dbg.js",
+			"size": 2574,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/sh.js",
+			"size": 2184
+		},
+		{
+			"name": "js/ace/snippets/sjs-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/sjs.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/slim-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/slim.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/smarty-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/smarty.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/smithy-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/smithy.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/snippets-dbg.js",
+			"size": 664,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/snippets.js",
+			"size": 422
+		},
+		{
+			"name": "js/ace/snippets/soy_template-dbg.js",
+			"size": 338,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/soy_template.js",
+			"size": 156
+		},
+		{
+			"name": "js/ace/snippets/space-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/space.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/sparql-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/sparql.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/sql-dbg.js",
+			"size": 1338,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/sql.js",
+			"size": 1062
+		},
+		{
+			"name": "js/ace/snippets/sqlserver-dbg.js",
+			"size": 2627,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/sqlserver.js",
+			"size": 2265
+		},
+		{
+			"name": "js/ace/snippets/stylus-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/stylus.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/svg-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/svg.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/swift-dbg.js",
+			"size": 331,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/swift.js",
+			"size": 149
+		},
+		{
+			"name": "js/ace/snippets/tcl-dbg.js",
+			"size": 2218,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/tcl.js",
+			"size": 1810
+		},
+		{
+			"name": "js/ace/snippets/terraform-dbg.js",
+			"size": 335,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/terraform.js",
+			"size": 153
+		},
+		{
+			"name": "js/ace/snippets/tex-dbg.js",
+			"size": 4360,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/tex.js",
+			"size": 3756
+		},
+		{
+			"name": "js/ace/snippets/text-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/text.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/textile-dbg.js",
+			"size": 950,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/textile.js",
+			"size": 666
+		},
+		{
+			"name": "js/ace/snippets/toml-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/toml.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/tsx-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/tsx.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/turtle-dbg.js",
+			"size": 332,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/turtle.js",
+			"size": 150
+		},
+		{
+			"name": "js/ace/snippets/twig-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/twig.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/typescript-dbg.js",
+			"size": 336,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/typescript.js",
+			"size": 154
+		},
+		{
+			"name": "js/ace/snippets/vala-dbg.js",
+			"size": 5321,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/vala.js",
+			"size": 3547
+		},
+		{
+			"name": "js/ace/snippets/vbscript-dbg.js",
+			"size": 334,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/vbscript.js",
+			"size": 152
+		},
+		{
+			"name": "js/ace/snippets/velocity-dbg.js",
+			"size": 1069,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/velocity.js",
+			"size": 778
+		},
+		{
+			"name": "js/ace/snippets/verilog-dbg.js",
+			"size": 333,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/verilog.js",
+			"size": 151
+		},
+		{
+			"name": "js/ace/snippets/vhdl-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/vhdl.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/visualforce-dbg.js",
+			"size": 337,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/visualforce.js",
+			"size": 155
+		},
+		{
+			"name": "js/ace/snippets/wollok-dbg.js",
+			"size": 1792,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/wollok.js",
+			"size": 1400
+		},
+		{
+			"name": "js/ace/snippets/xml-dbg.js",
+			"size": 329,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/xml.js",
+			"size": 147
+		},
+		{
+			"name": "js/ace/snippets/xquery-dbg.js",
+			"size": 2193,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/xquery.js",
+			"size": 1847
+		},
+		{
+			"name": "js/ace/snippets/yaml-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/yaml.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/snippets/zeek-dbg.js",
+			"size": 330,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/snippets/zeek.js",
+			"size": 148
+		},
+		{
+			"name": "js/ace/theme-ambiance-dbg.js",
+			"size": 28173,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-ambiance.js",
+			"size": 27576
+		},
+		{
+			"name": "js/ace/theme-chaos-dbg.js",
+			"size": 3510,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-chaos.js",
+			"size": 2957
+		},
+		{
+			"name": "js/ace/theme-chrome-dbg.js",
+			"size": 3327,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-chrome.js",
+			"size": 2829
+		},
+		{
+			"name": "js/ace/theme-clouds-dbg.js",
+			"size": 2630,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-clouds.js",
+			"size": 2198
+		},
+		{
+			"name": "js/ace/theme-clouds_midnight-dbg.js",
+			"size": 2989,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-clouds_midnight.js",
+			"size": 2555
+		},
+		{
+			"name": "js/ace/theme-cobalt-dbg.js",
+			"size": 2935,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-cobalt.js",
+			"size": 2467
+		},
+		{
+			"name": "js/ace/theme-crimson_editor-dbg.js",
+			"size": 3415,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-crimson_editor.js",
+			"size": 2937
+		},
+		{
+			"name": "js/ace/theme-dawn-dbg.js",
+			"size": 2811,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-dawn.js",
+			"size": 2353
+		},
+		{
+			"name": "js/ace/theme-dracula-dbg.js",
+			"size": 3206,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-dracula.js",
+			"size": 2701
+		},
+		{
+			"name": "js/ace/theme-dreamweaver-dbg.js",
+			"size": 3785,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-dreamweaver.js",
+			"size": 3260
+		},
+		{
+			"name": "js/ace/theme-eclipse-dbg.js",
+			"size": 2679,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-eclipse.js",
+			"size": 2243
+		},
+		{
+			"name": "js/ace/theme-github-dbg.js",
+			"size": 2749,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-github.js",
+			"size": 2293
+		},
+		{
+			"name": "js/ace/theme-gob-dbg.js",
+			"size": 2958,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-gob.js",
+			"size": 2492
+		},
+		{
+			"name": "js/ace/theme-gruvbox-dbg.js",
+			"size": 2189,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-gruvbox.js",
+			"size": 1784
+		},
+		{
+			"name": "js/ace/theme-idle_fingers-dbg.js",
+			"size": 2802,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-idle_fingers.js",
+			"size": 2368
+		},
+		{
+			"name": "js/ace/theme-iplastic-dbg.js",
+			"size": 7077,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-iplastic.js",
+			"size": 6593
+		},
+		{
+			"name": "js/ace/theme-katzenmilch-dbg.js",
+			"size": 3730,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-katzenmilch.js",
+			"size": 3246
+		},
+		{
+			"name": "js/ace/theme-kr_theme-dbg.js",
+			"size": 2862,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-kr_theme.js",
+			"size": 2412
+		},
+		{
+			"name": "js/ace/theme-kuroir-dbg.js",
+			"size": 2533,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-kuroir.js",
+			"size": 2169
+		},
+		{
+			"name": "js/ace/theme-merbivore-dbg.js",
+			"size": 2785,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-merbivore.js",
+			"size": 2353
+		},
+		{
+			"name": "js/ace/theme-merbivore_soft-dbg.js",
+			"size": 3004,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-merbivore_soft.js",
+			"size": 2570
+		},
+		{
+			"name": "js/ace/theme-mono_industrial-dbg.js",
+			"size": 3370,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-mono_industrial.js",
+			"size": 2914
+		},
+		{
+			"name": "js/ace/theme-monokai-dbg.js",
+			"size": 2942,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-monokai.js",
+			"size": 2490
+		},
+		{
+			"name": "js/ace/theme-nord_dark-dbg.js",
+			"size": 2640,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-nord_dark.js",
+			"size": 2201
+		},
+		{
+			"name": "js/ace/theme-one_dark-dbg.js",
+			"size": 3318,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-one_dark.js",
+			"size": 2784
+		},
+		{
+			"name": "js/ace/theme-pastel_on_dark-dbg.js",
+			"size": 3213,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-pastel_on_dark.js",
+			"size": 2755
+		},
+		{
+			"name": "js/ace/theme-solarized_dark-dbg.js",
+			"size": 2852,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-solarized_dark.js",
+			"size": 2434
+		},
+		{
+			"name": "js/ace/theme-solarized_light-dbg.js",
+			"size": 2908,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-solarized_light.js",
+			"size": 2484
+		},
+		{
+			"name": "js/ace/theme-sqlserver-dbg.js",
+			"size": 3530,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-sqlserver.js",
+			"size": 3012
+		},
+		{
+			"name": "js/ace/theme-terminal-dbg.js",
+			"size": 3499,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-terminal.js",
+			"size": 3029
+		},
+		{
+			"name": "js/ace/theme-textmate-dbg.js",
+			"size": 3239,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-textmate.js",
+			"size": 2731
+		},
+		{
+			"name": "js/ace/theme-tomorrow-dbg.js",
+			"size": 3131,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-tomorrow.js",
+			"size": 2673
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night-dbg.js",
+			"size": 3400,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night.js",
+			"size": 2942
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night_blue-dbg.js",
+			"size": 3612,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night_blue.js",
+			"size": 3158
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night_bright-dbg.js",
+			"size": 4109,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night_bright.js",
+			"size": 3625
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night_eighties-dbg.js",
+			"size": 3810,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-tomorrow_night_eighties.js",
+			"size": 3352
+		},
+		{
+			"name": "js/ace/theme-twilight-dbg.js",
+			"size": 3047,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-twilight.js",
+			"size": 2587
+		},
+		{
+			"name": "js/ace/theme-vibrant_ink-dbg.js",
+			"size": 2753,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-vibrant_ink.js",
+			"size": 2323
+		},
+		{
+			"name": "js/ace/theme-xcode-dbg.js",
+			"size": 2450,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/theme-xcode.js",
+			"size": 2032
+		},
+		{
+			"name": "js/ace/worker-base-dbg.js",
+			"size": 43030,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-base.js",
+			"size": 22400
+		},
+		{
+			"name": "js/ace/worker-coffee-dbg.js",
+			"size": 349202,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-coffee.js",
+			"size": 324927
+		},
+		{
+			"name": "js/ace/worker-css-dbg.js",
+			"size": 314156,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-css.js",
+			"size": 155633
+		},
+		{
+			"name": "js/ace/worker-html-dbg.js",
+			"size": 316171,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-html.js",
+			"size": 215339
+		},
+		{
+			"name": "js/ace/worker-javascript-dbg.js",
+			"size": 721517,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-javascript.js",
+			"size": 522111
+		},
+		{
+			"name": "js/ace/worker-json-dbg.js",
+			"size": 50776,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-json.js",
+			"size": 24904
+		},
+		{
+			"name": "js/ace/worker-lua-dbg.js",
+			"size": 103932,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-lua.js",
+			"size": 50140
+		},
+		{
+			"name": "js/ace/worker-php-dbg.js",
+			"size": 133074,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-php.js",
+			"size": 72715
+		},
+		{
+			"name": "js/ace/worker-xml-dbg.js",
+			"size": 90733,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-xml.js",
+			"size": 48777
+		},
+		{
+			"name": "js/ace/worker-xquery-dbg.js",
+			"size": 3501132,
+			"isDebug": true
+		},
+		{
+			"name": "js/ace/worker-xquery.js",
+			"size": 1643331
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/ui/codeeditor/library.js",
+			"size": 818,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "library-h2-preload.js",
+			"module": "sap/ui/codeeditor/library-h2-preload.js",
+			"size": 2248,
+			"merged": true,
+			"required": [
+				"sap/ui/codeeditor/js/ace/ace.js",
+				"sap/ui/codeeditor/js/ace/ext-beautify.js",
+				"sap/ui/codeeditor/js/ace/ext-language_tools.js",
+				"sap/ui/codeeditor/js/ace/mode-javascript.js",
+				"sap/ui/codeeditor/js/ace/mode-json.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/RenderManager.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/includeStylesheet.js",
+				"sap/ui/thirdparty/jquery.js"
+			],
+			"included": [
+				"sap/ui/codeeditor/library.js",
+				"sap/ui/codeeditor/manifest.json",
+				"sap/ui/codeeditor/CodeEditor.js",
+				"sap/ui/codeeditor/aceWorkerProxy.js"
+			]
+		},
+		{
+			"name": "library-h2-preload.js.map",
+			"size": 433,
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/ui/codeeditor/library-preload.js",
+			"size": 9305,
+			"merged": true,
+			"required": [
+				"sap/ui/codeeditor/js/ace/ace.js",
+				"sap/ui/codeeditor/js/ace/ext-beautify.js",
+				"sap/ui/codeeditor/js/ace/ext-language_tools.js",
+				"sap/ui/codeeditor/js/ace/mode-javascript.js",
+				"sap/ui/codeeditor/js/ace/mode-json.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/RenderManager.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/includeStylesheet.js",
+				"sap/ui/thirdparty/jquery.js"
+			],
+			"included": [
+				"sap/ui/codeeditor/CodeEditor.js",
+				"sap/ui/codeeditor/aceWorkerProxy.js",
+				"sap/ui/codeeditor/library.js",
+				"sap/ui/codeeditor/manifest.json"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"size": 6764,
+			"isDebug": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/ui/codeeditor/library.js",
+			"size": 451,
+			"required": [
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/ui/codeeditor/manifest.json",
+			"size": 1892
+		},
+		{
+			"name": "messagebundle.properties",
+			"module": "sap/ui/codeeditor/messagebundle.properties",
+			"size": 276,
+			"locale": "",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ar.properties",
+			"module": "sap/ui/codeeditor/messagebundle_ar.properties",
+			"size": 91,
+			"locale": "ar",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_bg.properties",
+			"module": "sap/ui/codeeditor/messagebundle_bg.properties",
+			"size": 128,
+			"locale": "bg",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ca.properties",
+			"module": "sap/ui/codeeditor/messagebundle_ca.properties",
+			"size": 44,
+			"locale": "ca",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_cs.properties",
+			"module": "sap/ui/codeeditor/messagebundle_cs.properties",
+			"size": 46,
+			"locale": "cs",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_cy.properties",
+			"module": "sap/ui/codeeditor/messagebundle_cy.properties",
+			"size": 42,
+			"locale": "cy",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_da.properties",
+			"module": "sap/ui/codeeditor/messagebundle_da.properties",
+			"size": 40,
+			"locale": "da",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_de.properties",
+			"module": "sap/ui/codeeditor/messagebundle_de.properties",
+			"size": 41,
+			"locale": "de",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_el.properties",
+			"module": "sap/ui/codeeditor/messagebundle_el.properties",
+			"size": 145,
+			"locale": "el",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en.properties",
+			"module": "sap/ui/codeeditor/messagebundle_en.properties",
+			"size": 41,
+			"locale": "en",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_GB.properties",
+			"module": "sap/ui/codeeditor/messagebundle_en_GB.properties",
+			"size": 41,
+			"locale": "en_GB",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_sappsd.properties",
+			"module": "sap/ui/codeeditor/messagebundle_en_US_sappsd.properties",
+			"size": 145,
+			"locale": "en_US_sappsd",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_saprigi.properties",
+			"module": "sap/ui/codeeditor/messagebundle_en_US_saprigi.properties",
+			"size": 317,
+			"locale": "en_US_saprigi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_saptrc.properties",
+			"module": "sap/ui/codeeditor/messagebundle_en_US_saptrc.properties",
+			"size": 64,
+			"locale": "en_US_saptrc",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_es.properties",
+			"module": "sap/ui/codeeditor/messagebundle_es.properties",
+			"size": 51,
+			"locale": "es",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_es_MX.properties",
+			"module": "sap/ui/codeeditor/messagebundle_es_MX.properties",
+			"size": 51,
+			"locale": "es_MX",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_et.properties",
+			"module": "sap/ui/codeeditor/messagebundle_et.properties",
+			"size": 43,
+			"locale": "et",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fi.properties",
+			"module": "sap/ui/codeeditor/messagebundle_fi.properties",
+			"size": 42,
+			"locale": "fi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fr.properties",
+			"module": "sap/ui/codeeditor/messagebundle_fr.properties",
+			"size": 50,
+			"locale": "fr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fr_CA.properties",
+			"module": "sap/ui/codeeditor/messagebundle_fr_CA.properties",
+			"size": 50,
+			"locale": "fr_CA",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hi.properties",
+			"module": "sap/ui/codeeditor/messagebundle_hi.properties",
+			"size": 79,
+			"locale": "hi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hr.properties",
+			"module": "sap/ui/codeeditor/messagebundle_hr.properties",
+			"size": 41,
+			"locale": "hr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hu.properties",
+			"module": "sap/ui/codeeditor/messagebundle_hu.properties",
+			"size": 53,
+			"locale": "hu",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_id.properties",
+			"module": "sap/ui/codeeditor/messagebundle_id.properties",
+			"size": 41,
+			"locale": "id",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_it.properties",
+			"module": "sap/ui/codeeditor/messagebundle_it.properties",
+			"size": 43,
+			"locale": "it",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_iw.properties",
+			"module": "sap/ui/codeeditor/messagebundle_iw.properties",
+			"size": 73,
+			"locale": "iw",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ja.properties",
+			"module": "sap/ui/codeeditor/messagebundle_ja.properties",
+			"size": 72,
+			"locale": "ja",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_kk.properties",
+			"module": "sap/ui/codeeditor/messagebundle_kk.properties",
+			"size": 103,
+			"locale": "kk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ko.properties",
+			"module": "sap/ui/codeeditor/messagebundle_ko.properties",
+			"size": 61,
+			"locale": "ko",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lt.properties",
+			"module": "sap/ui/codeeditor/messagebundle_lt.properties",
+			"size": 48,
+			"locale": "lt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lv.properties",
+			"module": "sap/ui/codeeditor/messagebundle_lv.properties",
+			"size": 44,
+			"locale": "lv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ms.properties",
+			"module": "sap/ui/codeeditor/messagebundle_ms.properties",
+			"size": 40,
+			"locale": "ms",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_nl.properties",
+			"module": "sap/ui/codeeditor/messagebundle_nl.properties",
+			"size": 41,
+			"locale": "nl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_no.properties",
+			"module": "sap/ui/codeeditor/messagebundle_no.properties",
+			"size": 40,
+			"locale": "no",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pl.properties",
+			"module": "sap/ui/codeeditor/messagebundle_pl.properties",
+			"size": 41,
+			"locale": "pl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pt.properties",
+			"module": "sap/ui/codeeditor/messagebundle_pt.properties",
+			"size": 51,
+			"locale": "pt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pt_PT.properties",
+			"module": "sap/ui/codeeditor/messagebundle_pt_PT.properties",
+			"size": 51,
+			"locale": "pt_PT",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ro.properties",
+			"module": "sap/ui/codeeditor/messagebundle_ro.properties",
+			"size": 46,
+			"locale": "ro",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ru.properties",
+			"module": "sap/ui/codeeditor/messagebundle_ru.properties",
+			"size": 109,
+			"locale": "ru",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sh.properties",
+			"module": "sap/ui/codeeditor/messagebundle_sh.properties",
+			"size": 59,
+			"locale": "sh",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sk.properties",
+			"module": "sap/ui/codeeditor/messagebundle_sk.properties",
+			"size": 46,
+			"locale": "sk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sl.properties",
+			"module": "sap/ui/codeeditor/messagebundle_sl.properties",
+			"size": 46,
+			"locale": "sl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sv.properties",
+			"module": "sap/ui/codeeditor/messagebundle_sv.properties",
+			"size": 39,
+			"locale": "sv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_th.properties",
+			"module": "sap/ui/codeeditor/messagebundle_th.properties",
+			"size": 108,
+			"locale": "th",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_tr.properties",
+			"module": "sap/ui/codeeditor/messagebundle_tr.properties",
+			"size": 50,
+			"locale": "tr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_uk.properties",
+			"module": "sap/ui/codeeditor/messagebundle_uk.properties",
+			"size": 109,
+			"locale": "uk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_vi.properties",
+			"module": "sap/ui/codeeditor/messagebundle_vi.properties",
+			"size": 69,
+			"locale": "vi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_CN.properties",
+			"module": "sap/ui/codeeditor/messagebundle_zh_CN.properties",
+			"size": 60,
+			"locale": "zh_CN",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_TW.properties",
+			"module": "sap/ui/codeeditor/messagebundle_zh_TW.properties",
+			"size": 60,
+			"locale": "zh_TW",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "resources.json",
+			"size": 8730
+		},
+		{
+			"name": "themes/base/.theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.css",
+			"size": 121,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.less",
+			"size": 240,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.source.less",
+			"size": 113742,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"size": 485,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"size": 2,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"size": 485,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"size": 823,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"size": 631,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library_skeleton-RTL.css",
+			"size": 364,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library_skeleton.css",
+			"size": 364,
+			"theme": "base"
+		},
+		{
+			"name": "themes/sap_hcb/.theming",
+			"size": 128,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css_variables.css",
+			"size": 121,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css_variables.less",
+			"size": 99692,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css_variables.source.less",
+			"size": 99392,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-RTL.css",
+			"size": 635,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-parameters.json",
+			"size": 2,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.css",
+			"size": 635,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.less",
+			"size": 358,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.source.less",
+			"size": 255,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library_skeleton-RTL.css",
+			"size": 514,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library_skeleton.css",
+			"size": 514,
+			"theme": "sap_hcb"
+		}
+	]
+}

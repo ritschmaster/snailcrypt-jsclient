@@ -1,0 +1,143 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_belize/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_belize/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_belize/global.less";
+/* START "Overlay.less" */
+/******************************************************************
+	Style of the RTA Overlays - sap_belize Theme
+*******************************************************************/
+@_sap_ui_rta_Overlay_ShellBG: @sapUiShellBackground; //#c9d8e7
+@_sap_ui_rta_Overlay_Base_PlaceholderBG: @sapUiPageHeaderBackground; //#eff4f9
+
+.sapUiRta .sapUiDtOverlayDropZone > .sapUiDtOverlayChildren > .sapUiDtOverlayMovable {
+	background: inherit;
+}
+/* END "Overlay.less" */
+
+/* START "ContextMenu.less" */
+/******************************************************************
+	Style of the RTA Contextmenu - sap_belize Theme
+*******************************************************************/
+@_sap_ui_rta_ContextMenu_Border_LightColor:  @sapUiInvertedElement; //#fff
+@_sap_ui_rta_ContextMenu_Border_DarkColor: darken(@sapUiShellTextColor,8);	//#2F3C48
+
+.sapUiRtaMode {
+
+	.sapUiDtContextMenu {
+
+		&.sapMPopover, .sapMPopover {
+			border: 0.125rem solid @_sap_ui_rta_ContextMenu_Border_LightColor; //2px
+			border-image: repeating-linear-gradient( -45deg, @_sap_ui_rta_ContextMenu_Border_DarkColor, @_sap_ui_rta_ContextMenu_Border_DarkColor 4px, @_sap_ui_rta_ContextMenu_Border_LightColor 4px, @_sap_ui_rta_ContextMenu_Border_LightColor 6px) 4;
+			box-shadow: 0 10px 20px fade(black, 19), 0 6px 6px fade(black, 23), 0 0 0 1px fade(white, 20), 0 1px 0 0 fade(white, 20);
+		}
+
+		&.sapMPopoverArr, .sapMPopoverArr {
+			width: 2rem; //32px
+			height: 2rem; //32px
+			bottom: -2rem; //32px
+			left:	0.25rem !important; //4px
+			&:after {
+				box-shadow: 6px -6px 12px 0 fade(black,30), 0 0 0 1px fade(white,20);
+				border: 0.125rem solid @_sap_ui_rta_ContextMenu_Border_LightColor; //2px
+				border-image: repeating-linear-gradient( -50deg, @_sap_ui_rta_ContextMenu_Border_DarkColor, @_sap_ui_rta_ContextMenu_Border_DarkColor 3px, @_sap_ui_rta_ContextMenu_Border_LightColor 3px, @_sap_ui_rta_ContextMenu_Border_LightColor 5px) 4;
+				width: 1rem; //16px
+				height: 1rem; //16px
+				margin: -0.65rem 0 0 0.35rem; //10px 6px
+			}
+			&.sapMPopoverArrUp {
+				height:	1rem; //16px
+				top: -1rem; //16px
+				&:after {
+					box-shadow: -6px 6px 12px 0 fade(black,30), 0 0 0 1px fade(white,20);
+					margin: 0.35rem 0 0 0.35rem; //6px 6px
+				}
+			}
+		}
+
+		&.sapMBtn:focus:not(:hover) > .sapMFocusable,
+		.sapMBtn:focus:not(:hover) > .sapMFocusable {
+			border: 0.0625rem dotted; //1px
+		}
+
+		&.sapMBtn:focus > .sapMFocusable,
+		.sapMBtn:focus > .sapMFocusable {
+			outline: none;
+			border: 0.0625rem solid; //1px
+		}
+	}
+}
+/* END "ContextMenu.less" */
+
+/* START "Dialogs.less" */
+/******************************************************************
+	Style of Dialogs shown in RTA - sap_belize Theme
+*******************************************************************/
+@_sap_ui_rta_Dialogs_BorderLightColor: @sapUiInvertedElement; //#fff
+@_sap_ui_rta_Dialogs_BorderDarkColor: darken(@sapUiShellTextColor,8); //#2F3C48
+
+.sapMDialog.sapUiRTABorder {
+	border: 0.1875rem solid @_sap_ui_rta_Dialogs_BorderLightColor;
+	border-image: repeating-linear-gradient( -45deg, @_sap_ui_rta_Dialogs_BorderDarkColor, @_sap_ui_rta_Dialogs_BorderDarkColor 5px, @_sap_ui_rta_Dialogs_BorderLightColor 5px, @_sap_ui_rta_Dialogs_BorderLightColor 10px) 4;
+}
+/* END "Dialogs.less" */
+
+/* START "Toolbar.personalization.less" */
+/******************************************************************
+	Style of the Personalization Toolbar - sap_belize Theme
+*******************************************************************/
+@_sap_ui_rta_Toolbar_Personalization_BaseColor: darken(@sapUiShellTextColor,8);	//#2F3C48
+/* END "Toolbar.personalization.less" */
+
+/* START "Toolbar.adaptation.less" */
+/******************************************************************
+	Style of the RTA Toolbar (type: adaptation) - sap_belize Theme
+*******************************************************************/
+@_sap_ui_rta_Toolbar_Adaptation_BaseColor: darken(@sapUiShellTextColor,8); //#2F3C48
+@_sap_ui_rta_Toolbar_Adaptation_TextColor: @sapUiContentContrastTextColor; //#fff
+/* END "Toolbar.adaptation.less" */
+
+/* START "Toolbar.base.less" */
+/******************************************************************
+	Style of the RTA Toolbar (all types) - sap_belize Theme
+*******************************************************************/
+@_sap_ui_rta_Toolbar_Base_TextColor: @sapUiContentContrastTextColor; //#fff
+@_sap_ui_rta_Toolbar_Base_BaseColor: darken(@sapUiShellTextColor,8); //#2F3C48
+
+.sapUiRtaMode {
+	.sapUiRtaToolbar {
+		background-color: @_sap_ui_rta_Toolbar_Base_BaseColor;
+		height: 3rem; //48px
+
+		.sapMBtn {
+			&.sapMBtnDisabled .sapMBtnInner {
+				opacity: 1.0;
+			}
+		}
+	}
+}
+
+.sapUiSizeCozy {
+	.sapUiRtaToolbar {
+		.sapMSegBBtn.sapMSegBBtnFocusable.sapMSegBBtnSel {
+			& .sapMSegBBtnInner:after {
+				left: 1rem; //16px
+				right: 1rem; //16px
+			}
+		}
+	}
+}
+
+.sapUiRtaToolbar .sapMBtn:hover:not(.sapMBtnDisabled) > .sapMBtnHoverable.sapMBtnTransparent:not(.sapMBtnActive):not(.sapMToggleBtnPressed) > .sapMBtnIcon,
+.sapUiRtaToolbar *.sapMBtn:hover:not(.sapMBtnDisabled) > span.sapMBtnInner.sapMBtnTransparent:not(.sapMBtnActive):not(.sapMToggleBtnPressed) > .sapMBtnIcon,
+.sapUiRtaToolbar :not(.sapMBtnDisabled):not(.sapMSBActive) > span.sapMBtnInner.sapMBtnTransparent:not(.sapMBtnActive):not(.sapMToggleBtnPressed):hover > .sapMBtnIcon,
+.sapUiRtaToolbar .sapMBtn:hover > .sapMBtnTransparent.sapMBtnHoverable:not(.sapMBtnActive):not(.sapMToggleBtnPressed) bdi {
+	color: @_sap_ui_rta_Toolbar_Base_TextColor;
+}
+/* END "Toolbar.base.less" */

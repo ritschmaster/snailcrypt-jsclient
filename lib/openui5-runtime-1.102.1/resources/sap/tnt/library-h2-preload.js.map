@@ -1,0 +1,9 @@
+{
+"version":3,
+"file":"sap/tnt/library-h2-preload.js",
+"sourceroot":".",
+"sources":["library-dbg.js","manifest.json"],
+"names":["thisLib"],
+"mappings":";;;;;;AASA,gBAAa,mBAAC,uBAAwB,iBACrC,UAAW,CACX,aAYA,IAAIA,CAAQ,CAAE,8BACb,IAAK,CAAE,UACP,QAAS,UACT,YAAa,CAAE,eAAgB,SAC/B,WAAY,wCACZ,MAAO,CACN,oBACD,EACA,WAAY,CACX,qBACD,EACA,SAAU,CACT,yBACA,qCACA,qBACA,yBACA,mBACA,mBACD,EACA,SAAU,CACT,4BACD,EACA,WAAY,CACX,iBAAkB,CACjB,6BAA8B,wCAC/B,CACD,CACD,GASAA,CAAO,WAAY,CAAE,CAKpB,OAAQ,SAMR,MAAO,OACR,EAYA,OAAOA,CAAO,CAEf;;;;;;;;;;;;;;;;;;;;;;",
+"x_com_sap_openui5_sections":[44,875,925,2074]
+}

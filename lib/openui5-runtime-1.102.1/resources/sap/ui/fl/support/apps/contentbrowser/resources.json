@@ -1,0 +1,117 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"size": 2038,
+			"isDebug": true
+		},
+		{
+			"name": "Component.js",
+			"size": 1308
+		},
+		{
+			"name": "controller/ContentDetails-dbg.controller.js",
+			"size": 9726,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ContentDetails.controller.js",
+			"size": 4004
+		},
+		{
+			"name": "controller/ContentDetailsEdit-dbg.controller.js",
+			"size": 8185,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ContentDetailsEdit.controller.js",
+			"size": 3330
+		},
+		{
+			"name": "controller/LayerContentMaster-dbg.controller.js",
+			"size": 6615,
+			"isDebug": true
+		},
+		{
+			"name": "controller/LayerContentMaster.controller.js",
+			"size": 2802
+		},
+		{
+			"name": "controller/Layers-dbg.controller.js",
+			"size": 1426,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Layers.controller.js",
+			"size": 702
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"size": 1356
+		},
+		{
+			"name": "index.html",
+			"size": 669
+		},
+		{
+			"name": "lrepConnector/LRepConnector-dbg.js",
+			"size": 11368,
+			"isDebug": true
+		},
+		{
+			"name": "lrepConnector/LRepConnector.js",
+			"size": 3088
+		},
+		{
+			"name": "manifest.json",
+			"size": 3039
+		},
+		{
+			"name": "style.css",
+			"size": 101
+		},
+		{
+			"name": "utils/DataUtils-dbg.js",
+			"size": 4356,
+			"isDebug": true
+		},
+		{
+			"name": "utils/DataUtils.js",
+			"size": 1378
+		},
+		{
+			"name": "utils/ErrorUtils-dbg.js",
+			"size": 2333,
+			"isDebug": true
+		},
+		{
+			"name": "utils/ErrorUtils.js",
+			"size": 1056
+		},
+		{
+			"name": "view/ContentDetails.view.xml",
+			"size": 1481
+		},
+		{
+			"name": "view/ContentDetailsEdit.view.xml",
+			"size": 760
+		},
+		{
+			"name": "view/EmptyDetails.view.xml",
+			"size": 80
+		},
+		{
+			"name": "view/LayerContentMaster.view.xml",
+			"size": 1132
+		},
+		{
+			"name": "view/Layers.view.xml",
+			"size": 636
+		},
+		{
+			"name": "view/MainView.view.xml",
+			"size": 93
+		}
+	]
+}

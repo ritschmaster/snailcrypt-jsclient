@@ -1,0 +1,106 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 128,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "DragDrop.less",
+			"size": 221,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Grouping.less",
+			"size": 199,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Row.less",
+			"size": 225,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "RowHighlight.less",
+			"size": 225,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "RowSelection.less",
+			"size": 235,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Scrolling.less",
+			"size": 351,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "Table.less",
+			"size": 623,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 12877,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 115033,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 114733,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 62127,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 5226,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.css",
+			"size": 62148,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.less",
+			"size": 2915,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library.source.less",
+			"size": 515,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 66786,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 66809,
+			"theme": "sap_hcb"
+		}
+	]
+}

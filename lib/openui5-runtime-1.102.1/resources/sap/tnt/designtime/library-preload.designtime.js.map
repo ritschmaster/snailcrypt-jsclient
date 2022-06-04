@@ -1,0 +1,9 @@
+{
+"version":3,
+"file":"sap/tnt/designtime/library-preload.designtime.js",
+"sourceroot":".",
+"sources":["NavigationListItem-dbg.designtime.js","library-dbg.designtime.js"],
+"names":["oControl"],
+"mappings":";;;;;;AAOA,gBAAa,oDAAC,GACb,QAAS,EAAG,CACX,aAEA,MAAO,CACN,QAAS,CACR,MAAO,QACR,EACA,QAAS,CACR,OAAQ,CACP,WAAY,SACZ,OAAQ,QAAS,CAACA,CAAQ,CAAE,CAC3B,OAAOA,CAAQ,iCAChB,CACD,CACD,EACA,UAAW,CACV,OAAQ,2DACT,CACD,EACD;AClBD,gBAAa,yCAAC,GAAI,UAAW,CAC5B,aACA,MAAO,GACR;",
+"x_com_sap_openui5_sections":[63,526,526,623]
+}

@@ -1,0 +1,944 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+@import "../../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../../sap/ui/core/themes/base/global.less";
+/* START "AdaptationFilterBar.less" */
+.sapUIAdaptationFilterBar {
+    height: 100%
+}
+/* END "AdaptationFilterBar.less" */
+
+/* START "QueryPanel.less" */
+.sapUiMDCP13nQueryPanel {
+
+}
+
+.sapUiMDCP13nQueryPanel .sapUiRespGrid.sapUiRespGridVSpace1 > div {
+    margin-bottom: 0;
+}
+/* END "QueryPanel.less" */
+
+/* START "FieldBase.less" */
+.sapUiMdcFieldBase {
+	display: inline-block;
+	box-sizing: border-box;
+	overflow: hidden; /* otherwise Text controls consumes too much space in Form */
+	vertical-align: top;
+}
+
+.sapUiMdcFieldBaseMoreFields{
+	min-width: 6.9rem; /* to avoid wrapping of inner controls */
+}
+
+.sapUiMdcFieldBaseMoreFields > *{
+	padding-left: 0.5rem;
+}
+
+.sapUiMdcFieldBaseMoreFields > *:first-child{
+	padding-left: 0;
+	max-width: calc(~"100% - 4.75rem"); /* as input has a min-width, to not cut off unit */
+	min-width: 2.13rem; /* as inner input has this min-width */
+}
+
+.sapUiMdcFieldBaseMoreFields > *:nth-child(2){
+	min-width: 4.75rem; /* As input has a min-width + padding */
+}
+
+/**
+ * align text-like controls in Table (as done for stand-alone controls in Table)
+ */
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMSlt > .sapMSltLabel,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMObjectNumber,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMLabel,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMText {
+	text-align: inherit !important;
+}
+
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMLnk,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMText,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMLabel,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMObjectNumber,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMObjectIdentifier,
+.sapMListTblCell > .sapUiMdcFieldBase > .sapMObjStatus {
+	vertical-align: middle;
+}
+
+.sapUiSizeCompact .sapMListTblCell > .sapUiMdcFieldBase > .sapMLnk,
+.sapUiSizeCompact .sapMListTblCell > .sapUiMdcFieldBase > .sapMText,
+.sapUiSizeCompact .sapMListTblCell > .sapUiMdcFieldBase > .sapMLabel,
+.sapUiSizeCompact .sapMListTblCell > .sapUiMdcFieldBase > .sapMObjectNumber,
+.sapUiSizeCompact .sapMListTblCell > .sapUiMdcFieldBase > .sapMObjectIdentifier,
+.sapUiSizeCompact .sapMListTblCell > .sapUiMdcFieldBase > .sapMObjStatus {
+	line-height: 1.4;
+}
+
+.sapMListTblSubCntValInline > .sapUiMdcFieldBase {
+	display: inline-flex; /*to align in mTable PopIn mode*/
+}
+/* END "FieldBase.less" */
+
+/* START "ValueHelpDialog.less" */
+// give all panels on the valueHelpPanel a left/right padding
+.sapMdcValueHelpPanel .sapMPanel {
+	padding-top: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.sapMdcTokenizerPanel > .sapMPanelContent {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0rem;
+	padding-bottom: 1rem;
+	overflow: hidden;
+}
+
+.sapMdcTablePanel > .sapMPanelContent {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.sapMdcValueHelpPanel .sapMPanel.sapMdcTokenizerPanel {
+    background-color: @sapUiBaseBG;
+}
+
+.sapMdcTablePanel > .sapMPanelHdr,
+.sapMdcTokenizerPanel > .sapMPanelHdr,
+.sapMdcDefineconditionPanel > .sapMPanelHdr{
+	border: none;
+}
+
+.sapMdcTokenizer.sapMTokenizer {
+	width: 100%;
+	border: 1px solid @sapUiFieldBorderColor;
+	background-color: @sapUiFieldBackground;
+	border-radius: @sapUiFieldBorderCornerRadius;
+}
+
+// Tokenizer height in Compact mode
+.sapUiSizeCompact .sapMdcTokenizer > .sapMTokenizerScrollContainer {
+    margin-top: 0.25rem;
+	height: 1.3rem;
+}
+
+.sapUiSizeCompact .sapMdcTokenizer.sapMTokenizer .sapMToken {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+// Tokenizer height in Cozy or Condenst mode
+.sapMdcTokenizer > .sapMTokenizerScrollContainer {
+	height: 2.25rem;
+}
+
+.sapMdcTokenizer.sapMTokenizer .sapMToken {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+.sapMdcTokenizer > .sapMTokenizerScrollContainer {
+	overflow-y: hidden;
+}
+
+.sapMdcTokenizer .sapMToken{
+	white-space: nowrap;
+}
+
+// overrules the tokenizer display setting for empty tokenizer
+.sapMdcTokenizer .sapMTokenizerScrollContainerNoVisibleTokens {
+    display: inline-block;
+}
+
+// make the ITB header height 3rem
+.sapMdcValueHelpPanel .sapMITBHead {
+	margin-top: 0rem;
+}
+
+// make the toolbar height 3rem and add 2rem padding left/right
+.sapMdcValueHelpPanel .sapMTB {
+	height: 3rem;
+	padding-left: 0;
+	padding-right: 1rem;
+}
+
+.sapMdcValueHelpPanel .sapMIBar.sapMTB .sapMBarChild:first-child {
+	margin-left: 0;
+}
+
+// padding between the Define Condition value fields
+.sapUiMdcDefineConditionPanel .sapUiRespGrid > div {
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	box-sizing: border-box;
+}
+
+// correct paddings around the define conditions content
+.sapMdcDefineconditionPanel .sapMPanelContent {
+	padding-left: 0.75rem;
+	padding-right: 0rem;
+	padding-top: 0rem;
+}
+
+// makes the IconTab Header hidden when only one tabs exist
+// .sapMdcValueHelpPanel .sapMdcNoHeader .sapMITH {
+// 	display: none;
+// }
+
+.sapMdcNoHeader > div:first-child {
+	 display: none;
+ }
+
+.sapUiMdcDefineConditionPanel .sapUiMdcDefineConditionGrid {
+	margin-bottom: 0.5rem;
+}
+
+// give the Filterbar the required padding and max height
+.sapMdcValueHelpPanelFilterbar {
+	margin-left: 2rem;
+	margin-right: 1rem;
+}
+
+// allign static text
+.sapUiMdcDefineConditionPanel .sapUiRespGrid .sapMText {
+	min-height: 2.75rem;
+	padding-top: 0.6875rem;
+	padding-bottom: 0.6875rem;
+	line-height: 1.375rem;
+}
+.sapUiSizeCompact .sapUiMdcDefineConditionPanel .sapUiRespGrid .sapMText {
+	min-height: 2rem;
+	padding-top: 0.3125rem;
+	padding-bottom: 0.3125rem;
+}
+
+// spacing between rows
+.sapUiMdcDefineConditionPanel .sapUiRespGrid.sapUiRespGridMedia-Std-Phone > .sapUiRespGridBreak:not(:first-child),
+.sapUiMdcDefineConditionPanel .sapUiRespGrid.sapUiRespGridMedia-Std-Phone > .sapUiRespGridBreak:not(:first-child) + div {
+	padding-top: 0.5rem;
+}
+
+// align add-button to the right
+.sapUiMdcDefineConditionPanel .sapUiRespGrid > div:last-child {
+	padding-top: 0.25rem;
+	position: relative;
+	height: 2.75rem;
+}
+.sapUiSizeCompact .sapUiMdcDefineConditionPanel .sapUiRespGrid > div:last-child {
+	height: 2rem;
+}
+.sapUiMdcDefineConditionPanel .sapUiRespGrid > div:last-child > button{
+	position: absolute;
+	right: 0.25rem;
+}
+
+// hide the toolbar border and give some more top margin
+.sapMdcValueHelpPanel .sapMTBStandard {
+	margin-top: 0.5rem;
+	border-bottom: solid 1px transparent;
+}
+
+// hide the panel bottom border
+.sapMdcValueHelpPanel .sapMPanelContent:not(.sapMPanelBGTransparent) {
+	border-bottom: none;
+}
+
+
+// show padding on top of the defineConditionPanel when used on popover
+.sapMPopoverCont .sapMPopoverScroll > .sapUiMdcDefineConditionPanel {
+	padding-top: 1rem;
+	// padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+// makes the title of the used panels smaller
+.sapMdcValueHelpPanel .sapMPanel .sapMPanelHdr {
+	font-size: @sapMFontHeader5Size;
+}
+
+// make the title shadows transparent
+.sapMdcValueHelpTitleShadow.sapMDialog:not(.sapMDialogWithSubHeader) > header:first-of-type .sapMIBar {
+	box-shadow: inset 0 -0.0625rem transparent;
+}
+
+.sapMdcValueHelpTitleShadow.sapMBar {
+	box-shadow: inset 0 -0.0625rem transparent;
+}
+
+// remove some borders around the IconTabBar content
+.sapMdcValueHelpPanel .sapMITBContent {
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+// set the 2rem padding also on the OK and Cancel buttons in the footer
+.sapMdcValueHelpTitle.sapMDialog footer .sapMTB {
+	padding: 0 2rem;
+}
+
+
+.sapMdcValueHelpPanelTableBox {
+	padding: 0 2rem;
+}
+
+.sapMdcValueHelpPanelTableBox > .sapMFlexItem {
+	//min-height: 200px !important;
+	height: 100%;
+}
+
+.sapMdcValueHelpPanelTableBox .sapUiMdcTable .sapMTBStandard {
+	margin-top: 0;
+}
+
+.sapMdcValueHelpPanel .sapUiFixFlexScrolling .sapMdcValueHelpPanelTableBox {
+	height: 200px !important;
+}
+
+.sapMdcValueHelpPanelTableBox .sapUiMdcTable .sapMTitleTB {
+	font-size: 1rem;
+}
+
+.sapMdcValueHelpPopover.sapMdcValueHelpMultiSelect .sapUiMdcDefineConditionPanel {
+	margin-left: 1rem;
+	margin-top: 1rem;
+}
+
+.sapMdcValueHelpPopover.sapMdcValueHelpSingleSelect .sapUiMdcDefineConditionPanel {
+	margin-left: 0rem;
+	margin-right: 0.75rem;
+	margin-top: 1rem;
+}
+/* END "ValueHelpDialog.less" */
+
+/* START "InfoPanel.less" */
+// ------------------------------------------------------------------------------
+// --------------- Header -------------------------------------------------------
+// ------------------------------------------------------------------------------
+
+.mdcbaseinfoPanel .sapUiFormTitle {
+  white-space: normal;
+}
+
+.mdcbaseinfoPanel .mdcbaseinfoPanelHeader {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+}
+
+.mdcbaseinfoPanelTitleH1 .sapMLnk {
+  font-size: 1.25rem;
+}
+
+.mdcbaseinfoPanelTitleH1 .sapMLabel {
+  font-size: 1.25rem;
+}
+
+.mdcbaseinfoPanelTitleH1 .sapMLnkDsbl {
+  opacity: 1;
+  color: @sapUiBaseText;
+}
+
+.mdcbaseinfoPanelThumbnail .mdcbaseinfoPanelListItem .sapMImageContentImageIcon.sapUiIcon {
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+  margin-right: .75rem;
+}
+
+.mdcbaseinfoPanelThumbnail .mdcbaseinfoPanelListItem .sapMImageContentImageIcon.sapMImg {
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 3rem;
+  margin-right: .75rem;
+  size: 3rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+// ------------------------------------------------------------------------------
+// --------------- Additional Content -------------------------------------------
+// ------------------------------------------------------------------------------
+
+.mdcbaseinfoPanel .mdcbaseinfoPanelDefaultAdditionalContent .sapUiFormTitle {
+  color: @sapUiBaseText;
+}
+
+// ------------------------------------------------------------------------------
+// --------------- Separator ----------------------------------------------------
+// ------------------------------------------------------------------------------
+
+.mdcbaseinfoPanel .mdcbaseinfoPanelSeparator {
+  border-bottom: 1px solid;
+  border-bottom-color: @sapUiToolbarSeparatorColor;
+}
+
+// ------------------------------------------------------------------------------
+// --------------- Links --------------------------------------------------------
+// ------------------------------------------------------------------------------
+
+/* Overwrite background of 'related apps' section */
+.mdcbaseinfoPanel .mdcbaseinfoPanelSectionLinks {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.mdcbaseinfoPanelListItem .sapUiFormResLayout.sapUiFormBackgrTranslucent > div {
+  background-color: transparent;
+}
+
+.mdcbaseinfoPanel .mdcbaseinfoPanelListItem {
+    padding-top: 0.375rem;
+	padding-bottom: 0.375rem;
+    padding-right: 1rem;
+    min-height: 1rem;
+}
+
+.mdcbaseinfoPanelListItem .sapMImageContentImageIcon.sapUiIcon {
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-bottom: 0rem;
+  color: @sapUiText;
+}
+
+.mdcbaseinfoPanelListItem .sapMImageContentImageIcon.sapMImg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.mdcbaseinfoPanelListItem .sapMImageContent {
+  width: auto;
+  height: auto;
+  margin-right: .75rem;
+}
+
+.mdcbaseinfoPanelListItem .sapMImageContentImageIcon {
+  position: relative;
+}
+
+.mdcbaseinfoPanelListItem .sapMFlexItem {
+  display: -webkit-box;
+  display: flex;
+}
+
+.mdcbaseinfoPanelListItem .mdcbaseinfoPanelItemsWithoutGroup {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.mdcbaseinfoPanelListItem .mdcbaseinfoPanelItemsGroup {
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+}
+
+.mdcbaseinfoPanelListItem .mdcbaseinfoPanelItemsGroup .sapMLink {
+  padding-bottom: 0.125rem;
+}
+
+.mdcbaseinfoPanelListItem .mdcbaseinfoPanelItemsGroup .sapMText {
+  color: @sapUiContentLabelColor;
+}
+
+// ------------------------------------------------------------------------------
+// --------------- Button -------------------------------------------------------
+// ------------------------------------------------------------------------------
+.mdcbaseinfoPanel {
+  padding-top: 0;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: calc(100% - 2rem);
+}
+
+/* END "InfoPanel.less" */
+
+/* START "FilterBar.less" */
+.sapUiMdcFilterBarBase {
+}
+
+.sapUiMdcFilterBarBaseAFLayout > .sapUiAFLayoutItem,
+.sapUiMdcFilterBarBaseAFLayout > .sapUiAFLayoutEnd {
+	margin-right: 1rem;
+	margin-top: 0.5rem;
+}
+
+.sapUiMdcFilterBarBaseAFLayout.sapUiAFLayoutOneLine > .sapUiAFLayoutEnd {
+	margin-top: 0.5rem;
+}
+
+.sapUiMdcFilterBarBase .sapUiMdcFilterBarBaseButtonPaddingRight {
+    padding-right: 0.5rem;
+}
+
+.sapUiMdcFilterBarBase .sapUiMdcFilterBarPaddingLeft {
+	padding-left: 0.5rem;
+}
+
+.sapUiMdcFilterBarBase .sapUiMdcFilterBarBaseLabel .sapMLabelColonAndRequired::before {
+	content: attr(data-colon);
+}
+
+.sapUiMdcFilterBarBaseAFLayout > .sapUiAFLayoutItem > div,
+.sapUiMdcFilterBarBaseAFLayout > .sapUiAFLayoutItem .sapUiMdcFieldBase {
+    width: 100%;
+}
+
+/* END "FilterBar.less" */
+
+/* START "AdaptFiltersPanel.less" */
+.sapUiMDCAdaptFiltersPanel >div>section {
+    margin-top: 0.25rem;
+}
+
+//Change background color for the container control
+.sapUiMDCAdaptFiltersPanel .sapMPageBgStandard {
+    background: @sapUiListBackground;
+}
+
+
+.sapUiMDCAdaptFiltersPanel .sapUiMDCPanelPadding{
+    padding-left: 1rem;
+    padding-right: 0.75rem;
+}
+
+.sapUiMDCAdaptFiltersPanel .sapUiMDCPaddingPanelLeft {
+    padding-left: 1.5rem;
+}
+
+.sapUiMDCGroupPanelBase .sapMBar-CTX {
+    border: none;
+    box-shadow: none;
+}
+
+.sapUiMDCGroupPanelBase .sapUiMDCContainerContent {
+    padding-top: 0.25rem;
+}
+
+.sapUiMDCAdaptFiltersSearchBar {
+    padding-bottom: 0.25rem;
+}
+/* END "AdaptFiltersPanel.less" */
+
+/* START "Wrapper.less" */
+.sapUiMDCP13nWrapper {
+
+}
+
+//Change background color for the container control
+.sapUiMDCP13nWrapper .sapMITB {
+    padding-top: 1.75rem;
+}
+
+//Remove padding to align the ITB with the rest of the p13n related controls (left aligned)
+.sapUiMDCP13nWrapper .sapMITH {
+    padding: 0
+}
+
+.sapUiMDCP13nWrapper .wrapperDefaultList .sapMLIB{
+    padding: 1.5rem;
+}
+/* END "Wrapper.less" */
+
+/* START "PersonalizationDialog.less" */
+@_sap_ui_mdc_PersonalizationDialog_Border_LightColor : @sapUiContentContrastFocusColor;  				//#fff
+@_sap_ui_mdc_PersonalizationDialog_Border_DarkColor : @sapUiContentFocusColor;
+
+.sapUiMdcPersonalizationDialog {
+
+}
+
+.sapUiMdcPersonalizationDialog .sapMMsgStrip {
+	margin: 10px;
+}
+
+.sapUiMdcPersonalizationDialog .sapUiMdcFieldBase {
+	width: 100%
+}
+
+.sapUiMdcPersonalizationDialog.sapMPopover .sapMPopoverScroll {
+	overflow-y: initial;
+}
+
+.sapUiMdcPersonalizationDialog.sapUiRTABorder {
+	border: 3px solid @_sap_ui_mdc_PersonalizationDialog_Border_LightColor;
+	border-image: repeating-linear-gradient( -45deg, @_sap_ui_mdc_PersonalizationDialog_Border_DarkColor, @_sap_ui_mdc_PersonalizationDialog_Border_DarkColor 5px, @_sap_ui_mdc_PersonalizationDialog_Border_LightColor 5px, @_sap_ui_mdc_PersonalizationDialog_Border_LightColor 10px) 4;
+}
+
+.sapUiMdcPersonalizationDialog .sapMMenuBtn{
+    max-width: none;
+}
+
+.sapUiMdcPersonalizationDialog.sapMDialog:not(.sapMDialogWithSubHeader) > header:first-of-type .sapUiMdcContainerBar{
+	box-shadow: none;
+}
+/* END "PersonalizationDialog.less" */
+
+/* START "SelectionDialog.less" */
+
+/* Overwrite background of selected items */
+.mdcbaseinfoSelectionDialog .sapMLIB.sapMLIBSelected {
+  background: @sapUiListBackground;
+}
+
+/* END "SelectionDialog.less" */
+
+/* START "ListView.less" */
+//Display ':' for Labels in the 'list' view
+.sapUiMDCListView.sapUiMDCAFLabelMarkingList tbody  .sapMLabel > .sapMLabelColonAndRequired::before{
+	content: attr(data-colon);
+}
+
+//Display checkbox at the top for items in the ListView
+.sapUiMDCListView tbody .sapMListTblSelCol {
+    vertical-align: top;
+}
+
+//Remove padding for items in list view
+.sapUiMDCListView.listViewHover .sapMListTblCell {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.sapUiMDCListView .sapMPanelContent li {
+    align-items: start; //Checkbox should not be centered
+    display: flex; //Is the default for Lists - only needs to be set as the parent is a Table
+}
+
+//Align inner rows with the outer controls
+.sapUiMDCListView table {
+    tr > td {
+        padding-left: 0.5rem;
+    }
+}
+
+//'Select All' should also be aligned correctly with the other controls in the panel
+.sapUiMDCListView .sapMTableTH {
+    padding-left: 0.5rem;
+}
+/* END "ListView.less" */
+
+/* START "GroupView.less" */
+//Remove border for panels
+.sapUiMDCGroupView .sapMPanelWrappingDivTb{
+    border: none;
+}
+
+//padding between list items in group view
+.sapUiMDCGroupView .sapMLIBContent {
+    padding-bottom: 0.75rem;
+    padding-top: 0.5rem;
+    padding-right: 0.375rem
+}
+
+//remove highlighting in group view
+.sapUiMDCGroupView .sapMLIB .sapMLIBSelected {
+	border-color: transparent;
+	background: @sapUiListBackground;
+}
+
+//Display ':' for Labels
+.sapUiMDCGroupView.sapUiMDCAFLabelMarking .sapMPanelContent .sapMLabelColonAndRequired::before {
+	content: attr(data-colon);
+}
+
+//Custom bar that should look like 'ListView' background (mock columnheader)
+.sapUiMDCGroupView .sapMListInfoTBar {
+    color: @sapUiListTextColor;
+    background: @sapUiListHeaderBackground;
+}
+//remove padding for infotoolbar in panel (mock columnheader)
+.sapUiMDCGroupView .sapMListInfoTBarContainer .sapMIBar.sapMTB.sapMTB-Info-CTX{
+    padding:0
+}
+//remove padding for infotoolbar in panel + padding for first child (mock columnheader)
+.sapUiMDCGroupView .sapMListInfoTBarContainer .sapMIBar.sapMTB .sapMBarChild:first-child {
+    margin-left:0;
+    padding-left: 2.5rem;
+}
+
+
+//Checkbox alignment --> at the top
+.sapUiMDCGroupView li .sapMCLI {
+    align-items: start;
+}
+
+//Margin to display dotted focus outline properly
+.sapUiMDCGroupView .sapMPanel{
+    margin: 2px;
+}
+
+//Adapt standard padding to use the whole content
+.sapUiMDCGroupView .sapMPanelContent{
+    overflow: visible;
+    border-bottom: none;
+    padding: 1rem 1rem 0 0;
+}
+
+
+/* END "GroupView.less" */
+
+/* START "Table.less" */
+.sapMdcTable {
+}
+/* END "Table.less" */
+
+/* START "CollectiveSearchSelect.less" */
+/* ================================================================ */
+/* CSS for control sap.ui.mdc/filterbar/vh/CollectiveSearchSelect  	*/
+/* Base theme                                     					*/
+/* ================================================================ */
+
+.sapUiMdcCollectiveSearchSelect {
+	display: inline-block;
+	text-align: center;
+}
+
+.sapUiMdcCollectiveSearchSelect .sapMTitle.sapUiMdcCollectiveSearchSelectTitle {
+	padding-top: 1.0rem;
+	vertical-align: top;
+	padding-right: 0.125rem;
+}
+
+.sapUiSizeCompact .sapUiMdcCollectiveSearchSelect .sapMTitle.sapUiMdcCollectiveSearchSelectTitle {
+	padding-top: 0.5rem;
+}
+
+.sapUiMdcCollectiveSearchSelectTriggerBtnHover>span {
+	background-image: none;
+	border-color: @sapUiButtonLiteHoverBorderColor;
+	background-color: @sapUiButtonLiteHoverBackground;
+}
+
+.sapUiMdcCollectiveSearchSelect .sapUiMdcCollectiveSearchSelectTextPhoneMaxWidth {
+	max-width: 5em;
+}
+
+.sapUiMdcCollectiveSearchSelect .sapUiMdcCollectiveSearchSelectTextMaxWidth {
+	max-width: 25rem;
+}
+
+.sapUiMdcCollectiveSearchSelect .sapUiMdcCollectiveSearchSelectClickable {
+	cursor: pointer;
+	color: @sapUiButtonTextColor;
+	text-shadow: @sapUiShadowText;
+}
+
+.sapUiMdcCollectiveSearchSelect .sapUiMdcCollectiveSearchSelectTriggerBtn>span>span {
+	font-size: 1.375rem;
+}
+
+.sapUiMdcCollectiveSearchSelectPopover .sapMSelectList {
+	border: 0rem solid;
+}
+
+/* END "CollectiveSearchSelect.less" */
+
+/* START "Chart.less" */
+.sapUiMDCChart {
+    background: @sapUiChartBackgroundColor;
+    border-radius: @sapUiElementBorderCornerRadius;
+    padding-bottom: 1rem;
+}
+
+.sapUiMDCChart .sapUiMDCChartBreadcrumbs {
+    margin-left: 1rem;
+}
+
+.sapUiMDCChart .sapMIBar.sapMTBHeader-CTX {
+    border-top-right-radius: @sapUiElementBorderCornerRadius;
+    border-top-left-radius: @sapUiElementBorderCornerRadius;
+}
+/* END "Chart.less" */
+
+/* START "TokenDisplay.less" */
+@mdctoken-large-line-height: 1.375rem;
+@mdctoken-small-line-height: 1rem;
+
+// hide Token border and background
+.sapUiMdcTokenizerDisplay .sapMToken {
+	border: 0px; // hide the border of a token
+	background-color: transparent; // remove background of Token
+	padding-left: 0px; // remove the left padding
+}
+
+.sapUiMdcTokenizerDisplay.sapMTokenizer.sapMTokenizerReadonly .sapMToken {
+	padding-left: 0px; // remove left padding of a token. The right padding will be used to show the delimiters
+
+	// right margin and padding of the token (space for the delimiter)
+	padding-right: 0.375rem;
+	margin-right: 0.375rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	color: @sapUiBaseText;
+	height: @mdctoken-small-line-height;
+}
+
+.sapUiFormEdit .sapUiMdcTokenizerDisplay.sapMTokenizer.sapMTokenizerReadonly .sapMToken {
+	height: @mdctoken-large-line-height;
+}
+
+.sapUiSizeCozy .sapUiMdcTokenizerDisplay.sapMTokenizer.sapMTokenizerReadonly .sapMToken {
+	// right margin and padding of the token (space for the delimiter)
+	padding-right: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+// delimiters between tokens
+.sapUiMdcTokenizerDisplay .sapMToken::after {
+	content: attr(delimiter);
+	color: @sapUiBaseText;
+	font-family: @sapUiFontFamily;
+	font-size: @sapMFontMediumSize;
+	font-weight: normal;
+	vertical-align: middle;
+	margin-left: 0.25rem; // space between tokens. the left margin of the delimiter and the right side of the token
+	position: absolute;
+	line-height: @mdctoken-small-line-height;
+}
+
+.sapUiSizeCozy .sapUiMdcTokenizerDisplay .sapMToken::after {
+	margin-left: 0.4rem; // space between tokens. the left side margin of the token
+}
+
+.sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMToken::after {
+	line-height: @mdctoken-large-line-height;
+}
+
+// no delimiter after the last token
+.sapUiMdcTokenizerDisplay .sapMToken:last-child:after {
+	content: none;
+}
+
+
+
+// make the token focus invisible
+html.sap-desktop .sapUiMdcTokenizerDisplay .sapMToken:focus {
+	outline: 0px;
+}
+
+// make the token hover invisible
+html.sap-desktop .sapUiMdcTokenizerDisplay .sapMToken:hover {
+	background: transparent;
+	border: 0px;
+}
+
+.sapUiSizeCompact .sapUiMdcTokenizerDisplay.sapMTokenizer .sapMToken {
+	font-size: @sapMFontMediumSize;
+}
+
+
+
+.sapUiMdcTokenizerDisplay .sapMTokenText {
+	// enable selection of scrollcontainer
+	-webkit-user-select: text;
+    user-select: text;
+
+	line-height: @mdctoken-small-line-height;
+}
+
+.sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMTokenText {
+	line-height: @mdctoken-large-line-height;
+}
+/* END "TokenDisplay.less" */
+
+/* START "TokenizerDisplay.less" */
+
+html.sap-desktop .sapUiMdcTokenizerDisplay.sapMTokenizer {
+	outline: none; // hide focus of the tokenizer
+	padding-left: 0px; // remove left padding of Tokenizer for Display mode
+
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+@mdctokenizer-large-line-height: 1.375rem;
+@mdctokenizer-small-line-height: 1rem;
+@mdctokenizer-large-padding-topbottom: 0.6875rem;
+@mdctokenizer-small-padding-topbottom: 0.3125rem;
+
+// show a focus around the more link
+.sapUiMdcTokenizerDisplay .sapMTokenizerIndicator:focus {
+	outline: @sapUiContentFocusWidth dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+	text-decoration: underline;
+}
+
+.sapUiMdcTokenizerDisplay .sapMTokenizerIndicator:hover {
+	text-decoration: underline;
+}
+
+.sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMTokenizerIndicator,
+.sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMTokenizerIndicator:focus {
+	line-height: @mdctokenizer-large-line-height;
+}
+
+.sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMTokenizerIndicator:focus {
+	text-decoration: underline;
+}
+
+.sapUiMdcTokenizerDisplay .sapMTokenizerIndicator {
+	line-height: @mdctokenizer-small-line-height;
+}
+
+
+
+
+// hide emptyIndicator for TokenizerDisplay
+.sapUiMdcTokenizerDisplay .sapMEmptyIndicator.sapMEmptyIndicatorAuto {
+	display: none;
+}
+
+// show emptyIndicator for TokenizerDisplay
+.sapMShowEmpty-CTX .sapUiMdcTokenizerDisplay .sapMEmptyIndicator.sapMEmptyIndicatorAuto {
+	line-height: @mdctokenizer-small-line-height;
+	font-size: @sapMFontMediumSize;
+	display: inline-block;
+}
+
+.sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMEmptyIndicator.sapMEmptyIndicatorAuto {
+	line-height: @mdctokenizer-large-line-height;
+}
+
+.sapUiSizeCozy .sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMEmptyIndicator.sapMEmptyIndicatorAuto {
+	padding-top: @mdctokenizer-large-padding-topbottom;
+	padding-bottom: @mdctokenizer-large-padding-topbottom;
+}
+
+.sapUiSizeCompact .sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMEmptyIndicator.sapMEmptyIndicatorAuto {
+	padding-top: @mdctokenizer-small-padding-topbottom;
+	padding-bottom: @mdctokenizer-small-padding-topbottom;
+}
+
+
+
+
+// enable mouse selection on scrollcontainer
+.sapUiMdcTokenizerDisplay .sapMTokenizerScrollContainer {
+	-moz-user-select: text;
+	-webkit-user-select: text;
+
+	// give the scrollcontainer the required top/bottom paddings so that is works like a text control
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+
+.sapUiSizeCozy .sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMTokenizerScrollContainer {
+	// give the scrollcontainer the required top/bottom paddings so that is works like a text control
+	padding-top: @mdctokenizer-large-padding-topbottom;
+	padding-bottom: @mdctokenizer-large-padding-topbottom;
+}
+
+.sapUiSizeCompact .sapUiFormEdit .sapUiMdcTokenizerDisplay .sapMTokenizerScrollContainer {
+	padding-top: @mdctokenizer-small-padding-topbottom;
+	padding-bottom: @mdctokenizer-small-padding-topbottom;
+}
+
+/* END "TokenizerDisplay.less" */
+

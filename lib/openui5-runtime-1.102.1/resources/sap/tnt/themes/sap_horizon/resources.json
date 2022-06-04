@@ -1,0 +1,94 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 90,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "InfoLabel.less",
+			"size": 1452,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "NavigationList.less",
+			"size": 521,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "SideNavigation.less",
+			"size": 453,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ToolHeader.less",
+			"size": 18791,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "ToolPage.less",
+			"size": 257,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 5438,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 121906,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 121544,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 34095,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 2270,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.css",
+			"size": 34091,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.less",
+			"size": 22289,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.source.less",
+			"size": 461,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 36722,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 36718,
+			"theme": "sap_horizon"
+		}
+	]
+}

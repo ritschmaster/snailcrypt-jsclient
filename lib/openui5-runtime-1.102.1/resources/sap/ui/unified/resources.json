@@ -1,0 +1,3710 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library",
+			"size": 1828
+		},
+		{
+			"name": ".supportrc",
+			"size": 25
+		},
+		{
+			"name": ".theming",
+			"size": 78
+		},
+		{
+			"name": "Calendar-dbg.js",
+			"module": "sap/ui/unified/Calendar.js",
+			"size": 84550,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/Month.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearRangePicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "Calendar.control",
+			"size": 11287,
+			"designtime": true
+		},
+		{
+			"name": "Calendar.js",
+			"module": "sap/ui/unified/Calendar.js",
+			"size": 41401,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/Month.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearRangePicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarAppointment-dbg.js",
+			"module": "sap/ui/unified/CalendarAppointment.js",
+			"size": 11666,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarAppointment.control",
+			"size": 3315,
+			"designtime": true
+		},
+		{
+			"name": "CalendarAppointment.js",
+			"module": "sap/ui/unified/CalendarAppointment.js",
+			"size": 4842,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarAppointmentHeight.type",
+			"size": 786,
+			"designtime": true
+		},
+		{
+			"name": "CalendarAppointmentRoundWidth.type",
+			"size": 667,
+			"designtime": true
+		},
+		{
+			"name": "CalendarAppointmentVisualization.type",
+			"size": 646,
+			"designtime": true
+		},
+		{
+			"name": "CalendarDateInterval-dbg.js",
+			"module": "sap/ui/unified/CalendarDateInterval.js",
+			"size": 35824,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Popover.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearRangePicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarDateInterval.control",
+			"size": 1384,
+			"designtime": true
+		},
+		{
+			"name": "CalendarDateInterval.js",
+			"module": "sap/ui/unified/CalendarDateInterval.js",
+			"size": 17268,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Popover.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearRangePicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarDateIntervalRenderer-dbg.js",
+			"module": "sap/ui/unified/CalendarDateIntervalRenderer.js",
+			"size": 1482,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/CalendarRenderer.js"
+			]
+		},
+		{
+			"name": "CalendarDateIntervalRenderer.js",
+			"module": "sap/ui/unified/CalendarDateIntervalRenderer.js",
+			"size": 896,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/CalendarRenderer.js"
+			]
+		},
+		{
+			"name": "CalendarDayType.type",
+			"size": 4119,
+			"designtime": true
+		},
+		{
+			"name": "CalendarIntervalType.type",
+			"size": 1337,
+			"designtime": true
+		},
+		{
+			"name": "CalendarLegend-dbg.js",
+			"module": "sap/ui/unified/CalendarLegend.js",
+			"size": 7488,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/CalendarLegendItem.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarLegend.control",
+			"size": 1620,
+			"designtime": true
+		},
+		{
+			"name": "CalendarLegend.js",
+			"module": "sap/ui/unified/CalendarLegend.js",
+			"size": 2766,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/CalendarLegendItem.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarLegendItem-dbg.js",
+			"module": "sap/ui/unified/CalendarLegendItem.js",
+			"size": 1770,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarLegendItem.control",
+			"size": 1062,
+			"designtime": true
+		},
+		{
+			"name": "CalendarLegendItem.js",
+			"module": "sap/ui/unified/CalendarLegendItem.js",
+			"size": 577,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarLegendRenderer-dbg.js",
+			"module": "sap/ui/unified/CalendarLegendRenderer.js",
+			"size": 8239,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/InvisibleText.js"
+			]
+		},
+		{
+			"name": "CalendarLegendRenderer.js",
+			"module": "sap/ui/unified/CalendarLegendRenderer.js",
+			"size": 2428,
+			"required": [
+				"sap/ui/core/InvisibleText.js"
+			]
+		},
+		{
+			"name": "CalendarMonthInterval-dbg.js",
+			"module": "sap/ui/unified/CalendarMonthInterval.js",
+			"size": 37895,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Popover.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/CalendarMonthIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/CustomYearPicker.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/MonthsRow.js",
+				"sap/ui/unified/calendar/YearPicker.js"
+			]
+		},
+		{
+			"name": "CalendarMonthInterval.control",
+			"size": 7199,
+			"designtime": true
+		},
+		{
+			"name": "CalendarMonthInterval.js",
+			"module": "sap/ui/unified/CalendarMonthInterval.js",
+			"size": 17796,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Popover.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/CalendarMonthIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/CustomYearPicker.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/MonthsRow.js",
+				"sap/ui/unified/calendar/YearPicker.js"
+			]
+		},
+		{
+			"name": "CalendarMonthIntervalRenderer-dbg.js",
+			"module": "sap/ui/unified/CalendarMonthIntervalRenderer.js",
+			"size": 2222,
+			"isDebug": true
+		},
+		{
+			"name": "CalendarMonthIntervalRenderer.js",
+			"module": "sap/ui/unified/CalendarMonthIntervalRenderer.js",
+			"size": 1264
+		},
+		{
+			"name": "CalendarOneMonthInterval-dbg.js",
+			"module": "sap/ui/unified/CalendarOneMonthInterval.js",
+			"size": 13177,
+			"isDebug": true,
+			"required": [
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarDateInterval.js",
+				"sap/ui/unified/CalendarOneMonthIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/CustomMonthPicker.js",
+				"sap/ui/unified/calendar/OneMonthDatesRow.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarOneMonthInterval.js",
+			"module": "sap/ui/unified/CalendarOneMonthInterval.js",
+			"size": 4274,
+			"required": [
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarDateInterval.js",
+				"sap/ui/unified/CalendarOneMonthIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/CustomMonthPicker.js",
+				"sap/ui/unified/calendar/OneMonthDatesRow.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarOneMonthIntervalRenderer-dbg.js",
+			"module": "sap/ui/unified/CalendarOneMonthIntervalRenderer.js",
+			"size": 748,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js"
+			]
+		},
+		{
+			"name": "CalendarOneMonthIntervalRenderer.js",
+			"module": "sap/ui/unified/CalendarOneMonthIntervalRenderer.js",
+			"size": 402,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js"
+			]
+		},
+		{
+			"name": "CalendarRenderer-dbg.js",
+			"module": "sap/ui/unified/CalendarRenderer.js",
+			"size": 4021,
+			"isDebug": true
+		},
+		{
+			"name": "CalendarRenderer.js",
+			"module": "sap/ui/unified/CalendarRenderer.js",
+			"size": 2041
+		},
+		{
+			"name": "CalendarRow-dbg.js",
+			"module": "sap/ui/unified/CalendarRow.js",
+			"size": 73252,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/InvisibleMessage.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/CalendarAppointment.js",
+				"sap/ui/unified/CalendarRowRenderer.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarRow.control",
+			"size": 12791,
+			"designtime": true
+		},
+		{
+			"name": "CalendarRow.js",
+			"module": "sap/ui/unified/CalendarRow.js",
+			"size": 29970,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/InvisibleMessage.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/CalendarAppointment.js",
+				"sap/ui/unified/CalendarRowRenderer.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarRowRenderer-dbg.js",
+			"module": "sap/ui/unified/CalendarRowRenderer.js",
+			"size": 29021,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/unified/CalendarAppointment.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarRowRenderer.js",
+			"module": "sap/ui/unified/CalendarRowRenderer.js",
+			"size": 14232,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/unified/CalendarAppointment.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarTimeInterval-dbg.js",
+			"module": "sap/ui/unified/CalendarTimeInterval.js",
+			"size": 57572,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Popover.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarTimeIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/TimesRow.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarTimeInterval.control",
+			"size": 7599,
+			"designtime": true
+		},
+		{
+			"name": "CalendarTimeInterval.js",
+			"module": "sap/ui/unified/CalendarTimeInterval.js",
+			"size": 30053,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Popover.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarTimeIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/TimesRow.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarTimeIntervalRenderer-dbg.js",
+			"module": "sap/ui/unified/CalendarTimeIntervalRenderer.js",
+			"size": 2291,
+			"isDebug": true
+		},
+		{
+			"name": "CalendarTimeIntervalRenderer.js",
+			"module": "sap/ui/unified/CalendarTimeIntervalRenderer.js",
+			"size": 1315
+		},
+		{
+			"name": "CalendarWeekInterval-dbg.js",
+			"module": "sap/ui/unified/CalendarWeekInterval.js",
+			"size": 8374,
+			"isDebug": true,
+			"required": [
+				"sap/ui/unified/CalendarDateInterval.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "CalendarWeekInterval.js",
+			"module": "sap/ui/unified/CalendarWeekInterval.js",
+			"size": 2518,
+			"required": [
+				"sap/ui/unified/CalendarDateInterval.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ColorPicker-dbg.js",
+			"module": "sap/ui/unified/ColorPicker.js",
+			"size": 77920,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/Global.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ColorPickerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ColorPicker.control",
+			"size": 8545,
+			"designtime": true
+		},
+		{
+			"name": "ColorPicker.js",
+			"module": "sap/ui/unified/ColorPicker.js",
+			"size": 39521,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/Global.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ColorPickerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ColorPickerDisplayMode-dbg.js",
+			"module": "sap/ui/unified/ColorPickerDisplayMode.js",
+			"size": 811,
+			"isDebug": true
+		},
+		{
+			"name": "ColorPickerDisplayMode.js",
+			"module": "sap/ui/unified/ColorPickerDisplayMode.js",
+			"size": 269
+		},
+		{
+			"name": "ColorPickerDisplayMode.type",
+			"size": 662,
+			"designtime": true
+		},
+		{
+			"name": "ColorPickerMode.type",
+			"size": 533,
+			"designtime": true
+		},
+		{
+			"name": "ColorPickerPopover-dbg.js",
+			"module": "sap/ui/unified/ColorPickerPopover.js",
+			"size": 11372,
+			"isDebug": true,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/library.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ColorPicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ColorPickerPopover.control",
+			"size": 6298,
+			"designtime": true
+		},
+		{
+			"name": "ColorPickerPopover.js",
+			"module": "sap/ui/unified/ColorPickerPopover.js",
+			"size": 3512,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/library.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ColorPicker.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ColorPickerRenderer-dbg.js",
+			"module": "sap/ui/unified/ColorPickerRenderer.js",
+			"size": 11348,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/unified/ColorPickerDisplayMode.js"
+			]
+		},
+		{
+			"name": "ColorPickerRenderer.js",
+			"module": "sap/ui/unified/ColorPickerRenderer.js",
+			"size": 7078,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/unified/ColorPickerDisplayMode.js"
+			]
+		},
+		{
+			"name": "ContentSwitcher-dbg.js",
+			"module": "sap/ui/unified/ContentSwitcher.js",
+			"size": 5966,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/unified/ContentSwitcherRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ContentSwitcher.control",
+			"size": 1809,
+			"designtime": true
+		},
+		{
+			"name": "ContentSwitcher.js",
+			"module": "sap/ui/unified/ContentSwitcher.js",
+			"size": 1970,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/unified/ContentSwitcherRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ContentSwitcherAnimation.type",
+			"size": 1585,
+			"designtime": true
+		},
+		{
+			"name": "ContentSwitcherRenderer-dbg.js",
+			"module": "sap/ui/unified/ContentSwitcherRenderer.js",
+			"size": 2165,
+			"isDebug": true,
+			"required": [
+				"sap/base/security/encodeXML.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ContentSwitcherRenderer.js",
+			"module": "sap/ui/unified/ContentSwitcherRenderer.js",
+			"size": 1123,
+			"required": [
+				"sap/base/security/encodeXML.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "Currency-dbg.js",
+			"module": "sap/ui/unified/Currency.js",
+			"size": 11091,
+			"isDebug": true,
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/unified/CurrencyRenderer.js"
+			]
+		},
+		{
+			"name": "Currency.control",
+			"size": 3955,
+			"designtime": true
+		},
+		{
+			"name": "Currency.js",
+			"module": "sap/ui/unified/Currency.js",
+			"size": 3362,
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/unified/CurrencyRenderer.js"
+			]
+		},
+		{
+			"name": "CurrencyRenderer-dbg.js",
+			"module": "sap/ui/unified/CurrencyRenderer.js",
+			"size": 2933,
+			"isDebug": true,
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Core.js"
+			]
+		},
+		{
+			"name": "CurrencyRenderer.js",
+			"module": "sap/ui/unified/CurrencyRenderer.js",
+			"size": 1344,
+			"required": [
+				"sap/m/library.js",
+				"sap/ui/core/Core.js"
+			]
+		},
+		{
+			"name": "DateRange-dbg.js",
+			"module": "sap/ui/unified/DateRange.js",
+			"size": 2030,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "DateRange.control",
+			"size": 815,
+			"designtime": true
+		},
+		{
+			"name": "DateRange.js",
+			"module": "sap/ui/unified/DateRange.js",
+			"size": 821,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "DateTypeRange-dbg.js",
+			"module": "sap/ui/unified/DateTypeRange.js",
+			"size": 2225,
+			"isDebug": true,
+			"required": [
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "DateTypeRange.control",
+			"size": 1629,
+			"designtime": true
+		},
+		{
+			"name": "DateTypeRange.js",
+			"module": "sap/ui/unified/DateTypeRange.js",
+			"size": 607,
+			"required": [
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploader-dbg.js",
+			"module": "sap/ui/unified/FileUploader.js",
+			"size": 64905,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/security/encodeXML.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/LabelEnablement.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/dom/jquery/Aria.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/FileUploaderRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploader.control",
+			"size": 23363,
+			"designtime": true
+		},
+		{
+			"name": "FileUploader.js",
+			"module": "sap/ui/unified/FileUploader.js",
+			"size": 25754,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/security/encodeXML.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/LabelEnablement.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/dom/jquery/Aria.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/FileUploaderRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploaderHttpRequestMethod-dbg.js",
+			"module": "sap/ui/unified/FileUploaderHttpRequestMethod.js",
+			"size": 747,
+			"isDebug": true
+		},
+		{
+			"name": "FileUploaderHttpRequestMethod.js",
+			"module": "sap/ui/unified/FileUploaderHttpRequestMethod.js",
+			"size": 235
+		},
+		{
+			"name": "FileUploaderHttpRequestMethod.type",
+			"size": 573,
+			"designtime": true
+		},
+		{
+			"name": "FileUploaderParameter-dbg.js",
+			"module": "sap/ui/unified/FileUploaderParameter.js",
+			"size": 1443,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploaderParameter.control",
+			"size": 774,
+			"designtime": true
+		},
+		{
+			"name": "FileUploaderParameter.js",
+			"module": "sap/ui/unified/FileUploaderParameter.js",
+			"size": 452,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploaderRenderer-dbg.js",
+			"module": "sap/ui/unified/FileUploaderRenderer.js",
+			"size": 3735,
+			"isDebug": true,
+			"required": [
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploaderRenderer.js",
+			"module": "sap/ui/unified/FileUploaderRenderer.js",
+			"size": 2141,
+			"required": [
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploaderXHRSettings-dbg.js",
+			"module": "sap/ui/unified/FileUploaderXHRSettings.js",
+			"size": 1405,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "FileUploaderXHRSettings.control",
+			"size": 707,
+			"designtime": true
+		},
+		{
+			"name": "FileUploaderXHRSettings.js",
+			"module": "sap/ui/unified/FileUploaderXHRSettings.js",
+			"size": 412,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "GroupAppointmentsMode.type",
+			"size": 670,
+			"designtime": true
+		},
+		{
+			"name": "IProcessableBlobs.interface",
+			"size": 535,
+			"designtime": true
+		},
+		{
+			"name": "Menu-dbg.js",
+			"module": "sap/ui/unified/Menu.js",
+			"size": 38125,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/events/ControlEvents.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/events/PseudoEvents.js",
+				"sap/ui/events/checkMouseEnterOrLeave.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/MenuRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "Menu.js",
+			"module": "sap/ui/unified/Menu.js",
+			"size": 17068,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/events/ControlEvents.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/events/PseudoEvents.js",
+				"sap/ui/events/checkMouseEnterOrLeave.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/MenuRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "MenuItem-dbg.js",
+			"module": "sap/ui/unified/MenuItem.js",
+			"size": 4410,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/library.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "MenuItem.control",
+			"size": 1308,
+			"designtime": true
+		},
+		{
+			"name": "MenuItem.js",
+			"module": "sap/ui/unified/MenuItem.js",
+			"size": 2235,
+			"required": [
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/library.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "MenuItemBase-dbg.js",
+			"module": "sap/ui/unified/MenuItemBase.js",
+			"size": 5329,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "MenuItemBase.control",
+			"size": 2261,
+			"designtime": true
+		},
+		{
+			"name": "MenuItemBase.js",
+			"module": "sap/ui/unified/MenuItemBase.js",
+			"size": 1596,
+			"required": [
+				"sap/ui/core/Element.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "MenuRenderer-dbg.js",
+			"module": "sap/ui/unified/MenuRenderer.js",
+			"size": 3432,
+			"isDebug": true
+		},
+		{
+			"name": "MenuRenderer.js",
+			"module": "sap/ui/unified/MenuRenderer.js",
+			"size": 1711
+		},
+		{
+			"name": "MenuTextFieldItem-dbg.js",
+			"module": "sap/ui/unified/MenuTextFieldItem.js",
+			"size": 11013,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/ValueStateSupport.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/jquery/cursorPos.js",
+				"sap/ui/events/PseudoEvents.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "MenuTextFieldItem.control",
+			"size": 1503,
+			"designtime": true
+		},
+		{
+			"name": "MenuTextFieldItem.js",
+			"module": "sap/ui/unified/MenuTextFieldItem.js",
+			"size": 5550,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/ValueStateSupport.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/jquery/cursorPos.js",
+				"sap/ui/events/PseudoEvents.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "Shell-dbg.js",
+			"module": "sap/ui/unified/Shell.js",
+			"size": 6287,
+			"isDebug": true,
+			"required": [
+				"sap/ui/unified/ShellHeader.js",
+				"sap/ui/unified/ShellLayout.js",
+				"sap/ui/unified/ShellRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "Shell.control",
+			"size": 3651,
+			"designtime": true
+		},
+		{
+			"name": "Shell.js",
+			"module": "sap/ui/unified/Shell.js",
+			"size": 2452,
+			"required": [
+				"sap/ui/unified/ShellHeader.js",
+				"sap/ui/unified/ShellLayout.js",
+				"sap/ui/unified/ShellRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellHeadItem-dbg.js",
+			"module": "sap/ui/unified/ShellHeadItem.js",
+			"size": 6261,
+			"isDebug": true,
+			"required": [
+				"sap/base/security/encodeXML.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellHeadItem.control",
+			"size": 2985,
+			"designtime": true
+		},
+		{
+			"name": "ShellHeadItem.js",
+			"module": "sap/ui/unified/ShellHeadItem.js",
+			"size": 2811,
+			"required": [
+				"sap/base/security/encodeXML.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellHeadUserItem-dbg.js",
+			"module": "sap/ui/unified/ShellHeadUserItem.js",
+			"size": 4468,
+			"isDebug": true,
+			"required": [
+				"sap/base/security/encodeXML.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellHeadUserItem.control",
+			"size": 1737,
+			"designtime": true
+		},
+		{
+			"name": "ShellHeadUserItem.js",
+			"module": "sap/ui/unified/ShellHeadUserItem.js",
+			"size": 1923,
+			"required": [
+				"sap/base/security/encodeXML.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellHeader-dbg.js",
+			"module": "sap/ui/unified/ShellHeader.js",
+			"size": 7931,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellHeader.js",
+			"module": "sap/ui/unified/ShellHeader.js",
+			"size": 5711,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellLayout-dbg.js",
+			"module": "sap/ui/unified/ShellLayout.js",
+			"size": 17445,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/dom/jquery/Focusable.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ShellLayoutRenderer.js",
+				"sap/ui/unified/SplitContainer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellLayout.control",
+			"size": 2635,
+			"designtime": true
+		},
+		{
+			"name": "ShellLayout.js",
+			"module": "sap/ui/unified/ShellLayout.js",
+			"size": 9849,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/dom/jquery/Focusable.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ShellLayoutRenderer.js",
+				"sap/ui/unified/SplitContainer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellLayoutRenderer-dbg.js",
+			"module": "sap/ui/unified/ShellLayoutRenderer.js",
+			"size": 2763,
+			"isDebug": true
+		},
+		{
+			"name": "ShellLayoutRenderer.js",
+			"module": "sap/ui/unified/ShellLayoutRenderer.js",
+			"size": 1870
+		},
+		{
+			"name": "ShellOverlay-dbg.js",
+			"module": "sap/ui/unified/ShellOverlay.js",
+			"size": 10583,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/dom/jquery/Selectors.js",
+				"sap/ui/dom/jquery/rect.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ShellOverlayRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellOverlay.control",
+			"size": 1631,
+			"designtime": true
+		},
+		{
+			"name": "ShellOverlay.js",
+			"module": "sap/ui/unified/ShellOverlay.js",
+			"size": 6354,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/dom/jquery/Selectors.js",
+				"sap/ui/dom/jquery/rect.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/ShellOverlayRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "ShellOverlayRenderer-dbg.js",
+			"module": "sap/ui/unified/ShellOverlayRenderer.js",
+			"size": 3277,
+			"isDebug": true
+		},
+		{
+			"name": "ShellOverlayRenderer.js",
+			"module": "sap/ui/unified/ShellOverlayRenderer.js",
+			"size": 2068
+		},
+		{
+			"name": "ShellRenderer-dbg.js",
+			"module": "sap/ui/unified/ShellRenderer.js",
+			"size": 554,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/ShellLayoutRenderer.js"
+			]
+		},
+		{
+			"name": "ShellRenderer.js",
+			"module": "sap/ui/unified/ShellRenderer.js",
+			"size": 277,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/ShellLayoutRenderer.js"
+			]
+		},
+		{
+			"name": "SplitContainer-dbg.js",
+			"module": "sap/ui/unified/SplitContainer.js",
+			"size": 11995,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/unified/SplitContainerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "SplitContainer.control",
+			"size": 2061,
+			"designtime": true
+		},
+		{
+			"name": "SplitContainer.js",
+			"module": "sap/ui/unified/SplitContainer.js",
+			"size": 5299,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/unified/SplitContainerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "SplitContainerRenderer-dbg.js",
+			"module": "sap/ui/unified/SplitContainerRenderer.js",
+			"size": 2656,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "SplitContainerRenderer.js",
+			"module": "sap/ui/unified/SplitContainerRenderer.js",
+			"size": 1447,
+			"required": [
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "StandardCalendarLegendItem.type",
+			"size": 1009,
+			"designtime": true
+		},
+		{
+			"name": "calendar/CalendarDate-dbg.js",
+			"module": "sap/ui/unified/calendar/CalendarDate.js",
+			"size": 16588,
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/core/date/UniversalDate.js"
+			]
+		},
+		{
+			"name": "calendar/CalendarDate.js",
+			"module": "sap/ui/unified/calendar/CalendarDate.js",
+			"size": 3708,
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/core/date/UniversalDate.js"
+			]
+		},
+		{
+			"name": "calendar/CalendarUtils-dbg.js",
+			"module": "sap/ui/unified/calendar/CalendarUtils.js",
+			"size": 27114,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/unified/calendar/CalendarDate.js"
+			]
+		},
+		{
+			"name": "calendar/CalendarUtils.js",
+			"module": "sap/ui/unified/calendar/CalendarUtils.js",
+			"size": 7039,
+			"required": [
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/unified/calendar/CalendarDate.js"
+			]
+		},
+		{
+			"name": "calendar/CustomMonthPicker-dbg.js",
+			"module": "sap/ui/unified/calendar/CustomMonthPicker.js",
+			"size": 4107,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/Header.js"
+			]
+		},
+		{
+			"name": "calendar/CustomMonthPicker.js",
+			"module": "sap/ui/unified/calendar/CustomMonthPicker.js",
+			"size": 2336,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/Header.js"
+			]
+		},
+		{
+			"name": "calendar/CustomYearPicker-dbg.js",
+			"module": "sap/ui/unified/calendar/CustomYearPicker.js",
+			"size": 3785,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/Header.js"
+			]
+		},
+		{
+			"name": "calendar/CustomYearPicker.js",
+			"module": "sap/ui/unified/calendar/CustomYearPicker.js",
+			"size": 2159,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/Header.js"
+			]
+		},
+		{
+			"name": "calendar/DatesRow-dbg.js",
+			"module": "sap/ui/unified/calendar/DatesRow.js",
+			"size": 11010,
+			"isDebug": true,
+			"required": [
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRowRenderer.js",
+				"sap/ui/unified/calendar/Month.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/DatesRow.control",
+			"size": 2081,
+			"designtime": true
+		},
+		{
+			"name": "calendar/DatesRow.js",
+			"module": "sap/ui/unified/calendar/DatesRow.js",
+			"size": 4574,
+			"required": [
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRowRenderer.js",
+				"sap/ui/unified/calendar/Month.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/DatesRowRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/DatesRowRenderer.js",
+			"size": 7500,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/MonthRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/DatesRowRenderer.js",
+			"module": "sap/ui/unified/calendar/DatesRowRenderer.js",
+			"size": 3564,
+			"required": [
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/MonthRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/Header-dbg.js",
+			"module": "sap/ui/unified/calendar/Header.js",
+			"size": 9977,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/unified/calendar/HeaderRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/Header.control",
+			"size": 4892,
+			"designtime": true
+		},
+		{
+			"name": "calendar/Header.js",
+			"module": "sap/ui/unified/calendar/Header.js",
+			"size": 4056,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/unified/calendar/HeaderRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/HeaderRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/HeaderRenderer.js",
+			"size": 6722,
+			"isDebug": true
+		},
+		{
+			"name": "calendar/HeaderRenderer.js",
+			"module": "sap/ui/unified/calendar/HeaderRenderer.js",
+			"size": 3790
+		},
+		{
+			"name": "calendar/IndexPicker-dbg.js",
+			"module": "sap/ui/unified/calendar/IndexPicker.js",
+			"size": 8070,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/IndexPickerRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/IndexPicker.js",
+			"module": "sap/ui/unified/calendar/IndexPicker.js",
+			"size": 4354,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/IndexPickerRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/IndexPickerRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/IndexPickerRenderer.js",
+			"size": 2735,
+			"isDebug": true
+		},
+		{
+			"name": "calendar/IndexPickerRenderer.js",
+			"module": "sap/ui/unified/calendar/IndexPickerRenderer.js",
+			"size": 1464
+		},
+		{
+			"name": "calendar/Month-dbg.js",
+			"module": "sap/ui/unified/calendar/Month.js",
+			"size": 69487,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/MonthRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/Month.control",
+			"size": 8640,
+			"designtime": true
+		},
+		{
+			"name": "calendar/Month.js",
+			"module": "sap/ui/unified/calendar/Month.js",
+			"size": 28568,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/MonthRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthPicker-dbg.js",
+			"module": "sap/ui/unified/calendar/MonthPicker.js",
+			"size": 30997,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/MonthPickerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthPicker.control",
+			"size": 4018,
+			"designtime": true
+		},
+		{
+			"name": "calendar/MonthPicker.js",
+			"module": "sap/ui/unified/calendar/MonthPicker.js",
+			"size": 15016,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/MonthPickerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthPickerRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/MonthPickerRenderer.js",
+			"size": 4028,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/unified/calendar/CalendarDate.js"
+			]
+		},
+		{
+			"name": "calendar/MonthPickerRenderer.js",
+			"module": "sap/ui/unified/calendar/MonthPickerRenderer.js",
+			"size": 2002,
+			"required": [
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/unified/calendar/CalendarDate.js"
+			]
+		},
+		{
+			"name": "calendar/MonthRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/MonthRenderer.js",
+			"size": 19347,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/library.js",
+				"sap/ui/unified/CalendarLegend.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthRenderer.js",
+			"module": "sap/ui/unified/calendar/MonthRenderer.js",
+			"size": 8702,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/library.js",
+				"sap/ui/unified/CalendarLegend.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthsRow-dbg.js",
+			"module": "sap/ui/unified/calendar/MonthsRow.js",
+			"size": 36152,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/MonthsRowRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthsRow.control",
+			"size": 5993,
+			"designtime": true
+		},
+		{
+			"name": "calendar/MonthsRow.js",
+			"module": "sap/ui/unified/calendar/MonthsRow.js",
+			"size": 15143,
+			"required": [
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/MonthsRowRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthsRowRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/MonthsRowRenderer.js",
+			"size": 10427,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/MonthsRowRenderer.js",
+			"module": "sap/ui/unified/calendar/MonthsRowRenderer.js",
+			"size": 4584,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/OneMonthDatesRow-dbg.js",
+			"module": "sap/ui/unified/calendar/OneMonthDatesRow.js",
+			"size": 5351,
+			"isDebug": true,
+			"required": [
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/OneMonthDatesRowRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/OneMonthDatesRow.js",
+			"module": "sap/ui/unified/calendar/OneMonthDatesRow.js",
+			"size": 2005,
+			"required": [
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/OneMonthDatesRowRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/OneMonthDatesRowRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/OneMonthDatesRowRenderer.js",
+			"size": 1191,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/calendar/DatesRowRenderer.js",
+				"sap/ui/unified/calendar/MonthRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/OneMonthDatesRowRenderer.js",
+			"module": "sap/ui/unified/calendar/OneMonthDatesRowRenderer.js",
+			"size": 647,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/unified/calendar/DatesRowRenderer.js",
+				"sap/ui/unified/calendar/MonthRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/TimesRow-dbg.js",
+			"module": "sap/ui/unified/calendar/TimesRow.js",
+			"size": 36940,
+			"isDebug": true,
+			"required": [
+				"sap/base/util/deepEqual.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/TimesRowRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/TimesRow.control",
+			"size": 6064,
+			"designtime": true
+		},
+		{
+			"name": "calendar/TimesRow.js",
+			"module": "sap/ui/unified/calendar/TimesRow.js",
+			"size": 16920,
+			"required": [
+				"sap/base/util/deepEqual.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/TimesRowRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/TimesRowRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/TimesRowRenderer.js",
+			"size": 9935,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/TimesRowRenderer.js",
+			"module": "sap/ui/unified/calendar/TimesRowRenderer.js",
+			"size": 5349,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/YearPicker-dbg.js",
+			"module": "sap/ui/unified/calendar/YearPicker.js",
+			"size": 29538,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/YearPickerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/YearPicker.control",
+			"size": 3839,
+			"designtime": true
+		},
+		{
+			"name": "calendar/YearPicker.js",
+			"module": "sap/ui/unified/calendar/YearPicker.js",
+			"size": 14575,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/YearPickerRenderer.js",
+				"sap/ui/unified/library.js"
+			]
+		},
+		{
+			"name": "calendar/YearPickerRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/YearPickerRenderer.js",
+			"size": 4451,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js"
+			]
+		},
+		{
+			"name": "calendar/YearPickerRenderer.js",
+			"module": "sap/ui/unified/calendar/YearPickerRenderer.js",
+			"size": 2218,
+			"required": [
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js"
+			]
+		},
+		{
+			"name": "calendar/YearRangePicker-dbg.js",
+			"module": "sap/ui/unified/calendar/YearRangePicker.js",
+			"size": 6995,
+			"isDebug": true,
+			"required": [
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearRangePickerRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/YearRangePicker.js",
+			"module": "sap/ui/unified/calendar/YearRangePicker.js",
+			"size": 2940,
+			"required": [
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearRangePickerRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/YearRangePickerRenderer-dbg.js",
+			"module": "sap/ui/unified/calendar/YearRangePickerRenderer.js",
+			"size": 4052,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/YearPickerRenderer.js"
+			]
+		},
+		{
+			"name": "calendar/YearRangePickerRenderer.js",
+			"module": "sap/ui/unified/calendar/YearRangePickerRenderer.js",
+			"size": 2073,
+			"required": [
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/YearPickerRenderer.js"
+			]
+		},
+		{
+			"name": "designtime/Calendar-dbg.designtime.js",
+			"module": "sap/ui/unified/designtime/Calendar.designtime.js",
+			"size": 403,
+			"isDebug": true,
+			"designtime": true
+		},
+		{
+			"name": "designtime/Calendar.designtime.js",
+			"module": "sap/ui/unified/designtime/Calendar.designtime.js",
+			"size": 286,
+			"designtime": true
+		},
+		{
+			"name": "designtime/Calendar.icon.svg",
+			"size": 5017,
+			"designtime": true
+		},
+		{
+			"name": "designtime/CalendarDateInterval-dbg.designtime.js",
+			"module": "sap/ui/unified/designtime/CalendarDateInterval.designtime.js",
+			"size": 647,
+			"isDebug": true,
+			"designtime": true
+		},
+		{
+			"name": "designtime/CalendarDateInterval.create.fragment.xml",
+			"module": "sap/ui/unified/designtime/CalendarDateInterval.create.fragment.xml",
+			"size": 139,
+			"designtime": true,
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/unified/CalendarDateInterval.js"
+			]
+		},
+		{
+			"name": "designtime/CalendarDateInterval.designtime.js",
+			"module": "sap/ui/unified/designtime/CalendarDateInterval.designtime.js",
+			"size": 472,
+			"designtime": true
+		},
+		{
+			"name": "designtime/CalendarDateInterval.icon.svg",
+			"size": 3422,
+			"designtime": true
+		},
+		{
+			"name": "designtime/CalendarLegend-dbg.designtime.js",
+			"module": "sap/ui/unified/designtime/CalendarLegend.designtime.js",
+			"size": 672,
+			"isDebug": true,
+			"designtime": true
+		},
+		{
+			"name": "designtime/CalendarLegend.create.fragment.xml",
+			"module": "sap/ui/unified/designtime/CalendarLegend.create.fragment.xml",
+			"size": 350,
+			"designtime": true,
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/unified/CalendarLegend.js",
+				"sap/ui/unified/CalendarLegendItem.js"
+			]
+		},
+		{
+			"name": "designtime/CalendarLegend.designtime.js",
+			"module": "sap/ui/unified/designtime/CalendarLegend.designtime.js",
+			"size": 386,
+			"designtime": true
+		},
+		{
+			"name": "designtime/Currency-dbg.designtime.js",
+			"module": "sap/ui/unified/designtime/Currency.designtime.js",
+			"size": 589,
+			"isDebug": true,
+			"designtime": true
+		},
+		{
+			"name": "designtime/Currency.create.fragment.xml",
+			"module": "sap/ui/unified/designtime/Currency.create.fragment.xml",
+			"size": 144,
+			"designtime": true,
+			"required": [
+				"sap/ui/core/Fragment.js",
+				"sap/ui/unified/Currency.js"
+			]
+		},
+		{
+			"name": "designtime/Currency.designtime.js",
+			"module": "sap/ui/unified/designtime/Currency.designtime.js",
+			"size": 426,
+			"designtime": true
+		},
+		{
+			"name": "designtime/Currency.icon.svg",
+			"size": 2911,
+			"designtime": true
+		},
+		{
+			"name": "designtime/FileUploader-dbg.designtime.js",
+			"module": "sap/ui/unified/designtime/FileUploader.designtime.js",
+			"size": 411,
+			"isDebug": true,
+			"designtime": true
+		},
+		{
+			"name": "designtime/FileUploader.designtime.js",
+			"module": "sap/ui/unified/designtime/FileUploader.designtime.js",
+			"size": 290,
+			"designtime": true
+		},
+		{
+			"name": "designtime/FileUploader.icon.svg",
+			"size": 902,
+			"designtime": true
+		},
+		{
+			"name": "designtime/library-dbg.designtime.js",
+			"module": "sap/ui/unified/designtime/library.designtime.js",
+			"size": 300,
+			"isDebug": true,
+			"designtime": true
+		},
+		{
+			"name": "designtime/library-preload.designtime.js",
+			"module": "sap/ui/unified/designtime/library-preload.designtime.js",
+			"size": 1761,
+			"merged": true,
+			"designtime": true,
+			"included": [
+				"sap/ui/unified/designtime/Calendar.designtime.js",
+				"sap/ui/unified/designtime/CalendarDateInterval.designtime.js",
+				"sap/ui/unified/designtime/CalendarLegend.designtime.js",
+				"sap/ui/unified/designtime/Currency.designtime.js",
+				"sap/ui/unified/designtime/FileUploader.designtime.js",
+				"sap/ui/unified/designtime/library.designtime.js"
+			]
+		},
+		{
+			"name": "designtime/library-preload.designtime.js.map",
+			"size": 1156,
+			"isDebug": true,
+			"designtime": true
+		},
+		{
+			"name": "designtime/library.designtime.js",
+			"module": "sap/ui/unified/designtime/library.designtime.js",
+			"size": 205,
+			"designtime": true
+		},
+		{
+			"name": "designtime/messagebundle.properties",
+			"module": "sap/ui/unified/designtime/messagebundle.properties",
+			"size": 697,
+			"designtime": true,
+			"locale": "",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_ar.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_ar.properties",
+			"size": 672,
+			"designtime": true,
+			"locale": "ar",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_bg.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_bg.properties",
+			"size": 708,
+			"designtime": true,
+			"locale": "bg",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_ca.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_ca.properties",
+			"size": 269,
+			"designtime": true,
+			"locale": "ca",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_cs.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_cs.properties",
+			"size": 312,
+			"designtime": true,
+			"locale": "cs",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_cy.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_cy.properties",
+			"size": 261,
+			"designtime": true,
+			"locale": "cy",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_da.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_da.properties",
+			"size": 249,
+			"designtime": true,
+			"locale": "da",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_de.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_de.properties",
+			"size": 258,
+			"designtime": true,
+			"locale": "de",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_el.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_el.properties",
+			"size": 734,
+			"designtime": true,
+			"locale": "el",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_en.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_en.properties",
+			"size": 248,
+			"designtime": true,
+			"locale": "en",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_en_GB.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_en_GB.properties",
+			"size": 248,
+			"designtime": true,
+			"locale": "en_GB",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_en_US_sappsd.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_en_US_sappsd.properties",
+			"size": 922,
+			"designtime": true,
+			"locale": "en_US_sappsd",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_en_US_saprigi.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_en_US_saprigi.properties",
+			"size": 1898,
+			"designtime": true,
+			"locale": "en_US_saprigi",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_en_US_saptrc.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_en_US_saptrc.properties",
+			"size": 386,
+			"designtime": true,
+			"locale": "en_US_saptrc",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_es.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_es.properties",
+			"size": 275,
+			"designtime": true,
+			"locale": "es",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_es_MX.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_es_MX.properties",
+			"size": 277,
+			"designtime": true,
+			"locale": "es_MX",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_et.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_et.properties",
+			"size": 261,
+			"designtime": true,
+			"locale": "et",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_fi.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_fi.properties",
+			"size": 320,
+			"designtime": true,
+			"locale": "fi",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_fr.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_fr.properties",
+			"size": 287,
+			"designtime": true,
+			"locale": "fr",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_fr_CA.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_fr_CA.properties",
+			"size": 287,
+			"designtime": true,
+			"locale": "fr_CA",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_hi.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_hi.properties",
+			"size": 628,
+			"designtime": true,
+			"locale": "hi",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_hr.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_hr.properties",
+			"size": 264,
+			"designtime": true,
+			"locale": "hr",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_hu.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_hu.properties",
+			"size": 306,
+			"designtime": true,
+			"locale": "hu",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_id.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_id.properties",
+			"size": 260,
+			"designtime": true,
+			"locale": "id",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_it.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_it.properties",
+			"size": 266,
+			"designtime": true,
+			"locale": "it",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_iw.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_iw.properties",
+			"size": 560,
+			"designtime": true,
+			"locale": "iw",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_ja.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_ja.properties",
+			"size": 346,
+			"designtime": true,
+			"locale": "ja",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_kk.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_kk.properties",
+			"size": 760,
+			"designtime": true,
+			"locale": "kk",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_ko.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_ko.properties",
+			"size": 304,
+			"designtime": true,
+			"locale": "ko",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_lt.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_lt.properties",
+			"size": 279,
+			"designtime": true,
+			"locale": "lt",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_lv.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_lv.properties",
+			"size": 329,
+			"designtime": true,
+			"locale": "lv",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_ms.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_ms.properties",
+			"size": 250,
+			"designtime": true,
+			"locale": "ms",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_nl.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_nl.properties",
+			"size": 245,
+			"designtime": true,
+			"locale": "nl",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_no.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_no.properties",
+			"size": 250,
+			"designtime": true,
+			"locale": "no",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_pl.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_pl.properties",
+			"size": 261,
+			"designtime": true,
+			"locale": "pl",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_pt.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_pt.properties",
+			"size": 292,
+			"designtime": true,
+			"locale": "pt",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_pt_PT.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_pt_PT.properties",
+			"size": 293,
+			"designtime": true,
+			"locale": "pt_PT",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_ro.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_ro.properties",
+			"size": 299,
+			"designtime": true,
+			"locale": "ro",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_ru.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_ru.properties",
+			"size": 694,
+			"designtime": true,
+			"locale": "ru",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_sh.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_sh.properties",
+			"size": 257,
+			"designtime": true,
+			"locale": "sh",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_sk.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_sk.properties",
+			"size": 283,
+			"designtime": true,
+			"locale": "sk",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_sl.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_sl.properties",
+			"size": 258,
+			"designtime": true,
+			"locale": "sl",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_sv.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_sv.properties",
+			"size": 259,
+			"designtime": true,
+			"locale": "sv",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_th.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_th.properties",
+			"size": 634,
+			"designtime": true,
+			"locale": "th",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_tr.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_tr.properties",
+			"size": 313,
+			"designtime": true,
+			"locale": "tr",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_uk.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_uk.properties",
+			"size": 694,
+			"designtime": true,
+			"locale": "uk",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_vi.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_vi.properties",
+			"size": 352,
+			"designtime": true,
+			"locale": "vi",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_zh_CN.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_zh_CN.properties",
+			"size": 298,
+			"designtime": true,
+			"locale": "zh_CN",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "designtime/messagebundle_zh_TW.properties",
+			"module": "sap/ui/unified/designtime/messagebundle_zh_TW.properties",
+			"size": 322,
+			"designtime": true,
+			"locale": "zh_TW",
+			"raw": "designtime/messagebundle.properties"
+		},
+		{
+			"name": "img/ColorPicker/Alphaslider_BG.png",
+			"size": 2936
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/ui/unified/library.js",
+			"size": 16328,
+			"isDebug": true,
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js",
+				"sap/ui/unified/ColorPickerDisplayMode.js",
+				"sap/ui/unified/FileUploaderHttpRequestMethod.js"
+			]
+		},
+		{
+			"name": "library-h2-preload.js",
+			"module": "sap/ui/unified/library-h2-preload.js",
+			"size": 25232,
+			"merged": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/security/encodeXML.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Button.js",
+				"sap/m/Popover.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/library.js",
+				"sap/ui/Device.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/InvisibleMessage.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/LabelEnablement.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/ValueStateSupport.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/dom/jquery/Aria.js",
+				"sap/ui/dom/jquery/Focusable.js",
+				"sap/ui/dom/jquery/Selectors.js",
+				"sap/ui/dom/jquery/cursorPos.js",
+				"sap/ui/dom/jquery/rect.js",
+				"sap/ui/events/ControlEvents.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/events/PseudoEvents.js",
+				"sap/ui/events/checkMouseEnterOrLeave.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/support/library.js",
+				"sap/ui/thirdparty/jquery.js"
+			],
+			"included": [
+				"sap/ui/unified/library.js",
+				"sap/ui/unified/manifest.json",
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarAppointment.js",
+				"sap/ui/unified/CalendarDateInterval.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js",
+				"sap/ui/unified/CalendarLegend.js",
+				"sap/ui/unified/CalendarLegendItem.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/CalendarMonthInterval.js",
+				"sap/ui/unified/CalendarMonthIntervalRenderer.js",
+				"sap/ui/unified/CalendarOneMonthInterval.js",
+				"sap/ui/unified/CalendarOneMonthIntervalRenderer.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/CalendarRow.js",
+				"sap/ui/unified/CalendarRowRenderer.js",
+				"sap/ui/unified/CalendarTimeInterval.js",
+				"sap/ui/unified/CalendarTimeIntervalRenderer.js",
+				"sap/ui/unified/CalendarWeekInterval.js",
+				"sap/ui/unified/ColorPicker.js",
+				"sap/ui/unified/ColorPickerDisplayMode.js",
+				"sap/ui/unified/ColorPickerPopover.js",
+				"sap/ui/unified/ColorPickerRenderer.js",
+				"sap/ui/unified/ContentSwitcher.js",
+				"sap/ui/unified/ContentSwitcherRenderer.js",
+				"sap/ui/unified/Currency.js",
+				"sap/ui/unified/CurrencyRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/FileUploader.js",
+				"sap/ui/unified/FileUploaderHttpRequestMethod.js",
+				"sap/ui/unified/FileUploaderParameter.js",
+				"sap/ui/unified/FileUploaderRenderer.js",
+				"sap/ui/unified/FileUploaderXHRSettings.js",
+				"sap/ui/unified/Menu.js",
+				"sap/ui/unified/MenuItem.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/MenuRenderer.js",
+				"sap/ui/unified/MenuTextFieldItem.js",
+				"sap/ui/unified/Shell.js",
+				"sap/ui/unified/ShellHeadItem.js",
+				"sap/ui/unified/ShellHeadUserItem.js",
+				"sap/ui/unified/ShellHeader.js",
+				"sap/ui/unified/ShellLayout.js",
+				"sap/ui/unified/ShellLayoutRenderer.js",
+				"sap/ui/unified/ShellOverlay.js",
+				"sap/ui/unified/ShellOverlayRenderer.js",
+				"sap/ui/unified/ShellRenderer.js",
+				"sap/ui/unified/SplitContainer.js",
+				"sap/ui/unified/SplitContainerRenderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/CustomMonthPicker.js",
+				"sap/ui/unified/calendar/CustomYearPicker.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/DatesRowRenderer.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/HeaderRenderer.js",
+				"sap/ui/unified/calendar/IndexPicker.js",
+				"sap/ui/unified/calendar/IndexPickerRenderer.js",
+				"sap/ui/unified/calendar/Month.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/MonthPickerRenderer.js",
+				"sap/ui/unified/calendar/MonthRenderer.js",
+				"sap/ui/unified/calendar/MonthsRow.js",
+				"sap/ui/unified/calendar/MonthsRowRenderer.js",
+				"sap/ui/unified/calendar/OneMonthDatesRow.js",
+				"sap/ui/unified/calendar/OneMonthDatesRowRenderer.js",
+				"sap/ui/unified/calendar/TimesRow.js",
+				"sap/ui/unified/calendar/TimesRowRenderer.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearPickerRenderer.js",
+				"sap/ui/unified/calendar/YearRangePicker.js",
+				"sap/ui/unified/calendar/YearRangePickerRenderer.js",
+				"sap/ui/unified/designtime/Calendar.designtime.js",
+				"sap/ui/unified/designtime/CalendarDateInterval.create.fragment.xml",
+				"sap/ui/unified/designtime/CalendarDateInterval.designtime.js",
+				"sap/ui/unified/designtime/CalendarLegend.create.fragment.xml",
+				"sap/ui/unified/designtime/CalendarLegend.designtime.js",
+				"sap/ui/unified/designtime/Currency.create.fragment.xml",
+				"sap/ui/unified/designtime/Currency.designtime.js",
+				"sap/ui/unified/designtime/FileUploader.designtime.js",
+				"sap/ui/unified/designtime/library.designtime.js",
+				"sap/ui/unified/library-preload-lazy.js",
+				"sap/ui/unified/library.support.js",
+				"sap/ui/unified/rules/FileUploader.support.js"
+			]
+		},
+		{
+			"name": "library-h2-preload.js.map",
+			"size": 3523,
+			"isDebug": true
+		},
+		{
+			"name": "library-preload-lazy.js",
+			"module": "sap/ui/unified/library-preload-lazy.js",
+			"size": 3120,
+			"format": "raw"
+		},
+		{
+			"name": "library-preload-lazy.js.map",
+			"size": 161,
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/ui/unified/library-preload.js",
+			"size": 490220,
+			"merged": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/security/encodeXML.js",
+				"sap/base/util/deepEqual.js",
+				"sap/m/Button.js",
+				"sap/m/Popover.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/library.js",
+				"sap/ui/Device.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/CalendarType.js",
+				"sap/ui/core/Control.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/Element.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/InvisibleMessage.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/LabelEnablement.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/LocaleData.js",
+				"sap/ui/core/Popup.js",
+				"sap/ui/core/Renderer.js",
+				"sap/ui/core/ResizeHandler.js",
+				"sap/ui/core/ValueStateSupport.js",
+				"sap/ui/core/date/UniversalDate.js",
+				"sap/ui/core/delegate/ItemNavigation.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/format/TimezoneUtil.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/theming/Parameters.js",
+				"sap/ui/dom/containsOrEquals.js",
+				"sap/ui/dom/jquery/Aria.js",
+				"sap/ui/dom/jquery/Focusable.js",
+				"sap/ui/dom/jquery/Selectors.js",
+				"sap/ui/dom/jquery/cursorPos.js",
+				"sap/ui/dom/jquery/rect.js",
+				"sap/ui/events/ControlEvents.js",
+				"sap/ui/events/KeyCodes.js",
+				"sap/ui/events/PseudoEvents.js",
+				"sap/ui/events/checkMouseEnterOrLeave.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/thirdparty/jquery.js"
+			],
+			"included": [
+				"sap/ui/unified/Calendar.js",
+				"sap/ui/unified/CalendarAppointment.js",
+				"sap/ui/unified/CalendarDateInterval.js",
+				"sap/ui/unified/CalendarDateIntervalRenderer.js",
+				"sap/ui/unified/CalendarLegend.js",
+				"sap/ui/unified/CalendarLegendItem.js",
+				"sap/ui/unified/CalendarLegendRenderer.js",
+				"sap/ui/unified/CalendarMonthInterval.js",
+				"sap/ui/unified/CalendarMonthIntervalRenderer.js",
+				"sap/ui/unified/CalendarOneMonthInterval.js",
+				"sap/ui/unified/CalendarOneMonthIntervalRenderer.js",
+				"sap/ui/unified/CalendarRenderer.js",
+				"sap/ui/unified/CalendarRow.js",
+				"sap/ui/unified/CalendarRowRenderer.js",
+				"sap/ui/unified/CalendarTimeInterval.js",
+				"sap/ui/unified/CalendarTimeIntervalRenderer.js",
+				"sap/ui/unified/CalendarWeekInterval.js",
+				"sap/ui/unified/ColorPicker.js",
+				"sap/ui/unified/ColorPickerDisplayMode.js",
+				"sap/ui/unified/ColorPickerPopover.js",
+				"sap/ui/unified/ColorPickerRenderer.js",
+				"sap/ui/unified/ContentSwitcher.js",
+				"sap/ui/unified/ContentSwitcherRenderer.js",
+				"sap/ui/unified/Currency.js",
+				"sap/ui/unified/CurrencyRenderer.js",
+				"sap/ui/unified/DateRange.js",
+				"sap/ui/unified/DateTypeRange.js",
+				"sap/ui/unified/FileUploader.js",
+				"sap/ui/unified/FileUploaderHttpRequestMethod.js",
+				"sap/ui/unified/FileUploaderParameter.js",
+				"sap/ui/unified/FileUploaderRenderer.js",
+				"sap/ui/unified/FileUploaderXHRSettings.js",
+				"sap/ui/unified/Menu.js",
+				"sap/ui/unified/MenuItem.js",
+				"sap/ui/unified/MenuItemBase.js",
+				"sap/ui/unified/MenuRenderer.js",
+				"sap/ui/unified/MenuTextFieldItem.js",
+				"sap/ui/unified/Shell.js",
+				"sap/ui/unified/ShellHeadItem.js",
+				"sap/ui/unified/ShellHeadUserItem.js",
+				"sap/ui/unified/ShellHeader.js",
+				"sap/ui/unified/ShellLayout.js",
+				"sap/ui/unified/ShellLayoutRenderer.js",
+				"sap/ui/unified/ShellOverlay.js",
+				"sap/ui/unified/ShellOverlayRenderer.js",
+				"sap/ui/unified/ShellRenderer.js",
+				"sap/ui/unified/SplitContainer.js",
+				"sap/ui/unified/SplitContainerRenderer.js",
+				"sap/ui/unified/calendar/CalendarDate.js",
+				"sap/ui/unified/calendar/CalendarUtils.js",
+				"sap/ui/unified/calendar/CustomMonthPicker.js",
+				"sap/ui/unified/calendar/CustomYearPicker.js",
+				"sap/ui/unified/calendar/DatesRow.js",
+				"sap/ui/unified/calendar/DatesRowRenderer.js",
+				"sap/ui/unified/calendar/Header.js",
+				"sap/ui/unified/calendar/HeaderRenderer.js",
+				"sap/ui/unified/calendar/IndexPicker.js",
+				"sap/ui/unified/calendar/IndexPickerRenderer.js",
+				"sap/ui/unified/calendar/Month.js",
+				"sap/ui/unified/calendar/MonthPicker.js",
+				"sap/ui/unified/calendar/MonthPickerRenderer.js",
+				"sap/ui/unified/calendar/MonthRenderer.js",
+				"sap/ui/unified/calendar/MonthsRow.js",
+				"sap/ui/unified/calendar/MonthsRowRenderer.js",
+				"sap/ui/unified/calendar/OneMonthDatesRow.js",
+				"sap/ui/unified/calendar/OneMonthDatesRowRenderer.js",
+				"sap/ui/unified/calendar/TimesRow.js",
+				"sap/ui/unified/calendar/TimesRowRenderer.js",
+				"sap/ui/unified/calendar/YearPicker.js",
+				"sap/ui/unified/calendar/YearPickerRenderer.js",
+				"sap/ui/unified/calendar/YearRangePicker.js",
+				"sap/ui/unified/calendar/YearRangePickerRenderer.js",
+				"sap/ui/unified/library.js",
+				"sap/ui/unified/manifest.json"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"size": 491397,
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.support.js",
+			"module": "sap/ui/unified/library-preload.support.js",
+			"size": 5768,
+			"merged": true,
+			"support": true,
+			"required": [
+				"sap/ui/support/library.js"
+			],
+			"included": [
+				"sap/ui/unified/library.support.js",
+				"sap/ui/unified/rules/FileUploader.support.js"
+			]
+		},
+		{
+			"name": "library-preload.support.js.map",
+			"size": 1007,
+			"isDebug": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/ui/unified/library.js",
+			"size": 5218,
+			"required": [
+				"sap/ui/base/Object.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js",
+				"sap/ui/unified/ColorPickerDisplayMode.js",
+				"sap/ui/unified/FileUploaderHttpRequestMethod.js"
+			]
+		},
+		{
+			"name": "library.support.js",
+			"module": "sap/ui/unified/library.support.js",
+			"size": 499,
+			"support": true,
+			"required": [
+				"sap/ui/support/library.js",
+				"sap/ui/unified/rules/FileUploader.support.js"
+			]
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/ui/unified/manifest.json",
+			"size": 4029
+		},
+		{
+			"name": "messagebundle.properties",
+			"module": "sap/ui/unified/messagebundle.properties",
+			"size": 4846,
+			"locale": "",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ar.properties",
+			"module": "sap/ui/unified/messagebundle_ar.properties",
+			"size": 4570,
+			"locale": "ar",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_bg.properties",
+			"module": "sap/ui/unified/messagebundle_bg.properties",
+			"size": 5450,
+			"locale": "bg",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ca.properties",
+			"module": "sap/ui/unified/messagebundle_ca.properties",
+			"size": 2091,
+			"locale": "ca",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_cs.properties",
+			"module": "sap/ui/unified/messagebundle_cs.properties",
+			"size": 2462,
+			"locale": "cs",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_cy.properties",
+			"module": "sap/ui/unified/messagebundle_cy.properties",
+			"size": 2006,
+			"locale": "cy",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_da.properties",
+			"module": "sap/ui/unified/messagebundle_da.properties",
+			"size": 2036,
+			"locale": "da",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_de.properties",
+			"module": "sap/ui/unified/messagebundle_de.properties",
+			"size": 2121,
+			"locale": "de",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_el.properties",
+			"module": "sap/ui/unified/messagebundle_el.properties",
+			"size": 5442,
+			"locale": "el",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en.properties",
+			"module": "sap/ui/unified/messagebundle_en.properties",
+			"size": 1927,
+			"locale": "en",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_GB.properties",
+			"module": "sap/ui/unified/messagebundle_en_GB.properties",
+			"size": 1931,
+			"locale": "en_GB",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_sappsd.properties",
+			"module": "sap/ui/unified/messagebundle_en_US_sappsd.properties",
+			"size": 7082,
+			"locale": "en_US_sappsd",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_saprigi.properties",
+			"module": "sap/ui/unified/messagebundle_en_US_saprigi.properties",
+			"size": 17829,
+			"locale": "en_US_saprigi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_en_US_saptrc.properties",
+			"module": "sap/ui/unified/messagebundle_en_US_saptrc.properties",
+			"size": 3240,
+			"locale": "en_US_saptrc",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_es.properties",
+			"module": "sap/ui/unified/messagebundle_es.properties",
+			"size": 2117,
+			"locale": "es",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_es_MX.properties",
+			"module": "sap/ui/unified/messagebundle_es_MX.properties",
+			"size": 2185,
+			"locale": "es_MX",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_et.properties",
+			"module": "sap/ui/unified/messagebundle_et.properties",
+			"size": 2134,
+			"locale": "et",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fi.properties",
+			"module": "sap/ui/unified/messagebundle_fi.properties",
+			"size": 2170,
+			"locale": "fi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fr.properties",
+			"module": "sap/ui/unified/messagebundle_fr.properties",
+			"size": 2291,
+			"locale": "fr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_fr_CA.properties",
+			"module": "sap/ui/unified/messagebundle_fr_CA.properties",
+			"size": 2278,
+			"locale": "fr_CA",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hi.properties",
+			"module": "sap/ui/unified/messagebundle_hi.properties",
+			"size": 4705,
+			"locale": "hi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hr.properties",
+			"module": "sap/ui/unified/messagebundle_hr.properties",
+			"size": 2076,
+			"locale": "hr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_hu.properties",
+			"module": "sap/ui/unified/messagebundle_hu.properties",
+			"size": 2598,
+			"locale": "hu",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_id.properties",
+			"module": "sap/ui/unified/messagebundle_id.properties",
+			"size": 1979,
+			"locale": "id",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_it.properties",
+			"module": "sap/ui/unified/messagebundle_it.properties",
+			"size": 2124,
+			"locale": "it",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_iw.properties",
+			"module": "sap/ui/unified/messagebundle_iw.properties",
+			"size": 3919,
+			"locale": "iw",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ja.properties",
+			"module": "sap/ui/unified/messagebundle_ja.properties",
+			"size": 2708,
+			"locale": "ja",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_kk.properties",
+			"module": "sap/ui/unified/messagebundle_kk.properties",
+			"size": 5191,
+			"locale": "kk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ko.properties",
+			"module": "sap/ui/unified/messagebundle_ko.properties",
+			"size": 2655,
+			"locale": "ko",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lt.properties",
+			"module": "sap/ui/unified/messagebundle_lt.properties",
+			"size": 2386,
+			"locale": "lt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_lv.properties",
+			"module": "sap/ui/unified/messagebundle_lv.properties",
+			"size": 2488,
+			"locale": "lv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ms.properties",
+			"module": "sap/ui/unified/messagebundle_ms.properties",
+			"size": 1968,
+			"locale": "ms",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_nl.properties",
+			"module": "sap/ui/unified/messagebundle_nl.properties",
+			"size": 2020,
+			"locale": "nl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_no.properties",
+			"module": "sap/ui/unified/messagebundle_no.properties",
+			"size": 1985,
+			"locale": "no",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pl.properties",
+			"module": "sap/ui/unified/messagebundle_pl.properties",
+			"size": 2306,
+			"locale": "pl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pt.properties",
+			"module": "sap/ui/unified/messagebundle_pt.properties",
+			"size": 2139,
+			"locale": "pt",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_pt_PT.properties",
+			"module": "sap/ui/unified/messagebundle_pt_PT.properties",
+			"size": 2158,
+			"locale": "pt_PT",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ro.properties",
+			"module": "sap/ui/unified/messagebundle_ro.properties",
+			"size": 2360,
+			"locale": "ro",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_ru.properties",
+			"module": "sap/ui/unified/messagebundle_ru.properties",
+			"size": 5204,
+			"locale": "ru",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sh.properties",
+			"module": "sap/ui/unified/messagebundle_sh.properties",
+			"size": 2081,
+			"locale": "sh",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sk.properties",
+			"module": "sap/ui/unified/messagebundle_sk.properties",
+			"size": 2353,
+			"locale": "sk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sl.properties",
+			"module": "sap/ui/unified/messagebundle_sl.properties",
+			"size": 2040,
+			"locale": "sl",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_sv.properties",
+			"module": "sap/ui/unified/messagebundle_sv.properties",
+			"size": 2076,
+			"locale": "sv",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_th.properties",
+			"module": "sap/ui/unified/messagebundle_th.properties",
+			"size": 4689,
+			"locale": "th",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_tr.properties",
+			"module": "sap/ui/unified/messagebundle_tr.properties",
+			"size": 2340,
+			"locale": "tr",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_uk.properties",
+			"module": "sap/ui/unified/messagebundle_uk.properties",
+			"size": 5504,
+			"locale": "uk",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_vi.properties",
+			"module": "sap/ui/unified/messagebundle_vi.properties",
+			"size": 3194,
+			"locale": "vi",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_CN.properties",
+			"module": "sap/ui/unified/messagebundle_zh_CN.properties",
+			"size": 2457,
+			"locale": "zh_CN",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "messagebundle_zh_TW.properties",
+			"module": "sap/ui/unified/messagebundle_zh_TW.properties",
+			"size": 2512,
+			"locale": "zh_TW",
+			"raw": "messagebundle.properties"
+		},
+		{
+			"name": "resources.json",
+			"size": 50373
+		},
+		{
+			"name": "rules/FileUploader.support.js",
+			"module": "sap/ui/unified/rules/FileUploader.support.js",
+			"size": 5077,
+			"support": true,
+			"required": [
+				"sap/ui/support/library.js"
+			]
+		},
+		{
+			"name": "themes/base/.theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Calendar.less",
+			"size": 24295,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/CalendarDateInterval.less",
+			"size": 701,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/CalendarLegend.less",
+			"size": 7724,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/CalendarRow.less",
+			"size": 19040,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ColorPicker.less",
+			"size": 20794,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ContentSwitcher.less",
+			"size": 4682,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Currency.less",
+			"size": 1024,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/FileUploader.less",
+			"size": 5530,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/IndexPicker.less",
+			"size": 828,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/Menu.less",
+			"size": 11845,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ShellHeader.less",
+			"size": 14079,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ShellLayout.less",
+			"size": 3979,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/ShellOverlay.less",
+			"size": 9257,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/SplitContainer.less",
+			"size": 1945,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.css",
+			"size": 18468,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.less",
+			"size": 240,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.source.less",
+			"size": 137445,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img-RTL/create.txt",
+			"size": 0,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/ColorPicker/Alphaslider_BG.png",
+			"size": 2936,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/ColorPicker/ColorBar.png",
+			"size": 559,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/ColorPicker/GradientBox.png",
+			"size": 56106,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/ColorPicker/PickingCursor-Default.png",
+			"size": 483,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/ColorPicker/Swatch_BG.png",
+			"size": 954,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/ColorPicker/Unified_Swatch_BG.png",
+			"size": 1064,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/img/create.txt",
+			"size": 0,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"size": 110372,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"size": 7509,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"size": 110285,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"size": 127073,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"size": 674,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library_skeleton-RTL.css",
+			"size": 117143,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library_skeleton.css",
+			"size": 117056,
+			"theme": "base"
+		},
+		{
+			"name": "themes/sap_hcb/.theming",
+			"size": 128,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/Calendar.less",
+			"size": 13903,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/CalendarLegend.less",
+			"size": 3368,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/CalendarRow.less",
+			"size": 5059,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/ColorPicker.less",
+			"size": 1362,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/Currency.less",
+			"size": 188,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/Menu.less",
+			"size": 576,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/ShellHeader.less",
+			"size": 4418,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/ShellLayout.less",
+			"size": 369,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/ShellOverlay.less",
+			"size": 1370,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css_variables.css",
+			"size": 18884,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css_variables.less",
+			"size": 124371,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css_variables.source.less",
+			"size": 124071,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/img-RTL/create.txt",
+			"size": 0,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/img/create.txt",
+			"size": 0,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-RTL.css",
+			"size": 155947,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-parameters.json",
+			"size": 7563,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.css",
+			"size": 155825,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.less",
+			"size": 31512,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.source.less",
+			"size": 499,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library_skeleton-RTL.css",
+			"size": 166669,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library_skeleton.css",
+			"size": 166547,
+			"theme": "sap_hcb"
+		}
+	]
+}

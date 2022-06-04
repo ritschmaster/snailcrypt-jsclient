@@ -1,0 +1,166 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "AdaptFiltersPanel.less",
+			"size": 628,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "AdaptationFilterBar.less",
+			"size": 46,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Chart.less",
+			"size": 379,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "CollectiveSearchSelect.less",
+			"size": 1368,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "FieldBase.less",
+			"size": 1945,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "FilterBar.less",
+			"size": 724,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "GroupView.less",
+			"size": 1503,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "InfoPanel.less",
+			"size": 3815,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ListView.less",
+			"size": 905,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "PersonalizationDialog.less",
+			"size": 1050,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "QueryPanel.less",
+			"size": 121,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SelectionDialog.less",
+			"size": 139,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Table.less",
+			"size": 16,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TokenDisplay.less",
+			"size": 2483,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TokenizerDisplay.less",
+			"size": 2861,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ValueHelpDialog.less",
+			"size": 5582,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Wrapper.less",
+			"size": 355,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 1021,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 240,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 114789,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 15684,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 382,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 15683,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 25481,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 770,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 16577,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 16576,
+			"theme": "base"
+		}
+	]
+}

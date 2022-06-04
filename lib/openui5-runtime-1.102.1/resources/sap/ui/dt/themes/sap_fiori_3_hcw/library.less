@@ -1,0 +1,74 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_fiori_3_hcw/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_fiori_3_hcw/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_fiori_3_hcw/global.less";
+
+/* START "ContextMenu.less" */
+/******************************************************************
+	Style of the DT Contextmenu - sap_fiori_3_hcw Theme
+*******************************************************************/
+@_sap_ui_dt_ContextMenu_Border_Radius: @sapUiButtonBorderCornerRadius; // 0.25rem
+@_sap_ui_dt_ContextMenu_OpenSubMenuBG: @sapUiSelected; //#fff
+@_sap_ui_dt_ContextMenu_OpenSubMenuBorder: @sapUiNeutralBG; //fff
+
+.sapUiDtContextMenu {
+	.sapUiMnuLst {
+		.sapUiMnuItm {
+
+			&:focus {
+				border-radius: @_sap_ui_dt_ContextMenu_Border_Radius;
+			}
+
+			&.sapUiMnuItmSubMnuOpen {
+				background-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBG;
+				border-bottom: 0.0625rem solid @_sap_ui_dt_ContextMenu_OpenSubMenuBorder !important; //1px
+				border-radius: @_sap_ui_dt_ContextMenu_Border_Radius;
+
+				&.sapUiMnuItmHov {
+					background-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBG;
+				}
+			}
+		}
+	}
+}
+
+.sapUiDtContextMiniMenu:not(.sapUiSubmenu) {
+	.sapUiMnuLst {
+
+		.sapUiMnuItmHov {
+			.sapUiIcon {
+				border-radius: @_sap_ui_dt_ContextMenu_Border_Radius;
+			}
+		}
+
+		.sapUiMnuItm.sapUiMnuItmSubMnuOpen {
+			background-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBorder;
+
+			.sapUiIcon {
+				border-radius: @_sap_ui_dt_ContextMenu_Border_Radius;
+			}
+		}
+	}
+}
+/* END "ContextMenu.less" */
+
+/* START "Overlay.less" */
+/******************************************************************
+	Style of the DT Overlays - sap_fiori_3_hcw Theme
+*******************************************************************/
+@_sap_ui_dt_Overlay_FocusColor: fade(@sapUiNeutralBorder, 80%); //rgba(0, 0, 0, 0.8)
+@_sap_ui_dt_Overlay_CuttedColor: @sapUiFieldReadOnlyBackground; //#b3b3b3
+@_sap_ui_dt_Overlay_HighlightColor: @sapUiListHighlightColor; // #ec8b46
+
+.sapUiDtOverlayHighlighted:not(.sapUiDtOverlaySelected):after {
+	box-shadow: none;
+}
+/* END "Overlay.less" */

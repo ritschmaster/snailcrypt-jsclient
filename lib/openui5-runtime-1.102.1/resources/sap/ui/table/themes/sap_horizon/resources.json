@@ -1,0 +1,94 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 90,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "Cell.less",
+			"size": 793,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "Grouping.less",
+			"size": 837,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "RowAction.less",
+			"size": 955,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "RowSelection.less",
+			"size": 875,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "Table.less",
+			"size": 608,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 13021,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 131244,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 130876,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 63812,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 5240,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.css",
+			"size": 63834,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.less",
+			"size": 5123,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library.source.less",
+			"size": 715,
+			"designtime": true,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 68690,
+			"theme": "sap_horizon"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 68714,
+			"theme": "sap_horizon"
+		}
+	]
+}

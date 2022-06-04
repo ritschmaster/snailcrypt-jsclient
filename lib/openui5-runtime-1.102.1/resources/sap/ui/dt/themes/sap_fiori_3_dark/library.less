@@ -1,0 +1,120 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_fiori_3_dark/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_fiori_3_dark/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_fiori_3_dark/global.less";
+
+/* START "ContextMenu.less" */
+/******************************************************************
+	Style of the DT Contextmenu - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_dt_ContextMenu_OpenFocusColor: @sapUiContentFocusColor; //#000
+@_sap_ui_dt_ContextMenu_MnuItemColor: @sapUiSelected; //#91c8f6
+@_sap_ui_dt_ContextMenu_Border_Radius: @sapUiButtonBorderCornerRadius; // 0.25rem
+@_sap_ui_dt_ContextMenu_OpenSubMenuBG: @sapUiShellBackground; //#232a31
+@_sap_ui_dt_ContextMenu_OpenSubMenuBorder: transparent;
+@_sap_ui_dt_ContextMenu_Disabled_Hover: @sapUiSelected; //#91c8f6
+
+.sapUiDtContextMenu {
+	.sapUiMnuLst {
+		.sapUiMnuItm {
+			color: @_sap_ui_dt_ContextMenu_MnuItemColor;
+			border: 0.0625rem dotted transparent;
+
+			.sapUiMnuItmIco {
+				color: @_sap_ui_dt_ContextMenu_MnuItemColor;
+			}
+
+			.sapUiMnuItmSbMnu > div:after,
+			.sapUiMnuItm.sapUiMnuItmHov .sapUiMnuItmSbMnu > div:after {
+				color: @_sap_ui_dt_ContextMenu_MnuItemColor;
+			}
+
+			&:focus {
+				outline: none;
+				border: 0.0625rem dotted !important;
+				border-radius: @_sap_ui_dt_ContextMenu_Border_Radius;
+			}
+
+			&.sapUiMnuItmSubMnuOpen {
+				background-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBG;
+				border-bottom: 0.0625rem solid @_sap_ui_dt_ContextMenu_OpenSubMenuBorder !important; //1px
+				&.sapUiMnuItm:focus {
+					border: 0.0625rem dotted @_sap_ui_dt_ContextMenu_OpenFocusColor !important;
+				}
+			}
+
+			&.sapUiMnuItmDsbl.sapUiMnuItmHov {
+				color: @_sap_ui_dt_ContextMenu_Disabled_Hover;
+			}
+		}
+	}
+}
+
+.sapUiDtContextMenu.sapUiDtContextMiniMenu {
+	&:not(.sapUiSubmenu) {
+		.sapUiMnuLst {
+			.sapUiMnuItm {
+
+				&:focus {
+					outline: none;
+					border-color: transparent !important;
+
+					.sapUiIcon {
+						border-radius: @_sap_ui_dt_ContextMenu_Border_Radius;
+					}
+
+					&.sapUiMnuItmSubMnuOpen {
+						background-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBorder !important;
+						border: 0.0625rem dotted @_sap_ui_dt_ContextMenu_OpenSubMenuBorder !important;
+
+						.sapUiIcon {
+							border-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBorder;
+						}
+					}
+
+					&:hover {
+						.sapUiIcon {
+							border-color: @_sap_ui_dt_ContextMenu_OpenFocusColor;
+						}
+					}
+				}
+
+				&.sapUiMnuItmSubMnuOpen {
+					background-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBorder;
+					border: 0.0625rem dotted @_sap_ui_dt_ContextMenu_OpenSubMenuBorder !important;
+
+					.sapUiIcon {
+						background-color: @_sap_ui_dt_ContextMenu_OpenSubMenuBG;
+					}
+				}
+			}
+		}
+	}
+}
+/* END "ContextMenu.less" */
+
+/* START "Overlay.less" */
+/******************************************************************
+	Style of the DT Overlays - sap_fiori_3_dark Theme
+*******************************************************************/
+@_sap_ui_dt_Overlay_CuttedColor: @sapUiButtonHoverBackground; //#062e4f
+@_sap_ui_dt_Overlay_CuttedBorder: @sapUiButtonEmphasizedBorderColor; //#1b8dec
+
+.sapUiRta {
+	.sapUiDtOverlayDropZone {
+		> .sapUiDtOverlayChildren {
+			> .sapUiDtOverlayMovable {
+				background: inherit;
+			}
+		}
+	}
+}
+/* END "Overlay.less" */

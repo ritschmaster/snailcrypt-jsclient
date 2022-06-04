@@ -1,0 +1,112 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "AnchorBar.less",
+			"size": 8610,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "BreadCrumbs.less",
+			"size": 1533,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "HierarchicalSelect.less",
+			"size": 4422,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageHeader.less",
+			"size": 10724,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageHeaderContent.less",
+			"size": 9056,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageLayout.less",
+			"size": 6631,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageSection.less",
+			"size": 2244,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectPageSubSection.less",
+			"size": 5692,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 111,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 234,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 113736,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 49386,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 2,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 49382,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 49948,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 533,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 49845,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 49841,
+			"theme": "base"
+		}
+	]
+}

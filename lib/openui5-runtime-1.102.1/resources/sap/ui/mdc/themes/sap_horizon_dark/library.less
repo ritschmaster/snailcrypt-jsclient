@@ -1,0 +1,105 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_horizon_dark/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_horizon_dark/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_horizon_dark/global.less";
+
+/* START "CollectiveSearchSelect.less" */
+/* ================================================== */
+/* CSS for control sap.ui.mdc/CollectiveSearchSelect  */
+/* Evening Horizon theme                              */
+/* ================================================== */
+
+.sapUiMdcCollectiveSearchSelect .sapMTitle.sapUiMdcCollectiveSearchSelectTitle {
+	padding-top: 0.9rem;
+}
+/* END "CollectiveSearchSelect.less" */
+
+/* START "Table.less" */
+/* ================================= */
+/* CSS for control sap.ui.mdc/Table  */
+/* Evening Horizon theme             */
+/* ================================= */
+
+.sapUiMdcTable .sapMIBar.sapMTBHeader-CTX {
+	border-top-right-radius: @sapUiElementBorderCornerRadius;
+	border-top-left-radius: @sapUiElementBorderCornerRadius;
+}
+/* END "Table.less" */
+
+/* START "ValueHelpDialog.less" */
+/* =========================================== */
+/* CSS for control sap.ui.mdc/ValueHelpDialog  */
+/* Evening Horizon theme                       */
+/* =========================================== */
+
+// give the title 2rem left margin
+.sapMdcValueHelpTitle.sapMDialog header .sapMBarPH {
+	padding-left: 2rem;
+}
+
+// setting some background to transparent so that the VH dialog content get a white background
+.sapMdcValueHelpPanel .sapMPanel.sapMdcTokenizerPanel {
+    background-color: transparent;
+}
+
+.sapMdcValueHelpPanel .sapMITBContent {
+	background-color: transparent;
+}
+/* END "ValueHelpDialog.less" */
+
+/* START "TokenDisplay.less" */
+/* ======================================== */
+/* CSS for control sap.ui.mdc/TokenDisplay  */
+/* Evening Horizon theme       				*/
+/* ======================================== */
+
+.sapUiMdcTokenizerDisplay .sapMToken {
+	background: transparent;
+	border: 0px;
+
+	padding-left: 0.3125rem;
+}
+
+.sapUiMdcTokenizerDisplay .sapMTokenSelected:not(:focus),
+.sapUiMdcTokenizerDisplay .sapMToken.sapMTokenReadOnly.sapMTokenSelected {
+	background: transparent;
+	border: 0px;
+	box-shadow: none;
+}
+
+html.sap-desktop .sapUiMdcTokenizerDisplay .sapMToken:not(.sapMTokenSelected):not(:focus):hover {
+	background: transparent;
+	border: 0px;
+	box-shadow: none;
+}
+
+html.sap-desktop .sapUiMdcTokenizerDisplay .sapMToken.sapMTokenSelected:hover {
+	background: transparent;
+	border: 0px;
+}
+
+html.sap-desktop .sapUiMdcTokenizerDisplay .sapMToken:focus {
+	border: 0px;
+	box-shadow: none;
+}
+/* END "TokenDisplay.less" */
+
+/* START "TokenizerDisplay.less" */
+/* ============================================ */
+/* CSS for control sap.ui.mdc/TokenizerDisplay  */
+/* Evening Horizon theme                        */
+/* ============================================ */
+
+html.sap-desktop .sapUiMdcTokenizerDisplay.sapMTokenizer:focus {
+    outline: none;
+    box-shadow: none;
+}
+/* END "TokenizerDisplay.less" */

@@ -6,7 +6,7 @@ RewriteRule ^$ public/ [L]
 
 ################################################################################
 # Any file/page accessed will be "re-directed" to the prefix "public"
-RewriteCond public/$0 -F
+RewriteCond public/$0 -f
 RewriteRule .* public/$0 [L]
 
 ################################################################################

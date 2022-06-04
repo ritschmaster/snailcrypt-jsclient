@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="timecapsule-jsclient.controller.App"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:mvc="sap.ui.core.mvc">
+  <VBox>
+    <grid:CSSGrid
+        gridTemplateColumns="auto
+                             auto"
+        gridTemplateRows="auto
+                          auto
+                          auto
+                          auto
+                          auto
+                          auto
+                          auto"
+        gridGap="auto"
+        class="sapUiSmallMargin">
+
+      <!--
+          1. row
+      -->
+      <Label text="Text to be encrypted:"
+             labelFor="toBeEncryptedTextArea"
+             class="sapUiSmallMargin" />
+      <Label text="Text to be decrypted:"
+             labelFor="toBeDecryptedTextArea"
+             class="sapUiSmallMargin" />
+
+      <!--
+          2. row
+      -->
+      <TextArea id="toBeEncryptedTextArea"
+                required="true"
+                rows="20"
+                change="onTextToBeEncrytedChanged"
+                class="sapUiSmallMargin" />
+      <TextArea id="toBeDecryptedTextArea"
+                required="true"
+                rows="20"
+                change="onTextToBeDecryptedChanged"
+                class="sapUiSmallMargin" />
+
+      <!--
+          3. row
+      -->
+      <DateTimePicker id="encryptionDateTimePicker"
+                      required="true"
+                      valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                      displayFormat="short"
+                      placeholder="Expiration date time"
+                      change="onEncryptionDateTimePickerChanged"
+                      class="sapUiSmallMargin" />
+      <VBox class="sapUiSmallMargin">
+      </VBox>
+
+      <!--
+          4. row
+      -->
+      <Button text="Encypt"
+              press="onEncryptPressed"
+              class="sapUiSmallMargin" />
+
+      <Button text="Decrypt"
+              press="onDecryptPressed"
+              class="sapUiSmallMargin" />
+
+      <!--
+          5. row
+      -->
+      <Label id="encryptedLabel"
+             text="Encrypted text:"
+             labelFor="encryptedTextArea"
+             visible="false"
+             class="sapUiSmallMargin" />
+      <Label id="decryptedLabel"
+             text="Decrypted text:"
+             labelFor="decryptedTextArea"
+             visible="false"
+             class="sapUiSmallMargin" />
+
+      <!--
+          7. row
+      -->
+      <DateTimePicker id="decryptedDateTimePicker"
+                      editable="false"
+                      visible="false"
+                      valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                      displayFormat="short"
+                      placeholder="Expiration date time"
+                      class="sapUiSmallMargin" />
+      <VBox class="sapUiSmallMargin">
+      </VBox>
+
+      <!--
+          8. row
+      -->
+      <TextArea id="encryptedTextArea"
+                editable="false"
+                visible="false"
+                class="sapUiSmallMargin" />
+      <TextArea id="decryptedTextArea"
+                editable="false"
+                visible="false"
+                class="sapUiSmallMargin" />
+    </grid:CSSGrid>
+
+    <MessageStrip id="cookieMessageStrip"
+                  text="You are a lucky one. This webpage is not even using cookies!"
+                  showCloseButton="true"
+                  close="onCookieMessageStripClose"
+                  class="sapUiSmallMargin" />
+  </VBox>
+</mvc:View>

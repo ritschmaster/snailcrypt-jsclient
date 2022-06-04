@@ -1,0 +1,257 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_fiori_3_hcb/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_fiori_3_hcb/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_fiori_3_hcb/global.less";
+
+/* START "FormLayout.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/FormLayout  */
+/* Quartz High Contrast Black theme          */
+/* ========================================= */
+
+.sapUiForm .sapUiFormTitle {
+	border-width: 3px;
+	box-sizing: border-box;
+	height: 2.75rem;
+	line-height: 2.75rem;
+}
+
+.sapUiFormM .sapUiFormContainerTitle > .sapUiFormTitle {
+	height: 2.75rem;
+	line-height: 2.75rem;
+	font-weight: bold;
+}
+
+.sapUiSizeCompact .sapUiFormContainerTitle > .sapUiFormTitle {
+	height: 2rem;
+	line-height: 2rem;
+}
+
+/* Title levels should be all rendered in same style. Levels can be changed by application to meet page structure without visual effect */
+/* Form Titles are rendered using H4 size*/
+.sapUiFormTitleH1,
+.sapUiFormTitleH2,
+.sapUiFormTitleH3,
+.sapUiFormTitleH4,
+.sapUiFormTitleH5,
+.sapUiFormTitleH6 {
+	font-size: @sapMFontHeader4Size;
+}
+
+/* FormContainer Titles are rendered using H4 size*/
+.sapUiFormContainerTitle > .sapUiFormTitleH1,
+.sapUiFormContainerTitle > .sapUiFormTitleH2,
+.sapUiFormContainerTitle > .sapUiFormTitleH3,
+.sapUiFormContainerTitle > .sapUiFormTitleH4,
+.sapUiFormContainerTitle > .sapUiFormTitleH5,
+.sapUiFormContainerTitle > .sapUiFormTitleH6 {
+	font-size: @sapMFontHeader6Size;
+	color: @sapUiGroupTitleTextColor;
+}
+
+/* Toolbar */
+.sapUiFormContainerToolbar > div:first-child > .sapMTitle{
+	font-weight: bold;
+}
+
+.sapUiFormContainerToolbar > div:first-child >.sapMTitle.sapMTitleStyleAuto{
+	font-size: @sapMFontHeader6Size;
+}
+
+.sapUiFormContainerToolbar > .sapMTB-Transparent-CTX.sapMTB{
+	padding: 0 0.25rem;
+}
+
+/* END "FormLayout.less" */
+
+/* START "ColumnLayout.less" */
+/* ================================================ */
+/* CSS for control sap.ui.layout/form/ColumnLayout  */
+/* Quartz High Contrast Black theme          */
+/* ================================================ */
+
+/* Toolbar */
+.sapUiFormCL.sapUiFormToolbar > div:first-child {
+	height: 2.75rem; /* to have always 3rem on Form header */
+	line-height: 2.75rem;
+	padding: 0 1rem;
+}
+
+/* edit mode */
+/* labels next to field */
+.sapUiFormEdit > .sapUiFormCLSmallColumns .sapUiFormElementLbl:not(.sapUiFormCLCellsS12),
+.sapUiFormEdit > .sapUiFormCLWideColumns .sapUiFormElementLbl:not(.sapUiFormCLCellsL12){
+	padding-top: 0.875rem;
+}
+/* END "ColumnLayout.less" */
+
+/* START "BlockLayout.less" */
+/* ============================================== */
+/* CSS for control sap.ui.layout/BlockLayout      */
+/* Quartz High Contrast Black theme               */
+/* ============================================== */
+
+@_sap_ui_layout_BlockLayout_BackgroundDashboardMargin: 0.5rem;
+@_sap_ui_layout_BlockLayout_BackgroundDashboardEdgeChildMargin: 1rem;
+@_sap_ui_layout_BlockLayout_BackgroundDashboardAfterScrollbarMargin: 0.75rem;
+
+@_sap_ui_layout_BlockLayout_LinkTextShadow: none;
+
+@_sap_ui_layout_BlockLayout_BackgroundDashboardColor: @sapUiTileBackground;
+@_sap_ui_layout_BlockLayout_BackgroundDashboardBorderRadius: 0.25rem;
+/* END "BlockLayout.less" */
+
+/* START "BlockLayoutCell.less" */
+/* ============================================== */
+/* CSS for control sap.ui.layout/BlockLayoutCell  */
+/* Quartz High Contrast Black theme               */
+/* ============================================== */
+
+.sapUiBlockCellContent {
+	border: 1px solid @sapUiTileBorderColor;
+}
+/* END "BlockLayoutCell.less" */
+
+/* START "GridLayout.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/GridLayout  */
+/* Quartz High Contrast Black theme          */
+/* ========================================= */
+
+.sapUiGridHeader > .sapUiFormTitle > .sapUiBtn {
+	bottom: 0.4375rem;
+}
+
+/* Toolbar */
+.sapUiGrid.sapUiFormToolbar th > div {
+	height: 2.75rem;
+	line-height: 2.75rem;
+}
+
+.sapUiGridHeader.sapUiFormContainerToolbar > .sapMTB {
+	padding: 0;
+}
+
+/* alignment of Labels */
+.sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr > td.sapUiFormElementLbl {
+	padding-top: 0.875rem;
+}
+
+.sapUiFormEdit.sapUiFormM > .sapUiGrid > tbody > tr.sapUiGridConteinerFirstRow > td.sapUiFormElementLbl {
+	padding-top: 2.875rem;
+}
+
+.sapUiFormEdit.sapUiFormM >.sapUiGrid > tbody > tr:first-child > td.sapUiFormElementLbl, /* if no Form title */
+.sapUiFormEdit[aria-labelledby].sapUiFormM > .sapUiGrid > tbody > tr:nth-child(2) > td.sapUiFormElementLbl {
+	padding-top: 1.875rem;
+}
+
+/* END "GridLayout.less" */
+
+/* START "ResponsiveGridLayout.less" */
+/* =================================================== */
+/* CSS for control sap.ui.layout/ResponsiveGridLayout  */
+/* Quartz High Contrast Black theme                    */
+/* =================================================== */
+
+/* Title */
+.sapUiRGLContainer > .sapUiFormTitle > .sapUiBtn {
+	bottom: 0.4375rem;
+	height: 2.75rem;
+	line-height: 2.75rem;
+	padding: 0 1rem;
+}
+
+/* Toolbar */
+.sapUiFormResGrid.sapUiFormToolbar > div:first-child {
+	padding-right: 1rem;
+}
+
+/* alignment of Labels */
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanS12),
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanM12),
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanL12),
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanXL12){
+	padding-top: 0.875rem;
+}
+
+/* END "ResponsiveGridLayout.less" */
+
+/* START "ResponsiveLayout.less" */
+/* =============================================== */
+/* CSS for control sap.ui.layout/ResponsiveLayout  */
+/* Quartz High Contrast Black theme                */
+/* =============================================== */
+
+/* Title */
+.sapUiRLContainer > .sapUiFormTitle > .sapUiBtn {
+	bottom: 0.4375rem;
+}
+
+/* Toolbar */
+.sapUiFormResLayout.sapUiFormToolbar > div:first-child {
+	height: 2.75rem;
+	line-height: 2.75rem;
+}
+
+.sapUiRLContainer.sapUiFormContainerToolbar > .sapMTB {
+	padding: 0;
+}
+
+/* alignment of Label */
+.sapUiFormEdit.sapUiFormM .sapUiRLElementWithLabel > .sapUiRFLRow:not(.sapUiRFLCompleteRow) > .sapUiRFLContainer:first-child > .sapUiRFLContainerContent{
+	padding-top: 0.875rem;
+}
+
+html[data-sap-ui-browser^="ff"] .sapUiFormEdit.sapUiFormM .sapUiRLElementWithLabel > .sapUiRFLRow:not(.sapUiRFLCompleteRow) > .sapUiRFLContainer:first-child > .sapUiRFLContainerContent{
+	padding-top: 0.8125rem;
+}
+
+/* END "ResponsiveLayout.less" */
+
+/* START "Splitter.less" */
+/* ======================================= */
+/* CSS for control sap.ui.layout/Splitter  */
+/* Quartz High Contrast Black theme        */
+/* ======================================= */
+
+@_sap_ui_layout_Splitter_BarActiveDecorationColors: @sapUiObjectHeaderBorderColor, @sapUiObjectHeaderBorderColor;
+@_sap_ui_layout_Splitter_BarDecorationColors: @sapUiObjectHeaderBorderColor, fade(@sapUiObjectHeaderBorderColor, 0);
+@_sap_ui_layout_Splitter_BarBorder: 0.0625rem solid @sapUiGroupContentBorderColor;
+@_sap_ui_layout_Splitter_BarHoverIconBorderColor: @sapUiButtonLiteHoverBorderColor;
+@_sap_ui_layout_Splitter_BarHoverIconBackground: @sapUiButtonLiteHoverBackground;
+
+.sapUiLoSplitter {
+	background-color: @sapUiHcStandardBackground;
+}
+
+/*********************************** Focus outline**********************************/
+
+.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiLoSplitter > .sapUiLoSplitterOverlay .sapUiLoSplitterOverlayBar {
+	&:focus::after {
+		border-width: 2px;
+	}
+}
+
+/* END "Splitter.less" */
+
+/* START "ResponsiveSplitter.less" */
+/* ================================================= */
+/* CSS for control sap.ui.layout/ResponsiveSplitter  */
+/* Quartz High Contrast Black theme                  */
+/* ================================================= */
+
+@_sap_ui_layout_ResponsiveSplitter_PaginatorHeight: 2.75rem;
+@_sap_ui_layout_ResponsiveSplitter_PaginatorButtonWidth: 2.25rem;
+@_sap_ui_layout_ResponsiveSplitter_PaginatorButtonHeight: 2.25rem;
+
+/* END "ResponsiveSplitter.less" */
