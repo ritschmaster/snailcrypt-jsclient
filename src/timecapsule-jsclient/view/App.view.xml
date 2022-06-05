@@ -46,14 +46,20 @@
       <!--
           3. row
       -->
-      <DateTimePicker id="encryptionDateTimePicker"
-                      required="true"
-                      valueFormat="yyyy-MM-ddTHH:mm:ssZ"
-                      displayFormat="short"
-                      placeholder="Expiration date time"
-                      change="onEncryptionDateTimePickerChanged"
-                      class="sapUiSmallMargin" />
+      <HBox class="sapUiSmallMargin">
+        <Label text="Encrypted until:"
+               labelFor="encryptionDateTimePicker"
+               class="sapUiSmallMargin" />
+        <DateTimePicker id="encryptionDateTimePicker"
+                        required="true"
+                        valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                        displayFormat="short"
+                        placeholder="Expiration date time"
+                        change="onEncryptionDateTimePickerChanged"
+                        class="sapUiSmallMargin" />
+      </HBox>
       <VBox class="sapUiSmallMargin">
+        <Label text="" />
       </VBox>
 
       <!--
@@ -75,24 +81,35 @@
              labelFor="encryptedTextArea"
              visible="false"
              class="sapUiSmallMargin" />
-      <Label id="decryptedLabel"
-             text="Decrypted text:"
-             labelFor="decryptedTextArea"
-             visible="false"
-             class="sapUiSmallMargin" />
+      <VBox class="sapUiSmallMargin">
+        <Label id="decryptedLabel"
+               text="Decrypted text:"
+               labelFor="decryptedTextArea"
+               visible="false"
+               class="sapUiSmallMargin" />
+        <VBox class="sapUiSmallMargin" />
+      </VBox>
 
       <!--
           7. row
       -->
-      <DateTimePicker id="decryptedDateTimePicker"
-                      editable="false"
-                      visible="false"
-                      valueFormat="yyyy-MM-ddTHH:mm:ssZ"
-                      displayFormat="short"
-                      placeholder="Expiration date time"
-                      class="sapUiSmallMargin" />
       <VBox class="sapUiSmallMargin">
+        <Label text="" />
       </VBox>
+      <HBox class="sapUiSmallMargin">
+        <Label id="decryptedDateTimeLabel"
+               text="Encrypted until:"
+               labelFor="decryptedDateTimePicker"
+               visible="false"
+               class="sapUiSmallMargin" />
+        <DateTimePicker id="decryptedDateTimePicker"
+                        editable="false"
+                        visible="false"
+                        valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                        displayFormat="short"
+                        placeholder="Expiration date time"
+                        class="sapUiSmallMargin" />
+      </HBox>
 
       <!--
           8. row

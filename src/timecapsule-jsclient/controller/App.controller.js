@@ -28,7 +28,7 @@ sap.ui.define([
                 + ":"
                 + config.timecapsuleServerPort
                 + config.timecapsuleServerPath;
-        }
+        },
 
         initEncryptedData: function() {
             const me = this;
@@ -70,6 +70,11 @@ sap.ui.define([
         onTextToBeDecryptedChanged: function () {
             const me = this;
 
+            var decryptedLabel = me.byId('decryptedLabel');
+            var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
+            var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
+            var visible = false;
+
             var toBeDecryptedTextArea = me.byId("toBeDecryptedTextArea");
             if (toBeDecryptedTextArea.getValue()) {
                 toBeDecryptedTextArea.setValueState(ValueState.Success);
@@ -78,16 +83,15 @@ sap.ui.define([
                 var timecapsuleCipher = toBeDecryptedTextArea.getValue();
                 var lockDate = me.extractTimecapsuleCipherLockDate(timecapsuleCipher);
 
-                var decryptedLabel = me.byId('decryptedLabel');
-                decryptedLabel.setVisible(true);
-
-                var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
                 decryptedDateTimePicker.setValue(lockDate);
-                decryptedDateTimePicker.setVisible(true);
-            }
 
+                visible = true;
+            }
             var decryptedTextArea = me.byId('decryptedTextArea');
             decryptedTextArea.setVisible(false);
+            decryptedLabel.setVisible(visible);
+            decryptedDateTimeLabel.setVisible(visible);
+            decryptedDateTimePicker.setVisible(visible);
         },
 
         onEncryptPressed: function () {
@@ -180,7 +184,7 @@ sap.ui.define([
             var decryptedTextArea = me.byId('decryptedTextArea');
 
             $.ajax({
-                url: config.timecapsuleURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
+                url: me.timecapsuleURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
                 type: "GET",
                 contentType: 'application/json; charset=utf-8',
                 success: function(key) {

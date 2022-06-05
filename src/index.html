@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Timecapsule</title>
-	<script src="lib/JSEncrypt/jsencrypt.min.js"></script>
-	<script id="sap-ui-bootstrap"
-		src="lib/openui5/sap-ui-core.js"
-		data-sap-ui-theme="sap_belize"
-		data-sap-ui-libs="sap.m"
-		data-sap-ui-resourceroots='{
-		    "timecapsule-jsclient": "./timecapsule-jsclient/"
-		}'
-		data-sap-ui-onInit="module:timecapsule-jsclient/index"
-		data-sap-ui-compatVersion="edge"
-		data-sap-ui-async="true">
-	</script>
-</head>
-<body class="sapUiBody" id="content"></body>
+	<head>
+		<meta charset="utf-8">
+		<title>Timecapsule</title>
+		<script src="lib/JSEncrypt/jsencrypt.min.js"></script>
+		<script id="sap-ui-bootstrap"
+				src="lib/openui5/sap-ui-core.js"
+				data-sap-ui-theme="sap_belize"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-resourceroots='{
+										   "timecapsule-jsclient": "./timecapsule-jsclient/"
+										   }'
+				data-sap-ui-onInit="module:timecapsule-jsclient/index"
+				data-sap-ui-compatVersion="edge"
+				data-sap-ui-async="true">
+		</script>
+
+	</head>
+	<body class="sapUiBody" id="content">
+			<div id="timecapsule_js_notice_en">
+				<h1>Your NoScript plugin is working!</h1>
+				<p>
+					Now to the bad news: unfortunately it is not possible to use
+					this page without enabling JavaScript.
+				</p>
+				<p>
+					But do not feel uncomfortable. This webpage is open source
+					and also relies on open source libraries. You can access the
+					source code for the webpage here:
+				</p>
+				<p>
+					The source code for the libraries is available here:
+					<ol>
+						<li><a href="https://github.com/SAP/openui5">OpenUI5</a></li>
+						<li><a href="https://github.com/travist/jsencrypt">JSEncrypt</a></li>
+					</ol>
+				</p>
+			</div>
+	</body>
 </html>
