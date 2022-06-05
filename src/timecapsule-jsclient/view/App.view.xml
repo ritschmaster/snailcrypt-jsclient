@@ -5,7 +5,7 @@
     xmlns:l="sap.ui.layout"
     xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:mvc="sap.ui.core.mvc">
-  <VBox>
+  <VBox class="sapUiSmallMargin">
     <grid:CSSGrid
         gridTemplateColumns="auto
                              auto"
@@ -17,49 +17,59 @@
                           auto
                           auto"
         gridGap="auto"
-        class="sapUiSmallMargin">
+        width="100%">
 
       <!--
           1. row
       -->
-      <Label text="Text to be encrypted:"
-             labelFor="toBeEncryptedTextArea"
-             class="sapUiSmallMargin" />
-      <Label text="Text to be decrypted:"
-             labelFor="toBeDecryptedTextArea"
-             class="sapUiSmallMargin" />
+      <VBox class="sapUiSmallMargin">
+        <Label text="Text to be encrypted:"
+               labelFor="toBeEncryptedTextArea"
+               width="100%" />
+      </VBox>
+      <VBox class="sapUiSmallMargin">
+        <Label text="Text to be decrypted:"
+               labelFor="toBeDecryptedTextArea"
+               width="100%" />
+      </VBox>
 
       <!--
           2. row
       -->
-      <TextArea id="toBeEncryptedTextArea"
-                required="true"
-                rows="20"
-                change="onTextToBeEncrytedChanged"
-                class="sapUiSmallMargin" />
-      <TextArea id="toBeDecryptedTextArea"
-                required="true"
-                rows="20"
-                change="onTextToBeDecryptedChanged"
-                class="sapUiSmallMargin" />
+      <VBox class="sapUiSmallMargin">
+        <TextArea id="toBeEncryptedTextArea"
+                  required="true"
+                  rows="20"
+                  change="onTextToBeEncrytedChanged"
+                  width="100%" />
+      </VBox>
+      <VBox class="sapUiSmallMargin">
+        <TextArea id="toBeDecryptedTextArea"
+                  required="true"
+                  rows="20"
+                  change="onTextToBeDecryptedChanged"
+                  width="100%" />
+      </VBox>
 
       <!--
           3. row
       -->
-      <HBox class="sapUiSmallMargin">
-        <Label text="Encrypted until:"
-               labelFor="encryptionDateTimePicker"
-               class="sapUiSmallMargin" />
-        <DateTimePicker id="encryptionDateTimePicker"
-                        required="true"
-                        valueFormat="yyyy-MM-ddTHH:mm:ssZ"
-                        displayFormat="short"
-                        placeholder="Expiration date time"
-                        change="onEncryptionDateTimePickerChanged"
-                        class="sapUiSmallMargin" />
-      </HBox>
+      <VBox>
+        <HBox>
+          <Label text="Encrypted until:"
+                 labelFor="encryptionDateTimePicker"
+                 class="sapUiSmallMargin" />
+          <DateTimePicker id="encryptionDateTimePicker"
+                          required="true"
+                          valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                          displayFormat="short"
+                          placeholder="Expiration date time"
+                          change="onEncryptionDateTimePickerChanged"
+                          class="sapUiSmallMargin"/>
+        </HBox>
+      </VBox>
       <VBox class="sapUiSmallMargin">
-        <Label text="" />
+        <VBox />
       </VBox>
 
       <!--
@@ -76,58 +86,68 @@
       <!--
           5. row
       -->
-      <Label id="encryptedLabel"
-             text="Encrypted text:"
-             labelFor="encryptedTextArea"
-             visible="false"
-             class="sapUiSmallMargin" />
+      <VBox class="sapUiSmallMargin">
+        <Label id="encryptedLabel"
+               text="Encrypted text:"
+               labelFor="encryptedTextArea"
+               visible="false"
+               width="100%" />
+        <VBox />
+      </VBox>
       <VBox class="sapUiSmallMargin">
         <Label id="decryptedLabel"
                text="Decrypted text:"
                labelFor="decryptedTextArea"
                visible="false"
-               class="sapUiSmallMargin" />
-        <VBox class="sapUiSmallMargin" />
+               width="100%" />
+        <VBox />
       </VBox>
 
       <!--
           7. row
       -->
       <VBox class="sapUiSmallMargin">
-        <Label text="" />
+        <TextArea id="encryptedTextArea"
+                  editable="false"
+                  visible="false"
+                  width="100%" />
+        <VBox />
       </VBox>
-      <HBox class="sapUiSmallMargin">
-        <Label id="decryptedDateTimeLabel"
-               text="Encrypted until:"
-               labelFor="decryptedDateTimePicker"
-               visible="false"
-               class="sapUiSmallMargin" />
-        <DateTimePicker id="decryptedDateTimePicker"
-                        editable="false"
-                        visible="false"
-                        valueFormat="yyyy-MM-ddTHH:mm:ssZ"
-                        displayFormat="short"
-                        placeholder="Expiration date time"
-                        class="sapUiSmallMargin" />
-      </HBox>
+      <VBox>
+        <HBox>
+          <Label id="decryptedDateTimeLabel"
+                 text="Encrypted until:"
+                 labelFor="decryptedDateTimePicker"
+                 visible="false"
+                 class="sapUiSmallMargin" />
+          <DateTimePicker id="decryptedDateTimePicker"
+                          editable="false"
+                          visible="false"
+                          valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                          displayFormat="short"
+                          placeholder="Expiration date time"
+                          class="sapUiSmallMargin" />
+        </HBox>
+        <VBox />
+      </VBox>
 
       <!--
           8. row
       -->
-      <TextArea id="encryptedTextArea"
-                editable="false"
-                visible="false"
-                class="sapUiSmallMargin" />
-      <TextArea id="decryptedTextArea"
-                editable="false"
-                visible="false"
-                class="sapUiSmallMargin" />
+      <VBox class="sapUiSmallMargin">
+        <VBox />
+      </VBox>
+      <VBox class="sapUiSmallMargin">
+        <TextArea id="decryptedTextArea"
+                  editable="false"
+                  visible="false"
+                  width="100%" />
+      </VBox>
     </grid:CSSGrid>
 
     <MessageStrip id="cookieMessageStrip"
                   text="You are a lucky one. This webpage is not even using cookies!"
                   showCloseButton="true"
-                  close="onCookieMessageStripClose"
-                  class="sapUiSmallMargin" />
+                  close="onCookieMessageStripClose" />
   </VBox>
 </mvc:View>

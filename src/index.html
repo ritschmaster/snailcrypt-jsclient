@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Timecapsule</title>
+
 		<script src="lib/JSEncrypt/jsencrypt.min.js"></script>
 		<script id="sap-ui-bootstrap"
 				src="lib/openui5/sap-ui-core.js"
@@ -15,14 +16,16 @@
 				data-sap-ui-compatVersion="edge"
 				data-sap-ui-async="true">
 		</script>
-
 	</head>
 	<body class="sapUiBody" id="content">
-			<div id="timecapsule_js_notice_en">
-				<h1>Your NoScript plugin is working!</h1>
+		<noscript>
+			<div id="timecapsule-js-notice-en" class="timecapsule-js-notice">
+				<h1>
+					Your NoScript plugin is working!
+				</h1>
 				<p>
-					Now to the bad news: unfortunately it is not possible to use
-					this page without enabling JavaScript.
+					<b>Now to the bad news:</b> unfortunately it is not possible to
+					use this page without enabling JavaScript.
 				</p>
 				<p>
 					But do not feel uncomfortable. This webpage is open source
@@ -32,10 +35,15 @@
 				<p>
 					The source code for the libraries is available here:
 					<ol>
-						<li><a href="https://github.com/SAP/openui5">OpenUI5</a></li>
-						<li><a href="https://github.com/travist/jsencrypt">JSEncrypt</a></li>
+						<li>
+							<a href="https://github.com/SAP/openui5">OpenUI5</a>
+						</li>
+						<li>
+							<a href="https://github.com/travist/jsencrypt">JSEncrypt</a>
+						</li>
 					</ol>
 				</p>
 			</div>
+		</noscript>
 	</body>
 </html>

@@ -41,6 +41,9 @@ sap.ui.define([
             encryptedTextArea.setVisible(false);
         },
 
+        onInit: function() {
+        },
+
         onCookieMessageStripClose: function(event) {
             even.getSource().close();
         },
@@ -156,7 +159,18 @@ sap.ui.define([
 
         extractTimecapsuleCipherLockDate: function(timecapsuleCipher) {
             var cipherArray = timecapsuleCipher.split(':');
-            return atob(cipherArray[0]);
+            if (cipherArray.length != 2) {
+                throw 'Not a valid timecapsule string: date cannot be retrieved.'
+            }
+
+            var lockDate = null;
+            try {
+                lockDate = atob(cipherArray[0]);
+            } catch (exception) {
+                throw 'Not a valid timecapsule string: date part is broken.'
+            }
+
+            return lockDate;
         },
 
         extractTimecapsuleCipherCipher: function(timecapsuleCipher) {
@@ -167,6 +181,8 @@ sap.ui.define([
         onDecryptPressed: function() {
             const me = this;
 
+            var error = false;
+
             var toBeDecryptedTextArea = me.byId("toBeDecryptedTextArea");
             if (toBeDecryptedTextArea.getValue()) {
                 toBeDecryptedTextArea.setValueState(ValueState.Success);
@@ -175,56 +191,68 @@ sap.ui.define([
                 toBeDecryptedTextArea.setValueState(ValueState.Error);
                 toBeDecryptedTextArea.setValueStateText("Obligatory field");
                 toBeDecryptedTextArea.openValueStateMessage();
+                error = true;
             }
 
-            var timecapsuleCipher = toBeDecryptedTextArea.getValue();
-            var lockDate = me.extractTimecapsuleCipherLockDate(timecapsuleCipher);
-            var cipher = me.extractTimecapsuleCipherCipher(timecapsuleCipher);
-            var decryptedLabel = me.byId('decryptedLabel');
-            var decryptedTextArea = me.byId('decryptedTextArea');
-
-            $.ajax({
-                url: me.timecapsuleURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
-                type: "GET",
-                contentType: 'application/json; charset=utf-8',
-                success: function(key) {
-                    if (key.private_key) {
-                        var decrypter = new JSEncrypt();
-                        decrypter.setPrivateKey(key.private_key);
-                        var decryptedText = decrypter.decrypt(cipher);
-
-                        decryptedTextArea.setValue(decryptedText);
-
-                        decryptedLabel.setVisible(true);
-                        decryptedTextArea.setVisible(true);
-                    } else {
-                        var cookieMessageDialog = new Dialog({
-                            type: DialogType.Message,
-                            title: "Not available yet",
-                            content: new Text({
-                                text: "The key to decrypt your message has not been released yet. You have to wait until "
-                                    + DateFormat.getDateTimeInstance({
-                                        style: "short"
-                                    }).format(new Date(lockDate))
-                                    + "!"
-                            }),
-                            beginButton: new Button({
-                                type: ButtonType.Emphasized,
-                                text: "OK",
-                                press: function () {
-                                    cookieMessageDialog.close();
-                                }
-                            })
-                        });
-
-                        cookieMessageDialog.open();
-                    }
-                },
-                error: function(data) {
-                    alert("Received an error :(");
+            if (!error) {
+                var timecapsuleCipher = toBeDecryptedTextArea.getValue();
+                try {
+                    var lockDate = me.extractTimecapsuleCipherLockDate(timecapsuleCipher);
+                } catch (exception) {
+                    toBeDecryptedTextArea.setValueState(ValueState.Error);
+                    toBeDecryptedTextArea.setValueStateText(exception);
+                    toBeDecryptedTextArea.openValueStateMessage();
+                    error = true;
                 }
-            });
+            }
 
+            if (!error) {
+                var cipher = me.extractTimecapsuleCipherCipher(timecapsuleCipher);
+                var decryptedLabel = me.byId('decryptedLabel');
+                var decryptedTextArea = me.byId('decryptedTextArea');
+
+                $.ajax({
+                    url: me.timecapsuleURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
+                    type: "GET",
+                    contentType: 'application/json; charset=utf-8',
+                    success: function(key) {
+                        if (key.private_key) {
+                            var decrypter = new JSEncrypt();
+                            decrypter.setPrivateKey(key.private_key);
+                            var decryptedText = decrypter.decrypt(cipher);
+
+                            decryptedTextArea.setValue(decryptedText);
+
+                            decryptedLabel.setVisible(true);
+                            decryptedTextArea.setVisible(true);
+                        } else {
+                            var cookieMessageDialog = new Dialog({
+                                type: DialogType.Message,
+                                title: "Not available yet",
+                                content: new Text({
+                                    text: "The key to decrypt your message has not been released yet. You have to wait until "
+                                        + DateFormat.getDateTimeInstance({
+                                            style: "short"
+                                        }).format(new Date(lockDate))
+                                        + "!"
+                                }),
+                                beginButton: new Button({
+                                    type: ButtonType.Emphasized,
+                                    text: "OK",
+                                    press: function () {
+                                        cookieMessageDialog.close();
+                                    }
+                                })
+                            });
+
+                            cookieMessageDialog.open();
+                        }
+                    },
+                    error: function(data) {
+                        alert("Received an error :(");
+                    }
+                });
+            }
         }
     });
 });
