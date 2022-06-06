@@ -41,6 +41,29 @@ sap.ui.define([
             encryptedTextArea.setVisible(false);
         },
 
+        showNotReleasedYetMessage: function(lockDate) {
+            var notAvailableYetDialog = new Dialog({
+                type: DialogType.Message,
+                title: "Not available yet",
+                content: new Text({
+                    text: "The key to decrypt your message has not been released yet. You have to wait until "
+                        + DateFormat.getDateTimeInstance({
+                            style: "short"
+                        }).format(new Date(lockDate))
+                        + "!"
+                }),
+                beginButton: new Button({
+                    type: ButtonType.Emphasized,
+                    text: "OK",
+                    press: function () {
+                        notAvailableYetDialog.close();
+                    }
+                })
+            });
+
+            notAvailableYetDialog.open();
+        }
+
         onInit: function() {
         },
 
@@ -226,26 +249,7 @@ sap.ui.define([
                             decryptedLabel.setVisible(true);
                             decryptedTextArea.setVisible(true);
                         } else {
-                            var cookieMessageDialog = new Dialog({
-                                type: DialogType.Message,
-                                title: "Not available yet",
-                                content: new Text({
-                                    text: "The key to decrypt your message has not been released yet. You have to wait until "
-                                        + DateFormat.getDateTimeInstance({
-                                            style: "short"
-                                        }).format(new Date(lockDate))
-                                        + "!"
-                                }),
-                                beginButton: new Button({
-                                    type: ButtonType.Emphasized,
-                                    text: "OK",
-                                    press: function () {
-                                        cookieMessageDialog.close();
-                                    }
-                                })
-                            });
-
-                            cookieMessageDialog.open();
+                            showNotReleasedYetMessage(lockDate);
                         }
                     },
                     error: function(data) {
