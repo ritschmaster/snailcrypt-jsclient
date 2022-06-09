@@ -41,6 +41,48 @@ sap.ui.define([
             encryptedTextArea.setVisible(false);
         },
 
+        showUnknownErrorMessage: function() {
+           var unknownErrorDialog = new Dialog({
+                type: DialogType.Message,
+                title: "Error",
+                content: new Text({
+                    text: "An unknown/unexpected error occurred."
+                }),
+                beginButton: new Button({
+                    type: ButtonType.Emphasized,
+                    text: "OK",
+                    press: function () {
+                        unknownErrorDialog.close();
+                    }
+                })
+            });
+
+            unknownErrorDialog.open();
+        },
+
+        showTooGranularErrorMessage: function(lockDate) {
+            var notAvailableYetDialog = new Dialog({
+                type: DialogType.Message,
+                title: "Expiration date denied",
+                content: new Text({
+                    text: "The timecapsule server's configuration does not allow a requested expiration date at "
+                        + DateFormat.getDateTimeInstance({
+                            style: "short"
+                        }).format(new Date(lockDate))
+                        + "!"
+                }),
+                beginButton: new Button({
+                    type: ButtonType.Emphasized,
+                    text: "OK",
+                    press: function () {
+                        notAvailableYetDialog.close();
+                    }
+                })
+            });
+
+            notAvailableYetDialog.open();
+        },
+
         showNotReleasedYetMessage: function(lockDate) {
             var notAvailableYetDialog = new Dialog({
                 type: DialogType.Message,
@@ -62,7 +104,7 @@ sap.ui.define([
             });
 
             notAvailableYetDialog.open();
-        }
+        },
 
         onInit: function() {
         },
@@ -123,6 +165,8 @@ sap.ui.define([
         onEncryptPressed: function () {
             const me = this;
 
+            var error = false;
+
             var toBeEncryptedTextArea = this.byId("toBeEncryptedTextArea");
             if (toBeEncryptedTextArea.getValue()) {
                 toBeEncryptedTextArea.setValueState(ValueState.Success);
@@ -131,6 +175,7 @@ sap.ui.define([
                 toBeEncryptedTextArea.setValueState(ValueState.Error);
                 toBeEncryptedTextArea.setValueStateText("Obligatory field");
                 toBeEncryptedTextArea.openValueStateMessage();
+                error = true;
             }
 
             var encryptionDateTimePicker = this.byId("encryptionDateTimePicker");
@@ -141,39 +186,54 @@ sap.ui.define([
                 encryptionDateTimePicker.setValueState(ValueState.Error);
                 encryptionDateTimePicker.setValueStateText("Obligatory field");
                 encryptionDateTimePicker.openValueStateMessage();
+                error = true;
             }
 
-            var lockDate = encryptionDateTimePicker.getValue();
-            var encryptedLabel = me.byId('encryptedLabel');
-            var encryptedTextArea = me.byId('encryptedTextArea');
+            if (!error) {
+                var lockDate = encryptionDateTimePicker.getValue();
+                var encryptedLabel = me.byId('encryptedLabel');
+                var encryptedTextArea = me.byId('encryptedTextArea');
 
-            $.ajax({
-                url: me.timecapsuleURL() + "keys",
-                type: "POST",
-                data: JSON.stringify({
-                    "lock_date": lockDate
-                }),
-                contentType: 'application/json; charset=utf-8',
-                success: function(key) {
-                    if (key.public_key) {
-                        var encrypter = new JSEncrypt();
-                        encrypter.setPublicKey(key.public_key);
-                        var cipher = encrypter.encrypt(toBeEncryptedTextArea.getValue());
+                $.ajax({
+                    url: me.timecapsuleURL() + "keys",
+                    type: "POST",
+                    data: JSON.stringify({
+                        "lock_date": lockDate
+                    }),
+                    contentType: 'application/json; charset=utf-8',
+                    success: function(key) {
+                        if (key.public_key) {
+                            var encrypter = new JSEncrypt();
+                            encrypter.setPublicKey(key.public_key);
+                            var cipher = encrypter.encrypt(toBeEncryptedTextArea.getValue());
 
-                        var timecapsuleCipher = me.toTimecapsuleCipher(lockDate, cipher);
+                            var timecapsuleCipher = me.toTimecapsuleCipher(lockDate, cipher);
 
-                        encryptedTextArea.setValue(timecapsuleCipher);
+                            encryptedTextArea.setValue(timecapsuleCipher);
 
-                        encryptedLabel.setVisible(true);
-                        encryptedTextArea.setVisible(true);
-                    } else {
-                        alert("Received an error :(");
+                            encryptedLabel.setVisible(true);
+                            encryptedTextArea.setVisible(true);
+                        } else {
+                            me.showUnknownErrorMessage();
+                        }
+                    },
+                    error: function(request, statusText, errorText) {
+                        var error = request.responseJSON;
+                        if (error.code) {
+                            switch (error.code) {
+                            case 5:
+                                me.showTooGranularErrorMessage(lockDate);
+                                break;
+
+                            default:
+                                me.showUnknownErrorMessage();
+                            }
+                        } else {
+                            me.showUnknownErrorMessage();
+                        }
                     }
-                },
-                error: function(data) {
-                    alert("Received an error :(");
-                }
-            });
+                });
+            }
         },
 
         toTimecapsuleCipher: function(lockDate, cipher) {
@@ -249,11 +309,12 @@ sap.ui.define([
                             decryptedLabel.setVisible(true);
                             decryptedTextArea.setVisible(true);
                         } else {
-                            showNotReleasedYetMessage(lockDate);
+                            me.showNotReleasedYetMessage(lockDate);
                         }
                     },
-                    error: function(data) {
-                        alert("Received an error :(");
+                    error: function(request, statusText, errorText) {
+                        var error = request.responseJSON;
+                        me.showUnknownErrorMessage();
                     }
                 });
             }
