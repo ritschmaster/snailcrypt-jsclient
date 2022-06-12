@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="timecapsule-jsclient.controller.Timer"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:mvc="sap.ui.core.mvc">
+
+  <VBox class="sapUiSmallMargin">
+    <FlexBox alignItems="Center"
+             justifyContent="Center">
+      <VBox>
+        <Label id="timerLabel" />
+
+        <HBox class="sapUiLargeMarginTop">
+          <Label id="decryptedDateTimeLabel"
+                 text="Encrypted until:"
+                 labelFor="decryptedDateTimePicker"
+                 class="sapUiSmallMarginEnd" />
+          <DateTimePicker id="decryptedDateTimePicker"
+                          editable="false"
+                          valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                          displayFormat="short"
+                          placeholder="Expiration date time" />
+        </HBox>
+
+        <VBox class="sapUiSmallMarginTop">
+          <Label id="decryptedLabel"
+                 text="Decrypted text:"
+                 labelFor="decryptedTextArea"
+                 visible="false"
+                 width="100%" />
+
+          <TextArea id="decryptedTextArea"
+                    editable="false"
+                    visible="false"
+                    rows="20"
+                    width="100%" />
+        </VBox>
+      </VBox>
+
+    </FlexBox>
+
+    <mvc:XMLView viewName="timecapsule-jsclient.view.CookieMessageStrip"
+                 class="sapUiLargeMarginTop" />
+  </VBox>
+</mvc:View>

@@ -4,7 +4,7 @@ sap.ui.define([
 	"use strict";
 
 	XMLView.create({
-		viewName: "timecapsule-jsclient.view.Main"
+		viewName: "timecapsule-jsclient.view.Timer"
 	}).then(function (oView) {
 		oView.placeAt("content");
 	});

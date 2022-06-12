@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mvc:View
-    controllerName="timecapsule-jsclient.controller.App"
+    controllerName="timecapsule-jsclient.controller.Main"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:grid="sap.ui.layout.cssgrid"
@@ -10,6 +10,9 @@
         gridTemplateColumns="auto
                              auto"
         gridTemplateRows="auto
+                          auto
+                          auto
+                          auto
                           auto
                           auto
                           auto
@@ -107,7 +110,7 @@
           7. row
       -->
       <VBox class="sapUiSmallMarginTop">
-                <VBox />
+        <VBox />
       </VBox>
       <VBox class="sapUiSmallMarginTop">
         <HBox>
@@ -143,11 +146,25 @@
                   rows="20"
                   width="100%" />
       </VBox>
+
+      <!--
+          10. row
+      -->
+      <VBox class="sapUiSmallMarginTop">
+        <VBox>
+          <Link id="timerLink"
+                text="Timer URL"
+                visible="false" />
+          <Label id="timerWarningLabel"
+                 text="Caution: the link is > 2000 characters long. This might not be supported by all browsers."
+                 visible="false" />
+        </VBox>
+      </VBox>
+      <VBox class="sapUiSmallMarginTop">
+        <VBox />
+      </VBox>
     </grid:CSSGrid>
 
-    <MessageStrip id="cookieMessageStrip"
-                  text="You are a lucky one. This webpage is not even using cookies!"
-                  showCloseButton="true"
-                  close="onCookieMessageStripClose" />
+    <mvc:XMLView viewName="timecapsule-jsclient.view.CookieMessageStrip" />
   </VBox>
 </mvc:View>

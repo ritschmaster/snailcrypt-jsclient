@@ -18,9 +18,14 @@ lib: public
 	mkdir -p public/lib/JSEncrypt
 	cp -r node_modules/jsencrypt/bin/*min.js              public/lib/JSEncrypt
 
+	mkdir -p public/lib/marked
+	cp -r node_modules/marked/marked.min.js               public/lib/marked
+
 
 src: grunt public
-	cp -r src/* public/
+	cp -r src/timecapsule-jsclient public/
+	cp -r src/index.html public/
+	cp -r src/timer.html public/
 
 
 config.js:

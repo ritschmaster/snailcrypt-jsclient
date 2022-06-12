@@ -10,6 +10,11 @@ RewriteCond public/$0 -f
 RewriteRule .* public/$0 [L]
 
 ################################################################################
+# Treat any file as PHP file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .*\.html  - [H=application/x-httpd-php]
+
+################################################################################
 # Disable all caching
 Header unset ETag
 Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"

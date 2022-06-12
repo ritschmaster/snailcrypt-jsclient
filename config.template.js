@@ -6,6 +6,12 @@ sap.ui.define([
         timecapsuleServerProtocol:  "http",
         timecapsuleServerDomain  :  "localhost",
         timecapsuleServerPort    :  "8080",
-        timecapsuleServerPath    :  "/"
+        timecapsuleServerPath    :  "/",
+
+        timecapsuleTimerProtocol:  "http",
+        timecapsuleTimerDomain  :  "localhost",
+        timecapsuleTimerPort    :  "8082",
+        timecapsuleTimerPath    :  "/",
+        timecapsuleTimerPath     :  "/timer.html"
     };
 });
