@@ -10,7 +10,7 @@ RewriteCond public/$0 -f
 RewriteRule .* public/$0 [L]
 
 ################################################################################
-# Treat any file as PHP file
+# Treat HTML files as PHP file
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .*\.html  - [H=application/x-httpd-php]
 

@@ -15,9 +15,6 @@ lib: public
 	mkdir -p public/lib/openui5
 	cp -r lib/openui5-runtime-1.102.1/resources/*         public/lib/openui5
 
-	mkdir -p public/lib/JSEncrypt
-	cp -r node_modules/jsencrypt/bin/*min.js              public/lib/JSEncrypt
-
 	mkdir -p public/lib/marked
 	cp -r node_modules/marked/marked.min.js               public/lib/marked
 
