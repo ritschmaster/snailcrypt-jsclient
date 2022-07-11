@@ -53,9 +53,9 @@ sap.ui.define([
 
             var unknownErrorDialog = new Dialog({
                 type: DialogType.Message,
-                title: "Error",
+                title: oBundle.getText('main.unknownErrorTitle'),
                 content: new Text({
-                    text: oBundle.getText('main.unknownError')
+                    text: oBundle.getText('main.unknownErrorText')
                 }),
                 beginButton: new Button({
                     type: ButtonType.Emphasized,
@@ -67,6 +67,30 @@ sap.ui.define([
             });
 
             unknownErrorDialog.open();
+        },
+
+        showLockDateInPastErrorMessage: function(lockDate) {
+           var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
+            var lockDateInPastErrorDialog = new Dialog({
+                type: DialogType.Message,
+                title: oBundle.getText('main.lockDateInPastTitle'),
+                content: new Text({
+                    text: oBundle.getText('main.lockDateInPastText',
+                                          [ DateFormat.getDateTimeInstance({
+                                              style: "short"
+                                          }).format(new Date(lockDate)) ])
+                }),
+                beginButton: new Button({
+                    type: ButtonType.Emphasized,
+                    text: oBundle.getText('main.buttonOK'),
+                    press: function () {
+                        lockDateInPastErrorDialog.close();
+                    }
+                })
+            });
+
+            lockDateInPastErrorDialog.open();
         },
 
         showTooGranularErrorMessage: function(lockDate) {
@@ -233,6 +257,10 @@ sap.ui.define([
                         var error = request.responseJSON;
                         if (error.code) {
                             switch (error.code) {
+                            case 2:
+                                me.showLockDateInPastErrorMessage(lockDate);
+                                break;
+
                             case 5:
                                 me.showTooGranularErrorMessage(lockDate);
                                 break;
