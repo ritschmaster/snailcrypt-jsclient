@@ -27,12 +27,12 @@
           1. row
       -->
       <VBox>
-        <Label text="Text to be encrypted:"
+        <Label text="{i18n>main.textToBeEncrypted}"
                labelFor="toBeEncryptedTextArea"
                width="100%" />
       </VBox>
       <VBox>
-        <Label text="Text to be decrypted:"
+        <Label text="{i18n>main.textToBeDecrypted}"
                labelFor="toBeDecryptedTextArea"
                width="100%" />
       </VBox>
@@ -60,7 +60,7 @@
       -->
       <VBox class="sapUiSmallMarginTop">
         <HBox width="100%">
-          <Label text="Encrypted until:"
+          <Label text="{i18n>main.encryptedUntil}"
                  labelFor="encryptionDateTimePicker"
             class="sapUiSmallMarginEnd"       />
           <DateTimePicker id="encryptionDateTimePicker"
@@ -78,11 +78,11 @@
       <!--
           4. row
       -->
-      <Button text="Encypt"
+      <Button text="{i18n>main.encrypt}"
               press="onEncryptPressed"
               class="sapUiSmallMarginTop" />
 
-      <Button text="Decrypt"
+      <Button text="{i18n>main.decrypt}"
               press="onDecryptPressed"
               class="sapUiSmallMarginTop" />
 
@@ -91,7 +91,7 @@
       -->
       <VBox class="sapUiSmallMarginTop">
         <Label id="encryptedLabel"
-               text="Encrypted text:"
+               text="{i18n>main.encryptedText}"
                labelFor="encryptedTextArea"
                visible="false"
                width="100%" />
@@ -99,7 +99,7 @@
       </VBox>
       <VBox class="sapUiSmallMarginTop">
         <Label id="decryptedLabel"
-               text="Decrypted text:"
+               text="{i18n>main.decryptedText}"
                labelFor="decryptedTextArea"
                visible="false"
                width="100%" />
@@ -115,7 +115,7 @@
       <VBox class="sapUiSmallMarginTop">
         <HBox>
           <Label id="decryptedDateTimeLabel"
-                 text="Encrypted until:"
+                 text="{i18n>main.encryptedUntil}"
                  labelFor="decryptedDateTimePicker"
                  visible="false"
                  class="sapUiSmallMarginEnd" />
@@ -153,10 +153,10 @@
       <VBox class="sapUiSmallMarginTop">
         <VBox>
           <Link id="timerLink"
-                text="Timer URL"
+                text="{i18n>main.timerLink}"
                 visible="false" />
           <Label id="timerWarningLabel"
-                 text="Caution: the link is > 2000 characters long. This might not be supported by all browsers."
+                 text="{i18n>main.timerLinkWarning}"
                  visible="false" />
         </VBox>
       </VBox>

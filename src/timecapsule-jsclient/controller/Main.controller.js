@@ -2,6 +2,7 @@ sap.ui.define([
     "sap/ui/core/library",
     "sap/ui/core/format/DateFormat",
     "sap/ui/core/mvc/Controller",
+    "sap/ui/model/resource/ResourceModel",
     "sap/m/library",
     "sap/m/Dialog",
     "sap/m/Button",
@@ -11,6 +12,7 @@ sap.ui.define([
 ], function (CoreLibrary,
              DateFormat,
              Controller,
+             ResourceModel,
              MobileLibrary,
              Dialog,
              Button,
@@ -24,6 +26,13 @@ sap.ui.define([
 
     return Controller.extend("timecapsule-jsclient.controller.Main", {
         timecapsuleFacade: new TimecapsuleFacade(),
+
+        onInit: function () {
+            var i18nModel = new ResourceModel({
+                bundleName: "timecapsule-jsclient.i18n.i18n"
+            });
+            this.getView().setModel(i18nModel, "i18n");
+        },
 
         initEncryptedData: function() {
             const me = this;
@@ -40,15 +49,17 @@ sap.ui.define([
         },
 
         showUnknownErrorMessage: function() {
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
             var unknownErrorDialog = new Dialog({
                 type: DialogType.Message,
                 title: "Error",
                 content: new Text({
-                    text: "An unknown/unexpected error occurred."
+                    text: oBundle.getText('main.unknownError')
                 }),
                 beginButton: new Button({
                     type: ButtonType.Emphasized,
-                    text: "OK",
+                    text: oBundle.getText('main.buttonOK'),
                     press: function () {
                         unknownErrorDialog.close();
                     }
@@ -59,42 +70,44 @@ sap.ui.define([
         },
 
         showTooGranularErrorMessage: function(lockDate) {
-            var notAvailableYetDialog = new Dialog({
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
+            var tooGranularErrorDialog = new Dialog({
                 type: DialogType.Message,
-                title: "Expiration date denied",
+                title: oBundle.getText('main.expirationDateDeniedTitle'),
                 content: new Text({
-                    text: "The timecapsule server's configuration does not allow a requested expiration date at "
-                        + DateFormat.getDateTimeInstance({
-                            style: "short"
-                        }).format(new Date(lockDate))
-                        + "!"
+                    text: oBundle.getText('main.expirationDateDeniedText',
+                                          [ DateFormat.getDateTimeInstance({
+                                              style: "short"
+                                          }).format(new Date(lockDate)) ])
                 }),
                 beginButton: new Button({
                     type: ButtonType.Emphasized,
-                    text: "OK",
+                    text: oBundle.getText('main.buttonOK'),
                     press: function () {
-                        notAvailableYetDialog.close();
+                        tooGranularErrorDialog.close();
                     }
                 })
             });
 
-            notAvailableYetDialog.open();
+            tooGranularErrorDialog.open();
         },
 
         showNotReleasedYetMessage: function(lockDate) {
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
             var notAvailableYetDialog = new Dialog({
                 type: DialogType.Message,
-                title: "Not available yet",
+                title: oBundle.getText('main.notAvailableYetTitle'),
                 content: new Text({
-                    text: "The key to decrypt your message has not been released yet. You have to wait until "
-                        + DateFormat.getDateTimeInstance({
-                            style: "short"
-                        }).format(new Date(lockDate))
-                        + "!"
+                    text: oBundle.getText('main.notAvailableYetText',
+                                          [ DateFormat.getDateTimeInstance({
+                                              style: "short"
+                                          }).format(new Date(lockDate)) ])
                 }),
                 beginButton: new Button({
                     type: ButtonType.Emphasized,
-                    text: "OK",
+                    text: oBundle.getText('main.buttonOK'),
                     press: function () {
                         notAvailableYetDialog.close();
                     }
@@ -102,9 +115,6 @@ sap.ui.define([
             });
 
             notAvailableYetDialog.open();
-        },
-
-        onInit: function() {
         },
 
         onCookieMessageStripClose: function(event) {
@@ -155,6 +165,8 @@ sap.ui.define([
         onEncryptPressed: function () {
             const me = this;
 
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
             var error = false;
 
             var toBeEncryptedTextArea = this.byId("toBeEncryptedTextArea");
@@ -163,7 +175,7 @@ sap.ui.define([
                 toBeEncryptedTextArea.closeValueStateMessage();
             } else {
                 toBeEncryptedTextArea.setValueState(ValueState.Error);
-                toBeEncryptedTextArea.setValueStateText("Obligatory field");
+                toBeEncryptedTextArea.setValueStateText(oBundle.getText('main.obligatoryField'));
                 toBeEncryptedTextArea.openValueStateMessage();
                 error = true;
             }
@@ -174,7 +186,7 @@ sap.ui.define([
                 encryptionDateTimePicker.closeValueStateMessage();
             } else {
                 encryptionDateTimePicker.setValueState(ValueState.Error);
-                encryptionDateTimePicker.setValueStateText("Obligatory field");
+                encryptionDateTimePicker.setValueStateText(oBundle.getText('main.obligatoryField'));
                 encryptionDateTimePicker.openValueStateMessage();
                 error = true;
             }
@@ -238,6 +250,8 @@ sap.ui.define([
         onDecryptPressed: function() {
             const me = this;
 
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
             var error = false;
 
             var toBeDecryptedTextArea = me.byId("toBeDecryptedTextArea");
@@ -246,7 +260,7 @@ sap.ui.define([
                 toBeDecryptedTextArea.closeValueStateMessage();
             } else {
                 toBeDecryptedTextArea.setValueState(ValueState.Error);
-                toBeDecryptedTextArea.setValueStateText("Obligatory field");
+                toBeDecryptedTextArea.setValueStateText(oBundle.getText('main.obligatoryField'));
                 toBeDecryptedTextArea.openValueStateMessage();
                 error = true;
             }

@@ -3,6 +3,7 @@ sap.ui.define([
     "sap/ui/core/library",
     "sap/ui/core/format/DateFormat",
     "sap/ui/core/mvc/Controller",
+    "sap/ui/model/resource/ResourceModel",
     "sap/m/library",
     "sap/m/Dialog",
     "sap/m/Button",
@@ -13,6 +14,7 @@ sap.ui.define([
              CoreLibrary,
              DateFormat,
              Controller,
+             ResourceModel,
              MobileLibrary,
              Dialog,
              Button,
@@ -37,11 +39,18 @@ sap.ui.define([
         },
 
         onInit: function() {
+            var i18nModel = new ResourceModel({
+                bundleName: "timecapsule-jsclient.i18n.i18n"
+            });
+            this.getView().setModel(i18nModel, "i18n");
+
             this.decrypt();
         },
 
         decrypt: function() {
-            var me = this;
+            const me = this;
+
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
 
             var cipher = me.extractCipherFromURL();
             if (cipher) {
@@ -61,7 +70,7 @@ sap.ui.define([
                         decryptedTextArea.setValue(cleartext);
 
 
-                        timerLabel.setText('Decryption key is released!');
+                        timerLabel.setText(oBundle.getText('timer.decryptionKeyIsReleased'));
                         decryptedLabel.setVisible(true);
                         decryptedTextArea.setVisible(true);
                     },
@@ -94,7 +103,9 @@ sap.ui.define([
         },
 
         updateTimerLabel: function() {
-            var me = this;
+            const me = this;
+
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
 
             var timerLabel = me.byId('timerLabel');
             var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
@@ -118,12 +129,12 @@ sap.ui.define([
                                               - diffHours * 60 * 60
                                               - diffMinutes * 60));
 
-                var diffText = FormatMessage("{0} days, {1} hours, {2} minutes, {3} seconds left",
-                                             [ diffDays, diffHours, diffMinutes, diffSeconds]);
+                var diffText = oBundle.getText('timer.timeLeft',
+                                               [ diffDays, diffHours, diffMinutes, diffSeconds]);
 
                 timerLabel.setText(diffText);
             } else {
-                timerLabel.setText('Decryption key is released!');
+                timerLabel.setText(oBundle.getText('timer.decryptionKeyIsReleased'));
                 clearInterval(me.updateTimerInterval);
                 me.decrypt();
             }

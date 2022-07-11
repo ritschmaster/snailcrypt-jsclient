@@ -14,7 +14,7 @@
 
         <HBox class="sapUiLargeMarginTop">
           <Label id="decryptedDateTimeLabel"
-                 text="Encrypted until:"
+                 text="{i18n>timer.encryptedUntil}"
                  labelFor="decryptedDateTimePicker"
                  class="sapUiSmallMarginEnd" />
           <DateTimePicker id="decryptedDateTimePicker"
@@ -26,7 +26,7 @@
 
         <VBox class="sapUiSmallMarginTop">
           <Label id="decryptedLabel"
-                 text="Decrypted text:"
+                 text="{i18n>timer.decryptedText}"
                  labelFor="decryptedTextArea"
                  visible="false"
                  width="100%" />

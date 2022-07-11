@@ -2,7 +2,7 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
   <MessageStrip id="cookieMessageStrip"
-                text="You are a lucky one. This webpage is not even using cookies!"
+                text="{i18n>CookieMessageStrip.text}"
                 showCloseButton="true"
                 close="onCookieMessageStripClose" />
 </mvc:View>
