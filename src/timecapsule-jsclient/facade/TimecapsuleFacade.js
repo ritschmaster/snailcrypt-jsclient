@@ -108,34 +108,74 @@ sap.ui.define([
       );
     };
 
+    me.plainTextChunkSize = 126;
+    me.cipherTextChunkSize = 256;
+
     /**
      * @param publicKey A CryptoKey
-     * @param message A string
+     * @param plaintext A string representing the plain text.
+     * @return An ArrayBuffer representing the cipher text.
      */
-    me.encryptMessage = function(publicKey, plaintext) {
+    me.encryptMessage = async function(publicKey, plaintext) {
       var encoder = new TextEncoder();
-      let encoded = encoder.encode(plaintext);
-      return window.crypto.subtle.encrypt(
-        {
-          name: "RSA-OAEP"
-        },
-        publicKey,
-        encoded
-      );
+      var encoded = encoder.encode(plaintext);
+
+      var cipherText = new ArrayBuffer(Math.ceil(plaintext.length / me.plainTextChunkSize) * me.cipherTextChunkSize);
+      var cipherTextArr = new Uint8Array(cipherText);
+      for (var i = 0; i * me.plainTextChunkSize < plaintext.length; i++) {
+        console.log(encoded.slice(i * me.plainTextChunkSize,
+                                                                               i * me.plainTextChunkSize + me.plainTextChunkSize))
+        var cipherTextChunk = await window.crypto.subtle.encrypt({ name: "RSA-OAEP" },
+                                                                 publicKey,
+                                                                 encoded.slice(i * me.plainTextChunkSize,
+                                                                               i * me.plainTextChunkSize + me.plainTextChunkSize));
+        var cipherTextChunkArr = new Uint8Array(cipherTextChunk);
+        console.log(cipherTextChunkArr);
+        cipherTextArr.set(cipherTextChunkArr,
+                          i * me.cipherTextChunkSize,
+                          i * me.cipherTextChunkSize + me.cipherTextChunkSize + 1)
+      }
+
+      return cipherText;
     };
 
     /**
      * @param publicKey A CryptoKey
-     * @param ciphertext A string
+     * @param ciphertext An ArrayBuffer representing the ciphertext.
+     * @return An Uint8Array representing the plain text.
      */
-    me.decryptMessage = function(privateKey, ciphertext) {
-      return window.crypto.subtle.decrypt(
-        {
-          name: "RSA-OAEP"
-        },
-        privateKey,
-        ciphertext
-      );
+    me.decryptMessage = async function(privateKey, cipherText) {
+      var cipherTextArr = new Uint8Array(cipherText);
+      var plainText = new ArrayBuffer(cipherText.byteLength * me.cipherTextChunkSize);
+      var plainTextArr = new Uint8Array(cipherText);
+      var plainTextPointer = 0;
+      var cipherTextChunk = new ArrayBuffer(me.cipherTextChunkSize);
+      var cipherTextChunkArr = new Uint8Array(cipherTextChunk);
+      for (var i = 0; i * me.cipherTextChunkSize < cipherTextArr.length; i++) {
+        cipherTextChunkArr.set(cipherTextArr.slice(i * me.cipherTextChunkSize,
+                                                   i * me.cipherTextChunkSize + me.cipherTextChunkSize),
+                               0,
+                               me.cipherTextChunkSize + 1);
+        var plainTextChunk = await window.crypto.subtle.decrypt({ name: "RSA-OAEP" },
+                                                                privateKey,
+                                                                cipherTextChunk);
+        var plainTextChunkArr = new Uint8Array(plainTextChunk);
+
+        plainTextArr.set(plainTextChunkArr,
+                         plainTextPointer,
+                         plainTextPointer + plainTextChunkArr.length);
+
+        plainTextPointer += plainTextChunkArr.length;
+      }
+
+      var plainTextFinal = new ArrayBuffer(plainTextPointer);
+      var plainTextFinalArr = new Uint8Array(plainTextFinal);
+      plainTextFinalArr.set(plainTextArr.slice(0,
+                                               plainTextPointer),
+                            0,
+                            plainTextPointer + 1);
+
+      return plainTextFinalArr;
     };
 
     /**
@@ -212,10 +252,10 @@ sap.ui.define([
           if (key.public_key) {
             var importedPublicKeyPromise = me.importPublicKey(key.public_key);
             importedPublicKeyPromise.then(function(importedPublicKey) {
-              var cipherPromise = me.encryptMessage(importedPublicKey, plaintext);
-              cipherPromise.then(function(cipher) {
-                var ciphertext = me.arrayBufferToBase64(cipher);
-                var timecapsuleCipherText = me.toTimecapsuleCipher(lockDate, ciphertext);
+              var cipherTextPromise = me.encryptMessage(importedPublicKey, plaintext);
+              cipherTextPromise.then(function(cipherText) {
+                var cipherTextBase64 = me.arrayBufferToBase64(cipherText);
+                var timecapsuleCipherText = me.toTimecapsuleCipher(lockDate, cipherTextBase64);
                 onSuccess(timecapsuleCipherText);
               });
             });
