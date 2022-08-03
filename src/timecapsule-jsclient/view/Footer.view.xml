@@ -1,0 +1,28 @@
+<mvc:View
+    controllerName="timecapsule-jsclient.controller.Main"
+    xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:mvc="sap.ui.core.mvc">
+  <VBox class="sapUiSmallMargin">
+    <grid:CSSGrid
+        gridTemplateColumns="auto
+                             auto"
+        gridTemplateRows="auto
+                          auto"
+        gridGap="auto"
+        gridColumnGap="10%"
+        width="100%">
+
+      <!--
+          1. row
+      -->
+      <Button text="{i18n>footer.impressum}"
+              press="onFooterImpressumtPressed"
+              class="sapUiSmallMarginTop" />
+      <Button text="{i18n>footer.privacyPolicy}"
+              press="onFooterPrivacyPolicyPressed"
+              class="sapUiSmallMarginTop" />
+
+    </grid:CSSGrid>
+  </VBox>
+</mvc:View>

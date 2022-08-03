@@ -11,7 +11,6 @@ sap.ui.define([
         timecapsuleTimerProtocol:  "http",
         timecapsuleTimerDomain  :  "localhost",
         timecapsuleTimerPort    :  "8082",
-        timecapsuleTimerPath    :  "/",
-        timecapsuleTimerPath     :  "/timer.html"
+        timecapsuleTimerPath    :  "/timer.html"
     };
 });

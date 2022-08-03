@@ -1,34 +1,14 @@
 sap.ui.define([
-	"timecapsule-jsclient/config"
-], function (config) {
+	"timecapsule-jsclient/config",
+	"timecapsule-jsclient/facade/urlFacade"
+], function (config,
+            UrlFacade) {
   "use strict";
 
   return function() {
     var me = this;
 
-    me.getTimecapsuleURL = function() {
-      return config.timecapsuleServerProtocol
-        + "://"
-        + config.timecapsuleServerDomain
-        + ":"
-        + config.timecapsuleServerPort
-        + config.timecapsuleServerPath;
-    };
-
-    me.getTimecapsuleTimerURL = function(cipher) {
-      var url = config.timecapsuleTimerProtocol
-          + "://"
-          + config.timecapsuleTimerDomain
-          + ":"
-          + config.timecapsuleTimerPort
-          + config.timecapsuleTimerPath;
-
-      if (cipher) {
-        url += '?c=' + encodeURIComponent(cipher);
-      }
-
-      return url;
-    },
+    me.urlFacade = new UrlFacade();
 
     /**
      * @param str A string.
@@ -242,7 +222,7 @@ sap.ui.define([
                           onEncryptionError,
                           onHttpError) {
       $.ajax({
-        url: me.getTimecapsuleURL() + "keys",
+        url: me.urlFacade.getTimecapsuleURL() + "keys",
         type: "POST",
         data: JSON.stringify({
           "lock_date": lockDate
@@ -285,7 +265,7 @@ sap.ui.define([
         var ciphertext = me.extractTimecapsuleCipherCipher(timecapsuleCipher);
 
         $.ajax({
-          url: me.getTimecapsuleURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
+          url: me.urlFacade.getTimecapsuleURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
           type: "GET",
           contentType: 'application/json; charset=utf-8',
           success: function(key) {

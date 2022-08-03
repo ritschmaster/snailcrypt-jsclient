@@ -8,6 +8,8 @@ sap.ui.define([
     "sap/m/Button",
     "sap/m/Text",
 	"timecapsule-jsclient/config",
+	"timecapsule-jsclient/facade/urlFacade",
+	"timecapsule-jsclient/facade/PopupFacade",
 	"timecapsule-jsclient/facade/TimecapsuleFacade"
 ], function (CoreLibrary,
              DateFormat,
@@ -18,6 +20,8 @@ sap.ui.define([
              Button,
              Text,
              config,
+             UrlFacade,
+             PopupFacade,
              TimecapsuleFacade) {
     "use strict";
     var ValueState = CoreLibrary.ValueState;
@@ -25,6 +29,8 @@ sap.ui.define([
     var ButtonType = MobileLibrary.ButtonType;
 
     return Controller.extend("timecapsule-jsclient.controller.Main", {
+        urlFacade:  new UrlFacade(),
+        popupFacade: null,
         timecapsuleFacade: new TimecapsuleFacade(),
 
         onInit: function () {
@@ -32,11 +38,12 @@ sap.ui.define([
                 bundleName: "timecapsule-jsclient.i18n.i18n"
             });
             this.getView().setModel(i18nModel, "i18n");
+
+            this.popupFacade = new PopupFacade(this.getView().getModel("i18n").getResourceBundle());
         },
 
         initEncryptedData: function() {
             const me = this;
-
 
             var encryptedLabel = me.byId('encryptedLabel');
             encryptedLabel.setVisible(false);
@@ -46,27 +53,6 @@ sap.ui.define([
 
             var timerLink = me.byId('timerLink');
             timerLink.setVisible(false);
-        },
-
-        showUnknownErrorMessage: function() {
-            var oBundle = this.getView().getModel("i18n").getResourceBundle();
-
-            var unknownErrorDialog = new Dialog({
-                type: DialogType.Message,
-                title: oBundle.getText('main.unknownErrorTitle'),
-                content: new Text({
-                    text: oBundle.getText('main.unknownErrorText')
-                }),
-                beginButton: new Button({
-                    type: ButtonType.Emphasized,
-                    text: oBundle.getText('main.buttonOK'),
-                    press: function () {
-                        unknownErrorDialog.close();
-                    }
-                })
-            });
-
-            unknownErrorDialog.open();
         },
 
         showLockDateInPastErrorMessage: function(lockDate) {
@@ -229,7 +215,7 @@ sap.ui.define([
                      * onSuccess
                      */
                     function(cipher) {
-                        var href = me.timecapsuleFacade.getTimecapsuleTimerURL(cipher);
+                        var href = me.urlFacade.getTimecapsuleTimerURL(cipher);
 
                         encryptedTextArea.setValue(cipher);
                         timerLink.setHref(href);
@@ -248,7 +234,7 @@ sap.ui.define([
                      * onEncryptionError
                      */
                     function() {
-                        me.showUnknownErrorMessage();
+                        me.popupFacade.showUnknownErrorPopup();
                     },
                     /**
                      * onHttpError
@@ -266,10 +252,10 @@ sap.ui.define([
                                 break;
 
                             default:
-                                me.showUnknownErrorMessage();
+                                    me.popupFacade.showUnknownErrorPopup();
                             }
                         } else {
-                            me.showUnknownErrorMessage();
+                            me.popupFacade.showUnknownErrorPopup();
                         }
                     });
             }
@@ -332,9 +318,17 @@ sap.ui.define([
                      */
                     function(request) {
                         var error = request.responseJSON;
-                        me.showUnknownErrorMessage();
+                        me.popupFacade.showUnknownErrorPopup();
                     });
             }
+        },
+
+        onFooterImpressumtPressed: function () {
+            this.popupFacade.showImpressumPopup();
+        },
+
+        onFooterPrivacyPolicyPressed: function () {
+            this.popupFacade.showPrivacyPolicyPopup();
         }
     });
 });

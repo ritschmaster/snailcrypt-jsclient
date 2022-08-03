@@ -165,6 +165,8 @@
       </VBox>
     </grid:CSSGrid>
 
+    <mvc:XMLView viewName="timecapsule-jsclient.view.Footer" />
+
     <mvc:XMLView viewName="timecapsule-jsclient.view.CookieMessageStrip" />
   </VBox>
 </mvc:View>
