@@ -38,8 +38,13 @@
                     width="100%" />
         </VBox>
       </VBox>
-
     </FlexBox>
+
+    <Toolbar width="100%"
+             height="1px"
+             class="sapUiLargeMarginTop "/>
+
+      <mvc:XMLView viewName="timecapsule-jsclient.view.Footer" />
 
     <mvc:XMLView viewName="timecapsule-jsclient.view.CookieMessageStrip"
                  class="sapUiLargeMarginTop" />

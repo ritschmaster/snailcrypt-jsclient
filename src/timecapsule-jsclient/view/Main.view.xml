@@ -7,11 +7,9 @@
     xmlns:mvc="sap.ui.core.mvc">
   <VBox class="sapUiSmallMargin">
     <grid:CSSGrid
-        gridTemplateColumns="auto
-                             auto"
+        gridTemplateColumns="1fr
+                             1fr"
         gridTemplateRows="auto
-                          auto
-                          auto
                           auto
                           auto
                           auto
@@ -107,7 +105,7 @@
       </VBox>
 
       <!--
-          7. row
+          6. row
       -->
       <VBox class="sapUiSmallMarginTop">
         <VBox />
@@ -130,7 +128,7 @@
       </VBox>
 
       <!--
-          8. row
+          7. row
       -->
       <VBox>
         <TextArea id="encryptedTextArea"
@@ -148,7 +146,7 @@
       </VBox>
 
       <!--
-          10. row
+          8. row
       -->
       <VBox class="sapUiSmallMarginTop">
         <VBox>
@@ -165,8 +163,13 @@
       </VBox>
     </grid:CSSGrid>
 
+    <Toolbar width="100%"
+             height="1px"
+             class="sapUiLargeMarginTop "/>
+
     <mvc:XMLView viewName="timecapsule-jsclient.view.Footer" />
 
-    <mvc:XMLView viewName="timecapsule-jsclient.view.CookieMessageStrip" />
+    <mvc:XMLView viewName="timecapsule-jsclient.view.CookieMessageStrip"
+                 class="sapUiLargeMarginTop" />
   </VBox>
 </mvc:View>

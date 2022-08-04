@@ -322,13 +322,5 @@ sap.ui.define([
                     });
             }
         },
-
-        onFooterImpressumtPressed: function () {
-            this.popupFacade.showImpressumPopup();
-        },
-
-        onFooterPrivacyPolicyPressed: function () {
-            this.popupFacade.showPrivacyPolicyPopup();
-        }
     });
 });
