@@ -1,6 +1,6 @@
 sap.ui.define([
-	"timecapsule-jsclient/config",
-	"timecapsule-jsclient/facade/urlFacade"
+	"snailcrypt-jsclient/config",
+	"snailcrypt-jsclient/facade/urlFacade"
 ], function (config,
             UrlFacade) {
   "use strict";
@@ -186,14 +186,14 @@ sap.ui.define([
       return bytes.buffer;
     };
 
-    me.toTimecapsuleCipher = function(lockDate, cipher) {
+    me.toSnailcryptCipher = function(lockDate, cipher) {
       return btoa(lockDate) + ":" + cipher;
     };
 
-    me.extractTimecapsuleCipherLockDate = function(timecapsuleCipher) {
-      var cipherArray = timecapsuleCipher.split(':');
+    me.extractSnailcryptCipherLockDate = function(snailcryptCipher) {
+      var cipherArray = snailcryptCipher.split(':');
       if (cipherArray.length != 2) {
-        throw 'Not a valid timecapsule string: date cannot be retrieved.'
+        throw 'Not a valid snailcrypt string: date cannot be retrieved.'
       }
 
       var lockDate = null;
@@ -205,14 +205,14 @@ sap.ui.define([
           throw 'error';
         }
       } catch (exception) {
-        throw 'Not a valid timecapsule string: date part is broken.'
+        throw 'Not a valid snailcrypt string: date part is broken.'
       }
 
       return lockDate;
     };
 
-    me.extractTimecapsuleCipherCipher = function(timecapsuleCipher) {
-      var cipherArray = timecapsuleCipher.split(':');
+    me.extractSnailcryptCipherCipher = function(snailcryptCipher) {
+      var cipherArray = snailcryptCipher.split(':');
       return cipherArray[1];
     };
 
@@ -222,7 +222,7 @@ sap.ui.define([
                           onEncryptionError,
                           onHttpError) {
       $.ajax({
-        url: me.urlFacade.getTimecapsuleURL() + "keys",
+        url: me.urlFacade.getSnailcryptURL() + "keys",
         type: "POST",
         data: JSON.stringify({
           "lock_date": lockDate
@@ -235,8 +235,8 @@ sap.ui.define([
               var cipherTextPromise = me.encryptMessage(importedPublicKey, plaintext);
               cipherTextPromise.then(function(cipherText) {
                 var cipherTextBase64 = me.arrayBufferToBase64(cipherText);
-                var timecapsuleCipherText = me.toTimecapsuleCipher(lockDate, cipherTextBase64);
-                onSuccess(timecapsuleCipherText);
+                var snailcryptCipherText = me.toSnailcryptCipher(lockDate, cipherTextBase64);
+                onSuccess(snailcryptCipherText);
               });
             });
           } else {
@@ -249,23 +249,23 @@ sap.ui.define([
       });
     };
 
-    me.decrypt = function(timecapsuleCipher,
+    me.decrypt = function(snailcryptCipher,
                           onSuccess,
                           onCipherError,
                           onNotReleasedYet,
                           onHttpError) {
       var lockDate = null;
       try {
-        lockDate = me.extractTimecapsuleCipherLockDate(timecapsuleCipher);
+        lockDate = me.extractSnailcryptCipherLockDate(snailcryptCipher);
       } catch (exception) {
         onCipherError(exception);
       }
 
       if (lockDate) {
-        var ciphertext = me.extractTimecapsuleCipherCipher(timecapsuleCipher);
+        var ciphertext = me.extractSnailcryptCipherCipher(snailcryptCipher);
 
         $.ajax({
-          url: me.urlFacade.getTimecapsuleURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
+          url: me.urlFacade.getSnailcryptURL() + "keys/lockdate/" + encodeURIComponent(lockDate),
           type: "GET",
           contentType: 'application/json; charset=utf-8',
           success: function(key) {

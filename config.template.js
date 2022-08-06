@@ -3,14 +3,14 @@ sap.ui.define([
     "use strict";
 
     return {
-        timecapsuleServerProtocol:  "http",
-        timecapsuleServerDomain  :  "localhost",
-        timecapsuleServerPort    :  "8080",
-        timecapsuleServerPath    :  "/",
+        snailcryptServerProtocol:  "http",
+        snailcryptServerDomain  :  "localhost",
+        snailcryptServerPort    :  "8080",
+        snailcryptServerPath    :  "/",
 
-        timecapsuleTimerProtocol:  "http",
-        timecapsuleTimerDomain  :  "localhost",
-        timecapsuleTimerPort    :  "8082",
-        timecapsuleTimerPath    :  "/timer.html"
+        snailcryptTimerProtocol:  "http",
+        snailcryptTimerDomain  :  "localhost",
+        snailcryptTimerPort    :  "8082",
+        snailcryptTimerPath    :  "/timer.html"
     };
 });

@@ -4,7 +4,7 @@ sap.ui.define([
 	"use strict";
 
 	XMLView.create({
-		viewName: "timecapsule-jsclient.view.Main"
+		viewName: "snailcrypt-jsclient.view.Main"
 	}).then(function (oView) {
 		oView.placeAt("content");
 	});

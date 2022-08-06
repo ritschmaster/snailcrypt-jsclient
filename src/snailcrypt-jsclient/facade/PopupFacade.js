@@ -4,8 +4,8 @@ sap.ui.define([
     "sap/m/Dialog",
     "sap/m/Button",
     "sap/m/Text",
-	"timecapsule-jsclient/config",
-	"timecapsule-jsclient/facade/urlFacade"
+	"snailcrypt-jsclient/config",
+	"snailcrypt-jsclient/facade/urlFacade"
 ], function (HTML,
              MobileLibrary,
              Dialog,
@@ -43,7 +43,7 @@ sap.ui.define([
 
     me.showImpressumPopup = function() {
       $.ajax({
-        url: urlFacade.getTimecapsuleURL() + "impressum",
+        url: urlFacade.getSnailcryptURL() + "impressum",
         type: "GET",
         success: function(impressumHTML) {
           var impressumDialog = new Dialog({
@@ -68,7 +68,7 @@ sap.ui.define([
 
     me.showPrivacyPolicyPopup = function() {
       $.ajax({
-        url: urlFacade.getTimecapsuleURL() + "privacypolicy",
+        url: urlFacade.getSnailcryptURL() + "privacypolicy",
         type: "GET",
         success: function(privacyPolicyHTML) {
           var privacyPolicyDialog = new Dialog({

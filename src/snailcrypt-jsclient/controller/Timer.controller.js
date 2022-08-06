@@ -8,8 +8,8 @@ sap.ui.define([
     "sap/m/Dialog",
     "sap/m/Button",
     "sap/m/Text",
-	"timecapsule-jsclient/config",
-	"timecapsule-jsclient/facade/TimecapsuleFacade"
+	"snailcrypt-jsclient/config",
+	"snailcrypt-jsclient/facade/SnailcryptFacade"
 ], function (FormatMessage,
              CoreLibrary,
              DateFormat,
@@ -20,14 +20,14 @@ sap.ui.define([
              Button,
              Text,
              config,
-             TimecapsuleFacade) {
+             SnailcryptFacade) {
     "use strict";
     var ValueState = CoreLibrary.ValueState;
     var DialogType = MobileLibrary.DialogType;
     var ButtonType = MobileLibrary.ButtonType;
 
-    return Controller.extend("timecapsule-jsclient.controller.Timer", {
-        timecapsuleFacade: new TimecapsuleFacade(),
+    return Controller.extend("snailcrypt-jsclient.controller.Timer", {
+        snailcryptFacade: new SnailcryptFacade(),
 
         updateTimerInterval: null,
 
@@ -40,7 +40,7 @@ sap.ui.define([
 
         onInit: function() {
             var i18nModel = new ResourceModel({
-                bundleName: "timecapsule-jsclient.i18n.i18n"
+                bundleName: "snailcrypt-jsclient.i18n.i18n"
             });
             this.getView().setModel(i18nModel, "i18n");
 
@@ -60,7 +60,7 @@ sap.ui.define([
                 var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
                 var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
 
-                me.timecapsuleFacade.decrypt(
+                me.snailcryptFacade.decrypt(
                     cipher,
                     /**
                      * onSucess

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mvc:View
-    controllerName="timecapsule-jsclient.controller.Main"
+    controllerName="snailcrypt-jsclient.controller.Main"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:grid="sap.ui.layout.cssgrid"
@@ -167,9 +167,9 @@
              height="1px"
              class="sapUiLargeMarginTop "/>
 
-    <mvc:XMLView viewName="timecapsule-jsclient.view.Footer" />
+    <mvc:XMLView viewName="snailcrypt-jsclient.view.Footer" />
 
-    <mvc:XMLView viewName="timecapsule-jsclient.view.CookieMessageStrip"
+    <mvc:XMLView viewName="snailcrypt-jsclient.view.CookieMessageStrip"
                  class="sapUiLargeMarginTop" />
   </VBox>
 </mvc:View>

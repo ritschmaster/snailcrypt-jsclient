@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="timecapsule-jsclient.controller.Footer"
+    controllerName="snailcrypt-jsclient.controller.Footer"
     xmlns="sap.m"
     xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:mvc="sap.ui.core.mvc">

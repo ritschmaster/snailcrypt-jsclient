@@ -7,10 +7,10 @@ sap.ui.define([
     "sap/m/Dialog",
     "sap/m/Button",
     "sap/m/Text",
-	"timecapsule-jsclient/config",
-	"timecapsule-jsclient/facade/urlFacade",
-	"timecapsule-jsclient/facade/PopupFacade",
-	"timecapsule-jsclient/facade/TimecapsuleFacade"
+	"snailcrypt-jsclient/config",
+	"snailcrypt-jsclient/facade/urlFacade",
+	"snailcrypt-jsclient/facade/PopupFacade",
+	"snailcrypt-jsclient/facade/SnailcryptFacade"
 ], function (CoreLibrary,
              DateFormat,
              Controller,
@@ -22,20 +22,20 @@ sap.ui.define([
              config,
              UrlFacade,
              PopupFacade,
-             TimecapsuleFacade) {
+             SnailcryptFacade) {
     "use strict";
     var ValueState = CoreLibrary.ValueState;
     var DialogType = MobileLibrary.DialogType;
     var ButtonType = MobileLibrary.ButtonType;
 
-    return Controller.extend("timecapsule-jsclient.controller.Main", {
+    return Controller.extend("snailcrypt-jsclient.controller.Main", {
         urlFacade:  new UrlFacade(),
         popupFacade: null,
-        timecapsuleFacade: new TimecapsuleFacade(),
+        snailcryptFacade: new SnailcryptFacade(),
 
         onInit: function () {
             var i18nModel = new ResourceModel({
-                bundleName: "timecapsule-jsclient.i18n.i18n"
+                bundleName: "snailcrypt-jsclient.i18n.i18n"
             });
             this.getView().setModel(i18nModel, "i18n");
 
@@ -208,14 +208,14 @@ sap.ui.define([
                 var timerLink = me.byId('timerLink');
                 var timerWarningLabel = me.byId('timerWarningLabel');
 
-                me.timecapsuleFacade.encrypt(
+                me.snailcryptFacade.encrypt(
                     toBeEncryptedTextArea.getValue(),
                     lockDate,
                     /**
                      * onSuccess
                      */
                     function(cipher) {
-                        var href = me.urlFacade.getTimecapsuleTimerURL(cipher);
+                        var href = me.urlFacade.getSnailcryptTimerURL(cipher);
 
                         encryptedTextArea.setValue(cipher);
                         timerLink.setHref(href);
@@ -280,7 +280,7 @@ sap.ui.define([
             }
 
             if (!error) {
-                me.timecapsuleFacade.decrypt(
+                me.snailcryptFacade.decrypt(
                     toBeDecryptedTextArea.getValue(),
                     /**
                      * onSucess

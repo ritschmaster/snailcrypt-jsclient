@@ -20,13 +20,13 @@ lib: public
 
 
 src: grunt public
-	cp -r src/timecapsule-jsclient public/
+	cp -r src/snailcrypt-jsclient public/
 	cp -r src/index.html public/
 	cp -r src/timer.html public/
 
 
 config.js:
-	cp config.js public/timecapsule-jsclient/
+	cp config.js public/snailcrypt-jsclient/
 
 
 clean:
