@@ -103,14 +103,11 @@ sap.ui.define([
       var cipherText = new ArrayBuffer(Math.ceil(plaintext.length / me.plainTextChunkSize) * me.cipherTextChunkSize);
       var cipherTextArr = new Uint8Array(cipherText);
       for (var i = 0; i * me.plainTextChunkSize < plaintext.length; i++) {
-        console.log(encoded.slice(i * me.plainTextChunkSize,
-                                                                               i * me.plainTextChunkSize + me.plainTextChunkSize))
         var cipherTextChunk = await window.crypto.subtle.encrypt({ name: "RSA-OAEP" },
                                                                  publicKey,
                                                                  encoded.slice(i * me.plainTextChunkSize,
                                                                                i * me.plainTextChunkSize + me.plainTextChunkSize));
         var cipherTextChunkArr = new Uint8Array(cipherTextChunk);
-        console.log(cipherTextChunkArr);
         cipherTextArr.set(cipherTextChunkArr,
                           i * me.cipherTextChunkSize,
                           i * me.cipherTextChunkSize + me.cipherTextChunkSize + 1)
