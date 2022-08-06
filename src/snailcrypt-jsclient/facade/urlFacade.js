@@ -15,6 +15,21 @@ sap.ui.define([
         + config.snailcryptServerPath;
     };
 
+    me.getSnailcryptAppURL = function(cipher) {
+      var url = config.snailcryptAppProtocol
+          + "://"
+          + config.snailcryptAppDomain
+          + ":"
+          + config.snailcryptAppPort
+          + config.snailcryptAppPath;
+
+      if (cipher) {
+        url += '?c=' + encodeURIComponent(cipher);
+      }
+
+      return url;
+    };
+
     me.getSnailcryptTimerURL = function(cipher) {
       var url = config.snailcryptTimerProtocol
           + "://"

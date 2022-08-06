@@ -51,8 +51,26 @@ sap.ui.define([
             var encryptedTextArea = me.byId('encryptedTextArea');
             encryptedTextArea.setVisible(false);
 
+            var timerTitle = me.byId('timerTitle');
+            timerTitle.setVisible(false);
+
+            var timerHelp1 = me.byId('timerHelp1');
+            timerHelp1.setVisible(false);
+
+            var timerHelp2 = me.byId('timerHelp2');
+            timerHelp2.setVisible(false);
+
+            var timerLinkLabel = me.byId('timerLinkLabel');
+            timerLinkLabel.setVisible(false);
+
             var timerLink = me.byId('timerLink');
             timerLink.setVisible(false);
+
+            var timerWarningLabel = me.byId('timerWarningLabel');
+            timerWarningLabel.setVisible(false);
+
+            var timerErrorLabel = me.byId('timerErrorLabel');
+            timerErrorLabel.setVisible(false);
         },
 
         showLockDateInPastErrorMessage: function(lockDate) {
@@ -205,8 +223,13 @@ sap.ui.define([
                 var lockDate = encryptionDateTimePicker.getValue();
                 var encryptedLabel = me.byId('encryptedLabel');
                 var encryptedTextArea = me.byId('encryptedTextArea');
+                var timerTitle = me.byId('timerTitle');
+                var timerHelp1 = me.byId('timerHelp1');
+                var timerHelp2 = me.byId('timerHelp2');
+                var timerLinkLabel = me.byId('timerLinkLabel');
                 var timerLink = me.byId('timerLink');
                 var timerWarningLabel = me.byId('timerWarningLabel');
+                var timerErrorLabel = me.byId('timerErrorLabel');
 
                 me.snailcryptFacade.encrypt(
                     toBeEncryptedTextArea.getValue(),
@@ -215,19 +238,46 @@ sap.ui.define([
                      * onSuccess
                      */
                     function(cipher) {
-                        var href = me.urlFacade.getSnailcryptTimerURL(cipher);
-
+                        /**
+                         * Place and show ecnrypted text
+                         */
                         encryptedTextArea.setValue(cipher);
-                        timerLink.setHref(href);
-
                         encryptedLabel.setVisible(true);
                         encryptedTextArea.setVisible(true);
-                        timerLink.setVisible(true);
 
-                        if (href.length > 2000) {
-                            timerWarningLabel.setVisible(true);
+                        /**
+                         * Retrieve URL and show timer (label)
+                         */
+                        var href = me.urlFacade.getSnailcryptTimerURL(cipher);
+                        timerTitle.setVisible(true);
+                        timerHelp1.setVisible(true);
+                        timerHelp2.setVisible(true);
+
+                        if (href.length > 8000) {
+                            /**
+                             * Error: URL too long
+                             */
+                            timerErrorLabel.setVisible(true);
                         } else {
-                            timerWarningLabel.setVisible(false);
+                            /**
+                             * OK: Place URL and show it
+                             */
+                            timerLinkLabel.setVisible(true);
+
+                            timerLink.setHref(href);
+                            timerLink.setVisible(true);
+
+                            if (href.length > 2000) {
+                                /**
+                                 * Warning: URL might be too long
+                                 */
+                                timerWarningLabel.setVisible(true);
+                            } else {
+                                /**
+                                 * OK
+                                 */
+                                timerWarningLabel.setVisible(false);
+                            }
                         }
                     },
                     /**

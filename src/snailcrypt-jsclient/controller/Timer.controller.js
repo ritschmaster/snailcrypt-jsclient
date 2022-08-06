@@ -9,6 +9,8 @@ sap.ui.define([
     "sap/m/Button",
     "sap/m/Text",
 	"snailcrypt-jsclient/config",
+	"snailcrypt-jsclient/facade/urlFacade",
+	"snailcrypt-jsclient/facade/PopupFacade",
 	"snailcrypt-jsclient/facade/SnailcryptFacade"
 ], function (FormatMessage,
              CoreLibrary,
@@ -20,6 +22,8 @@ sap.ui.define([
              Button,
              Text,
              config,
+             UrlFacade,
+             PopupFacade,
              SnailcryptFacade) {
     "use strict";
     var ValueState = CoreLibrary.ValueState;
@@ -27,6 +31,8 @@ sap.ui.define([
     var ButtonType = MobileLibrary.ButtonType;
 
     return Controller.extend("snailcrypt-jsclient.controller.Timer", {
+        urlFacade:  new UrlFacade(),
+        popupFacade: null,
         snailcryptFacade: new SnailcryptFacade(),
 
         updateTimerInterval: null,
@@ -43,6 +49,11 @@ sap.ui.define([
                 bundleName: "snailcrypt-jsclient.i18n.i18n"
             });
             this.getView().setModel(i18nModel, "i18n");
+
+            this.popupFacade = new PopupFacade(this.getView().getModel("i18n").getResourceBundle());
+
+            var appLink = this.byId('appLink');
+            appLink.setHref(this.urlFacade.getSnailcryptAppURL());
 
             this.decrypt();
         },

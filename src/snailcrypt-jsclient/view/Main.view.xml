@@ -5,6 +5,9 @@
     xmlns:l="sap.ui.layout"
     xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:mvc="sap.ui.core.mvc">
+  <ObjectHeader title="{i18n>main.title}"
+                responsive="true" />
+
   <VBox class="sapUiSmallMargin">
     <grid:CSSGrid
         gridTemplateColumns="1fr
@@ -16,27 +19,47 @@
                           auto
                           auto
                           auto
+                          auto
                           auto"
         gridGap="auto"
         gridColumnGap="10%"
         width="100%">
-
       <!--
           1. row
       -->
       <VBox>
+        <Title text="{i18n>main.titleEncryption}"
+               titleLevel="H2" />
+        <Text text="{i18n>main.titleEncryptionHelp}"
+              class="sapUiTinyMarginTop" />
+        <Toolbar width="100%"
+                 height="1px" />
+      </VBox>
+      <VBox>
+        <Title text="{i18n>main.titleDecryption}"
+               titleLevel="H2" />
+        <Text text="{i18n>main.titleDecryptionHelp}"
+              class="sapUiTinyMarginTop" />
+        <Toolbar width="100%"
+                 height="1px" />
+      </VBox>
+
+      <!--
+          2. row
+      -->
+      <VBox class="sapUiSmallMarginTop">
         <Label text="{i18n>main.textToBeEncrypted}"
                labelFor="toBeEncryptedTextArea"
                width="100%" />
       </VBox>
-      <VBox>
+      <VBox class="sapUiSmallMarginTop">
         <Label text="{i18n>main.textToBeDecrypted}"
                labelFor="toBeDecryptedTextArea"
                width="100%" />
       </VBox>
 
       <!--
-          2. row
+          3. row
       -->
       <VBox>
         <TextArea id="toBeEncryptedTextArea"
@@ -54,13 +77,13 @@
       </VBox>
 
       <!--
-          3. row
+          4. row
       -->
       <VBox class="sapUiSmallMarginTop">
         <HBox width="100%">
           <Label text="{i18n>main.encryptedUntil}"
                  labelFor="encryptionDateTimePicker"
-            class="sapUiSmallMarginEnd"       />
+                 class="sapUiSmallMarginEnd" />
           <DateTimePicker id="encryptionDateTimePicker"
                           required="true"
                           valueFormat="yyyy-MM-ddTHH:mm:ssZ"
@@ -74,7 +97,7 @@
       </VBox>
 
       <!--
-          4. row
+          5. row
       -->
       <Button text="{i18n>main.encrypt}"
               press="onEncryptPressed"
@@ -85,7 +108,7 @@
               class="sapUiSmallMarginTop" />
 
       <!--
-          5. row
+          6. row
       -->
       <VBox class="sapUiSmallMarginTop">
         <Label id="encryptedLabel"
@@ -105,7 +128,7 @@
       </VBox>
 
       <!--
-          6. row
+          7. row
       -->
       <VBox class="sapUiSmallMarginTop">
         <VBox />
@@ -128,7 +151,7 @@
       </VBox>
 
       <!--
-          7. row
+          8. row
       -->
       <VBox>
         <TextArea id="encryptedTextArea"
@@ -146,15 +169,43 @@
       </VBox>
 
       <!--
-          8. row
+          9. row
       -->
       <VBox class="sapUiSmallMarginTop">
         <VBox>
-          <Link id="timerLink"
-                text="{i18n>main.timerLink}"
+          <Toolbar width="100%"
+                   height="1px" />
+
+          <Title id="timerTitle"
+                 level="H3"
+                 text="{i18n>main.timerTitle}"
+                 visible="false" />
+          <Text id="timerHelp1"
+                text="{i18n>main.timerHelp1}"
                 visible="false" />
+          <Text id="timerHelp2"
+                text="{i18n>main.timerHelp2}"
+                visible="false"
+                class="sapUiTinyMarginTop" />
+
+
+          <HBox class="sapUiSmallMarginTop">
+            <Label id="timerLinkLabel"
+                   text="{i18n>main.timerLinkLabel}"
+                   labelFor="timerLink"
+                   visible="false"
+                   class="sapUiSmallMarginEnd" />
+            <Link id="timerLink"
+                  text="{i18n>main.timerLink}"
+                  visible="false" />
+          </HBox>
+
           <Label id="timerWarningLabel"
                  text="{i18n>main.timerLinkWarning}"
+                 visible="false" />
+
+          <Label id="timerErrorLabel"
+                 text="{i18n>main.timerLinkError}"
                  visible="false" />
         </VBox>
       </VBox>
@@ -165,7 +216,7 @@
 
     <Toolbar width="100%"
              height="1px"
-             class="sapUiLargeMarginTop "/>
+             class="sapUiLargeMarginTop" />
 
     <mvc:XMLView viewName="snailcrypt-jsclient.view.Footer" />
 

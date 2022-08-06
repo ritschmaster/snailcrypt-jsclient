@@ -5,12 +5,19 @@
     xmlns:l="sap.ui.layout"
     xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:mvc="sap.ui.core.mvc">
+  <ObjectHeader title="{i18n>timer.title}"
+                intro="{i18n>timer.titleHelp}"
+                responsive="true" />
 
   <VBox class="sapUiSmallMargin">
     <FlexBox alignItems="Center"
              justifyContent="Center">
+      <Label id="timerLabel" />
+    </FlexBox>
+
+    <FlexBox alignItems="Center"
+             justifyContent="Center">
       <VBox>
-        <Label id="timerLabel" />
 
         <HBox class="sapUiLargeMarginTop">
           <Label id="decryptedDateTimeLabel"
@@ -40,11 +47,23 @@
       </VBox>
     </FlexBox>
 
+    <FlexBox alignItems="Center"
+             justifyContent="Center">
+      <HBox class="sapUiLargeMarginTop">
+        <Label id="appLinkLabel"
+               text="{i18n>timer.appLinkLabel}"
+               labelFor="appLink"
+               class="sapUiSmallMarginEnd" />
+        <Link id="appLink"
+              text="{i18n>timer.appLink}" />
+      </HBox>
+    </FlexBox>
+
     <Toolbar width="100%"
              height="1px"
-             class="sapUiLargeMarginTop "/>
+             class="sapUiLargeMarginTop" />
 
-      <mvc:XMLView viewName="snailcrypt-jsclient.view.Footer" />
+    <mvc:XMLView viewName="snailcrypt-jsclient.view.Footer" />
 
     <mvc:XMLView viewName="snailcrypt-jsclient.view.CookieMessageStrip"
                  class="sapUiLargeMarginTop" />
