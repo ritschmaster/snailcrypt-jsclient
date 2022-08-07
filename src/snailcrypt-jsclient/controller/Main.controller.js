@@ -66,6 +66,9 @@ sap.ui.define([
             var timerLink = me.byId('timerLink');
             timerLink.setVisible(false);
 
+            var timerLinkCopyButton = me.byId('timerLinkCopyButton');
+            timerLinkCopyButton.setVisible(false);
+
             var timerWarningLabel = me.byId('timerWarningLabel');
             timerWarningLabel.setVisible(false);
 
@@ -228,6 +231,7 @@ sap.ui.define([
                 var timerHelp2 = me.byId('timerHelp2');
                 var timerLinkLabel = me.byId('timerLinkLabel');
                 var timerLink = me.byId('timerLink');
+                var timerLinkCopyButton = me.byId('timerLinkCopyButton');
                 var timerWarningLabel = me.byId('timerWarningLabel');
                 var timerErrorLabel = me.byId('timerErrorLabel');
 
@@ -266,6 +270,8 @@ sap.ui.define([
 
                             timerLink.setHref(href);
                             timerLink.setVisible(true);
+
+                            timerLinkCopyButton.setVisible(true);
 
                             if (href.length > 2000) {
                                 /**
@@ -372,5 +378,11 @@ sap.ui.define([
                     });
             }
         },
+
+        onTimerLinkCopyPressed: function() {
+            var timerLink = this.byId('timerLink');
+            var href = timerLink.getHref();
+            navigator.clipboard.writeText(href);
+        }
     });
 });

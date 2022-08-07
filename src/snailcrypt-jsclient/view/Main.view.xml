@@ -197,7 +197,12 @@
                    class="sapUiSmallMarginEnd" />
             <Link id="timerLink"
                   text="{i18n>main.timerLink}"
-                  visible="false" />
+                  visible="false"
+                  class="sapUiTinyMarginEnd" />
+            <Button id="timerLinkCopyButton"
+                    icon="sap-icon://copy"
+                    press="onTimerLinkCopyPressed"
+                    visible="false" />
           </HBox>
 
           <Label id="timerWarningLabel"
