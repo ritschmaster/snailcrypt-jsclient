@@ -69,11 +69,11 @@ sap.ui.define([
             var timerLinkCopyButton = me.byId('timerLinkCopyButton');
             timerLinkCopyButton.setVisible(false);
 
-            var timerWarningLabel = me.byId('timerWarningLabel');
-            timerWarningLabel.setVisible(false);
+            var timerWarningText = me.byId('timerWarningText');
+            timerWarningText.setVisible(false);
 
-            var timerErrorLabel = me.byId('timerErrorLabel');
-            timerErrorLabel.setVisible(false);
+            var timerErrorText = me.byId('timerErrorText');
+            timerErrorText.setVisible(false);
         },
 
         showLockDateInPastErrorMessage: function(lockDate) {
@@ -148,8 +148,24 @@ sap.ui.define([
             notAvailableYetDialog.open();
         },
 
+        onExportModeSwitchChanged: function(event) {
+            var expertMode = event.getSource().getState();
+
+            var mainGrid = this.byId("mainGrid");
+            if (expertMode) {
+                mainGrid.setGridTemplateColumns("1fr 1fr");
+            } else {
+                mainGrid.setGridTemplateColumns("1fr");
+            }
+
+            var expertModeOnlyComponents = this.getView().getControlsByFieldGroupId('expertOnlyFieldGroup').filter(e => e.isA("sap.m.VBox"));
+            expertModeOnlyComponents.forEach(function (expertModeOnlyComponent) {
+                expertModeOnlyComponent.setVisible(expertMode);
+            });
+        },
+
         onCookieMessageStripClose: function(event) {
-            even.getSource().close();
+            event.getSource().close();
         },
 
         onEncryptionDateTimePickerChanged: function () {
@@ -232,8 +248,8 @@ sap.ui.define([
                 var timerLinkLabel = me.byId('timerLinkLabel');
                 var timerLink = me.byId('timerLink');
                 var timerLinkCopyButton = me.byId('timerLinkCopyButton');
-                var timerWarningLabel = me.byId('timerWarningLabel');
-                var timerErrorLabel = me.byId('timerErrorLabel');
+                var timerWarningText = me.byId('timerWarningText');
+                var timerErrorText = me.byId('timerErrorText');
 
                 me.snailcryptFacade.encrypt(
                     toBeEncryptedTextArea.getValue(),
@@ -261,7 +277,7 @@ sap.ui.define([
                             /**
                              * Error: URL too long
                              */
-                            timerErrorLabel.setVisible(true);
+                            timerErrorText.setVisible(true);
                         } else {
                             /**
                              * OK: Place URL and show it
@@ -277,12 +293,12 @@ sap.ui.define([
                                 /**
                                  * Warning: URL might be too long
                                  */
-                                timerWarningLabel.setVisible(true);
+                                timerWarningText.setVisible(true);
                             } else {
                                 /**
                                  * OK
                                  */
-                                timerWarningLabel.setVisible(false);
+                                timerWarningText.setVisible(false);
                             }
                         }
                     },

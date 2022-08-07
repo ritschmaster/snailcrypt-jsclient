@@ -1,0 +1,9 @@
+#__xmlview0--timerWarningText {
+    font-weight: bold;
+    color: orange;
+}
+
+#__xmlview0--timerErrorText {
+    font-weight: bold;
+    color: red;
+}

@@ -9,9 +9,19 @@
                 responsive="true" />
 
   <VBox class="sapUiSmallMargin">
+    <HBox>
+      <Label text="{i18n>main.expertModeLabel}"
+             labelFor="exportModeSwitch"
+             class="sapUiSmallMarginEnd" />
+      <Switch state="false"
+              change="onExportModeSwitchChanged" />
+    </HBox>
+  </VBox>
+
+  <VBox class="sapUiSmallMargin">
     <grid:CSSGrid
-        gridTemplateColumns="1fr
-                             1fr"
+        id="mainGrid"
+        gridTemplateColumns="1fr"
         gridTemplateRows="auto
                           auto
                           auto
@@ -36,12 +46,15 @@
                  height="1px" />
       </VBox>
       <VBox>
-        <Title text="{i18n>main.titleDecryption}"
-               titleLevel="H2" />
-        <Text text="{i18n>main.titleDecryptionHelp}"
-              class="sapUiTinyMarginTop" />
-        <Toolbar width="100%"
-                 height="1px" />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <Title text="{i18n>main.titleDecryption}"
+                 titleLevel="H2" />
+          <Text text="{i18n>main.titleDecryptionHelp}"
+                class="sapUiTinyMarginTop" />
+          <Toolbar width="100%"
+                   height="1px" />
+        </VBox>
       </VBox>
 
       <!--
@@ -53,9 +66,12 @@
                width="100%" />
       </VBox>
       <VBox class="sapUiSmallMarginTop">
-        <Label text="{i18n>main.textToBeDecrypted}"
-               labelFor="toBeDecryptedTextArea"
-               width="100%" />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <Label text="{i18n>main.textToBeDecrypted}"
+                 labelFor="toBeDecryptedTextArea"
+                 width="100%" />
+        </VBox>
       </VBox>
 
       <!--
@@ -69,11 +85,14 @@
                   width="100%" />
       </VBox>
       <VBox>
-        <TextArea id="toBeDecryptedTextArea"
-                  required="true"
-                  rows="20"
-                  change="onTextToBeDecryptedChanged"
-                  width="100%" />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <TextArea id="toBeDecryptedTextArea"
+                    required="true"
+                    rows="20"
+                    change="onTextToBeDecryptedChanged"
+                    width="100%" />
+        </VBox>
       </VBox>
 
       <!--
@@ -93,79 +112,110 @@
         </HBox>
       </VBox>
       <VBox class="sapUiSmallMarginTop">
-        <VBox />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <VBox />
+        </VBox>
       </VBox>
 
       <!--
           5. row
       -->
-      <Button text="{i18n>main.encrypt}"
-              press="onEncryptPressed"
-              class="sapUiSmallMarginTop" />
-
-      <Button text="{i18n>main.decrypt}"
-              press="onDecryptPressed"
-              class="sapUiSmallMarginTop" />
+      <VBox class="sapUiSmallMarginTop">
+        <Button text="{i18n>main.encrypt}"
+                press="onEncryptPressed"
+                width="100%" />
+      </VBox>
+      <VBox class="sapUiSmallMarginTop">
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <Button text="{i18n>main.decrypt}"
+                  press="onDecryptPressed"
+                  width="100%" />
+        </VBox>
+      </VBox>
 
       <!--
           6. row
       -->
       <VBox class="sapUiSmallMarginTop">
-        <Label id="encryptedLabel"
-               text="{i18n>main.encryptedText}"
-               labelFor="encryptedTextArea"
-               visible="false"
-               width="100%" />
-        <VBox />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <Toolbar width="100%"
+                   height="1px" />
+
+          <Label id="encryptedLabel"
+                 text="{i18n>main.encryptedText}"
+                 labelFor="encryptedTextArea"
+                 visible="false"
+                 width="100%" />
+          <VBox />
+        </VBox>
       </VBox>
       <VBox class="sapUiSmallMarginTop">
-        <Label id="decryptedLabel"
-               text="{i18n>main.decryptedText}"
-               labelFor="decryptedTextArea"
-               visible="false"
-               width="100%" />
-        <VBox />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <Label id="decryptedLabel"
+                 text="{i18n>main.decryptedText}"
+                 labelFor="decryptedTextArea"
+                 visible="false"
+                 width="100%" />
+          <VBox />
+        </VBox>
       </VBox>
 
       <!--
           7. row
       -->
       <VBox class="sapUiSmallMarginTop">
-        <VBox />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <VBox />
+        </VBox>
       </VBox>
       <VBox class="sapUiSmallMarginTop">
-        <HBox>
-          <Label id="decryptedDateTimeLabel"
-                 text="{i18n>main.encryptedUntil}"
-                 labelFor="decryptedDateTimePicker"
-                 visible="false"
-                 class="sapUiSmallMarginEnd" />
-          <DateTimePicker id="decryptedDateTimePicker"
-                          editable="false"
-                          visible="false"
-                          valueFormat="yyyy-MM-ddTHH:mm:ssZ"
-                          displayFormat="short"
-                          placeholder="Expiration date time" />
-        </HBox>
-        <VBox />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+
+          <HBox>
+            <Label id="decryptedDateTimeLabel"
+                   text="{i18n>main.encryptedUntil}"
+                   labelFor="decryptedDateTimePicker"
+                   visible="false"
+                   class="sapUiSmallMarginEnd" />
+            <DateTimePicker id="decryptedDateTimePicker"
+                            editable="false"
+                            visible="false"
+                            valueFormat="yyyy-MM-ddTHH:mm:ssZ"
+                            displayFormat="short"
+                            placeholder="Expiration date time" />
+          </HBox>
+          <VBox />
+        </VBox>
       </VBox>
 
       <!--
           8. row
       -->
       <VBox>
-        <TextArea id="encryptedTextArea"
-                  editable="false"
-                  visible="false"
-                  rows="20"
-                  width="100%" />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <TextArea id="encryptedTextArea"
+                    editable="false"
+                    visible="false"
+                    rows="20"
+                    width="100%" />
+        </VBox>
       </VBox>
       <VBox>
-        <TextArea id="decryptedTextArea"
-                  editable="false"
-                  visible="false"
-                  rows="20"
-                  width="100%" />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <TextArea id="decryptedTextArea"
+                    editable="false"
+                    visible="false"
+                    rows="20"
+                    width="100%" />
+        </VBox>
       </VBox>
 
       <!--
@@ -205,17 +255,20 @@
                     visible="false" />
           </HBox>
 
-          <Label id="timerWarningLabel"
-                 text="{i18n>main.timerLinkWarning}"
-                 visible="false" />
+          <Text id="timerWarningText"
+                text="{i18n>main.timerLinkWarning}"
+                visible="false" />
 
-          <Label id="timerErrorLabel"
-                 text="{i18n>main.timerLinkError}"
-                 visible="false" />
+          <Text id="timerErrorText"
+                text="{i18n>main.timerLinkError}"
+                visible="false" />
         </VBox>
       </VBox>
       <VBox class="sapUiSmallMarginTop">
-        <VBox />
+        <VBox fieldGroupIds="expertOnlyFieldGroup"
+              visible="false">
+          <VBox />
+        </VBox>
       </VBox>
     </grid:CSSGrid>
 
