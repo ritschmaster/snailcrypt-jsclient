@@ -9,13 +9,13 @@
                 responsive="true" />
 
   <VBox class="sapUiSmallMargin">
-    <HBox>
+    <FlexBox alignItems="Center">
       <Label text="{i18n>main.expertModeLabel}"
              labelFor="exportModeSwitch"
              class="sapUiSmallMarginEnd" />
       <Switch state="false"
               change="onExportModeSwitchChanged" />
-    </HBox>
+    </FlexBox>
   </VBox>
 
   <VBox class="sapUiSmallMargin">
@@ -222,7 +222,7 @@
           9. row
       -->
       <VBox class="sapUiSmallMarginTop">
-        <VBox>
+        <VBox justifyContent="center">
           <Toolbar width="100%"
                    height="1px" />
 
@@ -230,16 +230,8 @@
                  level="H3"
                  text="{i18n>main.timerTitle}"
                  visible="false" />
-          <Text id="timerHelp1"
-                text="{i18n>main.timerHelp1}"
-                visible="false" />
-          <Text id="timerHelp2"
-                text="{i18n>main.timerHelp2}"
-                visible="false"
-                class="sapUiTinyMarginTop" />
 
-
-          <HBox class="sapUiSmallMarginTop">
+          <FlexBox alignItems="Center">
             <Label id="timerLinkLabel"
                    text="{i18n>main.timerLinkLabel}"
                    labelFor="timerLink"
@@ -253,7 +245,7 @@
                     icon="sap-icon://copy"
                     press="onTimerLinkCopyPressed"
                     visible="false" />
-          </HBox>
+          </FlexBox>
 
           <Text id="timerWarningText"
                 text="{i18n>main.timerLinkWarning}"
@@ -262,6 +254,14 @@
           <Text id="timerErrorText"
                 text="{i18n>main.timerLinkError}"
                 visible="false" />
+
+          <Text id="timerHelp1"
+                text="{i18n>main.timerHelp1}"
+                visible="false" />
+          <Text id="timerHelp2"
+                text="{i18n>main.timerHelp2}"
+                visible="false"
+                class="sapUiTinyMarginTop" />
         </VBox>
       </VBox>
       <VBox class="sapUiSmallMarginTop">
