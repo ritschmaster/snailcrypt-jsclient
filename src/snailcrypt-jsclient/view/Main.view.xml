@@ -99,7 +99,7 @@
           4. row
       -->
       <VBox class="sapUiSmallMarginTop">
-        <HBox width="100%">
+        <FlexBox alignItems="Center">
           <Label text="{i18n>main.encryptedUntil}"
                  labelFor="encryptionDateTimePicker"
                  class="sapUiSmallMarginEnd" />
@@ -107,9 +107,9 @@
                           required="true"
                           valueFormat="yyyy-MM-ddTHH:mm:ssZ"
                           displayFormat="short"
-                          placeholder="Expiration date time"
+                          placeholder="{i18n>main.encryptionExpirationDateTimePlaceholder}"
                           change="onEncryptionDateTimePickerChanged" />
-        </HBox>
+        </FlexBox>
       </VBox>
       <VBox class="sapUiSmallMarginTop">
         <VBox fieldGroupIds="expertOnlyFieldGroup"
@@ -177,7 +177,7 @@
         <VBox fieldGroupIds="expertOnlyFieldGroup"
               visible="false">
 
-          <HBox>
+          <FlexBox alignItems="Center">
             <Label id="decryptedDateTimeLabel"
                    text="{i18n>main.encryptedUntil}"
                    labelFor="decryptedDateTimePicker"
@@ -188,8 +188,8 @@
                             visible="false"
                             valueFormat="yyyy-MM-ddTHH:mm:ssZ"
                             displayFormat="short"
-                            placeholder="Expiration date time" />
-          </HBox>
+                            placeholder="{i18n>main.encryptionExpirationDateTimePlaceholder}" />
+          </FlexBox>
           <VBox />
         </VBox>
       </VBox>
@@ -237,10 +237,13 @@
                    labelFor="timerLink"
                    visible="false"
                    class="sapUiSmallMarginEnd" />
-            <Link id="timerLink"
-                  text="{i18n>main.timerLink}"
-                  visible="false"
-                  class="sapUiTinyMarginEnd" />
+            <VBox fieldGroupIds="expertOnlyFieldGroup"
+                  visible="false">
+              <Link id="timerLink"
+                    text="{i18n>main.timerLink}"
+                    visible="false"
+                    class="sapUiTinyMarginEnd" />
+            </VBox>
             <Button id="timerLinkCopyButton"
                     icon="sap-icon://copy"
                     press="onTimerLinkCopyPressed"
