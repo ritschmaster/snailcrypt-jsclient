@@ -9,6 +9,7 @@
     "@openui5/sap.ui.unified": "1.102.1",
     "@openui5/themelib_sap_belize": "1.102.1",
     "@openui5/themelib_sap_fiori_3": "^1.102.1",
+    "cronstrue": "^2.11.0",
     "date-fns": "^2.28.0",
     "marked": "^4.0.16",
     "quick-encrypt": "^1.0.8"

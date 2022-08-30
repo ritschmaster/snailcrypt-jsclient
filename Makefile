@@ -13,10 +13,14 @@ lib: public
 	mkdir -p public/lib
 
 	mkdir -p public/lib/openui5
-	cp -r lib/openui5-runtime-1.102.1/resources/*         public/lib/openui5
+	cp -r lib/openui5-runtime-1.102.1/resources/*           public/lib/openui5
+
+	mkdir -p public/lib/cronstrue
+	cp -r node_modules/cronstrue/dist/cronstrue.min.js      public/lib/cronstrue
+	cp -r node_modules/cronstrue/dist/cronstrue-i18n.min.js public/lib/cronstrue
 
 	mkdir -p public/lib/marked
-	cp -r node_modules/marked/marked.min.js               public/lib/marked
+	cp -r node_modules/marked/marked.min.js                 public/lib/marked
 
 
 src: grunt public

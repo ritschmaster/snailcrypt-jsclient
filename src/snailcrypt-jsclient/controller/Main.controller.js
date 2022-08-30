@@ -100,28 +100,72 @@ sap.ui.define([
             lockDateInPastErrorDialog.open();
         },
 
-        showTooGranularErrorMessage: function(lockDate) {
-            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+        getAcceptLanguage: function() {
+            var acceptLanguage = 'en';
 
-            var tooGranularErrorDialog = new Dialog({
-                type: DialogType.Message,
-                title: oBundle.getText('main.expirationDateDeniedTitle'),
-                content: new Text({
-                    text: oBundle.getText('main.expirationDateDeniedText',
-                                          [ DateFormat.getDateTimeInstance({
-                                              style: "short"
-                                          }).format(new Date(lockDate)) ])
-                }),
-                beginButton: new Button({
-                    type: ButtonType.Emphasized,
-                    text: oBundle.getText('main.buttonOK'),
-                    press: function () {
-                        tooGranularErrorDialog.close();
-                    }
-                })
+            $('meta').each(function (index, meta) {
+                var $meta = $(meta);
+                var acceptLanguageAttr = $meta.attr('accept-language');
+                if (acceptLanguageAttr) {
+                    acceptLanguage = acceptLanguageAttr.substring(0, 2);
+                }
             });
 
-            tooGranularErrorDialog.open();
+            return acceptLanguage;
+        },
+
+        showTooGranularErrorMessage: function(lockDate) {
+            var me = this;
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
+            $.ajax({
+                url: me.urlFacade.getSnailcryptURL() + "configs",
+                type: "GET",
+                success: function(configs) {
+                    var configsText = ""
+                    for (var i = 0; i < configs.length; i++) {
+                        var fromStr =  DateFormat.getDateTimeInstance({
+                            style: "medium"
+                        }).format(new Date(configs[i].from));
+                        var toStr =  DateFormat.getDateTimeInstance({
+                            style: "medium"
+                        }).format(new Date(configs[i].to));
+                        var cronExprStr = cronstrue.toString(configs[i].type,
+                                                             { locale: me.getAcceptLanguage() });
+
+                        configsText += "\n"
+                            + oBundle.getText('main.expirationDateDeniedConstraint',
+                                              [ fromStr,
+                                                toStr,
+                                                cronExprStr ]);
+                    }
+
+                    var lockDateStr = DateFormat.getDateTimeInstance({
+                        style: "medium"
+                    }).format(new Date(lockDate));
+                    var tooGranularErrorDialog = new Dialog({
+                        type: DialogType.Message,
+                        title: oBundle.getText('main.expirationDateDeniedTitle'),
+                        content: new Text({
+                            text: oBundle.getText('main.expirationDateDeniedText',
+                                                  [ lockDateStr ])
+                                + configsText
+                        }),
+                        beginButton: new Button({
+                            type: ButtonType.Emphasized,
+                            text: oBundle.getText('main.buttonOK'),
+                            press: function () {
+                                tooGranularErrorDialog.close();
+                            }
+                        })
+                    });
+
+                    tooGranularErrorDialog.open();
+                },
+                error: function(request, statusText, errorText) {
+                    me.popupFacade.showUnknownErrorPopup();
+                }
+            });
         },
 
         showNotReleasedYetMessage: function(lockDate) {
