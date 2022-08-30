@@ -83,7 +83,16 @@ sap.ui.define([
               press: function () {
                 privacyPolicyDialog.close();
               }
-            })
+            }),
+            afterOpen: function () {
+              $('.impressum').click(function(event) {
+                event.preventDefault();
+
+                privacyPolicyDialog.close();
+
+                me.showImpressumPopup();
+              });
+            }
           });
 
           privacyPolicyDialog.open();
