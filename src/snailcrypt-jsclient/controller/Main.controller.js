@@ -100,20 +100,6 @@ sap.ui.define([
             lockDateInPastErrorDialog.open();
         },
 
-        getAcceptLanguage: function() {
-            var acceptLanguage = 'en';
-
-            $('meta').each(function (index, meta) {
-                var $meta = $(meta);
-                var acceptLanguageAttr = $meta.attr('accept-language');
-                if (acceptLanguageAttr) {
-                    acceptLanguage = acceptLanguageAttr.substring(0, 2);
-                }
-            });
-
-            return acceptLanguage;
-        },
-
         showTooGranularErrorMessage: function(lockDate) {
             var me = this;
             var oBundle = this.getView().getModel("i18n").getResourceBundle();
@@ -131,7 +117,7 @@ sap.ui.define([
                             style: "medium"
                         }).format(new Date(configs[i].to));
                         var cronExprStr = cronstrue.toString(configs[i].type,
-                                                             { locale: me.getAcceptLanguage() });
+                                                             { locale: sap.ui.getCore().getConfiguration().getLanguage().substring(0, 2) });
 
                         configsText += "\n"
                             + oBundle.getText('main.expirationDateDeniedConstraint',
