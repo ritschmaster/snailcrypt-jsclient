@@ -45,6 +45,9 @@ sap.ui.define([
       $.ajax({
         url: urlFacade.getSnailcryptURL() + "impressum",
         type: "GET",
+        headers: {
+          'Accept-Language': sap.ui.getCore().getConfiguration().getLanguage().substring(0, 2)
+        },
         success: function(impressumHTML) {
           var impressumDialog = new Dialog({
             type: DialogType.Message,
@@ -70,6 +73,9 @@ sap.ui.define([
       $.ajax({
         url: urlFacade.getSnailcryptURL() + "privacypolicy",
         type: "GET",
+        headers: {
+          'Accept-Language': sap.ui.getCore().getConfiguration().getLanguage().substring(0, 2)
+        },
         success: function(privacyPolicyHTML) {
           var privacyPolicyDialog = new Dialog({
             type: DialogType.Message,
