@@ -25,6 +25,14 @@ sap.ui.define([
 
     onFooterPrivacyPolicyPressed: function () {
       this.popupFacade.showPrivacyPolicyPopup();
+    },
+
+    onFlagUKPressed: function() {
+      sap.ui.getCore().getConfiguration().setLanguage("en");
+    },
+
+    onFlagDEPressed: function() {
+      sap.ui.getCore().getConfiguration().setLanguage("de");
     }
   });
 });

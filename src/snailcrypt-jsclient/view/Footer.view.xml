@@ -22,4 +22,29 @@
             class="sapUiSmallMarginTop" />
 
   </grid:CSSGrid>
+
+  <FlexBox alignItems="Center"
+           justifyContent="Center"
+           class="sapUiSmallMarginTop">
+    <Label text="{i18n>footer.switchLanguage}" />
+  </FlexBox>
+
+  <FlexBox justifyContent="Center"
+           alignItems="Center">
+    <FlexBox>
+      <Image src="./snailcrypt-jsclient/assets/flag_uk.svg"
+             mode="InlineSvg"
+             alt="{i18n>footer.flagUKAlt}"
+             press="onFlagUKPressed"
+             class="flag-language
+                    sapUiSmallMarginEnd" />
+
+      <Image src="./snailcrypt-jsclient/assets/flag_de.svg"
+             mode="InlineSvg"
+             alt="{i18n>footer.flagDEAlt}"
+             press="onFlagDEPressed"
+             class="flag-language
+                    " />
+    </FlexBox>
+  </FlexBox>
 </mvc:View>
