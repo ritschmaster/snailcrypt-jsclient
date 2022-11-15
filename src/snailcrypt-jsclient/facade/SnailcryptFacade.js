@@ -89,7 +89,6 @@ sap.ui.define([
     };
 
     me.plainTextChunkSize = 126;
-    me.cipherTextChunkSize = 256;
 
     /**
      * @param publicKey A CryptoKey
@@ -97,10 +96,16 @@ sap.ui.define([
      * @return An ArrayBuffer representing the cipher text.
      */
     me.encryptMessage = async function(publicKey, plaintext) {
+      /**
+       * The amount of bits divided by the length of bits in a byte lets us know
+       * the size of the cipher text chunk in bytes
+       */
+      var cipherTextChunkSize = publicKey.algorithm.modulusLength / 8;
+
       var encoder = new TextEncoder();
       var encoded = encoder.encode(plaintext);
 
-      var cipherText = new ArrayBuffer(Math.ceil(plaintext.length / me.plainTextChunkSize) * me.cipherTextChunkSize);
+      var cipherText = new ArrayBuffer(Math.ceil(plaintext.length / me.plainTextChunkSize) * cipherTextChunkSize);
       var cipherTextArr = new Uint8Array(cipherText);
       for (var i = 0; i * me.plainTextChunkSize < plaintext.length; i++) {
         var cipherTextChunk = await window.crypto.subtle.encrypt({ name: "RSA-OAEP" },
@@ -109,8 +114,8 @@ sap.ui.define([
                                                                                i * me.plainTextChunkSize + me.plainTextChunkSize));
         var cipherTextChunkArr = new Uint8Array(cipherTextChunk);
         cipherTextArr.set(cipherTextChunkArr,
-                          i * me.cipherTextChunkSize,
-                          i * me.cipherTextChunkSize + me.cipherTextChunkSize + 1)
+                          i * cipherTextChunkSize,
+                          i * cipherTextChunkSize + cipherTextChunkSize + 1)
       }
 
       return cipherText;
@@ -122,17 +127,23 @@ sap.ui.define([
      * @return An Uint8Array representing the plain text.
      */
     me.decryptMessage = async function(privateKey, cipherText) {
+      /**
+       * The amount of bits divided by the length of bits in a byte lets us know
+       * the size of the cipher text chunk in bytes
+       */
+      var cipherTextChunkSize = privateKey.algorithm.modulusLength / 8;
+
       var cipherTextArr = new Uint8Array(cipherText);
-      var plainText = new ArrayBuffer(cipherText.byteLength * me.cipherTextChunkSize);
+      var plainText = new ArrayBuffer(cipherText.byteLength * cipherTextChunkSize);
       var plainTextArr = new Uint8Array(cipherText);
       var plainTextPointer = 0;
-      var cipherTextChunk = new ArrayBuffer(me.cipherTextChunkSize);
+      var cipherTextChunk = new ArrayBuffer(cipherTextChunkSize);
       var cipherTextChunkArr = new Uint8Array(cipherTextChunk);
-      for (var i = 0; i * me.cipherTextChunkSize < cipherTextArr.length; i++) {
-        cipherTextChunkArr.set(cipherTextArr.slice(i * me.cipherTextChunkSize,
-                                                   i * me.cipherTextChunkSize + me.cipherTextChunkSize),
+      for (var i = 0; i * cipherTextChunkSize < cipherTextArr.length; i++) {
+        cipherTextChunkArr.set(cipherTextArr.slice(i * cipherTextChunkSize,
+                                                   i * cipherTextChunkSize + cipherTextChunkSize),
                                0,
-                               me.cipherTextChunkSize + 1);
+                               cipherTextChunkSize + 1);
         var plainTextChunk = await window.crypto.subtle.decrypt({ name: "RSA-OAEP" },
                                                                 privateKey,
                                                                 cipherTextChunk);
