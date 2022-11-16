@@ -64,6 +64,26 @@
              height="1px"
              class="sapUiLargeMarginTop" />
 
+    <VBox class="sapUiLargeMarginBottom">
+        <Panel expandable="true"
+               headerText="{i18n>timer.faq1Title}">
+          <content>
+            <Text text="{i18n>timer.faq1Text}" />
+          </content>
+        </Panel>
+
+        <Panel expandable="true"
+               headerText="{i18n>timer.faq2Title}">
+          <content>
+            <Text text="{i18n>timer.faq2Text}" />
+          </content>
+        </Panel>
+    </VBox>
+
+    <Toolbar width="100%"
+             height="1px"
+             class="sapUiLargeMarginTop" />
+
     <mvc:XMLView viewName="snailcrypt-jsclient.view.Footer" />
 
     <mvc:XMLView viewName="snailcrypt-jsclient.view.CookieMessageStrip"
