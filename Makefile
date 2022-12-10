@@ -21,6 +21,9 @@ lib: public
 
 	mkdir -p public/lib/marked
 	cp -r node_modules/marked/marked.min.js                 public/lib/marked
+	
+	mkdir -p public/lib/forge
+	cp -r node_modules/node-forge/dist/forge.min.js         public/lib/forge
 
 
 src: grunt public

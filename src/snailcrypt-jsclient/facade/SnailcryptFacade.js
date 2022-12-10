@@ -27,33 +27,7 @@ sap.ui.define([
      * @return A Promise containing a CryptoKey which is the public key.
      */
     me.importPublicKey = function(pem) {
-      // fetch the part of the PEM string between header and footer
-      const pemHeader = '-----BEGIN PUBLIC KEY-----';
-      const pemFooter = '-----END PUBLIC KEY-----';
-
-      var pemContents = pem
-          .replaceAll('\n', '')
-          .replaceAll('\'', '');
-      pemContents = pemContents.substring(pemHeader.length, pemContents.length - pemFooter.length);
-
-      // base64 decode the string to get the binary data
-      const binaryDerString = window.atob(pemContents);
-
-      // convert from a binary string to an ArrayBuffer
-      const binaryDer = me.str2ab(binaryDerString);
-
-      return window.crypto.subtle.importKey(
-        'spki',
-        binaryDer,
-        {
-          name: 'RSA-OAEP',
-          hash: 'SHA-512'
-        },
-        true,
-        [ 'encrypt' ]
-      );
-
-
+      return forge.pki.publicKeyFromPem(pem);
     };
 
     /**
@@ -61,31 +35,7 @@ sap.ui.define([
      * @return A Promise containing a CryptoKey which is the private key.
      */
     me.importPrivateKey = function(pem) {
-      // fetch the part of the PEM string between header and footer
-      const pemHeader = '-----BEGIN PRIVATE KEY-----';
-      const pemFooter = '-----END PRIVATE KEY-----';
-
-      var pemContents = pem
-          .replaceAll('\n', '')
-          .replaceAll('\'', '');
-      pemContents = pemContents.substring(pemHeader.length, pemContents.length - pemFooter.length);
-
-      // base64 decode the string to get the binary data
-      const binaryDerString = window.atob(pemContents);
-
-      // convert from a binary string to an ArrayBuffer
-      const binaryDer = me.str2ab(binaryDerString);
-
-      return window.crypto.subtle.importKey(
-        'pkcs8',
-        binaryDer,
-        {
-          name: 'RSA-OAEP',
-          hash: 'SHA-512'
-        },
-        true,
-        [ 'decrypt' ]
-      );
+	  return forge.pki.privateKeyFromPem(pem);
     };
 
     me.plainTextChunkSize = 126;
@@ -95,24 +45,34 @@ sap.ui.define([
      * @param plaintext A string representing the plain text.
      * @return An ArrayBuffer representing the cipher text.
      */
-    me.encryptMessage = async function(publicKey, plaintext) {
+    me.encryptMessage = function(publicKey, plaintext) {
       /**
        * The amount of bits divided by the length of bits in a byte lets us know
        * the size of the cipher text chunk in bytes
        */
-      var cipherTextChunkSize = publicKey.algorithm.modulusLength / 8;
+      var cipherTextChunkSize = Math.ceil(publicKey.n.bitLength() / 8);
 
       var encoder = new TextEncoder();
       var encoded = encoder.encode(plaintext);
+      
+      var decoder = new TextDecoder();
 
       var cipherText = new ArrayBuffer(Math.ceil(plaintext.length / me.plainTextChunkSize) * cipherTextChunkSize);
       var cipherTextArr = new Uint8Array(cipherText);
-      for (var i = 0; i * me.plainTextChunkSize < plaintext.length; i++) {
-        var cipherTextChunk = await window.crypto.subtle.encrypt({ name: "RSA-OAEP" },
-                                                                 publicKey,
-                                                                 encoded.slice(i * me.plainTextChunkSize,
-                                                                               i * me.plainTextChunkSize + me.plainTextChunkSize));
-        var cipherTextChunkArr = new Uint8Array(cipherTextChunk);
+      for (var i = 0; i * me.plainTextChunkSize < plaintext.length; i++) {      	      
+      	var plaintextChunk = encoded.slice(i * me.plainTextChunkSize,
+                                           i * me.plainTextChunkSize + me.plainTextChunkSize);
+        var plaintextChunkStr = decoder.decode(plaintextChunk);
+      
+      	var cipherTextChunkStr = publicKey.encrypt(plaintextChunkStr,      								
+												   'RSA-OAEP');
+		var cipherTextChunkByteBuffer = forge.util.createBuffer(cipherTextChunkStr);												   
+
+        var cipherTextChunkArr = new Uint8Array(new ArrayBuffer(cipherTextChunkSize));
+		for (var j = 0; j < cipherTextChunkSize; j++) {
+			cipherTextChunkArr[j] = cipherTextChunkByteBuffer.at(j);
+		}
+
         cipherTextArr.set(cipherTextChunkArr,
                           i * cipherTextChunkSize,
                           i * cipherTextChunkSize + cipherTextChunkSize + 1)
@@ -126,12 +86,14 @@ sap.ui.define([
      * @param ciphertext An ArrayBuffer representing the ciphertext.
      * @return An Uint8Array representing the plain text.
      */
-    me.decryptMessage = async function(privateKey, cipherText) {
+    me.decryptMessage = function(privateKey, cipherText) {
+	    var textEncoder = new TextEncoder();
+    
       /**
        * The amount of bits divided by the length of bits in a byte lets us know
        * the size of the cipher text chunk in bytes
        */
-      var cipherTextChunkSize = privateKey.algorithm.modulusLength / 8;
+      var cipherTextChunkSize = Math.ceil(privateKey.n.bitLength() / 8);
 
       var cipherTextArr = new Uint8Array(cipherText);
       var plainText = new ArrayBuffer(cipherText.byteLength * cipherTextChunkSize);
@@ -144,9 +106,9 @@ sap.ui.define([
                                                    i * cipherTextChunkSize + cipherTextChunkSize),
                                0,
                                cipherTextChunkSize + 1);
-        var plainTextChunk = await window.crypto.subtle.decrypt({ name: "RSA-OAEP" },
-                                                                privateKey,
-                                                                cipherTextChunk);
+                               
+		var plainTextChunkStr = privateKey.decrypt(cipherTextChunkArr, 'RSA-OAEP');
+		var plainTextChunk = textEncoder.encode(plainTextChunkStr);
         var plainTextChunkArr = new Uint8Array(plainTextChunk);
 
         plainTextArr.set(plainTextChunkArr,
@@ -238,15 +200,11 @@ sap.ui.define([
         contentType: 'application/json; charset=utf-8',
         success: function(key) {
           if (key.public_key) {
-            var importedPublicKeyPromise = me.importPublicKey(key.public_key);
-            importedPublicKeyPromise.then(function(importedPublicKey) {
-              var cipherTextPromise = me.encryptMessage(importedPublicKey, plaintext);
-              cipherTextPromise.then(function(cipherText) {
-                var cipherTextBase64 = me.arrayBufferToBase64(cipherText);
-                var snailcryptCipherText = me.toSnailcryptCipher(lockDate, cipherTextBase64);
-                onSuccess(snailcryptCipherText);
-              });
-            });
+            var importedPublicKey = me.importPublicKey(key.public_key);
+            var ciphertext = me.encryptMessage(importedPublicKey, plaintext);
+            var ciphertextBase64 = me.arrayBufferToBase64(ciphertext);
+            var snailcryptCiphertext = me.toSnailcryptCipher(lockDate, ciphertextBase64);
+            onSuccess(snailcryptCiphertext);
           } else {
             onEncryptionError();
           }
@@ -278,15 +236,11 @@ sap.ui.define([
           contentType: 'application/json; charset=utf-8',
           success: function(key) {
             if (key.private_key) {
-              var importedPrivateKeyPromise = me.importPrivateKey(key.private_key);
-              importedPrivateKeyPromise.then(function (importedPrivateKey) {
-                var decryptedPromise = me.decryptMessage(importedPrivateKey,
-                                                         me.base64ToArrayBuffer(ciphertext));
-                decryptedPromise.then(function(plaintext) {
-                  var textDecoder = new TextDecoder();
-                  onSuccess(textDecoder.decode(plaintext), lockDate);
-                });
-              });
+              var importedPrivateKey = me.importPrivateKey(key.private_key);
+              var plaintext = me.decryptMessage(importedPrivateKey,
+                                                       me.base64ToArrayBuffer(ciphertext));
+              var textDecoder = new TextDecoder();
+              onSuccess(textDecoder.decode(plaintext), lockDate);
             } else {
               onNotReleasedYet(lockDate);
             }
