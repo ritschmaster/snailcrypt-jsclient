@@ -13,6 +13,8 @@
     <FlexBox alignItems="Center"
              justifyContent="Center">
       <Label id="timerLabel" />
+      <Label id="messageAvailbleLabel"
+      		 text="{i18n>timer.decryptionKeyIsReleased}" />
     </FlexBox>
 
     <FlexBox alignItems="Center"

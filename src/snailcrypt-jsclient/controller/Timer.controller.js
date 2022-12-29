@@ -65,7 +65,7 @@ sap.ui.define([
 
             var cipher = me.extractCipherFromURL();
             if (cipher) {
-                var timerLabel = me.byId('timerLabel');
+                var messageAvailbleLabel = me.byId('messageAvailbleLabel');
                 var decryptedLabel = me.byId('decryptedLabel');
                 var decryptedTextArea = me.byId('decryptedTextArea');
                 var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
@@ -81,7 +81,7 @@ sap.ui.define([
                         decryptedTextArea.setValue(cleartext);
 
 
-                        timerLabel.setText(oBundle.getText('timer.decryptionKeyIsReleased'));
+                        messageAvailbleLabel.setVisible(true);
                         decryptedLabel.setVisible(true);
                         decryptedTextArea.setVisible(true);
                     },
