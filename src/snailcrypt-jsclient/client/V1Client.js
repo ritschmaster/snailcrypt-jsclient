@@ -1,8 +1,10 @@
 sap.ui.define([
 	"snailcrypt-jsclient/config",
-	"snailcrypt-jsclient/facade/urlFacade"
+	"snailcrypt-jsclient/facade/urlFacade",
+	"snailcrypt-jsclient/client/ClientVersion"
 ], function (config,
-            UrlFacade) {
+             UrlFacade,
+             ClientVersion) {
   "use strict";
 
   return function() {
@@ -156,19 +158,19 @@ sap.ui.define([
       return bytes.buffer;
     };
 
-    me.toSnailcryptCipher = function(lockDate, cipher) {
-      return btoa(lockDate) + ":" + cipher;
+    me.toSnailcryptCipher = function(version, lockDate, cipher) {
+      return version + ":" + btoa(lockDate) + ":" + cipher;
     };
 
     me.extractSnailcryptCipherLockDate = function(snailcryptCipher) {
       var cipherArray = snailcryptCipher.split(':');
-      if (cipherArray.length != 2) {
+      if (cipherArray.length != 3) {
         throw 'Not a valid snailcrypt string: date cannot be retrieved.'
       }
 
       var lockDate = null;
       try {
-        lockDate = atob(cipherArray[0]);
+        lockDate = atob(cipherArray[1]);
 
         var datetime = new Date(lockDate);
         if (datetime.getTime() != datetime.getTime()) {
@@ -183,7 +185,7 @@ sap.ui.define([
 
     me.extractSnailcryptCipherCipher = function(snailcryptCipher) {
       var cipherArray = snailcryptCipher.split(':');
-      return cipherArray[1];
+      return cipherArray[2];
     };
 
     me.encrypt = function(plaintext,
@@ -203,7 +205,7 @@ sap.ui.define([
             var importedPublicKey = me.importPublicKey(key.public_key);
             var ciphertext = me.encryptMessage(importedPublicKey, plaintext);
             var ciphertextBase64 = me.arrayBufferToBase64(ciphertext);
-            var snailcryptCiphertext = me.toSnailcryptCipher(lockDate, ciphertextBase64);
+            var snailcryptCiphertext = me.toSnailcryptCipher(ClientVersion.V1, lockDate, ciphertextBase64);
             onSuccess(snailcryptCiphertext);
           } else {
             onEncryptionError();

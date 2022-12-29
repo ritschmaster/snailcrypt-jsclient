@@ -10,7 +10,7 @@ sap.ui.define([
 	"snailcrypt-jsclient/config",
 	"snailcrypt-jsclient/facade/urlFacade",
 	"snailcrypt-jsclient/facade/PopupFacade",
-	"snailcrypt-jsclient/facade/SnailcryptFacade"
+	"snailcrypt-jsclient/client/V1Client"
 ], function (CoreLibrary,
              DateFormat,
              Controller,
