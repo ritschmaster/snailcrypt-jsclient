@@ -28,8 +28,13 @@ lib: public
 
 src: grunt public
 	cp -r src/snailcrypt-jsclient public/
-	cp -r src/index.html public/
-	cp -r src/timer.html public/
+	cp -r src/index.html public/index.php
+	cp -r src/timer.html public/timer.php
+	cp -r assets/favicon_package/*.png public/
+	cp -r assets/favicon_package/*.xml public/
+	cp -r assets/favicon_package/*.ico public/
+	cp -r assets/favicon_package/*.svg public/
+	cp -r assets/favicon_package/*.webmanifest public/
 
 
 config.js:
@@ -40,9 +45,9 @@ clean:
 	rm -rf public
 
 start:
-	podman-compose up --build
+	docker-compose up --build
 
 stop:
-	podman-compose down
+	docker-compose down
 
 .PHONY: all config.js
