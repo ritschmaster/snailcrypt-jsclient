@@ -6,7 +6,8 @@
     xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:mvc="sap.ui.core.mvc">
   <ObjectHeader title="{i18n>main.title}"
-                responsive="true" />
+                responsive="true"
+                icon="/snailcrypt.png" />
 
   <VBox class="sapUiSmallMargin">
     <FlexBox alignItems="Center">
