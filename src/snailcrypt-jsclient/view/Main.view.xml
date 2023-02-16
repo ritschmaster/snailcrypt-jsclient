@@ -46,16 +46,14 @@
         <Toolbar width="100%"
                  height="1px" />
       </VBox>
-      <VBox>
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
               visible="false">
-          <Title text="{i18n>main.titleDecryption}"
-                 titleLevel="H2" />
-          <Text text="{i18n>main.titleDecryptionHelp}"
-                class="sapUiTinyMarginTop" />
-          <Toolbar width="100%"
-                   height="1px" />
-        </VBox>
+	      <Title text="{i18n>main.titleDecryption}"
+	             titleLevel="H2" />
+	      <Text text="{i18n>main.titleDecryptionHelp}"
+	            class="sapUiTinyMarginTop" />
+	      <Toolbar width="100%"
+	               height="1px" />
       </VBox>
 
       <!--
@@ -66,13 +64,12 @@
                labelFor="toBeEncryptedTextArea"
                width="100%" />
       </VBox>
-      <VBox class="sapUiSmallMarginTop">
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
-          <Label text="{i18n>main.textToBeDecrypted}"
-                 labelFor="toBeDecryptedTextArea"
-                 width="100%" />
-        </VBox>
+      <VBox class="sapUiSmallMarginTop"
+       		fieldGroupIds="expertOnlyFieldGroup"
+            visible="false">
+	      <Label text="{i18n>main.textToBeDecrypted}"
+	             labelFor="toBeDecryptedTextArea"
+	             width="100%" />
       </VBox>
 
       <!--
@@ -85,15 +82,13 @@
                   change="onTextToBeEncrytedChanged"
                   width="100%" />
       </VBox>
-      <VBox>
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
-          <TextArea id="toBeDecryptedTextArea"
-                    required="true"
-                    rows="20"
-                    change="onTextToBeDecryptedChanged"
-                    width="100%" />
-        </VBox>
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
+            visible="false">
+	      <TextArea id="toBeDecryptedTextArea"
+	                required="true"
+	                rows="20"
+	                change="onTextToBeDecryptedChanged"
+	                width="100%" />
       </VBox>
 
       <!--
@@ -112,11 +107,10 @@
                           change="onEncryptionDateTimePickerChanged" />
         </FlexBox>
       </VBox>
-      <VBox class="sapUiSmallMarginTop">
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
-          <VBox />
-        </VBox>
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
+            visible="false"
+            class="sapUiSmallMarginTop">
+      	<VBox />
       </VBox>
 
       <!--
@@ -127,13 +121,12 @@
                 press="onEncryptPressed"
                 width="100%" />
       </VBox>
-      <VBox class="sapUiSmallMarginTop">
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
+            visible="false"
+            class="sapUiSmallMarginTop">
           <Button text="{i18n>main.decrypt}"
                   press="onDecryptPressed"
                   width="100%" />
-        </VBox>
       </VBox>
 
       <!--
@@ -153,16 +146,15 @@
           <VBox />
         </VBox>
       </VBox>
-      <VBox class="sapUiSmallMarginTop">
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
+            visible="false"
+            class="sapUiSmallMarginTop">
           <Label id="decryptedLabel"
                  text="{i18n>main.decryptedText}"
                  labelFor="decryptedTextArea"
                  visible="false"
                  width="100%" />
           <VBox />
-        </VBox>
       </VBox>
 
       <!--
@@ -174,10 +166,9 @@
           <VBox />
         </VBox>
       </VBox>
-      <VBox class="sapUiSmallMarginTop">
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
-
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
+            visible="false"
+            class="sapUiSmallMarginTop">
           <FlexBox alignItems="Center">
             <Label id="decryptedDateTimeLabel"
                    text="{i18n>main.encryptedUntil}"
@@ -192,7 +183,6 @@
                             placeholder="{i18n>main.encryptionExpirationDateTimePlaceholder}" />
           </FlexBox>
           <VBox />
-        </VBox>
       </VBox>
 
       <!--
@@ -208,15 +198,13 @@
                     width="100%" />
         </VBox>
       </VBox>
-      <VBox>
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
+            visible="false">
           <TextArea id="decryptedTextArea"
                     editable="false"
                     visible="false"
                     rows="20"
                     width="100%" />
-        </VBox>
       </VBox>
 
       <!--
@@ -268,11 +256,10 @@
                 class="sapUiTinyMarginTop" />
         </VBox>
       </VBox>
-      <VBox class="sapUiSmallMarginTop">
-        <VBox fieldGroupIds="expertOnlyFieldGroup"
-              visible="false">
+      <VBox fieldGroupIds="expertOnlyFieldGroup"
+            visible="false"
+            class="sapUiSmallMarginTop">
           <VBox />
-        </VBox>
       </VBox>
     </grid:CSSGrid>
 

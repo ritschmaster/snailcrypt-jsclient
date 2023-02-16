@@ -26,7 +26,7 @@ lib: public
 	cp -r node_modules/node-forge/dist/forge.min.js         public/lib/forge
 
 
-src: grunt public
+src: public
 	cp -r src/snailcrypt-jsclient public/
 	cp -r src/index.html public/index.php
 	cp -r src/timer.html public/timer.php
