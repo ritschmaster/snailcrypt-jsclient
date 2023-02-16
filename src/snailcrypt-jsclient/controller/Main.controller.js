@@ -178,7 +178,7 @@ sap.ui.define([
             notAvailableYetDialog.open();
         },
 
-        onExportModeSwitchChanged: function(event) {
+        onExpertModeSwitchChanged: function(event) {
             var expertMode = event.getSource().getState();
 
             var mainGrid = this.byId("mainGrid");

@@ -12,10 +12,10 @@
   <VBox class="sapUiSmallMargin">
     <FlexBox alignItems="Center">
       <Label text="{i18n>main.expertModeLabel}"
-             labelFor="exportModeSwitch"
+             labelFor="expertModeSwitch"
              class="sapUiSmallMarginEnd" />
       <Switch state="false"
-              change="onExportModeSwitchChanged" />
+              change="onExpertModeSwitchChanged" />
     </FlexBox>
   </VBox>
 
