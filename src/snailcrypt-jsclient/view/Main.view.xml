@@ -226,16 +226,17 @@
                    labelFor="timerLink"
                    visible="false"
                    class="sapUiSmallMarginEnd" />
-            <VBox fieldGroupIds="expertOnlyFieldGroup"
-                  visible="false">
-              <Link id="timerLink"
-                    text="{i18n>main.timerLink}"
-                    visible="false"
-                    class="sapUiTinyMarginEnd" />
-            </VBox>
+            <Link id="timerLink"
+                  text="{i18n>main.timerLink}"
+                  visible="false"
+                  class="sapUiTinyMarginEnd" />
             <Button id="timerLinkCopyButton"
                     icon="sap-icon://copy"
                     press="onTimerLinkCopyPressed"
+                    visible="false" />
+            <Button id="timerLinkAsQrCodeButton"
+                    icon="sap-icon://qr-code"
+                    press="onTimerLinkAsQrCodeyPressed"
                     visible="false" />
           </FlexBox>
 

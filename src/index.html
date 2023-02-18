@@ -35,6 +35,10 @@
         
         <script src="lib/forge/forge.min.js"
                 type="text/javascript">
+        </script>
+        
+        <script src="lib/qrcode/qrcode.min.js"
+                type="text/javascript">
         </script>        
 
 		<script id="sap-ui-bootstrap"
@@ -49,9 +53,13 @@
 				data-sap-ui-preload="async">
           </script>
 	</head>
-	<body class="sapUiBody" id="content">
-		<?php
-         include('../src/noscript.html')
-         ?>
+	<body>
+		<div class="sapUiBody" id="content">
+		</div>
+		<div>
+			<?php
+         		include('../src/noscript.html')
+         	?>
+		</div>		
 	</body>
 </html>

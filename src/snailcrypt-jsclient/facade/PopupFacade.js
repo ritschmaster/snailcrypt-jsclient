@@ -105,6 +105,28 @@ sap.ui.define([
         }
       });
     };
+    
+    me.showTimerLinkAsQrCode = function(timerLink) {
+		window.QRCode.toDataURL(timerLink, function (error, url) {
+			if (error) throw error
+		
+		  	var qrcodeDialog = new Dialog({
+		        type: DialogType.Message,
+		        title: oBundle.getText('popupFacade.timerLinkAsQrCodeTitle'),
+		        content: new HTML({
+	              content: "<img src=\"" + url + "\" />"
+	            }),
+		        beginButton: new Button({
+		          type: ButtonType.Emphasized,
+		          text: oBundle.getText('popupFacade.buttonClose'),
+		          press: function () {
+		            qrcodeDialog.close();
+		          }
+		        })
+	        });					
+	      	qrcodeDialog.open();
+		});	
+	};
 
     return me;
   };
