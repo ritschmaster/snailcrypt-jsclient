@@ -144,10 +144,15 @@ sap.ui.define([
                                                [ diffDays, diffHours, diffMinutes, diffSeconds]);
 
                 timerLabel.setText(diffText);
-            } else {                
+            } else {
+				/**
+				 * Initialize and hide timer label
+				 */
+                timerLabel.setText('');
+                timerLabel.setVisible(false);
+                                
                 clearInterval(me.updateTimerInterval);
                 me.decrypt();
-                timerLabel.setText(oBundle.getText('timer.decryptionKeyIsReleased'));
             }
         }
     });
