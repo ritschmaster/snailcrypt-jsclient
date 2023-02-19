@@ -24,6 +24,7 @@ lib: public
 	
 	mkdir -p public/lib/forge
 	cp -r node_modules/node-forge/dist/forge.min.js         public/lib/forge
+	cp -r node_modules/node-forge/dist/forge.min.js.map     public/lib/forge
 	
 	mkdir -p public/lib/qrcode
 	cp -r node_modules/qrcode/build/qrcode.js               public/lib/qrcode/qrcode.min.js 

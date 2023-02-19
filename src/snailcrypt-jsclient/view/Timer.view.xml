@@ -14,7 +14,7 @@
     <FlexBox alignItems="Center"
              justifyContent="Center">
       <Label id="timerLabel" />
-      <Label id="messageAvailbleLabel"
+      <Label id="messageAvailableLabel"
       		 text="{i18n>timer.decryptionKeyIsReleased}"
       		 visible="false" />
     </FlexBox>

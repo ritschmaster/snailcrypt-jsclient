@@ -65,7 +65,7 @@ sap.ui.define([
 
             var cipher = me.extractCipherFromURL();
             if (cipher) {
-                var messageAvailbleLabel = me.byId('messageAvailbleLabel');
+                var messageAvailableLabel = me.byId('messageAvailableLabel');
                 var decryptedLabel = me.byId('decryptedLabel');
                 var decryptedTextArea = me.byId('decryptedTextArea');
                 var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
@@ -81,7 +81,7 @@ sap.ui.define([
                         decryptedTextArea.setValue(cleartext);
 
 
-                        messageAvailbleLabel.setVisible(true);
+                        messageAvailableLabel.setVisible(true);
                         decryptedLabel.setVisible(true);
                         decryptedTextArea.setVisible(true);
                     },
