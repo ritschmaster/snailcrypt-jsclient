@@ -127,6 +127,35 @@ sap.ui.define([
 	      	qrcodeDialog.open();
 		});	
 	};
+	
+	/**
+	 * Showas a critical decryption error which effectively disables the entire application. 
+	 */
+	me.showUnableToExtractCipherFromURLErrorPopup = function(serverResponse) {
+	  var errorDescription = oBundle.getText('popupFacade.unableToExtractCipherFromURLErrorText');
+	  
+	  if (serverResponse) {
+		  errorDescription += '\n' 
+		  + '\n'
+		  + oBundle.getText('popupFacade.unableToExtractCipherFromURLErrorTitleFurtherDetails')
+		  + '\n' + serverResponse;		  
+	  }
+		
+      var unableToExtractCipherFromURLErrorPopup = new Dialog({
+        type: DialogType.Message,
+        title: oBundle.getText('popupFacade.unableToExtractCipherFromURLErrorTitle'),
+        content: new Text({
+          text: errorDescription
+        }),
+        escapeHandler: function() {
+			/**
+			 * Disable escaping as this is a critical error.
+			 */
+		}
+      });
+
+      unableToExtractCipherFromURLErrorPopup.open();
+    };
 
     return me;
   };

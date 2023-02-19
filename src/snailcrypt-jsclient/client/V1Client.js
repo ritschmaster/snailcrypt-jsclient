@@ -239,10 +239,14 @@ sap.ui.define([
           success: function(key) {
             if (key.private_key) {
               var importedPrivateKey = me.importPrivateKey(key.private_key);
-              var plaintext = me.decryptMessage(importedPrivateKey,
-                                                       me.base64ToArrayBuffer(ciphertext));
-              var textDecoder = new TextDecoder();
-              onSuccess(textDecoder.decode(plaintext), lockDate);
+              try {
+	              var plaintext = me.decryptMessage(importedPrivateKey,
+	                                                       me.base64ToArrayBuffer(ciphertext));
+	              var textDecoder = new TextDecoder();
+	              onSuccess(textDecoder.decode(plaintext), lockDate);
+              } catch (e) {
+				  onCipherError(e.toString());
+			  }
             } else {
               onNotReleasedYet(lockDate);
             }

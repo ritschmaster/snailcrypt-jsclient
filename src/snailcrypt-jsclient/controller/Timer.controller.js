@@ -89,7 +89,7 @@ sap.ui.define([
                      * onCipherError
                      */
                     function(exceptionText) {
-                        alert(exceptionText);
+                        me.popupFacade.showUnableToExtractCipherFromURLErrorPopup(exceptionText);
                     },
                     /**
                      * onNotReleasedYet
@@ -109,7 +109,7 @@ sap.ui.define([
                     });
 
             } else {
-                // TODO throw error
+                me.popupFacade.showUnableToExtractCipherFromURLErrorPopup();
             }
         },
 
