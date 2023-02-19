@@ -33,14 +33,14 @@
            alignItems="Center">
     <FlexBox>
       <Image src="./snailcrypt-jsclient/assets/flag_uk.svg"
-             mode="InlineSvg"
+             mode="Image"
              alt="{i18n>footer.flagUKAlt}"
              press="onFlagUKPressed"
              class="flag-language
                     sapUiSmallMarginEnd" />
 
       <Image src="./snailcrypt-jsclient/assets/flag_de.svg"
-             mode="InlineSvg"
+             mode="Image"
              alt="{i18n>footer.flagDEAlt}"
              press="onFlagDEPressed"
              class="flag-language
