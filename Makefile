@@ -1,9 +1,12 @@
-all: lib src config.js grunt
+MINIFY=./node_modules/minify/bin/minify.js
 
+all: lib src config.js
 
-grunt:
-	./node_modules/.bin/grunt
-
+ui5: config.js
+	cd src && ../node_modules/@ui5/cli/bin/ui5.cjs build -a
+	rm -rf public/snailcrypt-jsclient
+	mv src/dist public/snailcrypt-jsclient
+	
 
 public:
 	mkdir -p public
@@ -11,9 +14,6 @@ public:
 
 lib: public
 	mkdir -p public/lib
-
-	mkdir -p public/lib/openui5
-	cp -r lib/openui5-runtime-1.102.1/resources/*           public/lib/openui5
 
 	mkdir -p public/lib/cronstrue
 	cp -r node_modules/cronstrue/dist/cronstrue.min.js      public/lib/cronstrue
@@ -29,11 +29,13 @@ lib: public
 	mkdir -p public/lib/qrcode
 	cp -r node_modules/qrcode/build/qrcode.js               public/lib/qrcode/qrcode.min.js 
 
+src/index.html:
+	$(MINIFY) src/index.html > public/index.php
+	
+src/timer.html:
+	$(MINIFY) src/timer.html > public/timer.php
 
-src: public
-	cp -r src/snailcrypt-jsclient public/
-	cp -r src/index.html public/index.php
-	cp -r src/timer.html public/timer.php
+src: ui5 src/index.html src/timer.html public
 	cp -r assets/*.png                 public/
 	cp -r assets/favicon_package/*.png public/
 	cp -r assets/favicon_package/*.xml public/
@@ -43,7 +45,7 @@ src: public
 
 
 config.js:
-	cp config.js public/snailcrypt-jsclient/
+	cp config.js src/webapp/
 
 
 clean:
@@ -55,4 +57,4 @@ start:
 stop:
 	docker-compose down
 
-.PHONY: all config.js
+.PHONY: all config.js src/index.html src/timer.html
