@@ -3,7 +3,7 @@ MINIFY=./node_modules/minify/bin/minify.js
 all: lib src config.js
 
 ui5: config.js
-	cd src && ../node_modules/@ui5/cli/bin/ui5.cjs build -a
+	cd src && ../node_modules/@ui5/cli/bin/ui5.cjs build self-contained -a
 	rm -rf public/snailcrypt-jsclient
 	mv src/dist public/snailcrypt-jsclient
 	

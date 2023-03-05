@@ -17,10 +17,10 @@
 			}
 		},
 		"rootView": {
-			"viewName": "snailcrypt-jsclient.view.Main",
+			"viewName": "snailcrypt-jsclient.view.Timer",
 			"type": "XML",
 			"async": true,
-			"id": "app"
+			"id": "timer"
 		},
 		"models": {
 			"i18n": {

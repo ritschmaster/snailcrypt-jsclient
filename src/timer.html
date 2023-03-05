@@ -12,30 +12,52 @@
 		<meta name="msapplication-TileColor" content="#00aba9">
 		<meta name="theme-color" content="#ffffff">
 
+		<link href="./snailcrypt-jsclient/style/splash.css"
+			  rel="stylesheet"
+			  type="text/css">
 		<link href="./snailcrypt-jsclient/style/footer.css"
 			  rel="stylesheet"
 			  type="text/css">
-        </link>
+			  
+		<script>
+        	window["sap-ui-config"] = {
+        		"compatVersion": "edge",
+        		"async": true,
+        		"resourceroots": {
+        			"snailcrypt-jsclient": "./snailcrypt-jsclient"
+        		},
+        		"onInit": "module:sap/ui/core/ComponentSupport",
+        		"theme": "sap_belize",
+        		"libs": "sap.m"
+        	} 
+        
+        	window.onload = function () {        		
+        		var splashScreen = document.getElementById('splash-screen');
+				splashScreen.remove();
+        	};
+        </script>
         
         <script src="lib/forge/forge.min.js"
-                type="text/javascript">
+                type="text/javascript"
+                defer>
         </script>
 
 		<script id="sap-ui-bootstrap"
-				src="snailcrypt-jsclient/resources/sap-ui-core.js"
-				data-sap-ui-theme="sap_belize"
-				data-sap-ui-libs="sap.m"
-				data-sap-ui-resourceroots='{
-										   "snailcrypt-jsclient": "./snailcrypt-jsclient/"
-										   }'
-				data-sap-ui-onInit="module:snailcrypt-jsclient/timer"
-				data-sap-ui-compatVersion="edge"
-				data-sap-ui-preload="async">
+				src="snailcrypt-jsclient/resources/sap-ui-custom.js"
+				defer>
 		</script>
 	</head>
-	<body class="sapUiBody" id="content">
+	<body class="sapUiBody">
+		<div data-sap-ui-component 
+			  data-name="snailcrypt-jsclient" 
+			  data-id="container" 
+			  data-settings='{"id" : "timer"}'>
+		</div>
+		<div id="splash-screen">
+        	<img src="snailcrypt_full.png" />
+        </div>
 		<?php
         	include('../src/noscript.html')
-        ?>		
+        ?>                		
 	</body>
 </html>

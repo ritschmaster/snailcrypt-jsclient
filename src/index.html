@@ -2,11 +2,6 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<?php
-         echo('<meta accept-language="'
-         . Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE'])
-         . '">');
-        ?>
 		<title>snailcrypt | Webapp</title>
 		
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -17,45 +12,64 @@
 		<meta name="msapplication-TileColor" content="#00aba9">
 		<meta name="theme-color" content="#ffffff">
 
+		<link href="./snailcrypt-jsclient/style/splash.css"
+			  rel="stylesheet"
+			  type="text/css">
 		<link href="./snailcrypt-jsclient/style/main.css"
 			  rel="stylesheet"
 			  type="text/css">
-        </link>
 		<link href="./snailcrypt-jsclient/style/footer.css"
 			  rel="stylesheet"
 			  type="text/css">
-        </link>
-
+        
+        <script>
+        	window["sap-ui-config"] = {
+        		"compatVersion": "edge",
+        		"async": true,
+        		"resourceroots": {
+        			"snailcrypt-jsclient": "./snailcrypt-jsclient"
+        		},
+        		"onInit": "module:snailcrypt-jsclient/index",
+        		"theme": "sap_belize",
+        		"libs": "sap.m"
+        	} 
+        
+        	window.onload = function () {        		
+        		var splashScreen = document.getElementById('splash-screen');
+				splashScreen.remove();
+        	};
+        </script>
+        
         <script src="lib/cronstrue/cronstrue.min.js"
-                type="text/javascript">
+                type="text/javascript"
+                defer>
         </script>
         <script src="lib/cronstrue/cronstrue-i18n.min.js"
-                type="text/javascript">
+                type="text/javascript"
+                defer>
         </script>
         
         <script src="lib/forge/forge.min.js"
-                type="text/javascript">
+                type="text/javascript"
+                defer>
         </script>
         
         <script src="lib/qrcode/qrcode.min.js"
-                type="text/javascript">
+                type="text/javascript"
+                defer>
         </script>        
 
 		<script id="sap-ui-bootstrap"
-                src="snailcrypt-jsclient/resources/sap-ui-core.js"
-				data-sap-ui-theme="sap_belize"
-				data-sap-ui-libs="sap.m"
-				data-sap-ui-resourceroots='{
-										   "snailcrypt-jsclient": "./snailcrypt-jsclient"
-										   }'
-                data-sap-ui-onInit="module:snailcrypt-jsclient/index"
-				data-sap-ui-compatVersion="edge"
-				data-sap-ui-preload="async">
+                src="snailcrypt-jsclient/resources/sap-ui-custom.js"				
+				defer>
           </script>
 	</head>
 	<body class="sapUiBody" id="content">
+		<div id="splash-screen">
+        	<img src="snailcrypt_full.png" />
+        </div>
 		<?php
         	include('../src/noscript.html')
-        ?>		
+        ?>        
 	</body>
 </html>
