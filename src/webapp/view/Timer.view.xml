@@ -8,7 +8,7 @@
   <ObjectHeader title="{i18n>timer.title}"
                 intro="{i18n>timer.titleHelp}"
                 responsive="true"
-                icon="/snailcrypt.png" />
+                icon="/snailcrypt-jsclient/assets/logo.png" />
 
   <VBox class="sapUiSmallMargin">
     <FlexBox alignItems="Center"

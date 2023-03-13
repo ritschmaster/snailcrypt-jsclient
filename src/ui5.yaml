@@ -13,3 +13,4 @@ framework:
     - name: sap.ui.table
     - name: sap.ui.testrecorder
     - name: themelib_sap_belize
+    - name: themelib_sap_fiori_3

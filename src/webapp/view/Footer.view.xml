@@ -43,8 +43,24 @@
              mode="Image"
              alt="{i18n>footer.flagDEAlt}"
              press="onFlagDEPressed"
-             class="flag-language
-                    " />
+             class="flag-language" />
+    </FlexBox>
+  </FlexBox>
+    
+  <FlexBox alignItems="Center"
+           justifyContent="Center"
+           class="sapUiSmallMarginTop">
+    <Label text="{i18n>footer.appearance}" />
+  </FlexBox>
+  <FlexBox justifyContent="Center"
+           alignItems="Center">
+    <FlexBox>
+      <Button text="{i18n>footer.lightMode}"
+              press="onLightModePressed"
+              class="sapUiSmallMarginEnd" />
+             
+      <Button text="{i18n>footer.darkMode}"
+      		  press="onDarkModePressed" />
     </FlexBox>
   </FlexBox>
 </mvc:View>
