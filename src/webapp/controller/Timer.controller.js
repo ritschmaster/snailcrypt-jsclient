@@ -11,7 +11,7 @@ sap.ui.define([
 	"snailcrypt-jsclient/config",
 	"snailcrypt-jsclient/facade/urlFacade",
 	"snailcrypt-jsclient/facade/PopupFacade",
-	"snailcrypt-jsclient/client/V1Client"
+	"snailcrypt-jsclient/facade/SnailcryptFacade"
 ], function (FormatMessage,
              CoreLibrary,
              DateFormat,
@@ -66,6 +66,8 @@ sap.ui.define([
             var cipher = me.extractCipherFromURL();
             if (cipher) {
                 var messageAvailableLabel = me.byId('messageAvailableLabel');
+                var hintLabel = me.byId('hintLabel');
+                var hintTextArea = me.byId('hintTextArea');
                 var decryptedLabel = me.byId('decryptedLabel');
                 var decryptedTextArea = me.byId('decryptedTextArea');
                 var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
@@ -73,6 +75,17 @@ sap.ui.define([
 
                 me.snailcryptFacade.decrypt(
                     cipher,
+                    /**
+					 * onHint
+					 */
+					function(hintAvailable, hint) {
+						if (hintAvailable) {
+							hintTextArea.setValue(hint);
+							
+							hintLabel.setVisible(true);
+							hintTextArea.setVisible(true);
+						} 	
+					},
                     /**
                      * onSucess
                      */

@@ -22,7 +22,6 @@
     <FlexBox alignItems="Center"
              justifyContent="Center">
       <VBox>
-
         <FlexBox alignItems="Center"
                  class="sapUiLargeMarginTop">
           <Label id="decryptedDateTimeLabel"
@@ -34,6 +33,20 @@
                           valueFormat="yyyy-MM-ddTHH:mm:ssZ"
                           displayFormat="short" />
         </FlexBox>
+        
+        <VBox class="sapUiSmallMarginTop">
+          <Label id="hintLabel"
+                 text="{i18n>timer.hintText}"
+                 labelFor="hintTextArea"
+                 visible="false"
+                 width="100%" />
+
+          <TextArea id="hintTextArea"
+                    editable="false"
+                    visible="false"
+                    rows="5"
+                    width="100%" />
+        </VBox>
 
         <VBox class="sapUiSmallMarginTop">
           <Label id="decryptedLabel"

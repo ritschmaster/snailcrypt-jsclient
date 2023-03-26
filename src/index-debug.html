@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>snailcrypt | Webapp</title>
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#00aba9">
+		<meta name="theme-color" content="#ffffff">
+
+		<link href="./snailcrypt-jsclient/style/splash.css"
+			  rel="stylesheet"
+			  type="text/css">
+		<link href="./snailcrypt-jsclient/style/main.css"
+			  rel="stylesheet"
+			  type="text/css">
+		<link href="./snailcrypt-jsclient/style/footer.css"
+			  rel="stylesheet"
+			  type="text/css">
+        
+        <script>
+        	window["sap-ui-config"] = {
+        		"compatVersion": "edge",
+        		"async": true,
+        		"resourceroots": {
+        			"snailcrypt-jsclient": "./snailcrypt-jsclient"
+        		},
+        		"onInit": "module:snailcrypt-jsclient/index",
+        		"theme": "sap_belize",
+        		"libs": "sap.m"
+        	} 
+        
+        	window.onload = function () {        		
+        		var splashScreen = document.getElementById('splash-screen');
+				splashScreen.remove();
+        	};
+        </script>
+        
+        <script src="lib/cronstrue/cronstrue.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+        <script src="lib/cronstrue/cronstrue-i18n.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+        
+        <script src="lib/forge/forge.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+        
+        <script src="lib/qrcode/qrcode.min.js"
+                type="text/javascript"
+                defer>
+        </script>        
+
+		<script id="sap-ui-bootstrap"
+                src="lib/openui5/sap-ui-core.js"				
+				defer>
+          </script>
+	</head>
+	<body class="sapUiBody" id="content">
+		<div id="splash-screen">
+        	<img src="snailcrypt_full.png" />
+        </div>
+		<?php
+        	include('../src/noscript.html')
+        ?>        
+	</body>
+</html>

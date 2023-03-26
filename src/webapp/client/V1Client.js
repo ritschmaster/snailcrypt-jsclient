@@ -190,6 +190,7 @@ sap.ui.define([
 
     me.encrypt = function(plaintext,
                           lockDate,
+                          hint,
                           onSuccess,
                           onEncryptionError,
                           onHttpError) {
@@ -218,10 +219,13 @@ sap.ui.define([
     };
 
     me.decrypt = function(snailcryptCipher,
+    					  onHint,
                           onSuccess,
                           onCipherError,
                           onNotReleasedYet,
                           onHttpError) {
+	  onHint(false, '');
+							  
       var lockDate = null;
       try {
         lockDate = me.extractSnailcryptCipherLockDate(snailcryptCipher);

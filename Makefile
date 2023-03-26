@@ -7,7 +7,7 @@ ui5: config.js
 	rm -rf public/snailcrypt-jsclient
 	mv src/dist public/snailcrypt-jsclient
 	
-
+	
 public:
 	mkdir -p public
 
@@ -42,6 +42,18 @@ src: ui5 src/index.html src/timer.html public
 	cp -r assets/favicon_package/*.ico public/
 	cp -r assets/favicon_package/*.svg public/
 	cp -r assets/favicon_package/*.webmanifest public/
+	
+	
+lib-debug:
+	mkdir -p public/lib/openui5
+	cp -r lib/openui5-runtime-1.102.1/resources/*  public/lib/openui5
+	
+
+src-debug: config.js public
+	cp src/index-debug.html public/index.php
+	cp src/timer-debug.html public/timer.php	
+	rm -rf public/snailcrypt-jsclient
+	cp -r src/webapp public/snailcrypt-jsclient
 
 
 config.js:

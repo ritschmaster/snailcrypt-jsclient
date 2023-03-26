@@ -3,7 +3,8 @@ sap.ui.define([
   "use strict";
 
   const ClientVersion = {
-  	V1: "1"
+  	V1: "1",
+  	V2: "2"
   };
   
   return ClientVersion;

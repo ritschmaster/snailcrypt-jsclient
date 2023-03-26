@@ -10,7 +10,7 @@ sap.ui.define([
 	"snailcrypt-jsclient/config",
 	"snailcrypt-jsclient/facade/urlFacade",
 	"snailcrypt-jsclient/facade/PopupFacade",
-	"snailcrypt-jsclient/client/V1Client"
+	"snailcrypt-jsclient/facade/SnailcryptFacade"
 ], function (CoreLibrary,
              DateFormat,
              Controller,
@@ -227,15 +227,19 @@ sap.ui.define([
             const me = this;
 
             var toBeDecryptedTextArea = me.byId("toBeDecryptedTextArea");
+            var decryptedHintLabel = me.byId('decryptedHintLabel');
+            var decryptedHintTextArea = me.byId('decryptedHintTextArea');            
             var decryptedLabel = me.byId('decryptedLabel');
             var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
-            var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
+            var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');                        
             var decryptedTextArea = me.byId('decryptedTextArea');
 
             if (toBeDecryptedTextArea.getValue()) {
                 toBeDecryptedTextArea.setValueState(ValueState.Success);
                 toBeDecryptedTextArea.closeValueStateMessage();
             }
+            decryptedHintLabel.setVisible(false);
+            decryptedHintTextArea.setVisible(false);
             decryptedTextArea.setVisible(false);
             decryptedLabel.setVisible(false);
             decryptedDateTimeLabel.setVisible(false);
@@ -270,6 +274,9 @@ sap.ui.define([
                 encryptionDateTimePicker.openValueStateMessage();
                 error = true;
             }
+            
+            var hintToBeEncryptedTextArea = this.byId('hintToBeEncryptedTextArea');
+            var hint = hintToBeEncryptedTextArea.getValue();
 
             if (!error) {
                 var lockDate = encryptionDateTimePicker.getValue();
@@ -288,6 +295,7 @@ sap.ui.define([
                 me.snailcryptFacade.encrypt(
                     toBeEncryptedTextArea.getValue(),
                     lockDate,
+                    hint,
                     /**
                      * onSuccess
                      */
@@ -389,6 +397,20 @@ sap.ui.define([
             if (!error) {
                 me.snailcryptFacade.decrypt(
                     toBeDecryptedTextArea.getValue(),
+                    /**
+					 * onHint
+					 */
+					function(hintAvailable, hint) {
+						if (hintAvailable) {
+							var decryptedHintLabel = me.byId('decryptedHintLabel'); 
+							var decryptedHintTextArea = me.byId('decryptedHintTextArea');
+							
+							decryptedHintTextArea.setValue(hint);
+							
+							decryptedHintLabel.setVisible(true);
+							decryptedHintTextArea.setVisible(true);			
+						} 	
+					},
                     /**
                      * onSucess
                      */
