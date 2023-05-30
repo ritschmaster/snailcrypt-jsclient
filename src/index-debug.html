@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>snailcrypt | Webapp</title>
-		
+
+        <!---------------------------------------------------------------------
+            Setup favicon
+        -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -12,9 +15,15 @@
 		<meta name="msapplication-TileColor" content="#00aba9">
 		<meta name="theme-color" content="#ffffff">
 
+        <!---------------------------------------------------------------------
+            Snailcrypt CSS
+        -->
 		<link href="./snailcrypt-jsclient/style/splash.css"
 			  rel="stylesheet"
 			  type="text/css">
+        <link href="./snailcrypt-jsclient/style/html-editor.css"
+              rel="stylesheet"
+              type="text/css">
 		<link href="./snailcrypt-jsclient/style/main.css"
 			  rel="stylesheet"
 			  type="text/css">
@@ -22,6 +31,9 @@
 			  rel="stylesheet"
 			  type="text/css">
         
+        <!---------------------------------------------------------------------
+            Setup OpenUI5 for Snailcrypt
+        -->
         <script>
         	window["sap-ui-config"] = {
         		"compatVersion": "edge",
@@ -38,6 +50,14 @@
         		var splashScreen = document.getElementById('splash-screen');
 				splashScreen.remove();
         	};
+        </script>
+        
+        <!---------------------------------------------------------------------
+            Add libraries
+        -->
+        <link href="lib/quill/quill.snow.css" rel="stylesheet">
+        <script src="lib/quill/quill.min.js"
+                type="text/javascript">
         </script>
         
         <script src="lib/cronstrue/cronstrue.min.js"
@@ -59,7 +79,10 @@
                 defer>
         </script>        
 
-		<script id="sap-ui-bootstrap"
+        <!---------------------------------------------------------------------
+            Start OpenUI5
+        -->
+        <script id="sap-ui-bootstrap"
                 src="lib/openui5/sap-ui-core.js"				
 				defer>
           </script>

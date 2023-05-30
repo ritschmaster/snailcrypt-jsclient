@@ -27,7 +27,9 @@ lib: public
 	cp -r node_modules/node-forge/dist/forge.min.js.map     public/lib/forge
 	
 	mkdir -p public/lib/qrcode
-	cp -r node_modules/qrcode/build/qrcode.js               public/lib/qrcode/qrcode.min.js 
+	cp -r node_modules/qrcode/build/qrcode.js               public/lib/qrcode/qrcode.min.js
+		
+	cp -r node_modules/quill/dist                           public/lib/quill
 
 src/index.html:
 	$(MINIFY) src/index.html > public/index.php

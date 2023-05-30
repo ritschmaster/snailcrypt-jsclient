@@ -1,0 +1,17 @@
+/******************************************************************************
+ * HTML editor containing a message
+ */
+.html-editor {
+    background-color: #f4f5f6;
+    border-color: #5e696e;
+}
+
+.html-editor .html-editor-editor {
+    height: 20em;
+    background: white;
+    color: black;
+}
+
+#decrypted-editor .ql-toolbar {
+    display: none;
+}

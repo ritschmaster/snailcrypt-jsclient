@@ -4,6 +4,7 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
   <ObjectHeader title="{i18n>timer.title}"
                 intro="{i18n>timer.titleHelp}"
@@ -55,6 +56,15 @@
                  visible="false"
                  width="100%" />
 
+          <core:HTML id="decryptedHTML"
+                     content="
+        &lt;div id=&quot;decrypted-editor&quot; class=&quot;html-editor&quot;&gt;
+            &lt;div id=&quot;decrypted-editor-editor&quot; class=&quot;html-editor-editor&quot; /&gt;
+        &lt;/div&gt;
+                     "
+                     visible="false"
+                     afterRendering="onDecryptedHTMLAfterRendering" />
+                 
           <TextArea id="decryptedTextArea"
                     editable="false"
                     visible="false"

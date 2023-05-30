@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title>snailcrypt | Webapp Timer</title>
 
+        <!---------------------------------------------------------------------
+            Setup favicon
+        -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -12,13 +15,22 @@
 		<meta name="msapplication-TileColor" content="#00aba9">
 		<meta name="theme-color" content="#ffffff">
 
+        <!---------------------------------------------------------------------
+            Snailcrypt CSS
+        -->
 		<link href="./snailcrypt-jsclient/style/splash.css"
 			  rel="stylesheet"
 			  type="text/css">
+        <link href="./snailcrypt-jsclient/style/html-editor.css"
+              rel="stylesheet"
+              type="text/css">
 		<link href="./snailcrypt-jsclient/style/footer.css"
 			  rel="stylesheet"
 			  type="text/css">
-			  
+
+        <!---------------------------------------------------------------------
+            Setup OpenUI5 for Snailcrypt
+        -->
 		<script>
         	window["sap-ui-config"] = {
         		"compatVersion": "edge",
@@ -36,13 +48,24 @@
 				splashScreen.remove();
         	};
         </script>
+
+        <!---------------------------------------------------------------------
+            Add libraries
+        -->
+        <link href="lib/quill/quill.snow.css" rel="stylesheet">
+        <script src="lib/quill/quill.min.js"
+                type="text/javascript">
+        </script>
         
         <script src="lib/forge/forge.min.js"
                 type="text/javascript"
                 defer>
         </script>
 
-		<script id="sap-ui-bootstrap"
+        <!---------------------------------------------------------------------
+            Start OpenUI5
+        -->
+        <script id="sap-ui-bootstrap"
 				src="snailcrypt-jsclient/resources/sap-ui-custom.js"
 				defer>
 		</script>

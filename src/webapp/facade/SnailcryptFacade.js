@@ -59,6 +59,12 @@ sap.ui.define([
 			  onCipherError('Not a valid snailcrypt string');
 		  }
 		};
+        
+        me.strContainsHTMLTags = function(str) {
+            var strContainsHTMLTags = /<\/?[a-z][\s\S]*>/i.test(str);
+            
+            return strContainsHTMLTags;
+        };
 		
 		return me;	
 	};

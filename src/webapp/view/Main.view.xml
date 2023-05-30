@@ -4,6 +4,7 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
   <ObjectHeader title="{i18n>main.title}"
                 responsive="true"
@@ -14,7 +15,8 @@
       <Label text="{i18n>main.expertModeLabel}"
              labelFor="expertModeSwitch"
              class="sapUiSmallMarginEnd" />
-      <Switch state="false"
+      <Switch id="exportModeSwitch"
+              state="false"
               change="onExpertModeSwitchChanged" />
     </FlexBox>
   </VBox>
@@ -62,14 +64,40 @@
       <VBox class="sapUiSmallMarginTop">
       	<VBox>      	
 	        <Label text="{i18n>main.textToBeEncrypted}"
-	               labelFor="toBeEncryptedTextArea"
 	               width="100%" />
-	               
-	        <TextArea id="toBeEncryptedTextArea"
-                  required="true"
-                  rows="20"
-                  change="onTextToBeEncrytedChanged"
-                  width="100%" />
+                   
+            
+            <VBox fieldGroupIds="expertOnlyFieldGroup"
+                  visible="false">
+                <FlexBox alignItems="Center">
+                    <Label text="{i18n>main.plainTextMode}"
+                           labelFor="plainTextSwitch"
+                           width="100%" />
+                           
+                    <Switch id="plainTextSwitch"
+                            state="false"
+                            change="onPlainTextSwitchChanged" />
+                </FlexBox>
+            </VBox>
+            
+            <VBox fieldGroupIds="richTextFieldGroup">
+                <core:HTML id="toBeEncryptedHTML"
+                           content="
+&lt;div id=&quot;to-be-encrypted-editor&quot; class=&quot;html-editor&quot;&gt;
+    &lt;div id=&quot;to-be-encrypted-editor-editor&quot; class=&quot;html-editor-editor&quot; /&gt;
+&lt;/div&gt;
+                           "
+                           afterRendering="onToBeEncryptedHTMLAfterRendering" />
+            </VBox>
+                       
+            <VBox fieldGroupIds="plainTextFieldGroup"
+                  visible="false">
+                <TextArea id="toBeEncryptedTextArea"
+                          required="true"
+                          rows="20"
+                          change="onTextToBeEncrytedChanged"
+                          width="100%" />
+            </VBox>
         </VBox>
       </VBox>
       <VBox class="sapUiSmallMarginTop"
@@ -192,6 +220,14 @@
                  visible="false"
                  width="100%" />
                  
+          <core:HTML id="decryptedHTML"
+                     content="
+ &lt;div id=&quot;decrypted-editor&quot; class=&quot;html-editor&quot;&gt;
+     &lt;div id=&quot;decrypted-editor-editor&quot; class=&quot;html-editor-editor&quot; /&gt;
+ &lt;/div&gt;
+                     "
+                     visible="false"
+                     afterRendering="onDecryptedHTMLAfterRendering" />
           <TextArea id="decryptedTextArea"
                     editable="false"
                     visible="false"

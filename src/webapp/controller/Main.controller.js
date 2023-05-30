@@ -6,6 +6,7 @@ sap.ui.define([
     "sap/m/library",
     "sap/m/Dialog",
     "sap/m/Button",
+    "sap/m/MessageBox",
     "sap/m/Text",
 	"snailcrypt-jsclient/config",
 	"snailcrypt-jsclient/facade/urlFacade",
@@ -18,6 +19,7 @@ sap.ui.define([
              MobileLibrary,
              Dialog,
              Button,
+             MessageBox,
              Text,
              config,
              UrlFacade,
@@ -32,6 +34,10 @@ sap.ui.define([
         urlFacade:  new UrlFacade(),
         popupFacade: null,
         snailcryptFacade: new SnailcryptFacade(),
+        toBeEncryptedEditor: null,
+        toBeEncryptedEditorHTMLBackup: null,
+        decryptedEditor: null,
+        decryptedEditorHTMLBackup: null,
 
         onInit: function () {
             var i18nModel = new ResourceModel({
@@ -40,6 +46,50 @@ sap.ui.define([
             this.getView().setModel(i18nModel, "i18n");
 
             this.popupFacade = new PopupFacade(this.getView().getModel("i18n").getResourceBundle());
+        },
+        
+        initToBeEncryptedEditor: function() {
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+            
+            var quillOptions = {
+                placeholder: oBundle.getText('main.textToBeEncryptedPlaceholder'),
+                theme: 'snow',
+                modules: {
+                    toolbar: [
+                        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ color: [] }, { background: [] }],
+                        [{ script: 'sub' }, { script: 'super' }],
+                        ['blockquote', 'code-block'],
+                        [{ list: 'ordered' }, { list: 'bullet' }],
+                        [{ indent: '-1' }, { indent: '+1' }],
+                        ['link', 'image', 'video'],
+                        ['clean']
+                    ]
+                },
+                formats: [
+                    'header', 'bold', 'italic', 'underline', 'strike', 'color', 'background',
+                    'script', 'blockquote', 'code-block', 'list', 'bullet', 'indent', 'link', 'image', 'video'
+                ]
+            };
+            this.toBeEncryptedEditor = new Quill('#to-be-encrypted-editor-editor',
+                                              quillOptions);
+        },
+        
+        initDecryptedEditor: function() {
+            var quillOptions = {
+                theme: 'snow',
+                readOnly: true,
+                modules: {
+                    toolbar: [ ],
+                },
+                formats: [
+                    'header', 'bold', 'italic', 'underline', 'strike', 'color', 'background',
+                    'script', 'blockquote', 'code-block', 'list', 'bullet', 'indent', 'link', 'image', 'video'
+                ]
+            };
+            this.decryptedEditor = new Quill('#decrypted-editor-editor',
+                                                 quillOptions);
         },
 
         initEncryptedData: function() {
@@ -183,7 +233,12 @@ sap.ui.define([
 
         onExpertModeSwitchChanged: function(event) {
             var expertMode = event.getSource().getState();
-
+            
+            var toBeEncryptedHTML = this.byId('toBeEncryptedHTML');
+            this.toBeEncryptedEditorHTMLBackup = this.toBeEncryptedEditor.root.innerHTML;
+            
+            var decryptedHTML = this.byId('decryptedHTML');
+            
             var mainGrid = this.byId("mainGrid");
             if (expertMode) {
                 mainGrid.setGridTemplateColumns("1fr 1fr");
@@ -200,10 +255,103 @@ sap.ui.define([
         onCookieMessageStripClose: function(event) {
             event.getSource().close();
         },
+        
+        onPlainTextSwitchChanged: function(event) {
+            const me = this;
+            
+            var plainTextMode = event.getSource().getState();
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+            var plainTextSwitch = me.byId('plainTextSwitch');
+            var toBeEncryptedTextArea = me.byId("toBeEncryptedTextArea");
+            
+            var toggleVisibility = function() {
+                /******************************************************************
+                 * Toggle all components associated with the rich text
+                 *
+                 * If the plain text mode is false, then the rich text mode is
+                 * true and vice versa
+                 */
+                var richTextComponents = me.getView().getControlsByFieldGroupId('richTextFieldGroup').filter(e => e.isA("sap.m.VBox"));
+                richTextComponents.forEach(function (richTextComponent) {
+                    richTextComponent.setVisible(!plainTextMode);
+                });
+                
+                /******************************************************************
+                 * Toggle all components associated with the plain text
+                 */
+                var plainTextComponents = me.getView().getControlsByFieldGroupId('plainTextFieldGroup').filter(e => e.isA("sap.m.VBox"));
+                plainTextComponents.forEach(function (plainTextComponent) {
+                    plainTextComponent.setVisible(plainTextMode);
+                });
+            };
+                                    
+            if (plainTextMode) {
+                /**************************************************************
+                 * Check if there is a rich text available and also if it is
+                 * not only plain text. In such case ask the user if the
+                 * switch should be cancelled
+                 */
+                if (me.toBeEncryptedEditor.getText() != '\n'
+                    && me.snailcryptFacade.strContainsHTMLTags(me.toBeEncryptedEditor.root.innerHTML)) {
+                    
+                    MessageBox.confirm(oBundle.getText('main.switchFromRichTextToPlainTextLossy'), {
+                        actions: [ MessageBox.Action.OK,
+                                   MessageBox.Action.CANCEL ],
+                        onClose: function (answer) {
+                            /**************************************************
+                             * Exit out if not confirmed
+                             */
+                            if (answer != MessageBox.Action.OK) {
+                                plainTextSwitch.setState(!plainTextMode);
+                                return;
+                            }
+                            
+                            toBeEncryptedTextArea.setValue(me.toBeEncryptedEditor.getText());
+                            
+                            /**************************************************
+                             * Initialze the rich text
+                             */
+                            me.toBeEncryptedEditor.root.innerHTML = '';
+                            
+                            toggleVisibility();
+                        }
+                    });
+                } else {
+                    toBeEncryptedTextArea.setValue(me.toBeEncryptedEditor.getText());
+                    
+                    /**********************************************************
+                     * Initialze the rich text
+                     */
+                    me.toBeEncryptedEditor.root.innerHTML = '';
+                }
+            } else {
+                /**************************************************************
+                 * Switching from plain text to rich text will not result in
+                 * loss of information. Therefore we can simply copy the
+                 * current text into the rich text editor.
+                 */
+                me.toBeEncryptedEditor.setText(toBeEncryptedTextArea.getValue());
+            
+                /**************************************************************
+                 * Initialze the plain text
+                 */
+                toBeEncryptedTextArea.setValue('');
+                
+                toggleVisibility();
+            }
+        },
+        
+        onToBeEncryptedHTMLAfterRendering: function() {
+            if (this.toBeEncryptedEditor == null) {
+                this.initToBeEncryptedEditor();
+            } else if (this.toBeEncryptedEditorHTMLBackup != null) {
+                this.initToBeEncryptedEditor();
+                this.toBeEncryptedEditor.root.innerHTML = this.toBeEncryptedEditorHTMLBackup;
+                this.toBeEncryptedEditorHTMLBackup = null;
+            }
+        },
 
         onEncryptionDateTimePickerChanged: function () {
-            const me = this;
-
             var encryptionDateTimePicker = this.byId("encryptionDateTimePicker");
             if (encryptionDateTimePicker.getValue()) {
                 encryptionDateTimePicker.setValueState(ValueState.Success);
@@ -231,19 +379,23 @@ sap.ui.define([
             var decryptedHintTextArea = me.byId('decryptedHintTextArea');            
             var decryptedLabel = me.byId('decryptedLabel');
             var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
-            var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');                        
+            var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
+            var decryptedHTML = me.byId('decryptedHTML');
             var decryptedTextArea = me.byId('decryptedTextArea');
-
+            
+            decryptedHintLabel.setVisible(false);
+            decryptedHintTextArea.setVisible(false);
+            decryptedLabel.setVisible(false);
+            decryptedDateTimeLabel.setVisible(false);
+            decryptedDateTimePicker.setVisible(false);
+            
+            decryptedHTML.setVisible(false);
+            
             if (toBeDecryptedTextArea.getValue()) {
                 toBeDecryptedTextArea.setValueState(ValueState.Success);
                 toBeDecryptedTextArea.closeValueStateMessage();
             }
-            decryptedHintLabel.setVisible(false);
-            decryptedHintTextArea.setVisible(false);
             decryptedTextArea.setVisible(false);
-            decryptedLabel.setVisible(false);
-            decryptedDateTimeLabel.setVisible(false);
-            decryptedDateTimePicker.setVisible(false);
         },
 
         onEncryptPressed: function () {
@@ -251,17 +403,25 @@ sap.ui.define([
 
             var oBundle = this.getView().getModel("i18n").getResourceBundle();
 
+            var cleartext = '';
             var error = false;
-
-            var toBeEncryptedTextArea = this.byId("toBeEncryptedTextArea");
-            if (toBeEncryptedTextArea.getValue()) {
-                toBeEncryptedTextArea.setValueState(ValueState.Success);
-                toBeEncryptedTextArea.closeValueStateMessage();
+            
+            var plainTextSwitch = this.byId('plainTextSwitch');
+            if (plainTextSwitch.getState()) {
+                var toBeEncryptedTextArea = this.byId("toBeEncryptedTextArea");
+                if (toBeEncryptedTextArea.getValue()) {
+                    toBeEncryptedTextArea.setValueState(ValueState.Success);
+                    toBeEncryptedTextArea.closeValueStateMessage();
+                } else {
+                    toBeEncryptedTextArea.setValueState(ValueState.Error);
+                    toBeEncryptedTextArea.setValueStateText(oBundle.getText('main.obligatoryField'));
+                    toBeEncryptedTextArea.openValueStateMessage();
+                    error = true;
+                }
+                
+                cleartext = toBeEncryptedTextArea.getValue();
             } else {
-                toBeEncryptedTextArea.setValueState(ValueState.Error);
-                toBeEncryptedTextArea.setValueStateText(oBundle.getText('main.obligatoryField'));
-                toBeEncryptedTextArea.openValueStateMessage();
-                error = true;
+                cleartext = me.toBeEncryptedEditor.root.innerHTML;
             }
 
             var encryptionDateTimePicker = this.byId("encryptionDateTimePicker");
@@ -291,9 +451,9 @@ sap.ui.define([
                 var timerLinkAsQrCodeButton =  me.byId('timerLinkAsQrCodeButton');
                 var timerWarningText = me.byId('timerWarningText');
                 var timerErrorText = me.byId('timerErrorText');
-
+                
                 me.snailcryptFacade.encrypt(
-                    toBeEncryptedTextArea.getValue(),
+                    cleartext,
                     lockDate,
                     hint,
                     /**
@@ -416,17 +576,28 @@ sap.ui.define([
                      */
                     function(cleartext, lockDate) {
                         var decryptedLabel = me.byId('decryptedLabel');
+                        var decryptedHTML = me.byId('decryptedHTML');
                         var decryptedTextArea = me.byId('decryptedTextArea');
                         var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
                         var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
 
                         decryptedDateTimePicker.setValue(lockDate);
-                        decryptedTextArea.setValue(cleartext);
-
+                        
                         decryptedLabel.setVisible(true);
-                        decryptedTextArea.setVisible(true);
                         decryptedDateTimeLabel.setVisible(true);
                         decryptedDateTimePicker.setVisible(true);
+                        
+                        if (me.snailcryptFacade.strContainsHTMLTags(cleartext)) {
+                            decryptedHTML.setVisible(true);
+                            me.decryptedEditorHTMLBackup = cleartext;
+                            
+                            if (me.decryptedEditor != null) {
+                                me.decryptedEditor.root.innerHTML = cleartext;
+                            }
+                        } else {
+                            decryptedTextArea.setValue(cleartext);
+                            decryptedTextArea.setVisible(true);
+                        }
                     },
                     /**
                      * onCipherError
@@ -450,6 +621,11 @@ sap.ui.define([
                         me.popupFacade.showUnknownErrorPopup();
                     });
             }
+        },
+        
+        onDecryptedHTMLAfterRendering: function() {
+            this.initDecryptedEditor();
+            this.decryptedEditor.root.innerHTML = this.decryptedEditorHTMLBackup;
         },
 
         onTimerLinkCopyPressed: function() {

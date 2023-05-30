@@ -34,6 +34,8 @@ sap.ui.define([
         urlFacade:  new UrlFacade(),
         popupFacade: null,
         snailcryptFacade: new SnailcryptFacade(),
+        decryptedEditor: null,
+        decryptedEditorHTMLBackup: null,
 
         updateTimerInterval: null,
 
@@ -57,6 +59,22 @@ sap.ui.define([
 
             this.decrypt();
         },
+        
+        initDecryptedEditor: function() {
+            var quillOptions = {
+                theme: 'snow',
+                readOnly: true,
+                modules: {
+                    toolbar: [ ],
+                },
+                formats: [
+                    'header', 'bold', 'italic', 'underline', 'strike', 'color', 'background',
+                    'script', 'blockquote', 'code-block', 'list', 'bullet', 'indent', 'link', 'image', 'video'
+                ]
+            };
+            this.decryptedEditor = new Quill('#decrypted-editor-editor',
+                                             quillOptions);
+        },
 
         decrypt: function() {
             const me = this;
@@ -69,6 +87,7 @@ sap.ui.define([
                 var hintLabel = me.byId('hintLabel');
                 var hintTextArea = me.byId('hintTextArea');
                 var decryptedLabel = me.byId('decryptedLabel');
+                var decryptedHTML = me.byId('decryptedHTML');
                 var decryptedTextArea = me.byId('decryptedTextArea');
                 var decryptedDateTimeLabel = me.byId('decryptedDateTimeLabel');
                 var decryptedDateTimePicker = me.byId('decryptedDateTimePicker');
@@ -91,12 +110,17 @@ sap.ui.define([
                      */
                     function(cleartext, lockDate) {
                         decryptedDateTimePicker.setValue(lockDate);
-                        decryptedTextArea.setValue(cleartext);
-
 
                         messageAvailableLabel.setVisible(true);
                         decryptedLabel.setVisible(true);
-                        decryptedTextArea.setVisible(true);
+                        
+                        if (me.snailcryptFacade.strContainsHTMLTags(cleartext)) {
+                            decryptedHTML.setVisible(true);
+                            me.decryptedEditorHTMLBackup = cleartext;
+                        } else {
+                            decryptedTextArea.setValue(cleartext);
+                            decryptedTextArea.setVisible(true);
+                        }
                     },
                     /**
                      * onCipherError
@@ -166,6 +190,13 @@ sap.ui.define([
                                 
                 clearInterval(me.updateTimerInterval);
                 me.decrypt();
+            }
+        },
+        
+        onDecryptedHTMLAfterRendering: function() {
+            if (this.decryptedEditor == null) {
+                this.initDecryptedEditor();
+                this.decryptedEditor.root.innerHTML = this.decryptedEditorHTMLBackup;
             }
         }
     });
