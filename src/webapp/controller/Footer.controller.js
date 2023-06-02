@@ -1,14 +1,17 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/resource/ResourceModel",
-	"snailcrypt-jsclient/facade/PopupFacade"
+	"snailcrypt-jsclient/facade/PopupFacade",
+    "snailcrypt-jsclient/facade/LanguageChangerFacade"
 ], function (Controller,
              ResourceModel,
-             PopupFacade) {
+             PopupFacade,
+             LanguageChangerFacade) {
   "use strict";
 
   return Controller.extend("snailcrypt-jsclient.controller.Main", {
     popupFacade: null,
+    languageChangerFacade: LanguageChangerFacade.getInstance(),
 
     onInit: function () {
 	  var me = this;
@@ -50,11 +53,11 @@ sap.ui.define([
     },
 
     onFlagUKPressed: function() {
-      sap.ui.getCore().getConfiguration().setLanguage("en");
+        this.languageChangerFacade.changeLanguage("en");
     },
 
     onFlagDEPressed: function() {
-      sap.ui.getCore().getConfiguration().setLanguage("de");
+        this.languageChangerFacade.changeLanguage("de");
     },
     
     onLightModePressed: function() {

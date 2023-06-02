@@ -6,7 +6,7 @@ sap.ui.define([
 	V2Client
 ) {
 	return function() {
-		var me = this;
+		const me = this;
 		
 		me.v1Client = new V1Client();
 		me.v2Client = new V2Client();

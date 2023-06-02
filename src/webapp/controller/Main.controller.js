@@ -11,6 +11,7 @@ sap.ui.define([
 	"snailcrypt-jsclient/config",
 	"snailcrypt-jsclient/facade/urlFacade",
 	"snailcrypt-jsclient/facade/PopupFacade",
+    "snailcrypt-jsclient/facade/LanguageChangerFacade",
 	"snailcrypt-jsclient/facade/SnailcryptFacade"
 ], function (CoreLibrary,
              DateFormat,
@@ -24,6 +25,7 @@ sap.ui.define([
              config,
              UrlFacade,
              PopupFacade,
+             LanguageChangerFacade,
              SnailcryptFacade) {
     "use strict";
     var ValueState = CoreLibrary.ValueState;
@@ -33,6 +35,7 @@ sap.ui.define([
     return Controller.extend("snailcrypt-jsclient.controller.Main", {
         urlFacade:  new UrlFacade(),
         popupFacade: null,
+        languageChangerFacade: LanguageChangerFacade.getInstance(),
         snailcryptFacade: new SnailcryptFacade(),
         toBeEncryptedEditor: null,
         toBeEncryptedEditorHTMLBackup: null,
@@ -40,12 +43,24 @@ sap.ui.define([
         decryptedEditorHTMLBackup: null,
 
         onInit: function () {
+            const me = this;
+            
             var i18nModel = new ResourceModel({
                 bundleName: "snailcrypt-jsclient.i18n.i18n"
             });
             this.getView().setModel(i18nModel, "i18n");
 
             this.popupFacade = new PopupFacade(this.getView().getModel("i18n").getResourceBundle());
+            
+            this.languageChangerFacade.subscribe(function(oldLanguage, newLanguage) {
+                if (me.toBeEncryptedEditor) {
+//                    me.toBeEncryptedEditor.language = newLanguage;
+                }
+                
+                if (me.decryptedEditor) {
+//                    me.decryptedEditor.language = newLanguage;
+                }
+            });
         },
         
         initToBeEncryptedEditor: function() {
