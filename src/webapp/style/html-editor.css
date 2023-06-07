@@ -1,5 +1,5 @@
 /******************************************************************************
- * HTML editor containing a message
+ * General color settings
  */
 .html-editor {
     background-color: #f4f5f6;
@@ -12,6 +12,129 @@
     color: black;
 }
 
+/******************************************************************************
+ * Hide the toolbar in a decryption scenario
+ */
 #decrypted-editor .ql-toolbar {
     display: none;
+}
+
+/******************************************************************************
+ * Translations for the text style in English
+ */
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+    content: "Heading 1";
+}
+
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+    content: "Heading 2";
+}
+
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+    content: "Heading 3";
+}
+
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+    content: "Heading 4";
+}
+
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+    content: "Heading 5";
+}
+
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+    content: "Heading 6";
+}
+
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-label::before,
+.html-editor.en .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+    content: "Normal";
+}
+
+/******************************************************************************
+ * Translations for the "Enter link" style in English
+ */
+.html-editor.en .ql-snow .ql-tooltip[data-mode="link"]::before {
+    content: "Enter link:";
+}
+
+.html-editor.en .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+    content: "Add link";
+}
+
+/******************************************************************************
+ * Translations for the "Enter video" style in English
+ */
+.html-editor.en .ql-snow .ql-tooltip[data-mode="video"]::before {
+    content: "Enter video:";
+}
+
+.html-editor.en .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+    content: "Insert";
+}
+
+/******************************************************************************
+ * Translations for the text style in German
+ */
+.html-editor.de .ql-snow .ql-formats .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
+.html-editor.de .ql-snow .ql-formats .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+    content: "Überschrift 1";
+}
+
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+    content: "Überschrift 2";
+}
+
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+    content: "Überschrift 3";
+}
+
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+    content: "Überschrift 4";
+}
+
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+    content: "Überschrift 5";
+}
+
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+    content: "Überschrift 6";
+}
+
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-label::before,
+.html-editor.de .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+    content: "Normal";
+}
+
+/******************************************************************************
+ * Translations for the "Enter link" style in German
+ */
+.html-editor.de .ql-snow .ql-tooltip[data-mode="link"]::before {
+    content: "Link eingeben:";
+}
+
+.html-editor.de .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+    content: "Link hinterlegen";
+}
+
+/******************************************************************************
+ * Translations for the "Enter video" style in English
+ */
+.html-editor.de .ql-snow .ql-tooltip[data-mode="video"]::before {
+    content: "Video eingeben:";
+}
+
+.html-editor.de .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+    content: "Einfügen";
 }

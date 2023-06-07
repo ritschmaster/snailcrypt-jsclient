@@ -53,14 +53,29 @@ sap.ui.define([
             this.popupFacade = new PopupFacade(this.getView().getModel("i18n").getResourceBundle());
             
             this.languageChangerFacade.subscribe(function(oldLanguage, newLanguage) {
-                if (me.toBeEncryptedEditor) {
-//                    me.toBeEncryptedEditor.language = newLanguage;
-                }
-                
-                if (me.decryptedEditor) {
-//                    me.decryptedEditor.language = newLanguage;
-                }
+                me.onChangeLanguage(oldLanguage, newLanguage);
             });
+            this.onChangeLanguage(sap.ui.getCore().getConfiguration().getLanguage());
+        },
+        
+        onChangeLanguage: function(oldLanguage, newLanguage) {
+            const me = this;
+            
+            var oBundle = me.getView().getModel("i18n").getResourceBundle();
+            
+            if (me.toBeEncryptedEditor) {
+//                me.toBeEncryptedEditor.container.classList.remove(oldLanguage);
+//                me.toBeEncryptedEditor.container.classList.add(newLanguage);
+                $('#to-be-encrypted-editor').first().removeClass(oldLanguage);
+                $('#to-be-encrypted-editor').first().addClass(newLanguage);
+                $('#to-be-encrypted-editor-editor .ql-editor').first().attr('data-placeholder', oBundle.getText('main.textToBeEncryptedPlaceholder'));
+                $('#to-be-encrypted-editor-editor').classList;
+            }
+            
+            if (me.decryptedEditor) {
+                me.decryptedEditor.container.classList.remove(oldLanguage);
+                me.decryptedEditor.container.classList.add(newLanguage);
+            }
         },
         
         initToBeEncryptedEditor: function() {
