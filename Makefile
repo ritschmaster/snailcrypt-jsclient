@@ -20,7 +20,10 @@
 
 MINIFY=./node_modules/minify/bin/minify.js
 
-all: lib src config.js
+all: dependencies public lib src config.js
+
+dependencies:
+	npm install
 
 ui5: config.js
 	cd src && ../node_modules/@ui5/cli/bin/ui5.cjs build self-contained -a
