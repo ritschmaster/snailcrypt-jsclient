@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Unit tests for snailcrypt-jsclient</title>
+        
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+       <!---------------------------------------------------------------------
+            Add libraries
+        -->
+       <link href="/lib/quill/quill.snow.css" rel="stylesheet">
+        <script src="/lib/quill/quill.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+        
+        <script src="/lib/cronstrue/cronstrue.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+        <script src="/lib/cronstrue/cronstrue-i18n.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+        
+        <script src="/lib/forge/forge.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+        
+        <script src="/lib/qrcode/qrcode.min.js"
+                type="text/javascript"
+                defer>
+        </script>
+
+        <!---------------------------------------------------------------------
+            Setup OpenUI5 for Snailcrypt
+        -->
+        <script>
+            window["sap-ui-config"] = {
+                "compatVersion": "edge",
+                "async": false,
+                "resourceroots": {
+                    "snailcrypt-jsclient": "./../.."
+                },
+                "theme": "sap_belize",
+                "libs": "sap.m"
+            }
+        </script>
+        
+ 
+        <!---------------------------------------------------------------------
+            Start OpenUI5
+        -->
+        <script id="sap-ui-bootstrap"
+                src="/lib/openui5/sap-ui-core.js"
+                defer>
+        </script>
+        
+        <!---------------------------------------------------------------------
+            Load QUnit for OpenUI5
+        -->
+        <script src="/lib/openui5/sap/ui/thirdparty/qunit-2.js"
+                type="text/javascript"
+                defer>
+        </script>
+        <script src="/lib/openui5/sap/ui/qunit/qunit-2-css.js"
+                type="text/javascript"
+                defer>
+        </script>
+        
+         <!---------------------------------------------------------------------
+            Start QUnit
+        -->
+        <script>
+            window.onload = function () {
+                QUnit.config.autostart = false;
+                sap.ui.getCore().attachInit(function() {
+                    sap.ui.require([
+                        "snailcrypt-jsclient/test/unit/allTests"
+                    ], function() {
+                        QUnit.start();
+                    });
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <div id="tmp"></div>
+    </body>
+</html>

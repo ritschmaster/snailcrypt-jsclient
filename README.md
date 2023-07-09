@@ -14,6 +14,13 @@ or
 
 1. Install docker
 2. Run `make start`
+3. Open [localhost:8082](http://localhost:8082)
+
+## Running the unittests
+
+1. Install docker
+2. Run `make start`
+3. Open [localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html)
 
 ## License
 
