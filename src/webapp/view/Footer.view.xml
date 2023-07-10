@@ -23,6 +23,7 @@
     controllerName="snailcrypt-jsclient.controller.Footer"
     xmlns="sap.m"
     xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
   <grid:CSSGrid
       gridTemplateColumns="1fr
@@ -84,4 +85,7 @@
       		  press="onDarkModePressed" />
     </FlexBox>
   </FlexBox>
+  
+  <core:HTML id="githubBannerHTML"
+             content="" />
 </mvc:View>

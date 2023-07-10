@@ -84,8 +84,6 @@ sap.ui.define([
             var oBundle = me.getView().getModel("i18n").getResourceBundle();
             
             if (me.toBeEncryptedEditor) {
-//                me.toBeEncryptedEditor.container.classList.remove(oldLanguage);
-//                me.toBeEncryptedEditor.container.classList.add(newLanguage);
                 $('#to-be-encrypted-editor').first().removeClass(oldLanguage);
                 $('#to-be-encrypted-editor').first().addClass(newLanguage);
                 $('#to-be-encrypted-editor-editor .ql-editor').first().attr('data-placeholder', oBundle.getText('main.textToBeEncryptedPlaceholder'));
