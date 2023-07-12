@@ -85,7 +85,4 @@
       		  press="onDarkModePressed" />
     </FlexBox>
   </FlexBox>
-  
-  <core:HTML id="githubBannerHTML"
-             content="" />
 </mvc:View>
