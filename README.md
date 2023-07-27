@@ -21,7 +21,7 @@ or
 
 1. Install Node.js 
 2. Install docker
-3. Run `make lib-debug src-debug`
+3. Run `make all lib-debug src-debug`
 4. Run `make start`
 5. Open [localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html)
 
@@ -29,7 +29,7 @@ or
 
 1. Install Node.js 
 2. Install docker
-3. Run `make lib-debug src-debug`
+3. Run `make all lib-debug src-debug`
 4. Run `make start`
 5. Open [localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html)
 
