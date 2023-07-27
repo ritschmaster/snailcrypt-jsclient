@@ -12,21 +12,26 @@ Visit [webapp.snailcrypt.com](https://webapp.snailcrypt.com)
 
 or 
 
-1. Install docker
-2. Run `make start`
-3. Open [localhost:8082](http://localhost:8082)
+1. Install Node.js 
+2. Install docker
+3. Run `make start`
+4. Open [localhost:8082](http://localhost:8082)
 
 ## Running the unittests
 
-1. Install docker
-2. Run `make start`
-3. Open [localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html)
+1. Install Node.js 
+2. Install docker
+3. Run `make lib-debug src-debug`
+4. Run `make start`
+5. Open [localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html)
 
 ## Running the integration tests
 
-1. Install docker
-2. Run `make start`
-3. Open [localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html)
+1. Install Node.js 
+2. Install docker
+3. Run `make lib-debug src-debug`
+4. Run `make start`
+5. Open [localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html)
 
 ## License
 
