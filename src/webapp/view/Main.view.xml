@@ -181,14 +181,16 @@
           5. row
       -->
       <VBox class="sapUiSmallMarginTop">
-        <Button text="{i18n>main.encrypt}"
+        <Button id="encryptButton"
+                text="{i18n>main.encrypt}"
                 press="onEncryptPressed"
                 width="100%" />
       </VBox>
       <VBox fieldGroupIds="expertOnlyFieldGroup"
             visible="false"
             class="sapUiSmallMarginTop">
-          <Button text="{i18n>main.decrypt}"
+          <Button id="decryptButton"
+                  text="{i18n>main.decrypt}"
                   press="onDecryptPressed"
                   width="100%" />
       </VBox>

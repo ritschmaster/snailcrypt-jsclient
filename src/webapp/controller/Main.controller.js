@@ -371,6 +371,8 @@ sap.ui.define([
                      * Initialze the rich text
                      */
                     me.toBeEncryptedEditor.root.innerHTML = '';
+                            
+                    toggleVisibility();
                 }
             } else {
                 /**************************************************************

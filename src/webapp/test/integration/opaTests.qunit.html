@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Unit tests for snailcrypt-jsclient</title>
+        <title>OPA tests for snailcrypt-jsclient</title>
         
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 
@@ -78,7 +78,7 @@
                 QUnit.config.autostart = false;
                 sap.ui.getCore().attachInit(function() {
                     sap.ui.require([
-                        "snailcrypt-jsclient/test/unit/AllTests"
+                        "snailcrypt-jsclient/test/integration/AllJourneys"
                     ], function() {
                         QUnit.start();
                     });

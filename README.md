@@ -22,6 +22,12 @@ or
 2. Run `make start`
 3. Open [localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/unit/unitTests.qunit.html)
 
+## Running the integration tests
+
+1. Install docker
+2. Run `make start`
+3. Open [localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html](http://localhost:8082/snailcrypt-jsclient/test/integration/opaTests.qunit.html)
+
 ## License
 
 1. Source files: GPLv2 - please see SOFTWARE\_LICENSE
