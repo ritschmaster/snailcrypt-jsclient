@@ -17,7 +17,5 @@ sap.ui.define([
         iTeardownTheApp: function() {
             this.iTeardownMyUIComponent();
         }
-
     });
-
 });

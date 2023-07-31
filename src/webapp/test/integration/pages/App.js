@@ -28,6 +28,7 @@ sap.ui.require([
     const plainTextSwitchId = 'plainTextSwitch';
     const toBeEncryptedHTMLId = 'toBeEncryptedHTML';
     const toBeEncryptedTextAreaId = 'toBeEncryptedTextArea';
+    const timerLinkId = 'timerLink';
     const encryptedTextAreaId = 'encryptedTextArea';
     const encryptionDateTimePickerId = 'encryptionDateTimePicker';
     const encryptButtonId = 'encryptButton';
@@ -68,7 +69,7 @@ sap.ui.require([
                 iEnterHTMLToBeEncrypted: function(htmlToBeEncrypted) {
                     return this.waitFor({
                         viewName: mainView,
-                        id: toBeEncryptedHTMLId,
+                        id: exportModeSwitchId,
                         actions: function () {
                             $('#to-be-encrypted-editor .ql-editor').html(htmlToBeEncrypted);
                         },
@@ -116,16 +117,58 @@ sap.ui.require([
             },
                                    
             assertions: {
-                iShouldBeEncrypted: function(textToBeEncrypted) {
-                    var encryptedText = 'test';
-                    
+                iShouldBeEncrypted: function(expectedText , expectedReleaseDate, expectedHint) {
+                    var snailcryptFacade = new SnailcryptFacade();
+                   
                     return this.waitFor({
                         viewName: mainView,
-                        id: encryptedTextAreaId,
-                        matchers: new PropertyStrictEquals({
-                            name: "value",
-                            value: encryptedText
-                        }),
+                        id: timerLinkId,
+                        matchers: function(timerLink) {
+//                            var resultText = false;
+//                            var resultHint = false;
+//
+//                            snailcryptFacade.decrypt(
+//                                                     textToBeEncrypted,
+//                                                     /**
+//                                                      * onHint
+//                                                      */
+//                                                     function(hintAvailable, expectedHint) {
+//                                                         if (hintAvailable == false) {
+//                                                             resultHint = true;
+//                                                         } else if (hintAvailable == true && hint == expectedHint) {
+//                                                             resultHint = true;
+//                                                         }
+//                                                     },
+//                                                     /**
+//                                                      * onSucess
+//                                                      */
+//                                                     function(cleartext, lockDate) {
+//                                                         if (textToBeEncrypted == cleartext) {
+//                                                             resultText = true;
+//                                                         }
+//                                                     },
+//                                                     /**
+//                                                      * onCipherError
+//                                                      */
+//                                                     function(exceptionText) {
+//                                                     },
+//                                                     /**
+//                                                      * onNotReleasedYet
+//                                                      */
+//                                                     function(lockDate) {
+//                                                     },
+//                                                     /**
+//                                                      * onHttpError
+//                                                      */
+//                                                     function(request) {
+//                                                     }
+//                                                     );
+//                            return resultText && resultHint;
+                          
+                            if (timerLink.getHref().length > 0) {
+                                return true;
+                            }
+                        },
                         success: function() {
                             Opa5.assert.ok(true, 'The string has been encrypted correctly');
                         },
